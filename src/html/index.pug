@@ -1,0 +1,12 @@
+extend _template
+
+block vars
+  - title = 'xxx'
+  - description = 'xxx'
+  - keywords = 'xxx'
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+
+block main
+  div(data-module='dummy' data-options='{ "dummy_opt": "dummy" }') Click me!
+  div(data-module='legacy') Legacy!
