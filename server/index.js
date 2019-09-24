@@ -7,6 +7,7 @@ const JSON5 = require('json5')
 
 const data = JSON5.parse(fs.readFileSync('./src/data/sample.json'), 'utf8')
 const app = express()
+const router = express.Router()
 const isExist = path => {
   try {
     fs.statSync(path)
@@ -19,6 +20,7 @@ const isExist = path => {
   return true
 }
 
+app.use(router)
 app.use(express.static('./dist'))
 
 
@@ -43,4 +45,6 @@ app.get('*', (req, res, next) => {
 
 
 // app.listen(3000, 'localhost')
-app.listen(3000)
+// app.listen(3000)
+app.listen(9000)
+module.exports = app
