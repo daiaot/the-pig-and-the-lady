@@ -1,0 +1,90 @@
+.logo
+  position relative
+
+  div:last-child
+    width 100%
+
+    div > svg
+      width 100%
+      height 100%
+      left 0
+      top 0
+
+.p-top_lead-logo
+  position relative
+  z-index 0
+
+.logo_cover
+  position absolute
+  z-index 1
+
+.logo_cover-1
+  width 17%
+  height auto
+  padding-top 24%
+  top 0
+  left 30%
+  transform rotate(135deg) translate(-68%, 25%)
+  transform-origin left center
+
+  &::before
+    content ''
+    width 100%
+    height 100%
+    position absolute
+    left 0
+    top 0
+    background-color #ffffff
+    transition all 0.5s ease-out
+    z-index 3
+
+  &.is-hidden
+    &::before
+      width 0
+
+.logo_cover-2
+  width 17%
+  height auto
+  padding-top 24%
+  top 0
+  left -21%
+  transform rotate(-45deg) translate(-4%, 125%)
+  transform-origin left center
+
+  &::before
+    content ''
+    width 100%
+    height 100%
+    position absolute
+    left 0
+    top 0
+    background-color #ffffff
+    transition all 0.5s ease-out
+    z-index 3
+
+  &.is-hidden
+    &::before
+      width 0
+
+.logo_cover-3
+  width 66%
+  height 100%
+  top 0
+  left 34%
+  transform-origin right
+
+  &::before
+    content ''
+    width 100%
+    height 100%
+    position absolute
+    left 0
+    top 0
+    background-color #ffffff
+    transition all 0.3s cubic-bezier(1, 0.01, 0.27, 0.99)
+    overflow hidden
+    z-index 3
+
+  &.is-hidden
+    &::before
+      left 100%

@@ -1,0 +1,36 @@
+//- .nav-bar(data-module='animenav')
+.nav-bar-wrap(data-module="fixNavigation")
+    .nav-bar.p-splash__navigation.lower(data-module-splash="navigation_lower")
+      .p-nav
+        h1.brand(data-module-splash="navigation-content-logo")
+          a(href='/')
+            img(src=`/assets/images/common/header_logo.svg` alt="")
+        .nav-mobile
+          #nav-toggle(data-module-splash="navigation-content-logo")
+            span
+            span
+        nav
+          ul.nav-list
+            li.nav-top(data-module-splash="navigation-content-links")
+              a(href='/')
+                +nav-top
+            if page === 'about'
+              li.nav-about.is-current(data-module-splash="navigation-content-links")
+                a(href='/about/')
+                  +nav-whoweare
+            else
+              li.nav-about(data-module-splash="navigation-content-links")
+                a(href='/about/')
+                  +nav-whoweare
+            li.nav-service(data-module-splash="navigation-content-links")
+              a(href='/#service')
+                +nav-service
+            li.nav-column(data-module-splash="navigation-content-links")
+              a(href='/#column')
+                +nav-column
+            li.nav-team(data-module-splash="navigation-content-links")
+              a(href='/#team')
+                +nav-team
+            li.nav-contact(data-module-splash="navigation-content-links")
+              a(href='/#contact')
+                +nav-contact

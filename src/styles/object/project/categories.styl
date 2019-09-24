@@ -1,0 +1,891 @@
+.p-pig
+  margin-top 6rem
+
+  +sp()
+    margin-top 6rem
+
+  &-news
+    color #fff
+    display flex
+    flex-direction row
+    align-items center
+    box-sizing border-box
+
+    +pc()
+      background-color rgba(1, 1, 1, 0.3)
+      width 572px
+      max-width 572px
+      margin-left auto
+      padding percentage((9 / 1440)) percentage((24 / 1440))
+
+    +sp()
+      justify-content space-between
+      background-color rgba(1, 1, 1, 0.3)
+      width 100%
+      padding 14px 0 14px 23px
+
+    .info
+      margin 0 auto 0 15px
+
+      +sp()
+        width percentage((480 / 630))
+        margin 0 auto 0 15px
+
+      & > dl:not(:first-child)
+        display none
+
+      dt
+        display inline-block
+        color #d6d6d6
+        padding-right 14px
+        font-size 12px
+        line-height 1.5
+        letter-spacing 1px
+
+        +sp()
+          font-size 1rem
+          padding-right percentage((16 / 750))
+
+      dd
+        display inline-block
+        font-size 12px
+        line-height 1.5
+        letter-spacing 1px
+
+        +sp()
+          font-size 1rem
+
+    .title
+      /* font-family 'Avenir Next' */
+      font-size 12px
+      line-height 0
+      color #fff
+
+      +pc()
+        width 44px
+
+      +sp()
+        font-size 1.3rem
+
+    .count
+      visibility hidden
+      display flex
+      flex-direction column
+      align-items center
+      position relative
+
+      +pc()
+        width 20px
+
+      p
+        font-size 10px
+        line-height 1
+        padding 6px 0
+
+      .p-arrow-top
+        cursor pointer
+        width 0
+        height 0
+        border-left 3px solid transparent
+        border-right 3px solid transparent
+        border-bottom 6px solid #fff
+
+        +sp()
+          // border-left 6px solid transparent
+          // border-right 6px solid transparent
+          // border-bottom 8px solid #fff
+          border-left 4px solid transparent
+          border-right 4px solid transparent
+          border-bottom 6px solid #fff
+
+      .p-arrow-under
+        cursor pointer
+        width 0
+        height 0
+        border-left 3px solid transparent
+        border-right 3px solid transparent
+        border-top 6px solid #fff
+
+        +sp()
+          border-left 4px solid transparent
+          border-right 4px solid transparent
+          border-top 6px solid #fff
+
+      /*
+      &:after
+        content 'â–¼'
+        font-size 1rem
+        position absolute
+        bottom -5px
+      */
+
+    +pc()
+      // display none
+
+  .kv
+    width 100vw
+
+    img
+      width 100%
+
+    &__main
+      background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
+      background-size 100% auto
+      width percentage((2098 / 2560))
+      height 0
+      padding-top percentage((1370 / 2098))
+      vertical-align middle
+
+  &-content
+    +pc()
+      clearfix()
+
+    h2
+      position relative
+
+      +pc()
+        width 100%
+        height auto
+
+      +sp()
+        line-height 1
+
+      & > svg
+        +pc()
+          width 100%
+          height 100%
+          left 0
+          top 0
+
+        +sp()
+          width 100%
+
+    h3
+      font-size 36px
+      font-weight 300
+      margin-bottom 70px
+
+      +pc()
+        letter-spacing 5px
+
+      +sp()
+        font-family NotoThin
+        font-size 2.5rem
+        font-weight 100
+        margin-bottom percentage((90 / 630))
+        font-feature-settings 'palt'
+        letter-spacing 0.05em
+
+    .amime_title
+      position relative
+      margin-top 0
+      margin-bottom 60px
+      font-family NotoThin
+      font-size 7.2rem
+      font-weight 100
+      letter-spacing 0.03em
+      line-height 1.6
+
+      +tb()
+        margin-bottom 23px
+
+      +sp()
+        margin-top 0
+        margin-bottom 40px
+        overflow hidden
+        font-size 42px
+        line-height 1.30952
+
+      svg
+        width 100%
+        height 100%
+        left 0
+        top 0
+
+        path
+          opacity 0
+
+      .character
+        opacity 0
+
+      & > div
+        display inline-block
+        height auto
+
+        // margin-left percentage((20 / 990))
+        +sp()
+          // margin-left percentage((24 / 630))
+
+    &.about
+      .amime_title
+        & > div
+          display inline-block
+          height auto
+          width 568px
+
+          +tb()
+            width 426px
+
+          +sp()
+            width percentage((471 / 630))
+
+            // margin-left percentage((24 / 630))
+            &:nth-child(-n+3)
+              margin-bottom 0
+
+    &.service
+      padding-bottom percentage((180 / 1440))
+
+      +sp()
+        padding-bottom 70px
+
+      .amime_title
+        & > div
+          display inline-block
+          height auto
+          width 341px
+
+          +tb()
+            width 255.75px
+
+          +sp()
+            width percentage((510 / 630))
+
+      .l-col__item
+        background #fff
+        min-height 480px
+
+        span.ico01,
+        img.ico01
+          width 11vw
+          height 10vw
+          max-width 165px
+          max-height 143px
+          display block
+          margin 20px auto 40px
+
+          +sp()
+            width 165px
+            height 143px
+
+        span.ico02,
+        img.ico02
+          width 11.52vw
+          height 6.4vw
+          max-width 167px
+          max-height 95px
+          display block
+          margin 50px auto 55px
+
+          +sp()
+            width 165px
+            height 95px
+            margin 40px auto 65px
+
+        span.ico03,
+        img.ico03
+          width 8.75vw
+          height 8.75vw
+          max-width 126px
+          max-height 126px
+          display block
+          margin 32px auto 45px
+
+          +sp()
+            width 126px
+            height 126px
+
+        +sp()
+          margin-bottom 55px
+          min-height auto
+
+          &:last-child
+            margin-bottom 0
+
+    &.column
+      z-index 1
+
+      +pc()
+        padding 145px 0 175px
+
+      +tb()
+        padding 108px 0 127px
+
+      +sp()
+        padding 90px 0 0px
+
+      .amime_title
+        svg
+          +pc()
+            width 100%
+            height 100%
+            left 0
+            top 0
+
+        & > div
+          display inline-block
+          height auto
+          width 366px
+
+          +tb()
+            width 274.5px
+
+          +sp()
+            width percentage((554 / 630))
+
+    &.team
+      background #f0f3f5
+      padding 160px 0 175px
+
+      +sp()
+        padding 90px 0 83px
+
+      .amime_title
+        svg
+          & + div
+            background #f0f3f5 !important
+
+        & > div
+          display inline-block
+          height auto
+          width 225px
+
+          +tb()
+            width 168.75px
+
+          +sp()
+            width percentage((340 / 630))
+
+    &.contact
+      padding 148px 0 180px
+
+      +tb()
+        padding 108px 0 135px
+
+      +sp()
+        padding 90px 0
+
+      .amime_title
+        & > div
+          width 404px
+
+          +tb()
+            width 303px
+
+          +sp()
+            // margin-left percentage((8 / 630))
+            width percentage((606 / 630))
+
+  &.top
+    margin-top 0
+
+    .kv
+      height 100%
+
+      +sp()
+        margin-top 27.5px
+
+    +pc()
+      overflow hidden
+
+    .lead_box
+      max-width none
+      width 78.75%
+
+      +sp()
+        width 85%
+
+    .p-pig-lead
+      font-family NotoThin
+      font-weight 300
+
+      +sp()
+        width 100%
+        font-size 2.7rem
+        letter-spacing 0.3rem
+        line-height 2
+        margin auto
+
+      +pc()
+        position relative
+        // width percentage((900 / 990))
+        // max-width 900px
+        width 100%
+        height auto
+        font-size 3.35vw
+        line-height 2.1
+        letter-spacing 10px
+        font-feature-settings 'palt'
+
+      +pcex()
+        font-size 48px
+
+      +tb()
+        line-height 2
+
+      & > svg
+        +pc()
+          position absolute
+          width 100%
+          height 100%
+          left 0
+          top 0
+
+    .p-pig-content
+      &.service
+        background #f0f3f5
+
+        +sp()
+          padding-top 40px
+
+    .p-pig-slide-wrap
+      width 100%
+      overflow hidden
+
+      +sp()
+        margin-bottom 83px
+
+  &-service
+    .l-col__item__title
+      font-family NotoLight
+      font-size 18px
+      line-height 1.6
+      margin-bottom percentage((30 / 480))
+      color #000
+
+      +sp()
+        margin-bottom 22px
+
+    .l-col__item__desc
+      line-height 2.2
+      font-size 13px
+      letter-spacing 1px
+      margin-bottom 70px
+
+      +sp()
+        font-size 1.5rem
+        margin-bottom 28px
+
+    .c-btn-more
+      width percentage((210 / 300))
+
+  &-content
+    &.service
+      position relative
+
+      .c-motion-image
+        position absolute
+        right 0
+        background-size 100% auto
+        vertical-align middle
+
+        [class*='c-object']
+          position absolute
+          width 100%
+          height 100%
+
+          &:nth-of-type(1)
+            width percentage((185 / 381))
+            height percentage((185 / 381))
+            right 0
+            top 0
+
+          &:nth-of-type(2)
+            width percentage((80 / 381))
+            height percentage((80 / 381))
+            left 0
+            bottom 0
+
+        +pc()
+          bottom percentage((-60 / 900))
+          width percentage((380 / 1440))
+          height 0
+          padding-top percentage((380 / 1440))
+
+        +sp()
+          bottom -1%
+          width percentage((206 / 750))
+          height 0
+          padding-top percentage((206 / 750))
+
+      .l-col
+        margin-bottom 85px
+
+        +sp()
+          margin-bottom 56px
+
+      .c-link
+        +pc()
+          width 100%
+
+          .l-col__item__title
+            font-size 24px
+            letter-spacing 2px
+            margin-bottom 35px
+            font-family NotoLight
+            color #000
+
+            +tb()
+              margin-bottom 25px
+
+          li
+            line-height 1
+            margin-bottom 28px
+            margin-right 28px
+            font-family NotoDemiLight
+            color #333
+
+        +sp()
+          .l-col__item__title
+            font-size 1.8rem
+            letter-spacing 2px
+            margin-bottom 38px
+
+          li
+            font-size 1.2rem
+            line-height 1.5
+            display inline-block
+            padding 0 percentage((26 / 630)) 18px 0
+
+    &.column
+      position relative
+
+      .c-motion-image
+        z-index -1
+        content ''
+        position absolute
+        right 0
+        top 50%
+        // background url('/assets/images/top/img_bg02.png') no-repeat 50% 50%
+        // background-size 100% auto
+        width percentage((1216 / 1440))
+        height 0
+        padding-top percentage((1238 / 1440))
+        vertical-align middle
+
+        +sp()
+          top percentage((319 / 750))
+          right percentage((-92 / 650))
+
+        [class*='c-object']
+          position absolute
+          width 100%
+          height 100%
+          right 0
+          top 0
+
+    &.team
+      .p-pig-list
+        +pc()
+          // width percentage((900 / 990))
+          // max-width 900px
+          width 100%
+          // max-width 900px
+
+        +sp()
+          width 100%
+
+        &__box
+          display flex
+
+          +pc()
+            justify-content space-between
+            margin-bottom 118px
+
+          +tb()
+            margin-bottom 88px
+
+          +sp()
+            flex-direction column
+            margin-bottom 53px
+
+          &:last-child
+            margin-bottom 0
+
+          &__bnr
+            font-size 12px
+
+            +pc()
+              width percentage((297 / 990))
+
+            +sp()
+              width 100%
+
+            img
+              +pc()
+                margin-bottom percentage((16 / 297))
+
+              +sp()
+                width 100%
+                margin-bottom 28px
+
+            p
+              +sp()
+                font-family Noto
+                margin-bottom 22px
+
+          &__desc
+            width percentage((643 / 990))
+
+            +sp()
+              width 100%
+
+            p
+              font-size 12px
+              line-height 2.2
+
+              +sp()
+                line-height 2
+
+            a
+              font-size 12px
+              line-height 2.2
+
+    &.contact
+      position relative
+
+      .c-motion-image
+        &:nth-of-type(1)
+          position absolute
+          right 0%
+          top -5%
+          width 25%
+          height 0
+          padding-top 30.694444%
+
+          [class*='c-object']
+            position absolute
+
+            &:nth-of-type(1)
+              width percentage((408 / 504))
+              height percentage((401 / 586))
+              right 0
+              top 0
+
+            &:nth-of-type(2)
+              width percentage((250 / 504))
+              height percentage((235 / 586))
+              left 0
+              bottom 0
+
+          +sp()
+            display none
+
+        &:nth-of-type(2)
+          position absolute
+          right percentage((124 / 1440))
+          top percentage((692 / 1087))
+          // background url('/assets/images/top/img_bg04.png') no-repeat 50% 50%
+          background-size 100% auto
+          width percentage((44 / 1440))
+
+          // height 0
+          // padding-top percentage((128 / 1440))
+          [class*='c-object']
+            width 100%
+            height 100%
+
+          +sp()
+            display none
+
+      .p-pig-info
+        &__box
+          margin-bottom 85px
+
+          +tb()
+            margin-bottom 55px
+
+          +sp()
+            margin-bottom 40px
+
+          .c-btn-more
+            width 210px
+            margin-top 30px
+
+            +tb()
+              margin-top 14px
+
+            +sp()
+              width 157.5px
+              margin-top 55px
+
+          .title
+            font-family NotoLight
+            font-size 2.4rem
+            line-height 1.2
+            margin-bottom 30px
+            letter-spacing 2px
+            color #000
+
+            +tb()
+              margin-bottom 20px
+
+            +sp()
+              font-size 1.8rem
+              margin-bottom 20px
+
+          .desc
+            line-height 2.2
+            letter-spacing 1px
+
+            +sp()
+              font-size 1.2rem
+
+          &:nth-child(3)
+            margin-bottom 0
+
+        & > div:last-child()
+          margin-bottom 0
+
+    +pc()
+      padding 150px 0 0
+
+    +tb()
+      padding 113px 0 0
+
+    +sp()
+      padding 77.5px 0 0
+
+    &.about
+      +pc()
+        padding 116px 0 0
+
+      +tb()
+        padding 86px 0 0
+
+    &.wipeimg
+      +pc()
+        padding 180px 0 0
+
+      +tb()
+        padding 135px 0 0
+
+      +sp()
+        padding 90px 0 0
+
+    &.service
+      +pc()
+        padding 90px 0 0
+
+      +tb()
+        padding 67px 0 0
+
+    &.team
+      .l-inner
+        position relative
+        z-index 1
+
+      +pc()
+        padding 145px 0 175px
+
+      +tb()
+        padding 108px 0 127px
+
+    &__about
+      +sp()
+        width 100%
+
+      +pc()
+        width percentage((900 / 990))
+        max-width 900px
+        height auto
+
+      & > svg
+        width 100%
+
+        +sp()
+          margin-bottom percentage((90 / 630))
+
+        +pc()
+          margin-bottom percentage((90 / 900))
+
+      .logo
+        margin-bottom 75px
+
+        +tb()
+          margin-bottom 57px
+
+        +sp()
+          margin-bottom 57px
+
+        & > svg
+          width 100%
+          height 100%
+
+      & > img
+        margin-bottom percentage((90 / 900))
+
+      &--intro
+        display flex
+
+        +pc()
+          justify-content space-between
+          align-items flex-end
+
+          .c-btn-arw__arw
+            width 110px
+
+          .c-btn-more
+            width 210px
+
+            .c-btn-arw__txt
+              svg
+                width 35px
+                height 8px
+
+        +sp()
+          flex-direction column
+
+          .c-btn-arw__arw
+            width 80px
+
+          .c-btn-more
+            width percentage((315 / 630))
+
+            .c-btn-arw__txt
+              svg
+                width 35px
+                height 8px
+
+        p
+          line-height 2.3
+          font-family NotoDemiLight
+
+          +pc()
+            width percentage((780 / 990))
+            letter-spacing 2px
+
+          +sp()
+            font-size 1.5rem
+            line-height 2
+            margin-bottom 57px
+
+    &-sec
+      width percentage((900 / 990))
+      margin-bottom percentage((120 / 990))
+
+      +sp()
+        width 100%
+        margin-bottom percentage((120 / 630))
+
+    &__desc
+      margin-bottom percentage((90 / 900))
+
+      +sp()
+        margin-bottom percentage((120 / 630))
+
+      p
+        line-height 2.2
+        letter-spacing 1px
+
+    &__image
+      margin-bottom percentage((90 / 900))
+
+      +sp()
+        margin-bottom percentage((120 / 630))
+
+[data-module='velocity']
+  opacity 0
+
+.sr-seq
+  opacity 0

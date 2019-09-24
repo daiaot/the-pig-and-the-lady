@@ -1,0 +1,285 @@
+$content-width = 1000px
+$breakpoint = 795px
+$nav-height = 62.5px
+$nav-background = #262626
+$nav-font-color = #ffffff
+$link-hover-color = #2581DC
+
+header
+  width 100%
+
+  +sp()
+    position fixed
+    top 0
+    z-index 100
+
+.nav-bar-wrap
+  width 100%
+  position relative
+  height 9rem
+
+.nav-bar
+  background #000
+  position absolute
+  // transition all .2s
+  backface-visibility hidden
+
+  +pc()
+    bottom 0
+    height 9rem
+
+  +sp()
+    top 0
+
+  &.lower
+    +pc()
+      top 0
+      bottom auto
+      position fixed
+      z-index 100
+
+  &.is-fixed
+    position fixed
+    top 0
+    left 0
+    z-index 4
+
+    &:not(.lower)
+      +pc()
+        height 6rem
+
+      .p-nav
+        +pc()
+          height 6rem
+
+          h1
+            width 72px
+            height 24.78px
+
+            img
+              vertical-align top
+
+.p-nav
+  width 100%
+  box-sizing border-box
+  transition all 0.2s
+
+  +sp()
+    height $nav-height
+    width 100%
+    flex-direction column
+
+    h1
+      position absolute
+      padding-left 20px
+      float left
+      line-height $nav-height
+      width 72px
+      height $nav-height
+      opacity 0
+
+      img
+        // vertical-align middle
+        width 72.775px
+        height 25px
+        position absolute
+        left 20px
+        top 19px
+
+  +pc()
+    height 9rem
+    display flex
+    // justify-content space-between
+    align-items center
+    padding 20px 61px 20px 45px
+
+    h1
+      // +sp()
+      // width 132px
+      +pc()
+        width 132px
+        opacity 0
+
+        a:hover
+          opacity 0.4
+          transition 0.2s
+
+        img
+          width 100%
+          vertical-align middle
+
+  ul
+    +pc()
+      display flex
+      justify-content space-between
+
+    +sp()
+      width 100%
+      flex-direction column
+      display none
+
+    li
+      color #fff
+
+      +pc()
+        box-sizing border-box
+
+        &last-child
+          padding-right 0
+
+      +sp()
+        float none
+
+      &.is-current
+        pointer-events none
+
+      &.nav-top
+        width 34px
+
+      &.nav-about
+        width 116px
+
+      &.nav-service
+        width 75px
+
+      &.nav-column
+        width 76px
+
+      &.nav-team
+        width 48px
+
+      &.nav-contact
+        width 86px
+
+      a
+        display inline-block
+        color #fff
+        font-family 'Avenir Next', 'Arial', YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ ゴシック', sans-serif
+
+        & > div
+          width 100%
+
+          & > div > svg
+            position absolute
+            width 100%
+            height 100%
+            top 0
+            left 0
+            fill #fff
+            stroke #fff
+            stroke-width 0.3px
+
+            path
+              opacity 0
+
+        &:hover
+          opacity 0.4
+          transition 0.2s
+
+        +sp()
+          background #000
+          display block
+          padding percentage((30 / 750))
+
+main > .about,
+.service,
+.support
+  +pc()
+    .nav-bar
+      height 6rem
+
+      .p-nav
+        height 6rem
+
+        h1
+          width 72px
+          height 24.78px
+
+          img
+            vertical-align top
+
+nav
+  +sp()
+    width 100%
+    padding 70px 0 15px
+
+  +pc()
+    width 618px
+    margin-left auto
+
+.nav-list
+  +pc()
+    & li
+      position relative
+      // opacity 0
+
+.nav-mobile
+  position absolute
+  top 0
+  right 0
+  background transparent
+  height $nav-height
+  width $nav-height
+
+  +sp()
+    display block
+    margin-left auto
+
+  +pc()
+    display none
+
++sp()
+  nav
+    width 100%
+      padding $nav-height 0 15px
+
+      ul
+        display none
+
+        li
+          float none
+
+          a
+            padding 15px
+            line-height 20px
+
+          ul li a
+            padding-left 30px
+
+  .nav-dropdown
+    position static
+
+#nav-toggle
+  position absolute
+  right 20px
+  top 50%
+  margin-top -13px
+  cursor pointer
+  padding 10px 35px 16px 0px
+  opacity 0
+
+  span
+    display block
+    width 25px
+    height 1px
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    margin auto
+    background-color #fff
+    transition all 0.2s
+    -webkit-transform translateY(-500%)
+    transform translateY(-500%)
+
+    &+span
+      transform translateY(500%)
+
+  &.is-open
+    span
+      transform rotate(45deg)
+      width 75.64102564102564%
+
+      &+span
+        transform rotate(-45deg)

@@ -1,0 +1,62 @@
+.p-burger_wrapper
+  position fixed
+  width 100%
+  height 100%
+  top 0
+  right -100%
+  background-color #000000
+  z-index 99
+
+  .p-burger_container
+    position absolute
+    width percentage((650 / 750))
+    top 55%
+    left 50%
+    transform translate(-50%, -50%)
+
+  .p-burger_item
+    display block
+
+    a
+      display block
+
+    .c-svg_container
+      svg
+        g
+          opacity 0
+
+        path
+          fill #ffffff
+
+    &+.p-burger_item
+      margin-top 6.46%
+
+    &:nth-child(1)
+      width percentage((574 / 650))
+
+      .c-svg-container
+        padding-top percentage((59.84 / 566.81))
+
+    &:nth-child(2)
+      width percentage((348 / 650))
+
+      .c-svg-container
+        padding-top percentage((59.84 / 333.76))
+
+    &:nth-child(3)
+      width percentage((383 / 650))
+
+      .c-svg-container
+        padding-top percentage((59.84 / 369.21))
+
+    &:nth-child(4)
+      width percentage((232 / 650))
+
+      .c-svg-container
+        padding-top percentage((59.84 / 226.87))
+
+    &:nth-child(5)
+      width percentage((420 / 650))
+
+      .c-svg-container
+        padding-top percentage((59.84 / 404.42))

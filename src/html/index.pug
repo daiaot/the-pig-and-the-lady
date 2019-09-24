@@ -1,12 +1,40 @@
-extend _template
+//- extend _template
+extend /_dev/_include/_layout
 
 block vars
   - title = 'xxx'
   - description = 'xxx'
   - keywords = 'xxx'
-  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
-  - url = 'http://localhost:3000'
+  //- - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  //- - url = 'http://localhost:3000'
 
 block main
-  div(data-module='dummy' data-options='{ "dummy_opt": "dummy" }') Click me!
-  div(data-module='legacy') Legacy!
+
+  .p-pig.top#top(data-module="loadToTop")
+    .p-splash(data-module="splash" style="position: relative;")
+      .p-loading__bg(data-module-loading="bg")
+      .kv.p-splash__visual(data-module-splash="visual")
+        //- video.p-splash__video(style="opacity: 0;" data-module-splash="video" loop muted playsinline data-object-fit="cover")
+        .kv__main
+      div.p-splash__loading-icon(data-module-splash="loading-icon")
+        +logo-icon
+      header
+        .p-splash__navigation__wrapper
+          include /_dev/_include/_inc_nav.pug
+
+      .p-burger_wrapper(data-module="burgerMenu")
+        ul.p-burger_container
+          li.p-burger_item(data-anchor="who")
+            +sp-nav-who
+          li.p-burger_item(data-anchor="service")
+            +sp-nav-service
+          li.p-burger_item(data-anchor="column")
+            +sp-nav-column
+          li.p-burger_item(data-anchor="team")
+            +sp-nav-team
+          li.p-burger_item(data-anchor="contact")
+            +sp-nav-contact
+
+      .p-scroll-icon
+
+

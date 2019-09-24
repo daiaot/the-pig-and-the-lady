@@ -1,0 +1,121 @@
+.p-splash
+  position relative
+  height 100vh
+
+.p-splash__visual,
+.p-splash__navigation
+  position relative
+  backface-visibility hidden
+
+.p-splash__visual
+  font-size 0
+
+  +sp()
+    background url('/assets/images/top/poster.png') no-repeat 50%
+    background-size cover
+
+.p-splash__navigation
+  width 100%
+
+.p-splash__video
+  min-width 100%
+  width 100%
+  object-fit cover
+
+  +pc()
+    min-height calc(100vh - 90px)
+    height calc(100vh - 90px)
+
+  +sp()
+    min-height 100%
+    height 100%
+    object-position 50% -26px
+
+.p-splash__loading-icon
+  position fixed
+  top 0
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  height 100%
+
+.p-splash__navigation__wrapper
+  position absolute
+  width 100%
+
+  +pc()
+    bottom 0
+
+  +sp()
+    top 0
+
+.p-splash
+  .p-scroll-icon
+    position absolute
+    overflow hidden
+
+    +pc()
+      width 19px
+      height 69px
+      right 36px
+      bottom 207px
+      background url('/assets/images/top/ico_scroll.png') no-repeat bottom right
+      background-size 8px 51px
+
+    +sp()
+      width 17.775px
+      height 65px
+      right 25px
+      bottom 70px
+      background url('/assets/images/top/ico_scroll_sp.png') no-repeat bottom right
+      background-size 8px 47.5px
+
+    &::before
+      display block
+      content ''
+      position absolute
+      width 1px
+      height 100%
+      background #000
+      animation wipe-down-line 2s cubic-bezier(1, 0, 0.09, 0.85) infinite 1s
+      transform-origin top
+
+  .p-pig-news
+    position absolute
+
+    +pc()
+      bottom 135px
+      right 0
+
+    +sp()
+      margin-top 5rem
+      bottom 0
+
+@keyframes wipe-down-line
+  0%
+    opacity 1
+    transform translateY(0)
+
+  30%
+    opacity 1
+    transform translateY(110%)
+
+  31%
+    opacity 0
+
+  32%
+    opacity 0
+    transform translateY(-100%)
+
+  33%
+    opacity 1
+    transform translateY(-100%)
+
+  60%
+    opacity 1
+    transform translateY(0)
+
+  100%
+    opacity 1
+    transform translateY(0)
