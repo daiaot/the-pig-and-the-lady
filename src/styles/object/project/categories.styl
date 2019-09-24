@@ -1,6 +1,77 @@
-.p-pig
+// .p-pig
+.top
   margin-top 6rem
 
+  +pc()
+    margin-top 0
+
+  .kv
+    height 100%
+
+    +sp()
+      margin-top 27.5px
+
+  +pc()
+    overflow hidden
+
+  .lead_box
+    max-width none
+    width 78.75%
+
+    +sp()
+      width 85%
+
+  .p-lead
+    font-family NotoThin
+    font-weight 300
+
+    +sp()
+      width 100%
+      font-size 2.7rem
+      letter-spacing 0.3rem
+      line-height 2
+      margin auto
+
+    +pc()
+      position relative
+      // width percentage((900 / 990))
+      // max-width 900px
+      width 100%
+      height auto
+      font-size 3.35vw
+      line-height 2.1
+      letter-spacing 10px
+      font-feature-settings 'palt'
+
+    +pcex()
+      font-size 48px
+
+    +tb()
+      line-height 2
+
+    & > svg
+      +pc()
+        position absolute
+        width 100%
+        height 100%
+        left 0
+        top 0
+
+  .p-content
+    &.service
+      background #f0f3f5
+
+      +sp()
+        padding-top 40px
+
+  .p-slide-wrap
+    width 100%
+    overflow hidden
+
+    +sp()
+      margin-bottom 83px
+
+.p
   +sp()
     margin-top 6rem
 
@@ -122,7 +193,8 @@
     +pc()
       // display none
 
-  .kv
+  // .kv
+  &-kv
     width 100vw
 
     img
@@ -133,8 +205,21 @@
       background-size 100% auto
       width percentage((2098 / 2560))
       height 0
-      padding-top percentage((1370 / 2098))
+      // padding-top percentage((1370 / 2098))
+      padding-top percentage((1370 / 2560))
       vertical-align middle
+      // margin-top 9rem
+      margin-top 8.984375%
+
+    &__lead
+      position absolute
+      // bottom 250px
+      bottom 60%
+      left 50px
+      font-size 11.2rem
+      line-height 1.15
+      font-family 'Futura-Boo', Verdana, sans-serif
+      color #fff
 
   &-content
     +pc()
@@ -217,6 +302,12 @@
           // margin-left percentage((24 / 630))
 
     &.about
+      margin-top 160px
+      // background url('/assets/images/top/img_bg_wave01.jpg') repeat-x 50% 0
+      // background-size 1232px 214px
+      background url('/assets/images/top/img_bg_wave03.jpg') no-repeat 50% 0
+      background-size 100% auto
+
       .amime_title
         & > div
           display inline-block
@@ -376,75 +467,6 @@
             // margin-left percentage((8 / 630))
             width percentage((606 / 630))
 
-  &.top
-    margin-top 0
-
-    .kv
-      height 100%
-
-      +sp()
-        margin-top 27.5px
-
-    +pc()
-      overflow hidden
-
-    .lead_box
-      max-width none
-      width 78.75%
-
-      +sp()
-        width 85%
-
-    .p-pig-lead
-      font-family NotoThin
-      font-weight 300
-
-      +sp()
-        width 100%
-        font-size 2.7rem
-        letter-spacing 0.3rem
-        line-height 2
-        margin auto
-
-      +pc()
-        position relative
-        // width percentage((900 / 990))
-        // max-width 900px
-        width 100%
-        height auto
-        font-size 3.35vw
-        line-height 2.1
-        letter-spacing 10px
-        font-feature-settings 'palt'
-
-      +pcex()
-        font-size 48px
-
-      +tb()
-        line-height 2
-
-      & > svg
-        +pc()
-          position absolute
-          width 100%
-          height 100%
-          left 0
-          top 0
-
-    .p-pig-content
-      &.service
-        background #f0f3f5
-
-        +sp()
-          padding-top 40px
-
-    .p-pig-slide-wrap
-      width 100%
-      overflow hidden
-
-      +sp()
-        margin-bottom 83px
-
   &-service
     .l-col__item__title
       font-family NotoLight
@@ -575,7 +597,7 @@
           top 0
 
     &.team
-      .p-pig-list
+      .p-list
         +pc()
           // width percentage((900 / 990))
           // max-width 900px
@@ -688,7 +710,7 @@
           +sp()
             display none
 
-      .p-pig-info
+      .p-info
         &__box
           margin-bottom 85px
 
@@ -748,7 +770,8 @@
 
     &.about
       +pc()
-        padding 116px 0 0
+        // padding 116px 0 0
+        padding 214px 0 0
 
       +tb()
         padding 86px 0 0

@@ -1,9 +1,11 @@
 //- .nav-bar(data-module='animenav')
 //- div
 .nav-bar-wrap(data-module="fixNavigation")
-  .nav-bar.p-splash__navigation(data-module-splash="navigation" style="opacity: 0;")
+  //- .nav-bar.p-splash__navigation(data-module-splash="navigation" style="opacity: 0;")
+  .nav-bar.p-splash__navigation
     .p-nav
-      h1.brand(data-module-splash="navigation-content-logo")
+      //- h1.brand(data-module-splash="navigation-content-logo")
+      h1.brand
         a(href='/')
           img(src=`/assets/images/common/header_logo.svg` alt="")
       .nav-mobile
@@ -12,22 +14,48 @@
             span
             span
       nav
-        ul.nav-list(data-module="naviAnchor")
+        //- ul.nav-list(data-module="naviAnchor")
+        ul.nav-list
           li.nav-top.is-current(data-module-splash="navigation-content-links")
             a(href='/#top')
-              +nav-top
+              |about
           li.nav-about(data-module-splash="navigation-content-links")
             a(href='/about/')
-              +nav-whoweare
+              |menu
           li.nav-service(data-module-splash="navigation-content-links")
             a(href='#service')
-              +nav-service
+              |gallery
           li.nav-column(data-module-splash="navigation-content-links")
             a(href='#column')
-              +nav-column
+              |news
           li.nav-team(data-module-splash="navigation-content-links")
             a(href='#team')
-              +nav-team
+              |contact
           li.nav-contact(data-module-splash="navigation-content-links")
             a(href='#contact')
-              +nav-contact
+              |access
+          li.nav-contact(data-module-splash="navigation-content-links")
+            a(href='#contact')
+              |reservation
+
+
+      //- nav
+      //-   ul.nav-list(data-module="naviAnchor")
+      //-     li.nav-top.is-current(data-module-splash="navigation-content-links")
+      //-       a(href='/#top')
+      //-         +nav-top
+      //-     li.nav-about(data-module-splash="navigation-content-links")
+      //-       a(href='/about/')
+      //-         +nav-whoweare
+      //-     li.nav-service(data-module-splash="navigation-content-links")
+      //-       a(href='#service')
+      //-         +nav-service
+      //-     li.nav-column(data-module-splash="navigation-content-links")
+      //-       a(href='#column')
+      //-         +nav-column
+      //-     li.nav-team(data-module-splash="navigation-content-links")
+      //-       a(href='#team')
+      //-         +nav-team
+      //-     li.nav-contact(data-module-splash="navigation-content-links")
+      //-       a(href='#contact')
+      //-         +nav-contact

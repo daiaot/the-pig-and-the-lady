@@ -10,12 +10,19 @@ block vars
 
 block main
 
-  .p-pig.top#top(data-module="loadToTop")
+  //- .p-pig.top#top(data-module="loadToTop")
+  .top#top(data-module="loadToTop")
     .p-splash(data-module="splash" style="position: relative;")
       .p-loading__bg(data-module-loading="bg")
-      .kv.p-splash__visual(data-module-splash="visual")
+      //- .kv.p-splash__visual(data-module-splash="visual")
+      .p-kv.p-splash__visual(data-module-splash="visual")
         //- video.p-splash__video(style="opacity: 0;" data-module-splash="video" loop muted playsinline data-object-fit="cover")
-        .kv__main
+        .p-kv__main
+          p.p-kv__lead
+            |Honolulu, Hawaii's
+            br
+            |popular Vietnamese restaurant
+        //- .kv__main
       div.p-splash__loading-icon(data-module-splash="loading-icon")
         +logo-icon
       header
@@ -37,4 +44,6 @@ block main
 
       .p-scroll-icon
 
+    .p-content.about#who
+      .l-inner(data-module='LogoTitleAnimation')
 
