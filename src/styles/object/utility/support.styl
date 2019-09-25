@@ -1,0 +1,66 @@
+
+.u-display-only-pc
+  display none !important
+
+  +pc()
+    display block !important
+
+.u-display-only-sp
+  display block !important
+
+  +pc()
+    display none !important
+
+.u-spOnly
+  +pc()
+    display none !important
+
+.u-pcOnly
+  +sp()
+    display none !important
+
+.u-txtCenter
+  text-align center !important
+
+.u-txtLeft
+  text-align left !important
+
+.u-txtRight
+  text-align right !important
+
+.u-txtBold
+  font-weight 700 !important
+
+.u-txtNormal
+  font-weight normal !important
+
+.u-txtIndent
+  padding-left 1em
+  text-indent -1em
+
+// Margin Padding Support
+// @for $i from 0 through 20
+for num in (1 .. 20)
+  .u-mt{num * 5}
+    margin-top (num * 0.5) rem !important
+
+  .u-mr{num * 5}
+    margin-right (num * 0.5) rem !important
+
+  .u-mb{num * 5}
+    margin-bottom (num * 0.5) rem !important
+
+  .u-ml{num * 5}
+    margin-left (num * 0.5) rem !important
+
+  .u-pt{num * 5}
+    padding-top (num * 0.5) rem !important
+
+  .u-pr{num * 5}
+    padding-right (num * 0.5) rem !important
+
+  .u-pb{num * 5}
+    padding-bottom (num * 0.5) rem !important
+
+  .u-pl{num * 5}
+    padding-left (num * 0.5) rem !important

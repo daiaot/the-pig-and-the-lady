@@ -301,29 +301,6 @@
         +sp()
           // margin-left percentage((24 / 630))
 
-    &.about
-      margin-top 160px
-      // background url('/assets/images/top/img_bg_wave01.jpg') repeat-x 50% 0
-      // background-size 1232px 214px
-      background url('/assets/images/top/img_bg_wave03.jpg') no-repeat 50% 0
-      background-size 100% auto
-
-      .amime_title
-        & > div
-          display inline-block
-          height auto
-          width 568px
-
-          +tb()
-            width 426px
-
-          +sp()
-            width percentage((471 / 630))
-
-            // margin-left percentage((24 / 630))
-            &:nth-child(-n+3)
-              margin-bottom 0
-
     &.service
       padding-bottom percentage((180 / 1440))
 
@@ -491,421 +468,469 @@
     .c-btn-more
       width percentage((210 / 300))
 
-  &-content
-    &.service
+  &-section
+    &.about
       position relative
+      content ''
+      margin 160px 0
+      // background url('/assets/images/top/img_bg_wave01.jpg') repeat-x 50% 0
+      // background-size 1232px 214px
+      // background url('/assets/images/top/img_bg_wave01.jpg') no-repeat 50% top, url('/assets/images/top/img_bg_wave04.jpg') no-repeat 50% bottom
+      background-color #ffd7d7
+      background-image url('/assets/images/top/img_bg_wave01.jpg'), url('/assets/images/top/img_bg_wave04.jpg')
+      background-repeat repeat-x, repeat-x
+      background-position 50% top, 50% bottom
+      background-size auto, 100% auto
+      padding 214px 0 215px
 
-      .c-motion-image
+    // :after
+    // content ''
+    // display block
+    // position absolute
+    // bottom 0
+    // margin-bottom 160px
+    // // background url('/assets/images/top/img_bg_wave01.jpg') repeat-x 50% 0
+    // // background-size 1232px 214px
+    // background url('/assets/images/top/img_bg_wave04.jpg') no-repeat 50% bottom
+    // background-size 100% auto
+    // padding-top 215px
+    .l-inner
+      background #ffd7d7
+      max-width 2200px
+      width per(2200, 2560)
+      margin auto
+
+    .amime_title
+      & > div
+        display inline-block
+        height auto
+        width 568px
+
+        +tb()
+          width 426px
+
+        +sp()
+          width percentage((471 / 630))
+
+          // margin-left percentage((24 / 630))
+          &:nth-child(-n+3)
+            margin-bottom 0
+
+&-content
+  &.service
+    position relative
+
+    .c-motion-image
+      position absolute
+      right 0
+      background-size 100% auto
+      vertical-align middle
+
+      [class*='c-object']
         position absolute
-        right 0
-        background-size 100% auto
-        vertical-align middle
+        width 100%
+        height 100%
 
-        [class*='c-object']
-          position absolute
-          width 100%
-          height 100%
-
-          &:nth-of-type(1)
-            width percentage((185 / 381))
-            height percentage((185 / 381))
-            right 0
-            top 0
-
-          &:nth-of-type(2)
-            width percentage((80 / 381))
-            height percentage((80 / 381))
-            left 0
-            bottom 0
-
-        +pc()
-          bottom percentage((-60 / 900))
-          width percentage((380 / 1440))
-          height 0
-          padding-top percentage((380 / 1440))
-
-        +sp()
-          bottom -1%
-          width percentage((206 / 750))
-          height 0
-          padding-top percentage((206 / 750))
-
-      .l-col
-        margin-bottom 85px
-
-        +sp()
-          margin-bottom 56px
-
-      .c-link
-        +pc()
-          width 100%
-
-          .l-col__item__title
-            font-size 24px
-            letter-spacing 2px
-            margin-bottom 35px
-            font-family NotoLight
-            color #000
-
-            +tb()
-              margin-bottom 25px
-
-          li
-            line-height 1
-            margin-bottom 28px
-            margin-right 28px
-            font-family NotoDemiLight
-            color #333
-
-        +sp()
-          .l-col__item__title
-            font-size 1.8rem
-            letter-spacing 2px
-            margin-bottom 38px
-
-          li
-            font-size 1.2rem
-            line-height 1.5
-            display inline-block
-            padding 0 percentage((26 / 630)) 18px 0
-
-    &.column
-      position relative
-
-      .c-motion-image
-        z-index -1
-        content ''
-        position absolute
-        right 0
-        top 50%
-        // background url('/assets/images/top/img_bg02.png') no-repeat 50% 50%
-        // background-size 100% auto
-        width percentage((1216 / 1440))
-        height 0
-        padding-top percentage((1238 / 1440))
-        vertical-align middle
-
-        +sp()
-          top percentage((319 / 750))
-          right percentage((-92 / 650))
-
-        [class*='c-object']
-          position absolute
-          width 100%
-          height 100%
+        &:nth-of-type(1)
+          width percentage((185 / 381))
+          height percentage((185 / 381))
           right 0
           top 0
 
-    &.team
-      .p-list
-        +pc()
-          // width percentage((900 / 990))
-          // max-width 900px
-          width 100%
-          // max-width 900px
-
-        +sp()
-          width 100%
-
-        &__box
-          display flex
-
-          +pc()
-            justify-content space-between
-            margin-bottom 118px
-
-          +tb()
-            margin-bottom 88px
-
-          +sp()
-            flex-direction column
-            margin-bottom 53px
-
-          &:last-child
-            margin-bottom 0
-
-          &__bnr
-            font-size 12px
-
-            +pc()
-              width percentage((297 / 990))
-
-            +sp()
-              width 100%
-
-            img
-              +pc()
-                margin-bottom percentage((16 / 297))
-
-              +sp()
-                width 100%
-                margin-bottom 28px
-
-            p
-              +sp()
-                font-family Noto
-                margin-bottom 22px
-
-          &__desc
-            width percentage((643 / 990))
-
-            +sp()
-              width 100%
-
-            p
-              font-size 12px
-              line-height 2.2
-
-              +sp()
-                line-height 2
-
-            a
-              font-size 12px
-              line-height 2.2
-
-    &.contact
-      position relative
-
-      .c-motion-image
-        &:nth-of-type(1)
-          position absolute
-          right 0%
-          top -5%
-          width 25%
-          height 0
-          padding-top 30.694444%
-
-          [class*='c-object']
-            position absolute
-
-            &:nth-of-type(1)
-              width percentage((408 / 504))
-              height percentage((401 / 586))
-              right 0
-              top 0
-
-            &:nth-of-type(2)
-              width percentage((250 / 504))
-              height percentage((235 / 586))
-              left 0
-              bottom 0
-
-          +sp()
-            display none
-
         &:nth-of-type(2)
-          position absolute
-          right percentage((124 / 1440))
-          top percentage((692 / 1087))
-          // background url('/assets/images/top/img_bg04.png') no-repeat 50% 50%
-          background-size 100% auto
-          width percentage((44 / 1440))
+          width percentage((80 / 381))
+          height percentage((80 / 381))
+          left 0
+          bottom 0
 
-          // height 0
-          // padding-top percentage((128 / 1440))
-          [class*='c-object']
-            width 100%
-            height 100%
+      +pc()
+        bottom percentage((-60 / 900))
+        width percentage((380 / 1440))
+        height 0
+        padding-top percentage((380 / 1440))
 
-          +sp()
-            display none
+      +sp()
+        bottom -1%
+        width percentage((206 / 750))
+        height 0
+        padding-top percentage((206 / 750))
 
-      .p-info
-        &__box
-          margin-bottom 85px
+    .l-col
+      margin-bottom 85px
+
+      +sp()
+        margin-bottom 56px
+
+    .c-link
+      +pc()
+        width 100%
+
+        .l-col__item__title
+          font-size 24px
+          letter-spacing 2px
+          margin-bottom 35px
+          font-family NotoLight
+          color #000
 
           +tb()
-            margin-bottom 55px
+            margin-bottom 25px
 
-          +sp()
-            margin-bottom 40px
-
-          .c-btn-more
-            width 210px
-            margin-top 30px
-
-            +tb()
-              margin-top 14px
-
-            +sp()
-              width 157.5px
-              margin-top 55px
-
-          .title
-            font-family NotoLight
-            font-size 2.4rem
-            line-height 1.2
-            margin-bottom 30px
-            letter-spacing 2px
-            color #000
-
-            +tb()
-              margin-bottom 20px
-
-            +sp()
-              font-size 1.8rem
-              margin-bottom 20px
-
-          .desc
-            line-height 2.2
-            letter-spacing 1px
-
-            +sp()
-              font-size 1.2rem
-
-          &:nth-child(3)
-            margin-bottom 0
-
-        & > div:last-child()
-          margin-bottom 0
-
-    +pc()
-      padding 150px 0 0
-
-    +tb()
-      padding 113px 0 0
-
-    +sp()
-      padding 77.5px 0 0
-
-    &.about
-      +pc()
-        // padding 116px 0 0
-        padding 214px 0 0
-
-      +tb()
-        padding 86px 0 0
-
-    &.wipeimg
-      +pc()
-        padding 180px 0 0
-
-      +tb()
-        padding 135px 0 0
+        li
+          line-height 1
+          margin-bottom 28px
+          margin-right 28px
+          font-family NotoDemiLight
+          color #333
 
       +sp()
-        padding 90px 0 0
+        .l-col__item__title
+          font-size 1.8rem
+          letter-spacing 2px
+          margin-bottom 38px
 
-    &.service
+        li
+          font-size 1.2rem
+          line-height 1.5
+          display inline-block
+          padding 0 percentage((26 / 630)) 18px 0
+
+  &.column
+    position relative
+
+    .c-motion-image
+      z-index -1
+      content ''
+      position absolute
+      right 0
+      top 50%
+      // background url('/assets/images/top/img_bg02.png') no-repeat 50% 50%
+      // background-size 100% auto
+      width percentage((1216 / 1440))
+      height 0
+      padding-top percentage((1238 / 1440))
+      vertical-align middle
+
+      +sp()
+        top percentage((319 / 750))
+        right percentage((-92 / 650))
+
+      [class*='c-object']
+        position absolute
+        width 100%
+        height 100%
+        right 0
+        top 0
+
+  &.team
+    .p-list
       +pc()
-        padding 90px 0 0
+        // width percentage((900 / 990))
+        // max-width 900px
+        width 100%
+        // max-width 900px
 
-      +tb()
-        padding 67px 0 0
-
-    &.team
-      .l-inner
-        position relative
-        z-index 1
-
-      +pc()
-        padding 145px 0 175px
-
-      +tb()
-        padding 108px 0 127px
-
-    &__about
       +sp()
         width 100%
 
-      +pc()
-        width percentage((900 / 990))
-        max-width 900px
-        height auto
-
-      & > svg
-        width 100%
-
-        +sp()
-          margin-bottom percentage((90 / 630))
-
-        +pc()
-          margin-bottom percentage((90 / 900))
-
-      .logo
-        margin-bottom 75px
-
-        +tb()
-          margin-bottom 57px
-
-        +sp()
-          margin-bottom 57px
-
-        & > svg
-          width 100%
-          height 100%
-
-      & > img
-        margin-bottom percentage((90 / 900))
-
-      &--intro
+      &__box
         display flex
 
         +pc()
           justify-content space-between
-          align-items flex-end
+          margin-bottom 118px
 
-          .c-btn-arw__arw
-            width 110px
-
-          .c-btn-more
-            width 210px
-
-            .c-btn-arw__txt
-              svg
-                width 35px
-                height 8px
+        +tb()
+          margin-bottom 88px
 
         +sp()
           flex-direction column
+          margin-bottom 53px
 
-          .c-btn-arw__arw
-            width 80px
+        &:last-child
+          margin-bottom 0
 
-          .c-btn-more
-            width percentage((315 / 630))
-
-            .c-btn-arw__txt
-              svg
-                width 35px
-                height 8px
-
-        p
-          line-height 2.3
-          font-family NotoDemiLight
+        &__bnr
+          font-size 12px
 
           +pc()
-            width percentage((780 / 990))
-            letter-spacing 2px
+            width percentage((297 / 990))
 
           +sp()
-            font-size 1.5rem
-            line-height 2
-            margin-bottom 57px
+            width 100%
 
-    &-sec
+          img
+            +pc()
+              margin-bottom percentage((16 / 297))
+
+            +sp()
+              width 100%
+              margin-bottom 28px
+
+          p
+            +sp()
+              font-family Noto
+              margin-bottom 22px
+
+        &__desc
+          width percentage((643 / 990))
+
+          +sp()
+            width 100%
+
+          p
+            font-size 12px
+            line-height 2.2
+
+            +sp()
+              line-height 2
+
+          a
+            font-size 12px
+            line-height 2.2
+
+  &.contact
+    position relative
+
+    .c-motion-image
+      &:nth-of-type(1)
+        position absolute
+        right 0%
+        top -5%
+        width 25%
+        height 0
+        padding-top 30.694444%
+
+        [class*='c-object']
+          position absolute
+
+          &:nth-of-type(1)
+            width percentage((408 / 504))
+            height percentage((401 / 586))
+            right 0
+            top 0
+
+          &:nth-of-type(2)
+            width percentage((250 / 504))
+            height percentage((235 / 586))
+            left 0
+            bottom 0
+
+        +sp()
+          display none
+
+      &:nth-of-type(2)
+        position absolute
+        right percentage((124 / 1440))
+        top percentage((692 / 1087))
+        // background url('/assets/images/top/img_bg04.png') no-repeat 50% 50%
+        background-size 100% auto
+        width percentage((44 / 1440))
+
+        // height 0
+        // padding-top percentage((128 / 1440))
+        [class*='c-object']
+          width 100%
+          height 100%
+
+        +sp()
+          display none
+
+    .p-info
+      &__box
+        margin-bottom 85px
+
+        +tb()
+          margin-bottom 55px
+
+        +sp()
+          margin-bottom 40px
+
+        .c-btn-more
+          width 210px
+          margin-top 30px
+
+          +tb()
+            margin-top 14px
+
+          +sp()
+            width 157.5px
+            margin-top 55px
+
+        .title
+          font-family NotoLight
+          font-size 2.4rem
+          line-height 1.2
+          margin-bottom 30px
+          letter-spacing 2px
+          color #000
+
+          +tb()
+            margin-bottom 20px
+
+          +sp()
+            font-size 1.8rem
+            margin-bottom 20px
+
+        .desc
+          line-height 2.2
+          letter-spacing 1px
+
+          +sp()
+            font-size 1.2rem
+
+        &:nth-child(3)
+          margin-bottom 0
+
+      & > div:last-child()
+        margin-bottom 0
+
+  +pc()
+    padding 150px 0 0
+
+  +tb()
+    padding 113px 0 0
+
+  +sp()
+    padding 77.5px 0 0
+
+  &.about
+    +pc()
+      // padding 116px 0 0
+      padding 214px 0 0
+
+    +tb()
+      padding 86px 0 0
+
+  &.wipeimg
+    +pc()
+      padding 180px 0 0
+
+    +tb()
+      padding 135px 0 0
+
+    +sp()
+      padding 90px 0 0
+
+  &.service
+    +pc()
+      padding 90px 0 0
+
+    +tb()
+      padding 67px 0 0
+
+  &.team
+    .l-inner
+      position relative
+      z-index 1
+
+    +pc()
+      padding 145px 0 175px
+
+    +tb()
+      padding 108px 0 127px
+
+  &__about
+    +sp()
+      width 100%
+
+    +pc()
       width percentage((900 / 990))
-      margin-bottom percentage((120 / 990))
+      max-width 900px
+      height auto
+
+    & > svg
+      width 100%
 
       +sp()
-        width 100%
-        margin-bottom percentage((120 / 630))
+        margin-bottom percentage((90 / 630))
 
-    &__desc
+      +pc()
+        margin-bottom percentage((90 / 900))
+
+    .logo
+      margin-bottom 75px
+
+      +tb()
+        margin-bottom 57px
+
+      +sp()
+        margin-bottom 57px
+
+      & > svg
+        width 100%
+        height 100%
+
+    & > img
       margin-bottom percentage((90 / 900))
 
+    &--intro
+      display flex
+
+      +pc()
+        justify-content space-between
+        align-items flex-end
+
+        .c-btn-arw__arw
+          width 110px
+
+        .c-btn-more
+          width 210px
+
+          .c-btn-arw__txt
+            svg
+              width 35px
+              height 8px
+
       +sp()
-        margin-bottom percentage((120 / 630))
+        flex-direction column
+
+        .c-btn-arw__arw
+          width 80px
+
+        .c-btn-more
+          width percentage((315 / 630))
+
+          .c-btn-arw__txt
+            svg
+              width 35px
+              height 8px
 
       p
-        line-height 2.2
-        letter-spacing 1px
+        line-height 2.3
+        font-family NotoDemiLight
 
-    &__image
-      margin-bottom percentage((90 / 900))
+        +pc()
+          width percentage((780 / 990))
+          letter-spacing 2px
 
-      +sp()
-        margin-bottom percentage((120 / 630))
+        +sp()
+          font-size 1.5rem
+          line-height 2
+          margin-bottom 57px
+
+  &-sec
+    width percentage((900 / 990))
+    margin-bottom percentage((120 / 990))
+
+    +sp()
+      width 100%
+      margin-bottom percentage((120 / 630))
+
+  &__desc
+    margin-bottom percentage((90 / 900))
+
+    +sp()
+      margin-bottom percentage((120 / 630))
+
+    p
+      line-height 2.2
+      letter-spacing 1px
+
+  &__image
+    margin-bottom percentage((90 / 900))
+
+    +sp()
+      margin-bottom percentage((120 / 630))
 
 [data-module='velocity']
   opacity 0

@@ -1,0 +1,27 @@
+
+.l-col
+  display flex
+  align-items stretch
+  justify-content flex-start
+  -webkit-flex-wrap wrap
+  flex-wrap wrap
+  box-lines multiple
+
+  &--1,
+  &--2,
+  &--3,
+  &--4,
+  .l-col__item
+    box-sizing border-box
+
+    +sp()
+      width 100%
+
+  &--2
+    & > div
+      width 50%
+
+  &--3
+    .l-col__item
+      +pc()
+        width per(345, 1086)
