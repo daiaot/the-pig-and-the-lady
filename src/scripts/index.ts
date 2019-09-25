@@ -7,7 +7,8 @@ Array.prototype.forEach.call(
     const opts: string | null = element.getAttribute('data-options') || null
 
     keys.forEach(key => {
-      import(`./modules/${key.charAt(0).toUpperCase() + key.slice(1)}`).then(
+      import(/* webpackMode: "eager" */
+      `./modules/${key.charAt(0).toUpperCase() + key.slice(1)}`).then(
         module => {
           const options: object = opts
             ? keys.length > 1
