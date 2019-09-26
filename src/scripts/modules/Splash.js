@@ -1,6 +1,6 @@
 import { TweenMax, TimelineMax } from 'gsap'
 import emit from '../emit'
-
+import LottieAnimation from './LottieAnimation.js'
 
 export default class Splash {
   constructor(elem) {
@@ -23,7 +23,7 @@ export default class Splash {
     this.kvImage = elem.querySelector('[data-module-splash="visual"]')
     this.bg = elem.querySelector('[data-module-loading="bg"]')
     TweenMax.set(this.kvImage, { css: { opacity: '0' } })
-    // this.LottieAnimation = new LottieAnimation(this.elem)
+    this.LottieAnimation = new LottieAnimation(this.elem)
     this.heightAdjust()
     this.prepareSlideInAnimation()
     this.animate()
@@ -275,7 +275,7 @@ export default class Splash {
     // await this.loading()
     // await this.loadVideo(videoSrc)
     await TweenMax.to(this.bg, 0.01, { display: 'none' })
-    // await this.loaded()
+    await this.loaded()
     // await this.showVideo()
     await TweenMax.set(this.body, { css: { overflow: 'scroll' } })
     await TweenMax.set(this.body, { css: { overflowX: 'hidden' } })
