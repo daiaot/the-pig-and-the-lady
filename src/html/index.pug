@@ -12,8 +12,9 @@ block main
 
   //- .p-pig.top#top(data-module="loadToTop")
   .top#top(data-module="loadToTop")
-    .p-splash(data-module="splash" style="position: relative;")
-      .p-loading__bg(data-module-loading="bg")
+    //- .p-splash(data-module="splash" style="position: relative;")
+    .p-splash(style="position: relative;")
+      //- .p-loading__bg(data-module-loading="bg")
       //- .kv.p-splash__visual(data-module-splash="visual")
       .p-kv.p-splash__visual(data-module-splash="visual")
         //- video.p-splash__video(style="opacity: 0;" data-module-splash="video" loop muted playsinline data-object-fit="cover")
@@ -49,8 +50,8 @@ block main
       .p-section.about#about
         .l-inner(data-module='LogoTitleAnimation')
           .u-txtCenter.u-mt10
-            h2 ALOHA TOKYO
-            p ハワイで最も人気のあるモダンベトナムレストラン
+            h2.font_demo  ALOHA TOKYO
+            p.font_demo ハワイで最も人気のあるモダンベトナムレストラン
               br
               |“THE PIG & THE LADY”がついに日本初上陸！
             p Hawaii's popular modern Vietnamese restaurant, The Pig & The Lady, opening in Japan this year!
