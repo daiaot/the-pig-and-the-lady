@@ -9,8 +9,8 @@ export default class Splash {
     this.innerLink = document.querySelectorAll('a')
     TweenMax.set(this.body, { css: { overflow: 'hidden' } })
     this.isSplash = elem.classList.contains('p-splash') ? true : false
-    this.splashMask = this.createMask(this.elem, '#f0f3f5')
-    this.appendMask(this.splashMask, this.elem)
+    // this.splashMask = this.createMask(this.elem, '#f0f3f5')
+    // this.appendMask(this.splashMask, this.elem)
     this.navigation = elem.querySelector('[data-module-splash="navigation"]')
     this.navigationLogo = elem.querySelectorAll(
       '[data-module-splash="navigation-content-logo"]'
@@ -87,23 +87,23 @@ export default class Splash {
     return new Promise(resolve => {
       TweenMax.set(this.elem, { display: 'block' })
       TweenMax.set(this.body, { css: { overflow: 'hidden' } })
-      TweenMax.set(this.splashMask, {
-        opacity: 1,
-        display: 'block',
-        x: -this.navigation.clientWidth,
-        zIndex: 100,
-      })
+      // TweenMax.set(this.splashMask, {
+      //   opacity: 1,
+      //   display: 'block',
+      //   x: -this.navigation.clientWidth,
+      //   zIndex: 100,
+      // })
       resolve()
     })
   }
 
   prepareSlideInAnimation() {
     return new Promise(() => {
-      TweenMax.set(this.splashMask, {
-        opacity: 1,
-        x: 0,
-        zIndex: 10,
-      })
+      // TweenMax.set(this.splashMask, {
+      //   opacity: 1,
+      //   x: 0,
+      //   zIndex: 10,
+      // })
       // TweenMax.set(this.navigation, {
       //   opacity: 1,
       //   width: '100%',
@@ -156,22 +156,22 @@ export default class Splash {
     })
   }
 
-  // loading() {
-  //   return new Promise(resolve => {
-  //     const tl = new TimelineMax({
-  //       onComplete: () => {
-  //         setTimeout(() => {
-  //           resolve()
-  //         }, 1500);
-  //       },
-  //     }).to(this.loadingIcon, 0.1, {
-  //       opacity: 1,
-  //       onComplete: () => {
-  //       this.LottieAnimation.play()
-  //       },
-  //     })
-  //   })
-  // }
+  loading() {
+    return new Promise(resolve => {
+      const tl = new TimelineMax({
+        onComplete: () => {
+          setTimeout(() => {
+            resolve()
+          }, 1500);
+        },
+      }).to(this.loadingIcon, 0.1, {
+        opacity: 1,
+        onComplete: () => {
+        this.LottieAnimation.play()
+        },
+      })
+    })
+  }
 
   loaded() {
     return new Promise(resolve => {
@@ -271,7 +271,7 @@ export default class Splash {
     } else {
     }
 
-    await this.slideInVideoMask()
+    // await this.slideInVideoMask()
     // await this.loading()
     // await this.loadVideo(videoSrc)
     await TweenMax.to(this.bg, 0.01, { display: 'none' })
@@ -281,7 +281,7 @@ export default class Splash {
     await TweenMax.set(this.body, { css: { overflowX: 'hidden' } })
     await TweenMax.set(this.body, { css: { width: '100vw' } })
     await TweenMax.set(this.kvImage, { css: { opacity: '1' } })
-    await this.slideOutVideoMask()
+    // await this.slideOutVideoMask()
     await emit.ev.emit('pageLoaded', true)
     await this.slideInNavigation()
     await this.fadeInNavLinks()

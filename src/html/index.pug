@@ -18,10 +18,17 @@ block main
       .p-kv.p-splash__visual(data-module-splash="visual")
         //- video.p-splash__video(style="opacity: 0;" data-module-splash="video" loop muted playsinline data-object-fit="cover")
         .p-kv__main
-          p.p-kv__lead
-            |Honolulu, Hawaii's
-            br
-            |popular Vietnamese restaurant
+          .p-kv__lead
+            p
+              |Honolulu, Hawaii's
+              br
+              |popular Vietnamese restaurant
+            p
+              |Opening in Ebisu, Tokyo, fall 2019
+            p
+              |ハワイ・ホノルルで最も人気のあるモダンベトナムレストラン
+              br
+              |2019年秋 恵比寿にオープン
         //- .kv__main
       div.p-splash__loading-icon(data-module-splash="loading-icon")
         +logo-icon
@@ -46,50 +53,91 @@ block main
 
     .p-content
 
-      .p-section.about#about
-        .l-inner(data-module='LogoTitleAnimation')
-          .u-txtCenter.u-mt10
-            h2.font_demo  ALOHA TOKYO
-            p.font_demo ハワイで最も人気のあるモダンベトナムレストラン
-              br
-              |“THE PIG & THE LADY”がついに日本初上陸！
-            p Hawaii's popular modern Vietnamese restaurant, The Pig & The Lady, opening in Japan this year!
+      .p-section.about
+        .p-about-body
+          .l-inner
+            .p-title.u-txtCenter
+              h2  ALOHA TOKYO
+              p
+                span.u-font-noto ハワイで最も人気のあるモダンベトナムレストラン
+                br
+                |“THE PIG &amp; THE LADY”
+                span.u-font-noto がついに日本初上陸！
+              p.p-txt-small Hawaii's popular modern Vietnamese restaurant, The Pig & The Lady, opening in Japan this year!
 
-          .p-about
-            a.c-btn--1(href='/about') view more
-            .p-thumb.thumb__1
-              img(src=`/assets/images/top/img_about_thumb01.jpg` alt="")
-            //- .p-thumb.thumb__2
-            //-   img(src=`/assets/images/top/img_about_thumb02.jpg` alt="")
+            .p-about
+              a.c-btn--1(href='/about') view more
+              .p-thumb.thumb__1
+                img(src=`/assets/images/top/img_about_thumb01.jpg` alt="")
+              //- .p-thumb.thumb__2
+              //-   img(src=`/assets/images/top/img_about_thumb02.jpg` alt="")
 
-            //- .l-col.l-col--2
-            //-   .ffxi__section__list__thumb
-            //-     img(src=`/assets/images/top/img_thumb_faith_02.jpg` alt="")
-            //-   .ffxi__section__list__detail
-            //-     p.c-text__long.ffxi__section__list__detail__adjust
-            //-       span.ffxi__section__list__category.font-times
-            //-         |FAITH
-            //-     p.c-text__long
-            //-       span.ffxi__section__list__count.font-times-new-Roman
-            //-         |02/02
-            //-     p
-            //-       span.ffxi__section__list__desc
-            //-         |お友達や他のプレイヤーが
-            //-         br
-            //-         |集まらないときは、
-            //-         br
-            //-         |頼りがいのある分身たち…
-            //-         br
-            //-         |フェイスに任せてみましょう。
-
-
-
+              //- .l-col.l-col--2
+              //-   .ffxi__section__list__thumb
+              //-     img(src=`/assets/images/top/img_thumb_faith_02.jpg` alt="")
+              //-   .ffxi__section__list__detail
+              //-     p.c-text__long.ffxi__section__list__detail__adjust
+              //-       span.ffxi__section__list__category.font-times
+              //-         |FAITH
+              //-     p.c-text__long
+              //-       span.ffxi__section__list__count.font-times-new-Roman
+              //-         |02/02
+              //-     p
+              //-       span.ffxi__section__list__desc
+              //-         |お友達や他のプレイヤーが
+              //-         br
+              //-         |集まらないときは、
+              //-         br
+              //-         |頼りがいのある分身たち…
+              //-         br
+              //-         |フェイスに任せてみましょう。
 
 
       .p-section.p-thumb-section
-        .l-inner(data-module='LogoTitleAnimation')
+        .l-inner
           .l-col.l-col--2
-            .p-thumb
+            a.p-thumb(href='/menu')
+              p MENU
               img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
-            .p-thumb
+            a.p-thumb(href='/gallery')
+              p GALLERY
               img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
+
+      .p-section.news
+        .l-inner
+          .l-col.l-col--2
+            .p-news-title
+              h2 NEWS
+            .p-news-lists
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |November holiday information
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |November holiday information
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |November holiday information
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |November holiday information
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+
+
+
+              
