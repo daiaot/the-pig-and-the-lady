@@ -2,10 +2,9 @@
 //- div
 .nav-bar-wrap(data-module="fixNavigation")
   //- .nav-bar.p-splash__navigation(data-module-splash="navigation" style="opacity: 0;")
-  .nav-bar.p-splash__navigation
+  .nav-bar.p-splash__navigation(data-module-splash="navigation")
     .p-nav
-      //- h1.brand(data-module-splash="navigation-content-logo")
-      h1.brand
+      h1.brand(data-module-splash="navigation-content-logo")
         a(href='/')
           img(src=`/assets/images/common/header_logo.svg` alt="")
       .nav-mobile
@@ -13,30 +12,30 @@
           #nav-toggle(data-module-splash="navigation-content-logo")
             span
             span
-      nav
-        //- ul.nav-list(data-module="naviAnchor")
-        ul.nav-list
-          li.nav-top.is-current(data-module-splash="navigation-content-links")
-            a(href='/#top')
-              |about
-          li.nav-about(data-module-splash="navigation-content-links")
-            a(href='/about/')
-              |menu
-          li.nav-service(data-module-splash="navigation-content-links")
-            a(href='#service')
-              |gallery
-          li.nav-column(data-module-splash="navigation-content-links")
-            a(href='#column')
-              |news
-          li.nav-team(data-module-splash="navigation-content-links")
-            a(href='#team')
-              |contact
-          li.nav-contact(data-module-splash="navigation-content-links")
-            a(href='#contact')
-              |access
-          li.nav-contact(data-module-splash="navigation-content-links")
-            a(href='#contact')
-              |reservation
+      //- nav
+      //-   //- ul.nav-list(data-module="naviAnchor")
+      //-   ul.nav-list
+      //-     li.nav-top.is-current(data-module-splash="navigation-content-links")
+      //-       a(href='/#top')
+      //-         |about
+      //-     li.nav-about(data-module-splash="navigation-content-links")
+      //-       a(href='/about/')
+      //-         |menu
+      //-     li.nav-service(data-module-splash="navigation-content-links")
+      //-       a(href='#service')
+      //-         |gallery
+      //-     li.nav-column(data-module-splash="navigation-content-links")
+      //-       a(href='#column')
+      //-         |news
+      //-     li.nav-team(data-module-splash="navigation-content-links")
+      //-       a(href='#team')
+      //-         |contact
+      //-     li.nav-contact(data-module-splash="navigation-content-links")
+      //-       a(href='#contact')
+      //-         |access
+      //-     li.nav-contact(data-module-splash="navigation-content-links")
+      //-       a(href='#contact')
+      //-         |reservation
 
 
       //- nav
