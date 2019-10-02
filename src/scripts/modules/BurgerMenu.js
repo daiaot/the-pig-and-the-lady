@@ -20,11 +20,25 @@ export default class BurgerMenu {
   }
 
   bgSlide() {
+    console.log('bgSlide()')
+    console.log('status: ' + this.state.status)
+
     TweenMax.to(this.el, 0.3, {
       css: {
         right: 0,
       },
-      onComplete: () => this.lettersFade(),
+      // onComplete: () => this.lettersFade(),
+    })
+  }
+
+  toggleSlide() {
+    // console.log('toggleSlide()')
+    // console.log('status: ' + this.state.status)
+
+    TweenMax.to(this.btn, 0.3, {
+      css: {
+        right: '50%',
+      },
     })
   }
 
@@ -55,14 +69,29 @@ export default class BurgerMenu {
   }
 
   openAnimation() {
-    this.state.status = 'animating'
+    // console.log('openAnimation()')
+    // console.log('status: ' + this.state.status)
+
+    // this.state.status = 'animating'
+    this.state.status = 'opened'
+    this.toggleSlide()
     this.bgSlide()
   }
 
   closeAnimation() {
+    console.log('closeAnimation()')
+    console.log(this.state.status)
+
     this.state.status = 'animating'
-    this.allLetters = this.el.querySelectorAll('g')
-    TweenMax.to(this.allLetters, 0.2, { opacity: 0 })
+    // this.allLetters = this.el.querySelectorAll('g')
+    // TweenMax.to(this.allLetters, 0.2, { opacity: 0 })
+
+    TweenMax.to(this.btn, 0.3, {
+      css: {
+        right: '0',
+      },
+    })
+
     TweenMax.to(this.el, 0.3, {
       css: {
         right: '-100%',
@@ -72,6 +101,8 @@ export default class BurgerMenu {
   }
 
   animate() {
+    console.log('animate()')
+    console.log('status: ' + this.state.status)
     if (this.state.status === 'closed') {
       TweenMax.set(this.btn, { className: '+=is-open' })
       this.openAnimation()

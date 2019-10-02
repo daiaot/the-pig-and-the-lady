@@ -42,42 +42,46 @@ block main
         +logo-icon
 
       .p-burger_wrapper(data-module="burgerMenu")
-        ul.p-burger_container
-          li.p-burger_item(data-anchor="who")
-            +sp-nav-who
-          li.p-burger_item(data-anchor="service")
-            +sp-nav-service
-          li.p-burger_item(data-anchor="column")
-            +sp-nav-column
-          li.p-burger_item(data-anchor="team")
-            +sp-nav-team
-          li.p-burger_item(data-anchor="contact")
-            +sp-nav-contact
         //- ul.p-burger_container
-          li.p-burger_item(data-anchor="who")
-            a(href='/#top')
-              |ABOUT
-          li.p-burger_item(data-anchor="service")
-            a(href='/#top')
-              |MENU
-          li.p-burger_item(data-anchor="column")
-            a(href='#service')
-              |GALLERY
-          li.p-burger_item(data-anchor="team")
-            a(href='#column')
-              |NEWS
-          li.p-burger_item(data-anchor="contact")
-            a(href='#team')
-              |CONTACT
-          li.p-burger_item(data-anchor="contact")
-            a(href='#contact')
-              |ACCESS
-          li.p-burger_item(data-anchor="contact")
-            a.c-link--color(href='#contact')
-              |RESERVATION
-          li.p-burger_item(data-anchor="contact")
-            a(href='#contact')
-              |JP
+        //-   li.p-burger_item(data-anchor="who")
+        //-     +sp-nav-who
+        //-   li.p-burger_item(data-anchor="service")
+        //-     +sp-nav-service
+        //-   li.p-burger_item(data-anchor="column")
+        //-     +sp-nav-column
+        //-   li.p-burger_item(data-anchor="team")
+        //-     +sp-nav-team
+        //-   li.p-burger_item(data-anchor="contact")
+        //-     +sp-nav-contact
+
+        .l-col.l-col--2
+          .p-burger_space
+          .p-burger_container
+            ul.p-burger_menu
+              li.p-burger_item(data-anchor="who")
+                a(href='/#top')
+                  |ABOUT
+              li.p-burger_item(data-anchor="service")
+                a(href='/#top')
+                  |MENU
+              li.p-burger_item(data-anchor="column")
+                a(href='#service')
+                  |GALLERY
+              li.p-burger_item(data-anchor="team")
+                a(href='#column')
+                  |NEWS
+              li.p-burger_item(data-anchor="contact")
+                a(href='#team')
+                  |CONTACT
+              li.p-burger_item(data-anchor="contact")
+                a(href='#contact')
+                  |ACCESS
+              li.p-burger_item(data-anchor="contact")
+                a.c-link--color(href='#contact')
+                  |RESERVATION
+              li.nav-sns--insta.p-burger_item(data-anchor="contact")
+                a(href='#contact')
+                  |JP
 
       .p-scroll-icon
 
@@ -133,7 +137,7 @@ block main
               p GALLERY
               img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
 
-      .p-section.news
+      .p-section.news#news
         .l-inner
           .l-col.l-col--2
             .p-news-title

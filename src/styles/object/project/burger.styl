@@ -4,18 +4,138 @@
   height 100%
   top 0
   right -100%
-  background-color #000000
+  // background-color #000000
+  background-color transparent
+  // opacity .65
   z-index 99
+
+  .p-burger_space
+    position absolute
+    top 0
+    left 0
+    height 100%
+    background #ffffff
+    opacity .65
+    width per(338,750)
 
   .p-burger_container
     position absolute
-    width percentage((650 / 750))
-    top 55%
-    left 50%
-    transform translate(-50%, -50%)
+    // width percentage((650 / 750))
+    // top 55%
+    // left 50%
+    // transform translate(-50%, -50%)
+    width per(412,750)
+    background #fff
+    // width 50%
+    top 0
+    right 0
+    height 100%
+    .p-burger_menu
+      text-align right
+      position absolute
+      top 50%
+      right per(50,750)
+      transform translateY(-50%)
+      +pc()
+        display flex
+        // justify-content space-between
+        flex-direction column
+        text-align right
+      +sp()
+        width 100%
+        flex-direction column
+        // display none
+
+      li
+        // color #fff
+        color #000
+        position relative
+
+        +pc()
+          box-sizing border-box
+
+          &last-child
+            padding-right 0
+
+        &.is-current
+          pointer-events none
+
+        &.nav-sns--insta
+          margin-top per(45, 260)
+
+          a
+            margin-right per(48, 260)
+            font-size (32 / 2560) * 100vw
+
+            // position relative
+            &:after
+              content ''
+              display block
+              background url('/assets/images/common/ico_insta_2.svg') 50% 50% no-repeat
+              background-size 100% auto
+              // width 100%
+              // padding-top 100%
+              position absolute
+              top 0
+              right 0
+              width per(38, 260)
+              padding-top per(38, 260)
+              // right (-40 / 260) * 100vw
+
+
+        a
+          display inline-block
+          // color #fff
+          color #000
+          // font-family 'FuturaMdCnBT', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Verdana, sans-serif
+          font-family 'Futura-Med', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Verdana, sans-serif
+          // font-size 3.6rem
+          font-size (36 / 2560) * 100vw
+
+          &.c-link--color
+            color #ed7473
+
+            &:after
+              content ''
+              display block
+              // width per(260, 2560)
+              height (3 / 2560) * 100vw
+              background #ed7473
+              margin-top per(-8, 260)
+
+          & > div
+            width 100%
+
+            & > div > svg
+              position absolute
+              width 100%
+              height 100%
+              top 0
+              left 0
+              // fill #fff
+              // stroke #fff
+              fill #000
+              stroke #000
+              stroke-width 0.3px
+
+              path
+                opacity 0
+
+          &:hover
+            opacity 0.4
+            transition 0.2s
+
+          +sp()
+            // background #000
+            display block
+            // padding percentage((30 / 750))
+
+
+
 
   .p-burger_item
     display block
+    // font-size 3.8rem
 
     a
       display block
@@ -31,32 +151,35 @@
     &+.p-burger_item
       margin-top 6.46%
 
-    &:nth-child(1)
-      width percentage((574 / 650))
+    // &:nth-child(1)
+    //   width percentage((574 / 650))
 
-      .c-svg-container
-        padding-top percentage((59.84 / 566.81))
+    //   .c-svg-container
+    //     padding-top percentage((59.84 / 566.81))
 
-    &:nth-child(2)
-      width percentage((348 / 650))
+    // &:nth-child(2)
+    //   width percentage((348 / 650))
 
-      .c-svg-container
-        padding-top percentage((59.84 / 333.76))
+    //   .c-svg-container
+    //     padding-top percentage((59.84 / 333.76))
 
-    &:nth-child(3)
-      width percentage((383 / 650))
+    // &:nth-child(3)
+    //   width percentage((383 / 650))
 
-      .c-svg-container
-        padding-top percentage((59.84 / 369.21))
+    //   .c-svg-container
+    //     padding-top percentage((59.84 / 369.21))
 
-    &:nth-child(4)
-      width percentage((232 / 650))
+    // &:nth-child(4)
+    //   width percentage((232 / 650))
 
-      .c-svg-container
-        padding-top percentage((59.84 / 226.87))
+    //   .c-svg-container
+    //     padding-top percentage((59.84 / 226.87))
 
-    &:nth-child(5)
-      width percentage((420 / 650))
+    // &:nth-child(5)
+    //   width percentage((420 / 650))
 
-      .c-svg-container
-        padding-top percentage((59.84 / 404.42))
+    //   .c-svg-container
+    //     padding-top percentage((59.84 / 404.42))
+
+
+

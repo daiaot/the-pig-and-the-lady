@@ -6,7 +6,7 @@
         a(href='/')
           img(src=`/assets/images/common/header_logo.svg` alt="")
 nav.pc-fixed
-  ul.nav-list
+  ul.nav-list.nav-list(data-module="naviAnchor")
     li.nav-top.is-current(data-module-splash="navigation-content-links")
       a(href='/#top')
         |ABOUT
@@ -17,7 +17,7 @@ nav.pc-fixed
       a(href='#service')
         |GALLERY
     li.nav-column(data-module-splash="navigation-content-links")
-      a(href='#column')
+      a(href='#news')
         |NEWS
     li.nav-team(data-module-splash="navigation-content-links")
       a(href='#team')
