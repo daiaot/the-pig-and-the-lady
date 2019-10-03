@@ -16,10 +16,10 @@ header
 .nav-bar-wrap
   width 100%
   position relative
+
   // height 9rem
   // height 14rem
-  height (230 / 2560) * 100vw
-
+  // height (230 / 2560) * 100vw
   +pc()
     transition all 0.4s ease
 
@@ -34,6 +34,7 @@ header
   position absolute
   // transition all .2s
   backface-visibility hidden
+  height (158 / 750) * 100vw
 
   +pc()
     // bottom 0
@@ -41,9 +42,8 @@ header
     // height 14rem
     height (230 / 2560) * 100vw
 
-  +sp()
-    top 0
-
+  // +sp()
+  // top 0
   &.lower
     +pc()
       top 0
@@ -68,26 +68,30 @@ header
   transition all 0.2s
 
   +sp()
-    height $nav-height
-    width 100%
-    flex-direction column
+    height (158 / 750) * 100vw
 
     h1
       position absolute
-      padding-left 20px
-      float left
-      line-height $nav-height
-      width 72px
-      height $nav-height
-
+      // padding-left 20px
+      // float left
+      // line-height $nav-height
+      // width 72px
+      // height $nav-height
+      width per(292, 750)
+      height (62 / 750) * 100vw
       // opacity 0
+      left per(40, 750)
+      top 50%
+      transform translateY(-50%)
+
       img
         // vertical-align middle
-        width 72.775px
-        height 25px
-        position absolute
-        left 20px
-        top 19px
+        // width 72.775px
+        // height 25px
+        width 100%
+        // position absolute
+        // left per(40, 292)
+        // top 50%
 
   +pc()
     // height 9rem
@@ -98,7 +102,7 @@ header
     // height 14rem
     height (230 / 2560) * 100vw
     // padding 0 80px
-    padding 0 per(80,2560)
+    padding 0 per(80, 2560)
     width 100%
     flex-direction column
 
@@ -487,7 +491,6 @@ nav
     // transform translate(-80px, 0)
     opacity 1
 
-
   span
     display block
     // width 25px
@@ -530,12 +533,6 @@ nav
 
       &:nth-of-type(3)
         transform rotate(45deg)
-
-
-
-
-
-
 
 .pc-fixed
   ul

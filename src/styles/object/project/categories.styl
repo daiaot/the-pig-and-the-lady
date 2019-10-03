@@ -1,6 +1,7 @@
 
 .top
-  margin-top 6rem
+  // margin-top 6rem
+  margin-top (190 / 750) * 100vw
 
   +pc()
     margin-top 0
@@ -217,43 +218,71 @@
       width 100%
 
     &__main
-      background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
+      background url('/assets/images/top/img_kv01_sp.jpg') no-repeat 50% 50%
       background-size 100% auto
-      width percentage((2098 / 2560))
+      width percentage((579 / 750))
       height 0
-      // padding-top percentage((1370 / 2098))
-      padding-top percentage((1370 / 2560))
-      // padding-top percentage((1370 / 2098))
+      padding-top percentage((935 / 750))
       vertical-align middle
-      // margin-top per(230, 2560)
-      // margin-top 9rem
-      // margin-top 8.984375%
+
+      +pc()
+        background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
+        background-size 100% auto
+        width percentage((2098 / 2560))
+        height 0
+        padding-top percentage((1370 / 2560))
+        vertical-align middle
 
     &__lead
       position absolute
-      // bottom 250px
-      top 50%
-      // left 50px
-      left per(180, 2560)
+      top per(378, 935)
+      left per(50, 579)
+
+      +pc()
+        top 50%
+        left per(180, 2560)
 
       p:nth-of-type(1)
-        font-size (112 / 2560) * 100vw
-        // font-size 11.2rem
-        line-height 1.15
         font-family 'Futura-Boo', Verdana, sans-serif
         color #fff
+        // font-size (50 / 750) * 100vw
+        font-size 2.5rem
+        line-height 1.3
+
+        +sp()
+          margin-bottom per(20, 750)
+
+        +pc()
+          font-size (112 / 2560) * 100vw
+          // font-size 11.2rem
+          line-height 1.15
 
       p:nth-of-type(2)
-        font-size (66 / 2560) * 100vw
+        font-family 'FuturaStdBold', Verdana, sans-serif
         color #ed7473
         font-weight bold
+        // font-size (44 / 750) * 100vw
+        font-size 2.2rem
+        letter-spacing 0.2rem
+
+        +sp()
+          line-height 1.4
+          margin-bottom per(20, 750)
+
+        +pc()
+          font-size (66 / 2560) * 100vw
 
       p:nth-of-type(3)
-        font-size (40 / 2560) * 100vw
         color #fff
         font-family Noto
         font-weight bold
-        line-height 1.75
+        // font-size (28 / 750) * 100vw
+        font-size 1.4rem
+        line-height 1.6
+
+        +pc()
+          font-size (40 / 2560) * 100vw
+          line-height 1.75
 
   &-content
     +pc()
@@ -503,8 +532,10 @@
 
   &-about
     position relative
-    margin-top per(173, 2560)
-    bottom -30px
+
+    +pc()
+      margin-top per(173, 2560)
+      bottom -30px
 
     &:after
       content ''
@@ -514,9 +545,13 @@
       bottom per(45, 1078)
       background url('/assets/images/top/img_pig01.png') no-repeat 0 0
       background-size 100% auto
-      width per(413, 2560)
+      width per(224, 650)
       height 0
-      padding-top per(297, 2560)
+      padding-top per(168, 650)
+
+      +pc()
+        width per(413, 2560)
+        padding-top per(297, 2560)
 
     &-body
       background-color #ffd7d7
@@ -524,6 +559,9 @@
 
     .p-thumb
       margin-left auto
+
+      +sp()
+        padding-bottom per(300, 650)
 
       // position relative
       &.thumb__1
@@ -536,29 +574,45 @@
 
     .c-btn--1
       position absolute
-      left 0
-      top per(318, 2560)
+      bottom 0
       z-index 1
+      border (3 / 750) * 100vw solid #000
+
+      +pc()
+        left 0
+        top per(318, 2560)
+        border (6 / 2560) * 100vw solid #000
 
   &-section
     margin-bottom per(300, 2560)
 
     .l-inner
-      max-width 2200px
-      width per(2200, 2560)
+      width per(650, 750)
       margin auto
+
+      +pc()
+        max-width 2200px
+        width per(2200, 2560)
 
     &.about
       position relative
-      content ''
-      margin per(177, 2560) 0 per(360, 2560)
-      background-image url('/assets/images/top/img_bg_wave01.jpg'), url('/assets/images/top/img_bg_wave02.jpg')
-      background-repeat repeat-x, repeat-x
-      background-position 70% top, 48% bottom
-      background-size per(1232, 2560) auto, per(1188, 2560) auto
-      padding per(214, 2560) 0 per(215, 2560)
-      // padding per(214, 2560) 0 per(225, 2560)
+      margin per(100, 750) 0
+      background-image url('/assets/images/top/img_bg_wave01_sp.jpg'), url('/assets/images/top/img_bg_wave02_sp.jpg')
+      background-repeat no-repeat, no-repeat
+      background-position 50% top, 50% bottom
+      background-size 100% auto, 100% auto
+      padding per(104, 750) 0 per(103, 750)
       width 100%
+
+      +pc()
+        margin per(177, 2560) 0 per(360, 2560)
+        background-image url('/assets/images/top/img_bg_wave01.jpg'), url('/assets/images/top/img_bg_wave02.jpg')
+        background-repeat repeat-x, repeat-x
+        background-position 70% top, 48% bottom
+        background-size per(1232, 2560) auto, per(1188, 2560) auto
+        padding per(214, 2560) 0 per(215, 2560)
+
+      // padding per(214, 2560) 0 per(225, 2560)
 
       // :after
       // content ''
@@ -573,7 +627,10 @@
       // padding-top 215px
       .l-inner
         // background #ffd7d7
-        padding per(115, 2560) 0 0
+        padding per(70, 750) 0 0
+
+        +pc()
+          padding per(115, 2560) 0 0
 
       .l-col--2
         justify-content space-between
@@ -581,16 +638,31 @@
       .p-title
         h2
           font-family Futura-Med
-          // font-size 15.2rem
-          font-size (152 / 2560) * 100vw
+          font-size 4.2rem
+          margin-bottom per(60, 650)
+
+          +pc()
+            // font-size 15.2rem
+            font-size (152 / 2560) * 100vw
 
         p
-          // font-size 50rem
-          font-size (50 / 2560) * 100vw
+          font-size 1.9rem
           line-height 1.5
 
+          +sp()
+            margin-bottom per(40, 650)
+
+          +pc()
+            // font-size 50rem
+            font-size (50 / 2560) * 100vw
+
           &.p-txt-small
-            font-size (34 / 2560) * 100vw
+            font-size 1.1rem
+            line-height 1.4
+
+            +pc()
+              // font-size 34rem
+              font-size (34 / 2560) * 100vw
 
     &.news
       h2
