@@ -76,22 +76,6 @@
   +sp()
     margin-top 6rem
 
-  &-thumb-section
-    .l-col--2
-      justify-content space-between
-
-      & > a
-        width per(1060, 2200)
-        position relative
-
-        p
-          position absolute
-          left 50%
-          top 50%
-          transform translate(-50%, -50%)
-          color #fff
-          font-size (114 / 2560) * 100vw
-
   &-news
     color #fff
     display flex
@@ -541,15 +525,19 @@
       content ''
       display block
       position absolute
-      left 0
-      bottom per(45, 1078)
-      background url('/assets/images/top/img_pig01.png') no-repeat 0 0
+      left per(-40, 650)
+      bottom per(100, 754)
+      background url('/assets/images/top/img_pig01_sp.png') no-repeat 0 0
       background-size 100% auto
-      width per(224, 650)
+      width per(265, 650)
       height 0
-      padding-top per(168, 650)
+      padding-top per(189, 650)
 
       +pc()
+        background url('/assets/images/top/img_pig01.png') no-repeat 0 0
+        background-size 100% auto
+        left 0
+        bottom per(45, 1078)
         width per(413, 2560)
         padding-top per(297, 2560)
 
@@ -561,12 +549,15 @@
       margin-left auto
 
       +sp()
-        padding-bottom per(300, 650)
+        padding-bottom per(376, 650)
 
       // position relative
       &.thumb__1
-        max-width 1608px
-        width per(1608, 2200)
+        width per(567, 650)
+
+        +pc()
+          max-width 1608px
+          width per(1608, 2200)
 
       &.thumb__2
         max-width 1078px
@@ -574,9 +565,11 @@
 
     .c-btn--1
       position absolute
-      bottom 0
       z-index 1
-      border (3 / 750) * 100vw solid #000
+      border (4 / 750) * 100vw solid #000
+
+      +sp()
+        bottom per(-60, 766)
 
       +pc()
         left 0
@@ -596,7 +589,7 @@
 
     &.about
       position relative
-      margin per(100, 750) 0
+      margin per(100, 750) 0 per(142, 750)
       background-image url('/assets/images/top/img_bg_wave01_sp.jpg'), url('/assets/images/top/img_bg_wave02_sp.jpg')
       background-repeat no-repeat, no-repeat
       background-position 50% top, 50% bottom
@@ -659,22 +652,78 @@
           &.p-txt-small
             font-size 1.1rem
             line-height 1.4
+            font-family Futura-Med
+
+            +sp()
+              margin-bottom per(104, 650)
 
             +pc()
               // font-size 34rem
               font-size (34 / 2560) * 100vw
 
+    &.thumb
+      +sp()
+        margin-bottom per(175, 750)
+
+      .l-col--2
+        justify-content space-between
+
+        & > a
+          position relative
+          width 100%
+
+          +sp()
+            &:nth-of-type(1)
+              margin-bottom per(120, 650)
+
+          +pc()
+            width per(1060, 2200)
+
+          p
+            position absolute
+            left 50%
+            top 50%
+            transform translate(-50%, -50%)
+            color #fff
+            font-size (82 / 650) * 100vw
+            line-height 1
+            margin 0
+
+            +pc()
+              font-size (114 / 2560) * 100vw
+
     &.news
+      +sp()
+        margin-bottom per(250, 750)
+
       h2
         font-family Futura-Med
-        // font-size 15.2rem
-        font-size (152 / 2560) * 100vw
+        font-size 4.8rem
+
+        +sp()
+          margin-bottom per(110, 650)
+
+        +pc()
+          // font-size 15.2rem
+          font-size (152 / 2560) * 100vw
+
+      .l-col--2
+        & > div
+          +sp()
+            width 100%
 
       .p-news-list
-        padding per(50, 2560) 0
         position relative
-        // border-bottom 4px dotted #000
-        border-bottom (4 / 2560) * 100vw dotted #000
+        padding per(34, 650) 0
+        border-bottom (4 / 650) * 100vw dotted #000
+
+        +sp()
+          &:nth-of-type(1)
+            padding-top 0
+
+        +pc()
+          padding per(50, 2560) 0
+          border-bottom (4 / 2560) * 100vw dotted #000
 
         // transition opacity 0.4s
         // &:hover
@@ -692,24 +741,42 @@
             display block
             background url('/assets/images/common/ico_plus.svg') no-repeat 50% 50%
             background-size 100% auto
-            // width per(36,2560)
-            width per(36, 1280)
-            height 0
-            // padding-top per(36,2560)
-            padding-top per(36, 1280)
             position absolute
+            width per(26, 650)
+            height 0
+            padding-top per(26, 650)
             left 100%
             bottom 0
-            transform translate(-100%, -166%)
+            transform translate(-100%, -50%)
+
+            +pc()
+              // width per(36,2560)
+              width per(36, 1280)
+              height 0
+              // padding-top per(36,2560)
+              padding-top per(36, 1280)
+              transform translate(-100%, -166%)
 
         dt
-          font-size (26 / 2560) * 100vw
+          font-size 1.1rem
+
+          +pc()
+            font-size (26 / 2560) * 100vw
 
         dd
-          font-size (52 / 2560) * 100vw
+          font-size 2rem
+
+          +sp()
+            width per(625, 650)
+
+          +pc()
+            font-size (52 / 2560) * 100vw
 
           .u-font-noto
-            font-size (30 / 2560) * 100vw
+            font-size 1.2rem
+
+            +pc()
+              font-size (30 / 2560) * 100vw
 
 &-content
   &.service

@@ -1,8 +1,13 @@
 .p-footer
-  // background #fff
-  // padding percentage((30 / 1440)) percentage((44 / 1440))
-  // position relative
-  margin-bottom per(140, 2580)
+  margin-bottom per(104, 750)
+
+  +pc()
+    margin-bottom per(140, 2580)
+
+  .l-col--2
+    & > div
+      +sp()
+        width 100%
 
   .l-inner
     max-width 2200px
@@ -11,19 +16,34 @@
     position relative
 
     .p-copyright
-      position absolute
-      left 0
-      bottom per(-40, 432)
+      +pc()
+        position absolute
+        left 0
+        bottom per(-40, 432)
 
       p
-        font-size (26 / 2520) * 100vw
+        font-size (20 / 750) * 100vw
         margin-bottom 0
 
+        +sp()
+          text-align center
+
+        +pc()
+          font-size (26 / 2520) * 100vw
+
   &-logo
-    width 50%
+    +sp()
+      text-align center
+      margin-bottom per(74, 650)
+
+    +pc()
+      width 50%
 
     svg
-      width per(388, 1100)
+      width per(274, 650)
+
+      +pc()
+        width per(388, 1100)
 
     &__image
       background url('/assets/images/common/logo02.svg') no-repeat 50% 50%
@@ -33,39 +53,70 @@
       padding-top per(304, 2560)
 
   &-info
-    text-align right
+    +sp()
+      margin-bottom per(50, 650)
+
+    +pc()
+      text-align right
 
     p
-      font-size (42 / 2560) * 100vw
-      line-height 2
-      margin-bottom per(58, 1100)
+      font-family Futura-Med
+      font-size (34 / 650) * 100vw
+      line-height 1.7
+      margin-bottom per(46, 650)
+
+      +sp()
+        text-align center
+
+      +pc()
+        font-size (42 / 2560) * 100vw
+        line-height 2
+        margin-bottom per(58, 1100)
 
       &:nth-of-type(1)
         margin-bottom 0
 
   &-link
-    margin-bottom per(48, 2560)
+    +sp()
+      display flex
+      justify-content space-around
+      margin-bottom per(46, 650)
+
+    +pc()
+      margin-bottom per(48, 2560)
 
     li
       display inline-block
-      margin-right per(50, 2560)
 
-      &:last-child
-        margin-right 0
+      +pc()
+        margin-right per(50, 2560)
+
+        &:last-child
+          margin-right 0
 
     a
       color #ed7473
       font-family YanoneKaffeesatz-Bold
-      font-size (54 / 2560) * 100vw
+      font-size (46 / 750) * 100vw
+
+      +pc()
+        font-size (54 / 2560) * 100vw
 
       &:after
         content ''
         display block
         width 100%
-        height 0.2rem
+        height (4 / 750) * 100vw
         // padding-top per(2 / 212) * 100vw
         background #ed7473
         transition opacity 0.4s
+
+        +sp()
+          margin-top (-4 / 750) * 100vw
+
+        +pc()
+          // height 0.2rem
+          height (2 / 2560) * 100vw
 
       &:hover
         &:after
@@ -74,26 +125,42 @@
   &-sns
     display flex
     flex-wrap nowrap
-    justify-content flex-end
     width 100%
 
+    +sp()
+      justify-content center
+
+    +pc()
+      justify-content flex-end
+
     li
-      width per(96, 1100)
       position relative
-      margin-right per(10, 1100)
+      width per(78, 650)
+      margin-right per(8, 650)
+
+      +pc()
+        width per(96, 1100)
+        margin-right per(10, 1100)
 
       &:before
         font-family FuturaMdCnBT
-        font-size (46 / 2560) * 100vw
+        font-size (36 / 750) * 100vw
         color #ed7473
         font-weight bold
         position absolute
         top 50%
         left 0
-        transform translate(-150%, -50%)
+        transform translate(-140%, -50%)
+
+        +pc()
+          font-size (46 / 2560) * 100vw
+          transform translate(-150%, -50%)
 
       &:nth-of-type(1)
-        margin-right per(132, 1100)
+        margin-right per(106, 650)
+
+        +pc()
+          margin-right per(132, 1100)
 
         &:before
           content 'U.S.'
@@ -101,6 +168,9 @@
       &:nth-of-type(2)
         &:before
           content 'JP'
+
+          +sp()
+            transform translate(-176%, -50%)
 
       &:nth-of-type(4)
         margin-right 0

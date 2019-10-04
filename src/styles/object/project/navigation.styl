@@ -495,8 +495,8 @@ nav
     display block
     // width 25px
     // height 1px
-    width per(54, 124)
-    height (4 / 2560) * 100vw
+    width per(38, 88)
+    height (4 / 750) * 100vw
     // width per(126, 2560)
     // height per(126,2560)
     // padding-top per(126, 2560)
@@ -509,10 +509,13 @@ nav
     margin auto
     background-color #fff
     transition all 0.2s
-    // -webkit-transform translateY(-500%)
-    // transform translateY(-500%)
-    // transform translateY(-300%)
-    transform translateY(-400%)
+    transform translateY(-300%)
+
+    +pc()
+      width per(54, 124)
+      height (4 / 2560) * 100vw
+      transform translateY(-400%)
+      // transform translate(percentage((-80 / 126)), -50%)
 
     &:nth-of-type(2)
       // transform translateY(500%)
@@ -520,13 +523,19 @@ nav
 
     &:nth-of-type(3)
       // transform translateY(1500%)
-      transform translateY(400%)
+      transform translateY(300%)
+
+      +pc()
+        transform translateY(400%)
 
   &.is-open
     span
       transform rotate(-45deg)
       // width 75.64102564102564%
-      width per(80, 124)
+      width per(40, 88)
+
+      +pc()
+        width per(80, 124)
 
       &:nth-of-type(2)
         opacity 0

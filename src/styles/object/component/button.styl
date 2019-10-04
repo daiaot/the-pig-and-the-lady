@@ -2,27 +2,39 @@
 .c-btn
   &--1
     display block
+    // border 6px solid #000
     border 6px solid #000
     border-radius 8px
     background #fff
     color #000
-    padding per(58, 2560) per(184, 2560)
-    width per(633, 2200)
-    font-size (43 / 2560) * 100vw
-    // font-size (43 / 2200) * 100vw
+    // padding per(41, 650) per(122, 650)
+    padding per(34, 650) per(122, 650)
+    width per(506, 650)
+    // font-size (34 / 650) * 100vw
+    font-size (34 / 506) * 100vw
     line-height 1
     font-weight bold
     text-align center
+
+    +pc()
+      padding per(58, 2560) per(184, 2560)
+      width per(633, 2200)
+      font-size (43 / 2560) * 100vw
+      // font-size (43 / 2200) * 100vw
 
     &:after
       content ''
       display block
       background url('/assets/images/top/ico_arrow01.svg') 50% 50% no-repeat
       background-size 100% auto
-      width per(66, 633)
-      height 0
-      padding-top per(66, 633)
       position absolute
       right 0
       top 50%
       transform translate(-50%, -50%)
+      width per(54, 506)
+      height 0
+      padding-top per(54, 506)
+
+      +pc()
+        width per(66, 633)
+        padding-top per(66, 633)
