@@ -34,15 +34,19 @@
     .p-burger_menu
       text-align right
       position absolute
-      top 50%
+      top (158 / 750) * 100vw
+      // top per(158 / 750)
       right per(50, 750)
-      transform translateY(-50%)
 
+      // transform translateY(-50%)
       +pc()
         display flex
         // justify-content space-between
         flex-direction column
         text-align right
+        top 50%
+        right per(50, 750)
+        transform translateY(-50%)
 
       +sp()
         width 100%
@@ -67,9 +71,12 @@
           margin-top per(45, 260)
 
           a
-            margin-right per(48, 260)
-            // font-size (32 / 2560) * 100vw
-            font-size (72 / 2560) * 100vw
+            margin-right per(56, 414)
+            font-size 1.9rem
+
+            +pc()
+              margin-right per(48, 260)
+              font-size (72 / 2560) * 100vw
 
             // position relative
             &:after
@@ -77,23 +84,28 @@
               display block
               background url('/assets/images/common/ico_insta_2.svg') 50% 50% no-repeat
               background-size 100% auto
-              // width 100%
-              // padding-top 100%
               position absolute
-              // top 0
-              top 15%
+              top 0
               right 0
-              width per(38, 260)
-              padding-top per(38, 260)
-              // right (-40 / 260) * 100vw
+              width per(46, 414)
+              padding-top per(46, 414)
+
+              +pc()
+                // top 0
+                top 15%
+                right 0
+                width per(38, 260)
+                padding-top per(38, 260)
+                // right (-40 / 260) * 100vw
 
         a
           display inline-block
           color #000
           font-family 'Futura-Med', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Verdana, sans-serif
-          // font-size 3.6rem
-          // font-size (36 / 2560) * 100vw
-          font-size (72 / 2560) * 100vw
+          font-size 1.9rem
+
+          +pc()
+            font-size (72 / 2560) * 100vw
 
           &.c-link--color
             color #ed7473
@@ -102,9 +114,13 @@
               content ''
               display block
               // width per(260, 2560)
-              height (3 / 2560) * 100vw
+              height (4 / 750) * 100vw
               background #ed7473
-              margin-top per(-8, 260)
+              margin-top per(-8, 224)
+
+              +pc()
+                height (3 / 2560) * 100vw
+                margin-top per(-8, 260)
 
           & > div
             width 100%
@@ -130,7 +146,7 @@
 
           +sp()
             // background #000
-            display block
+            // display block
             // padding percentage((30 / 750))
 
   .p-burger_item
