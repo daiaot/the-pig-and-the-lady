@@ -1,0 +1,121 @@
+//- extend _template
+extend /_dev/_include/_layout
+
+block vars
+  - title = 'The Pig and The Lady'
+  - description = 'xxx'
+  - keywords = 'xxx'
+  //- - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  //- - url = 'http://localhost:3000'
+
+block main
+
+
+  .p-menu(data-module="loadToTop")
+    header
+      //- .p-splash__navigation__wrapper
+      .p-lower__navigation__wrapper
+        include /_dev/_include/_inc_lower_nav.pug
+      .p-burger_wrapper(data-module="burgerMenu FixNavigationLower")
+        .l-col.l-col--2
+          .p-burger_space
+          include /_dev/_include/_inc_burger_menu.pug
+
+    .p-content
+
+      .p-section.p-menu-nav
+        ul
+          li
+            a(href="#lunch") LUNCH
+          li
+            a(href="#dinner") DINNER
+          li
+            a(href="#drink") DRINK
+          li
+            a(href="#sweets") SWEETS
+
+
+      .p-section.p-menu-wrap
+        .l-inner
+          .p-menu-info
+            #lunch.p-menu-gloup
+              .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                h3 Hold The Rice
+                spna.sub-title ベジタブルフォー
+                p 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
+                p
+                  |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                .item-img-container
+                 img(src='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' alt='Hold The Rice' width='100%' height='auto')
+              .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                h3 Hold The Rice
+                spna.sub-title ベジタブルフォー
+                p 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
+                p
+                  |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                .item-img-container
+                 img(src='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' alt='Hold The Rice' width='100%' height='auto')
+
+
+          .p-menu-thumb
+            img(src='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' alt='Hold The Rice' width='100%' height='auto')
+
+
+
+
+
+      .p-section.thumb
+        .l-inner
+          .l-col.l-col--2
+            a.p-thumb(href='/menu')
+              p MENU
+              img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
+            a.p-thumb(href='/gallery')
+              p GALLERY
+              img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
+
+      .p-section.news#news
+        .l-inner
+          .l-col.l-col--2
+            .p-news-title
+              h2 NEWS
+            .p-news-lists
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |NOVEMBER HOLIDAY INFORMATION
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |STAFF RECRUITMENT NOTICE
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |OPEN WEBSITE
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |STAFF RECRUITMENT NOTICE
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+              .p-news-list
+                dl
+                  dt 2019.11.1
+                  dd
+                    |OPEN WEBSITE
+                    br
+                    span.u-font-noto 11月休業日のお知らせ
+
+
+
+

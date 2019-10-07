@@ -3,6 +3,12 @@ export default class FixNav {
     this.elem = elem
     this.opts = opts
     this.fixFlg = false
+    // this.current = document.querySelectorAll('.top')
+    // console.log(this.current)
+
+    this.isLower = elem.classList.contains('nav-bar-lower') ? true : false
+    console.log(this.isLower)
+
     this.addEvents()
   }
   addEvents() {
@@ -30,15 +36,23 @@ export default class FixNav {
         this.elem.children[0].classList.remove('is-fixed')
       }
     } else {
-      // if (top < -1200) {
-      if (winTop > 1080) {
-        this.elem.classList.remove('is-hidden')
-        this.elem.children[0].classList.add('is-fixed')
-        // } else if (140 > relativeHeight) {
+
+      if (this.isLower == false) {
+        // if (top < -1200) {
+        if (winTop > 1080) {
+          this.elem.classList.remove('is-hidden')
+          this.elem.children[0].classList.add('is-fixed')
+          // } else if (140 > relativeHeight) {
+        } else {
+          this.elem.classList.add('is-hidden')
+          this.elem.children[0].classList.remove('is-fixed')
+        }
       } else {
-        this.elem.classList.add('is-hidden')
-        this.elem.children[0].classList.remove('is-fixed')
+        console.log('test')
+        this.elem.classList.remove('is-hidden')
+        this.elem.classList.add('is-fixed')
       }
+
     }
   }
 }

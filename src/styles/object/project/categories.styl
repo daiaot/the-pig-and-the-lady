@@ -208,6 +208,7 @@
       height 0
       padding-top percentage((935 / 750))
       vertical-align middle
+
       +pc()
         background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
         background-size 100% auto
@@ -566,6 +567,9 @@
       position absolute
       z-index 1
       border (4 / 750) * 100vw solid #000
+      &:hover
+        font-style italic
+        opacity 1
 
       +sp()
         bottom per(-60, 766)
@@ -671,6 +675,10 @@
           position relative
           width 100%
 
+          &:hover
+            p
+              font-style italic
+
           +sp()
             &:nth-of-type(1)
               margin-bottom per(120, 650)
@@ -733,7 +741,10 @@
           position relative
 
           &:hover
-            opacity 0.6
+            // opacity 0.6
+            *
+              font-style italic
+
 
           &:after
             content ''

@@ -1,0 +1,33 @@
+.p
+  &-menu
+
+    &-nav
+      position relative
+
+      &.is-fixed
+        position fixed
+        top 0
+        left 0
+        z-index 100
+    &-wrap
+      display flex
+      +pc()
+        flex-wrap nowrap
+        justify-content space-between
+    &-info
+      +pc()
+        width per(1226, 2200)
+    &-thumb
+      +sp()
+        display none
+      +pc()
+        width per(810, 2200)
+
+    &-gloup
+      display flex
+      +pc()
+        justify-content space-between
+    &-item
+      +pc()
+        width per(564, 1226)
+
