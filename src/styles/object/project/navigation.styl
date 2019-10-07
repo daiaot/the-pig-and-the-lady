@@ -111,25 +111,29 @@ header
 
       // +sp()
       // width 132px
-      +pc()
-        // width 132px
-        // width 420px
-        // position absolute
-        width percentage((420 / 2560))
-        // height 0
-        top 50%
-        left 0
-        transform translateY(100%)
+      // width 132px
+      // width 420px
+      // position absolute
+      width percentage((420 / 2560))
+      // height 0
+      // top 50%
+      // left 0
+      // transform translateY(100%)
+      position absolute
+      left 0
+      top 50%
+      transform translate((80 / 420) * 100%, -50%)
 
-        // opacity 0
-        // height 90px
-        a:hover
-          opacity 0.4
-          transition 0.2s
 
-        img
-          width 100%
-          vertical-align middle
+      // opacity 0
+      // height 90px
+      a:hover
+        opacity 0.4
+        transition 0.2s
+
+      img
+        width 100%
+        vertical-align middle
 
   ul
     +pc()
@@ -244,37 +248,41 @@ header
   +pc()
     padding 0 per(80, 2560)
     height (230 / 2560) * 100vw
-
     h1
-      // margin-top 3%
-
-      // +sp()
       // width 132px
-      +pc()
-        // width 132px
-        // width 420px
-        width percentage((420 / 2560))
-        // position absolute
-        // top 50%
-        // left 0
-        // transform translate(percentage(80 / 420), 50%)
+      // width 420px
+      width percentage((420 / 2560))
+      // position absolute
+      // top 50%
+      // left 0
+      // transform translate(percentage(80 / 420), 50%)
 
-        // height 0
-        top 50%
-        left 0
-        transform translateY(percentage((64 / 89)))
+      // height 0
 
-        // height 0
+      // top 50%
+      // left 0
+      // transform translateY(percentage((64 / 89)))
 
-        // opacity 0
-        // height 90px
-        a:hover
-          opacity 0.4
-          transition 0.2s
+      position absolute
+      left 0
+      top 50%
+      transform translate((80 / 420) * 100%, -50%)
 
-        img
-          width 100%
-          vertical-align middle
+
+
+      // height 0
+
+      // opacity 0
+      // height 90px
+      a:hover
+        opacity 0.4
+        transition 0.2s
+
+      svg
+        width 100%
+      img
+        width 100%
+        vertical-align middle
 
   ul
     +pc()
