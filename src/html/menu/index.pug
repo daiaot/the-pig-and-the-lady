@@ -23,98 +23,106 @@ block main
 
     .p-content
 
-      .p-section.p-menu-nav
-        ul
-          li
-            a(href="#lunch") LUNCH
-          li
-            a(href="#dinner") DINNER
-          li
-            a(href="#drink") DRINK
-          li
-            a(href="#sweets") SWEETS
-
-
-      .p-section.p-menu-wrap
+      .p-menu-nav
         .l-inner
-          .p-menu-info
-            #lunch.p-menu-gloup
-              .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
-                h3 Hold The Rice
-                spna.sub-title ベジタブルフォー
-                p 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
-                p
-                  |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                .item-img-container
-                 img(src='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' alt='Hold The Rice' width='100%' height='auto')
-              .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
-                h3 Hold The Rice
-                spna.sub-title ベジタブルフォー
-                p 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
-                p
-                  |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                .item-img-container
-                 img(src='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' alt='Hold The Rice' width='100%' height='auto')
+          ul.p-menu-nav__food
+            li
+              a(href="#lunch") LUNCH
+            li
+              a(href="#dinner") DINNER
+            li
+              a(href="#drink") DRINK
+            li
+              a(href="#sweets") SWEETS
+          ul.p-menu-nav__pdf
+            li
+              a(href="#") PDF
+            li
+              a(href="#") PDF
+            li
+              a(href="#") PDF
+            li
+              a(href="#") PDF
 
 
-          .p-menu-thumb
-            img(src='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' alt='Hold The Rice' width='100%' height='auto')
+      h2 MENU
 
-
-
-
-
-      .p-section.thumb
+      .p-section
         .l-inner
-          .l-col.l-col--2
-            a.p-thumb(href='/menu')
-              p MENU
-              img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
-            a.p-thumb(href='/gallery')
-              p GALLERY
-              img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
+          .p-menu-wrap
+            #lunch.p-menu-group
+              .p-menu-info
+                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                  h3 01. PHO CHAY
+                  p.p-sub-title ベジタブルフォー
+                  p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  .item-img-container
+                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
 
-      .p-section.news#news
-        .l-inner
-          .l-col.l-col--2
-            .p-news-title
-              h2 NEWS
-            .p-news-lists
-              .p-news-list
-                dl
-                  dt 2019.11.1
-                  dd
-                    |NOVEMBER HOLIDAY INFORMATION
-                    br
-                    span.u-font-noto 11月休業日のお知らせ
-              .p-news-list
-                dl
-                  dt 2019.11.1
-                  dd
-                    |STAFF RECRUITMENT NOTICE
-                    br
-                    span.u-font-noto 11月休業日のお知らせ
-              .p-news-list
-                dl
-                  dt 2019.11.1
-                  dd
-                    |OPEN WEBSITE
-                    br
-                    span.u-font-noto 11月休業日のお知らせ
-              .p-news-list
-                dl
-                  dt 2019.11.1
-                  dd
-                    |STAFF RECRUITMENT NOTICE
-                    br
-                    span.u-font-noto 11月休業日のお知らせ
-              .p-news-list
-                dl
-                  dt 2019.11.1
-                  dd
-                    |OPEN WEBSITE
-                    br
-                    span.u-font-noto 11月休業日のお知らせ
+                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                  h3 02. PHO BO
+                  p.p-sub-title 牛肉のフォー
+                  p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  .item-img-container
+                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO BO')
+
+            #dinner.p-menu-group
+              .p-menu-info
+                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                  h3 01. PHO CHAY
+                  p.p-sub-title ベジタブルフォー
+                  p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  .item-img-container
+                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
+
+                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                  h3 02. PHO BO
+                  p.p-sub-title 牛肉のフォー
+                  p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  .item-img-container
+                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO BO')
+
+            #drink.p-menu-group
+              .p-menu-info
+                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                  h3 01. PHO CHAY
+                  p.p-sub-title ベジタブルフォー
+                  p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  .item-img-container
+                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
+
+                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                  h3 02. PHO BO
+                  p.p-sub-title 牛肉のフォー
+                  p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  .item-img-container
+                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO BO')
+
+
+            .p-menu-thumb
+                figure#menu-image
+                  img(src=`/assets/images/menu/img_food_01.jpg` alt='Hold The Rice')
+
+
+
+
+
+
+
+
+
 
 
 
