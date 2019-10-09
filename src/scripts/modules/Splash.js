@@ -280,6 +280,7 @@ export default class Splash {
         // ease: Expo.easeInOut,
         ease: Expo.easeInOut,
         opacity: 0,
+        zIndex: 0,
       })
 
     })

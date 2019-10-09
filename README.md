@@ -1,4 +1,4 @@
-# the-pig-and-the-lady
+# thepigandthelady
 
 ## Usage
 

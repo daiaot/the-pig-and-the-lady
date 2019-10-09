@@ -1,5 +1,5 @@
 {
-  "name": "the-pig-and-the-lady",
+  "name": "thepigandthelady",
   "version": "1.0.0",
   "scripts": {
     "prestart": "npm run del",
