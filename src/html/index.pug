@@ -10,10 +10,8 @@ block vars
 
 block main
 
-  .bg
-
   //- .p-pig.top#top(data-module="loadToTop")
-  .top#top(data-module="loadToTop")
+  .p-top#top(data-module="loadToTop")
 
     .p-splash(data-module="splash" style="position: relative;")
       .p-loading__bg(data-module-loading="bg")
@@ -149,10 +147,10 @@ block main
       .p-section.thumb
         .l-inner
           .l-col.l-col--2
-            a.p-thumb(href='/menu')
+            a.p-thumb(href='/menu/')
               p MENU
               img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
-            a.p-thumb(href='/gallery')
+            a.p-thumb(href='/gallery/')
               p GALLERY
               img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
 

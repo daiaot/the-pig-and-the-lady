@@ -6,78 +6,80 @@
 // // background rgba(255,255,255, .5)
 // background-color #fff
 // opacity .5
-.top
-  // margin-top 6rem
-  margin-top (190 / 750) * 100vw
-
-  +pc()
-    margin-top 0
-
-  .kv
-    height 100%
-
-    +sp()
-      margin-top 27.5px
-
-  +pc()
-    overflow hidden
-
-  .lead_box
-    max-width none
-    width 78.75%
-
-    +sp()
-      width 85%
-
-  .p-lead
-    font-family NotoThin
-    font-weight 300
-
-    +sp()
-      width 100%
-      font-size 2.7rem
-      letter-spacing 0.3rem
-      line-height 2
-      margin auto
+// .top
+.p
+  &-top
+    // margin-top 6rem
+    margin-top (190 / 750) * 100vw
 
     +pc()
-      position relative
-      // width percentage((900 / 990))
-      // max-width 900px
-      width 100%
-      height auto
-      font-size 3.35vw
-      line-height 2.1
-      letter-spacing 10px
-      font-feature-settings 'palt'
+      margin-top 0
 
-    +pcex()
-      font-size 48px
-
-    +tb()
-      line-height 2
-
-    & > svg
-      +pc()
-        position absolute
-        width 100%
-        height 100%
-        left 0
-        top 0
-
-  .p-content
-    &.service
-      background #f0f3f5
+    .kv
+      height 100%
 
       +sp()
-        padding-top 40px
+        margin-top 27.5px
 
-  .p-slide-wrap
-    width 100%
-    overflow hidden
+    +pc()
+      overflow hidden
+
+    .lead_box
+      max-width none
+      width 78.75%
+
+      +sp()
+        width 85%
+
+    .p-lead
+      font-family NotoThin
+      font-weight 300
+
+      +sp()
+        width 100%
+        font-size 2.7rem
+        letter-spacing 0.3rem
+        line-height 2
+        margin auto
+
+      +pc()
+        position relative
+        // width percentage((900 / 990))
+        // max-width 900px
+        width 100%
+        height auto
+        font-size 3.35vw
+        line-height 2.1
+        letter-spacing 10px
+        font-feature-settings 'palt'
+
+      +pcex()
+        font-size 48px
+
+      +tb()
+        line-height 2
+
+      & > svg
+        +pc()
+          position absolute
+          width 100%
+          height 100%
+          left 0
+          top 0
+
+.p-content
+  &.service
+    background #f0f3f5
 
     +sp()
-      margin-bottom 83px
+      padding-top 40px
+
+.p-slide-wrap
+  width 100%
+  overflow hidden
+
+  +sp()
+    margin-bottom 83px
 
 .p
   +sp()
