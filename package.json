@@ -111,6 +111,7 @@
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
+    "magnific-popup": "1.1.0",
     "normalize.css": "8.0.0",
     "whatwg-fetch": "2.0.3"
   }
