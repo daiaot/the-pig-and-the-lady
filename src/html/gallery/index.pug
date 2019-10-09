@@ -1,0 +1,59 @@
+//- extend _template
+extend /_dev/_include/_layout
+
+block vars
+  - title = 'The Pig and The Lady'
+  - description = 'xxx'
+  - keywords = 'xxx'
+  //- - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  //- - url = 'http://localhost:3000'
+
+block main
+
+  .p-gallery
+    header
+      .p-lower__navigation__wrapper
+        include /_dev/_include/_inc_lower_nav.pug
+      .p-burger_wrapper(data-module="burgerMenu FixNavigationLower")
+        .l-col.l-col--2
+          .p-burger_space
+          include /_dev/_include/_inc_burger_menu.pug
+    .p-content
+      h2 GALLERY
+      .p-section
+        .l-inner
+          .p-gallery-wrap
+            .p-gallery-col--column
+              //- a(href='/assets/images/gallery/img_photo_01.jpg' data-module="GalleryShow")
+              a(href='/assets/images/gallery/img_photo_01.jpg')
+                img(src=`/assets/images/gallery/img_photo_01.jpg` alt='PHO CHAY')
+              a(href='/assets/images/gallery/img_photo_02.jpg')
+                img(src=`/assets/images/gallery/img_photo_02.jpg` alt='PHO CHAY')
+            a.p-gallery-col(href='/assets/images/gallery/img_photo_03.jpg')
+              img(src=`/assets/images/gallery/img_photo_03.jpg` alt='PHO CHAY')
+            a.p-gallery-col(href='/assets/images/gallery/img_photo_04.jpg')
+              img(src=`/assets/images/gallery/img_photo_04.jpg` alt='PHO CHAY')
+
+            a.p-gallery-col(href='/assets/images/gallery/img_photo_05.jpg')
+              img(src=`/assets/images/gallery/img_photo_05.jpg` alt='PHO CHAY')
+            .p-gallery-col--column
+              a(href='/assets/images/gallery/img_photo_06.jpg')
+                img(src=`/assets/images/gallery/img_photo_06.jpg` alt='PHO CHAY')
+              a(href='/assets/images/gallery/img_photo_07.jpg')
+                img(src=`/assets/images/gallery/img_photo_07.jpg` alt='PHO CHAY')
+            a.p-gallery-col(href='/assets/images/gallery/img_photo_08.jpg')
+              img(src=`/assets/images/gallery/img_photo_08.jpg` alt='PHO CHAY')
+
+            a.p-gallery-col(href='/assets/images/gallery/img_photo_09.jpg')
+              img(src=`/assets/images/gallery/img_photo_09.jpg` alt='PHO CHAY')
+            a.p-gallery-col(href='/assets/images/gallery/img_photo_10.jpg')
+              img(src=`/assets/images/gallery/img_photo_10.jpg` alt='PHO CHAY')
+            .p-gallery-col--column
+              a(href='/assets/images/gallery/img_photo_11.jpg')
+                img(src=`/assets/images/gallery/img_photo_11.jpg` alt='PHO CHAY')
+              a(href='/assets/images/gallery/img_photo_12.jpg')
+                img(src=`/assets/images/gallery/img_photo_12.jpg` alt='PHO CHAY')
+
+
+
+

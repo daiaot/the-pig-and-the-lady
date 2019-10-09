@@ -278,7 +278,8 @@ export default class Splash {
       })
       TweenMax.to(this.bg, 3.0, {
         // ease: Expo.easeInOut,
-        ease: Expo.easeInOut,
+        // ease: Expo.easeOut,
+        ease: Expo.easeIn,
         opacity: 0,
         zIndex: 0,
       })

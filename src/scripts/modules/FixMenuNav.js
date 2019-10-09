@@ -5,7 +5,6 @@ export default class FixMenuNav {
     this.elem = elem
     this.opts = opts
     this.title = document.querySelectorAll('h2')
-    console.log(this.title)
     this.addEvents()
   }
   addEvents() {
