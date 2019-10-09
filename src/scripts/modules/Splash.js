@@ -1,6 +1,6 @@
 import { TweenMax, TimelineMax } from 'gsap'
-import emit from '../emit'
-import LottieAnimation from './LottieAnimation.js'
+// import emit from '../emit'
+// import LottieAnimation from './LottieAnimation.js'
 
 export default class Splash {
   constructor(elem) {
@@ -23,7 +23,7 @@ export default class Splash {
     this.kvImage = elem.querySelector('[data-module-splash="visual"]')
     this.bg = elem.querySelector('[data-module-loading="bg"]')
     TweenMax.set(this.kvImage, { css: { opacity: '0' } })
-    this.LottieAnimation = new LottieAnimation(this.elem)
+    // this.LottieAnimation = new LottieAnimation(this.elem)
     this.heightAdjust()
     this.prepareSlideInAnimation()
     this.animate()
@@ -259,31 +259,63 @@ export default class Splash {
     })
   }
 
+  topSplashDemo() {
+    return new Promise(() => {
+      // TweenMax.set(this.splashMask, {
+      //   opacity: 1,
+      //   x: 0,
+      //   zIndex: 10,
+      // })
+      // TweenMax.set(this.navigation, {
+      //   opacity: 1,
+      //   width: '100%',
+      //   x: -this.navigation.clientWidth,
+      // })
+      TweenMax.set(this.bg, {
+        opacity: 1,
+        // ease: Expo.easeIn,
+        zIndex: 110,
+      })
+      TweenMax.to(this.bg, 3.0, {
+        // ease: Expo.easeInOut,
+        ease: Expo.easeInOut,
+        opacity: 0,
+      })
+
+    })
+  }
+
+
+
+
   async transitionStart() {
     await this.prepareSlideOutAnimation()
     await this.slideInVideoMask()
     await this.locationHref()
+    // await this.topSplashDemo()
   }
 
   async animate() {
-    const ua = navigator.userAgent
-    if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
-    } else {
-    }
+    // const ua = navigator.userAgent
+    // if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+    // } else {
+    // }
 
     // await this.slideInVideoMask()
     // await this.loading()
     // await this.loadVideo(videoSrc)
-    await TweenMax.to(this.bg, 0.01, { display: 'none' })
-    await this.loaded()
+    // await TweenMax.to(this.bg, 0.01, { display: 'none' })
+    // await TweenMax.to(this.bg, 0.8, { display: 'none' })
+    this.topSplashDemo()
+    // await this.loaded()
     // await this.showVideo()
     await TweenMax.set(this.body, { css: { overflow: 'scroll' } })
     await TweenMax.set(this.body, { css: { overflowX: 'hidden' } })
     await TweenMax.set(this.body, { css: { width: '100vw' } })
     await TweenMax.set(this.kvImage, { css: { opacity: '1' } })
     // await this.slideOutVideoMask()
-    await emit.ev.emit('pageLoaded', true)
-    await this.slideInNavigation()
-    await this.fadeInNavLinks()
+    // await emit.ev.emit('pageLoaded', true)
+    // await this.slideInNavigation()
+    // await this.fadeInNavLinks()
   }
 }
