@@ -1,0 +1,124 @@
+//- extend _template
+extend /_dev/_include/_layout
+
+block vars
+  - title = 'The Pig and The Lady'
+  - description = 'xxx'
+  - keywords = 'xxx'
+  //- - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  //- - url = 'http://localhost:3000'
+
+block main
+
+  //- .p-pig.top#top(data-module="loadToTop")
+  .p-about
+
+    header
+      .p-lower__navigation__wrapper
+        include /_dev/_include/_inc_lower_nav.pug
+      .p-burger_wrapper(data-module="burgerMenu FixNavigationLower")
+        .l-col.l-col--2
+          .p-burger_space
+          include /_dev/_include/_inc_burger_menu.pug
+
+    .p-content
+
+      h2 ABOUT
+      .p-section
+        .l-inner
+          .p-about-kv
+            img(src=`/assets/images/about/img_kv.jpg` alt="")
+
+      .p-section
+        .l-inner
+          .p-about-concept
+            .u-txtCenter
+              h3 CONCEPT
+              p ハワイで最も人気のあるモダンベトナムレストラン
+              p.p-txt-small
+                |Vietnamese restaurant from Hawaii
+            .l-col.l-col--2
+              p
+                |2019年 秋 ハワイ・ホノルルで最も人気のあるベトナムレストラン「THE PIG & THE LADY」が恵比寿に日本初上陸！
+                br
+                |「THE PIG & THE LADY」の料理は、フランス料理出身のオーナーシェフ アンドリュー・レイの母親が作るベトナム料理が大切なルーツとなっており、母親の作り出す秘伝の“出汁”が重要で、それを使用した料理の数々が人気を集める要因の一つです。
+                br
+                |母親が作るベトナム料理をベースに、アンドリューが培ってきたフレンチのエッセンスを取り入れると共に、ハワイの文化を取り入れることでオリジナリティ溢れる新感覚のモダンベトナムレストランとして確立しており、「THE PIG & THE LADY」の料理を求め、ハリウッドスターやモデルたちが足繁く通うほどのハワイで最も人気のあるモダンベトナムレストランです。
+              p
+                |Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text tex
+
+            .l-col.l-col--2.l-col__align--center
+              .p-about-concept__figure
+                img(src=`/assets/images/about/img_about01.jpg` alt="")
+              .p-about-concept__figure
+                img(src=`/assets/images/about/img_about02.jpg` alt="")
+
+      .p-section
+        .l-inner
+          .p-about-story
+            h3.u-txtCenter BRAND STORY
+            .p-about-story__movie
+              img(src=`/assets/images/about/img_story01.jpg` alt="")
+
+      .p-section
+        .l-inner
+          .p-about-owners
+            .l-col.l-col--2
+              .p-about-owners__desc
+                .u-txtCenter
+                h3 OWNERS COMMENT
+                p
+                  |オーナーのアンドリュー・レイ 氏は、ベトナム系二世。ニューヨークの料理学校を卒業後、ハワイで5つ星を獲得したコンテンポラリー・フレンチレストラン【シェフ マブロ】でスーシェフまで上り詰め、ホノルルのファーマーズマーケットに出店し爆発的な人気を呼び、2013年、チャイナタウンに「THE PIG & THE LADY」を開業しました。
+                  br
+                  |また、2016年には、「THE PIG & THE LADY」の姉妹店となる「PIGGY SMALLS」を開業しハワイで話題のレストランとして、さらに人気を博しているほか、2019年8月9日(金)フード、ドリンク、トラベル、エンタメの情報を提供するライフスタイルメディアサイト「Thrillist」が主催する名誉ある賞「TOP 28 Best Vietnamese Restaurants in America」を受賞いたしました。
+                p
+                  |Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
+              .p-about-owners__figure
+                img(src=`/assets/images/about/img_owners01.jpg` alt="")
+                p ANDREW LE
+                p
+                  span アンドリュー・レイ
+
+            .p-about-owners__figure
+              img(src=`/assets/images/about/img_about03.jpg` alt="")
+
+
+      .p-section
+        .l-inner
+          .p-about-access
+            h3.u-txtCenter ACCESS
+            .l-col.l-col--2
+              .p-about-access__figure
+                img(src=`/assets/images/about/img_about03.jpg` alt="")
+              .p-about-access__info
+                dl
+                  dt ADDRESS
+                  dd
+                    |東京都渋谷区恵比寿南1-4-15
+                    br
+                    |恵比寿銀座クロスビル2階
+                a.c-link--1(href='')
+                  |GOOGLE MAP
+
+                dl
+                  dt OPEN
+                  dd
+                    |平日 11:00 - 16:00 / 17:00 - 23:00
+                    br
+                    |(L.O. FOOD 22:00 / DRINK 22:30)
+                  dd
+                    |土日 ・ 祝 11:00 - 23:00
+                    br
+                    |(L.O. FOOD 22:00 / DRINK 22:30)
+                  dt TEL
+                  dd
+                    |050-1743-1650
+                  dt SHEET
+                  dd
+                    |88席
+                  dt AREA
+                  dd
+                    |230.80㎡
+
+
+
