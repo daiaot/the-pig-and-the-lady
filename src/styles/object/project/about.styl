@@ -58,6 +58,12 @@
           width (60 / 2560) * 100vw
           height (4 / 2560) * 100vw
 
+    h3
+      font-size (84 / 750) * 100vw
+      +pc()
+        // font-size (130 / 2560) * 100vw
+        font-size (130 / 2560) * 100vw
+        margin-bottom per(50, 2560)
 
     &-concept
       .l-col--2
@@ -79,6 +85,20 @@
           & > img
             +pc()
               width 100%
+      &__lead
+        font-family Noto
+        font-size (46 / 750) * 100vw
+        +pc()
+          font-size (62 / 2560) * 100vw
+          line-height 1.4
+          margin-bottom per(25, 2560)
+          &--small
+            font-size (36 / 750) * 100vw
+            +pc()
+              font-size (36 / 2560) * 100vw
+              line-height 1.4
+
+
     &-story
       &__movie
         +pc()
