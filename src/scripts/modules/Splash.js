@@ -11,25 +11,25 @@ export default class Splash {
     this.isSplash = elem.classList.contains('p-splash') ? true : false
     // this.splashMask = this.createMask(this.elem, '#f0f3f5')
     // this.appendMask(this.splashMask, this.elem)
-    this.navigation = elem.querySelector('[data-module-splash="navigation"]')
-    this.navigationLogo = elem.querySelectorAll(
-      '[data-module-splash="navigation-content-logo"]'
-    )
-    this.navigationLinks = elem.querySelectorAll(
-      '[data-module-splash="navigation-content-links"]'
-    )
-    this.video = elem.querySelector('[data-module-splash="video"]')
-    this.loadingIcon = elem.querySelector('[data-module-splash="loading-icon"]')
+    // this.navigation = elem.querySelector('[data-module-splash="navigation"]')
+    // this.navigationLogo = elem.querySelectorAll(
+    //   '[data-module-splash="navigation-content-logo"]'
+    // )
+    // this.navigationLinks = elem.querySelectorAll(
+    //   '[data-module-splash="navigation-content-links"]'
+    // )
+    // this.video = elem.querySelector('[data-module-splash="video"]')
+    // this.loadingIcon = elem.querySelector('[data-module-splash="loading-icon"]')
     this.kvImage = elem.querySelector('[data-module-splash="visual"]')
     this.bg = elem.querySelector('[data-module-loading="bg"]')
     TweenMax.set(this.kvImage, { css: { opacity: '0' } })
     // this.LottieAnimation = new LottieAnimation(this.elem)
 
-    this.toggle = elem.querySelector('[data-module-toggle="toggle"]')
+    // this.toggle = elem.querySelector('[data-module-toggle="toggle"]')
 
-    this.heightAdjust()
-    this.prepareSlideInAnimation()
-    this.animate()
+    // this.heightAdjust()
+    // this.prepareSlideInAnimation()
+    // this.animate()
     this.bindEvents()
   }
 
@@ -51,16 +51,19 @@ export default class Splash {
   }
 
   bindEvents() {
-    for (let i = 0; i < this.innerLink.length; i = i + 1) {
-      this.innerLink[i].addEventListener('click', e => {
-        let target = e.currentTarget.getAttribute('target')
-        this.href = e.currentTarget.getAttribute('href')
-        if ((target === null || target === '') && !this.href.match(/#/)) {
-          e.preventDefault()
-          this.transitionStart()
-        }
-      })
-    }
+
+    this.animate()
+    // for (let i = 0; i < this.innerLink.length; i = i + 1) {
+    //   this.innerLink[i].addEventListener('click', e => {
+    //     let target = e.currentTarget.getAttribute('target')
+    //     this.href = e.currentTarget.getAttribute('href')
+    //     if ((target === null || target === '') && !this.href.match(/#/)) {
+    //       e.preventDefault()
+    //       this.transitionStart()
+    //     }
+    //   })
+    // }
+
     // this.toggle.addEventListener('click', e => {
     //   console.log('splash toggle click')
     //   e.preventDefault()
@@ -150,18 +153,6 @@ export default class Splash {
     })
   }
 
-  showVideo() {
-    return new Promise(resolve => {
-      TweenMax.set(this.body, { css: { overflow: 'scroll' } })
-      TweenMax.set(this.video, {
-        onComplete: () => {
-          resolve()
-          this.video.play()
-        },
-        opacity: 1,
-      })
-    })
-  }
 
   loading() {
     return new Promise(resolve => {
@@ -180,91 +171,91 @@ export default class Splash {
     })
   }
 
-  loaded() {
-    return new Promise(resolve => {
-      TweenMax.to(this.loadingIcon, 0.1, {
-        onComplete: () => {
-          TweenMax.set(this.loadingIcon, {
-            zIndex: 0,
-          })
-          resolve()
-        },
-        opacity: 0,
-      })
-    })
-  }
+  // loaded() {
+  //   return new Promise(resolve => {
+  //     TweenMax.to(this.loadingIcon, 0.1, {
+  //       onComplete: () => {
+  //         TweenMax.set(this.loadingIcon, {
+  //           zIndex: 0,
+  //         })
+  //         resolve()
+  //       },
+  //       opacity: 0,
+  //     })
+  //   })
+  // }
 
-  slideInNavigation() {
-    return new Promise(resolve => {
-    })
-  }
+  // slideInNavigation() {
+  //   return new Promise(resolve => {
+  //   })
+  // }
 
-  fadeInNavLinks() {
-    return new Promise(resolve => {
-      TweenMax.staggerTo(
-        this.navigationLogo,
-        0.8,
-        {
-          opacity: 1,
-          ease: Expo.easeInOut,
-        },
-        0.07,
-        () => resolve()
-      )
-      const linkIndexArr = []
-      for (let i = 0; i < this.navigationLinks.length; i++) {
-        linkIndexArr.push(i)
-      }
-      for (var j = linkIndexArr.length - 1; j >= 0; j--) {
-        var rand = Math.floor(Math.random() * (j + 1))
-        ;[linkIndexArr[j], linkIndexArr[rand]] = [
-          linkIndexArr[rand],
-          linkIndexArr[j],
-        ]
-      }
-      linkIndexArr.forEach((linkIndex, i) => {
-        TweenMax.staggerFromTo(
-          this.navigationLinks[linkIndex].querySelectorAll('.character'),
-          0.8,
-          {
-            opacity: 0,
-            y: 3,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            delay: i / 10,
-            ease: Power4.easeInOut,
-          },
-          0.01 + 0.01 * i,
-          () => resolve()
-        )
-      })
-    })
-  }
+  // fadeInNavLinks() {
+  //   return new Promise(resolve => {
+  //     TweenMax.staggerTo(
+  //       this.navigationLogo,
+  //       0.8,
+  //       {
+  //         opacity: 1,
+  //         ease: Expo.easeInOut,
+  //       },
+  //       0.07,
+  //       () => resolve()
+  //     )
+  //     const linkIndexArr = []
+  //     for (let i = 0; i < this.navigationLinks.length; i++) {
+  //       linkIndexArr.push(i)
+  //     }
+  //     for (var j = linkIndexArr.length - 1; j >= 0; j--) {
+  //       var rand = Math.floor(Math.random() * (j + 1))
+  //       ;[linkIndexArr[j], linkIndexArr[rand]] = [
+  //         linkIndexArr[rand],
+  //         linkIndexArr[j],
+  //       ]
+  //     }
+  //     linkIndexArr.forEach((linkIndex, i) => {
+  //       TweenMax.staggerFromTo(
+  //         this.navigationLinks[linkIndex].querySelectorAll('.character'),
+  //         0.8,
+  //         {
+  //           opacity: 0,
+  //           y: 3,
+  //         },
+  //         {
+  //           opacity: 1,
+  //           y: 0,
+  //           delay: i / 10,
+  //           ease: Power4.easeInOut,
+  //         },
+  //         0.01 + 0.01 * i,
+  //         () => resolve()
+  //       )
+  //     })
+  //   })
+  // }
 
-  slideOutNavigationChildMask() {
-    return new Promise(resolve => {
-      TweenMax.staggerTo(
-        this.navigationContents.getElementsByTagName('path'),
-        0.3,
-        {
-          opacity: 1,
-          ease: Expo.easeInOut,
-        },
-        0.05,
-        () => resolve()
-      )
-    })
-  }
+  // slideOutNavigationChildMask() {
+  //   return new Promise(resolve => {
+  //     TweenMax.staggerTo(
+  //       this.navigationContents.getElementsByTagName('path'),
+  //       0.3,
+  //       {
+  //         opacity: 1,
+  //         ease: Expo.easeInOut,
+  //       },
+  //       0.05,
+  //       () => resolve()
+  //     )
+  //   })
+  // }
 
-  loadVideo(src) {
-    return new Promise((resolve) => {
-      this.video.src = src
-      this.video.addEventListener('canplay', () => resolve())
-      setTimeout(resolve, 5000)
-    })
-  }
+  // loadVideo(src) {
+  //   return new Promise((resolve) => {
+  //     this.video.src = src
+  //     this.video.addEventListener('canplay', () => resolve())
+  //     setTimeout(resolve, 5000)
+  //   })
+  // }
 
   topSplashDemo() {
     return new Promise(() => {

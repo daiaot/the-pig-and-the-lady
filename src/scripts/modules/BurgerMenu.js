@@ -16,10 +16,18 @@ export default class BurgerMenu {
 
     // ナビオープン時のバックグラウンド
     this.splashMask = this.createMask(this.el, '#fff')
-    this.appendMask(this.splashMask, this.el)
+    // this.appendMask(this.splashMask, this.el)
+    this.appendMask(this.splashMask, this.body)
 
     this.bindEvent()
     this.anchorLink()
+  }
+
+  appendMask(mask, target) {
+    // target.style.position = 'relative'
+    // SP時のnewsを表示させるため、一時的に'hidden'解除
+    // target.style.overflow = 'hidden'
+    target.appendChild(mask)
   }
 
   bindEvent() {
@@ -102,12 +110,6 @@ export default class BurgerMenu {
     this.prepareSlideOutAnimation()
   }
 
-  appendMask(mask, target) {
-    // target.style.position = 'relative'
-    // SP時のnewsを表示させるため、一時的に'hidden'解除
-    target.style.overflow = 'hidden'
-    target.appendChild(mask)
-  }
   prepareSlideOutAnimation() {
     return new Promise(resolve => {
       TweenMax.set(this.el, { display: 'block' })
@@ -121,7 +123,7 @@ export default class BurgerMenu {
       TweenMax.set(this.nav, { css: { zIndex: 20 } })
       TweenMax.set(this.splashMask, {
         opacity: .5,
-        // display: 'block',
+        display: 'block',
         // x: -this.navigation.clientWidth,
         zIndex: 10,
         overflow: 'hidden',
@@ -137,8 +139,10 @@ export default class BurgerMenu {
     mask.style.position = 'fixed'
     mask.style.zIndex = '10'
     mask.style.top = '0px'
-    mask.style.right = '0px'
+    // mask.style.right = '0px'
+    mask.style.left = '0px'
     mask.style.opacity = '0'
+    mask.style.display = 'none'
     return mask
   }
 
@@ -185,6 +189,18 @@ export default class BurgerMenu {
   }
 
   anchorLink() {
+
+
+    // $('a[href^="#"]').click(function() {
+    //   const speed = 500
+    //   let href = $(this).attr('href')
+    //   const target = $(href === '#' || href === '' ? 'html' : href)
+    //   const position = target.offset().top
+    //   $('html, body').animate({ scrollTop: position }, speed, 'swing')
+    //   return false
+    //   thisModule.closeAnimation()
+    // })
+
     const thisModule = this
     for (let j = 0; j < this.links.length; j++) {
       this.links[j].addEventListener('click', function() {
@@ -221,6 +237,7 @@ export default class BurgerMenu {
       TweenMax.set(this.body, { css: { height: '' } })
       TweenMax.set(this.splashMask, {
         opacity: 0,
+        display: 'none',
         x: 0,
         zIndex: 0,
       })

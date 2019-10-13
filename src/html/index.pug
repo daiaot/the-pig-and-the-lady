@@ -14,7 +14,7 @@ block main
   .p-top#top
 
     .p-splash(data-module="splash" style="position: relative;")
-      .p-loading__bg(data-module-loading="bg")
+      .p-loading__bg(data-module-loading="bg" style="opacity: 0;")
         img.p-loading__msg(src=`/assets/images/top/img_splash_msg.svg` alt="")
       //- .kv.p-splash__visual(data-module-splash="visual")
 
@@ -46,7 +46,7 @@ block main
               br
               |2019年秋 恵比寿にオープン
         //- .kv__main
-      div.p-splash__loading-icon(data-module-splash="loading-icon")
+      //- div.p-splash__loading-icon(data-module-splash="loading-icon")
         +logo-icon
 
       .p-burger_wrapper(data-module="burgerMenu")
