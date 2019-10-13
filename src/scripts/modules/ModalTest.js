@@ -2,14 +2,13 @@
 import $ from 'jquery'
 import Swiper from 'swiper'
 
-export default class GalleryShow {
+export default class ModalTest {
   constructor(elem) {
     this.elem = elem
     this.init()
   }
 
   init() {
-    // const modal = $('#js-galleryModal')
     const modal = $('#js-galleryModal')
     const modalClose = $('#js-galleryModalClose')
     const modalOverlay = $('#js-galleryModalOverlay')

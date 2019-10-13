@@ -11,7 +11,7 @@ block vars
 block main
 
   //- .p-pig.top#top(data-module="loadToTop")
-  .p-top#top(data-module="loadToTop")
+  .p-top#top
 
     .p-splash(data-module="splash" style="position: relative;")
       .p-loading__bg(data-module-loading="bg")
@@ -160,15 +160,15 @@ block main
           .l-col.l-col--2
             .p-news-title
               h2 NEWS
-            .p-news-lists
-              .p-news-list
+            .p-news-lists(data-module="Modal")
+              .gallery-content__item.p-news-list(data-slide="1")
                 dl
                   dt 2019.11.1
                   dd
                     |NOVEMBER HOLIDAY INFORMATION
                     br
                     span.u-font-noto 11月休業日のお知らせ
-              .p-news-list
+              .gallery-content__item.p-news-list(data-slide="2")
                 dl
                   dt 2019.11.1
                   dd
@@ -196,6 +196,107 @@ block main
                     |OPEN WEBSITE
                     br
                     span.u-font-noto 11月休業日のお知らせ
+
+
+
+      //- 以下modal
+      #js-galleryModal.modal
+        #js-galleryModalOverlay.modal-overlay
+        .modal-dialog
+          .modal-content
+            .modal-header
+              #js-galleryModalClose.modal-close
+                img(
+                  src="/assets/images/common/ic_close.png"
+                  alt=""
+                  decoding="async"
+                )
+            .modal-body
+              //- #js-galleryModalSwiper.swiper-container
+              #js-galleryModalSwiper.swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    .swiper-content
+                      .swiper-content__title Title test 1
+                      .swiper-content__desc
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+
+                  .swiper-slide
+                    .swiper-content
+                      .swiper-content__title Title test 2
+                      .swiper-content__desc
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+
+                  .swiper-slide
+                    .swiper-content
+                      .swiper-content__title Contacg
+                      .swiper-content__desc
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+
+                //- .swiper-wrapper
+                //-   .swiper-slide
+                //-     .swiper-img
+                //-       img(
+                //-         src="/assets/images/gallery/img_photo_01.jpg"
+                //-         alt=""
+                //-         decoding="async"
+                //-       )
+                //-     .swiper-text リゾートゲートウェイ・ステーション
+
+                //-   .swiper-slide
+                //-     .swiper-img
+                //-       img(
+                //-         src="/assets/images/gallery/img_photo_02.jpg"
+                //-         alt=""
+                //-         decoding="async"
+                //-       )
+                //-     .swiper-text
+
+
+                  //- .swiper-slide
+                  //-   .swiper-img
+                  //-     img(
+                  //-       src="/assets/images/gallery/img_photo_01.jpg"
+                  //-       alt=""
+                  //-       decoding="async"
+                  //-     )
+                  //-   .swiper-text 自動券売機は11台！一番多くのフリーきっぷデザインが並びます！
+
+                  //- .swiper-slide
+                  //-   .swiper-img
+                  //-     img(
+                  //-       src="/assets/images/gallery/img_photo_02.jpg"
+                  //-       alt=""
+                  //-       decoding="async"
+                  //-     )
+                  //-   .swiper-text
+
+                  //- .swiper-slide
+                  //-   .swiper-img
+                  //-     img(
+                  //-       src="/assets/images/gallery/img_photo_01.jpg"
+                  //-       alt=""
+                  //-       decoding="async"
+                  //-     )
+                  //-   .swiper-text 夕日が差し込むホーム
+
+                  //- .swiper-slide
+                  //-   .swiper-img
+                  //-     img(
+                  //-       src="/assets/images/gallery/img_photo_02.jpg"
+                  //-       alt=""
+                  //-       decoding="async"
+                  //-     )
+                  //-   .swiper-text 夜のライトアップで、また違う印象になります
+
+                .swiper-button
+                  #js-swiper-button-prev.swiper-button-prev
+                  #js-swiper-button-next.swiper-button-next
+                  #js-swiper-numbers.swiper-numbers
 
 
 

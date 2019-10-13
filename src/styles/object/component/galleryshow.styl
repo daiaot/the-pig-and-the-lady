@@ -1,17 +1,11 @@
-.modal
+// .modal
+.galleryshow
   visibility hidden
-
-  &-wrap
-    width 80%
-    background #fff
-    padding 10%
-
-    &__title
-      font-zise 30px
 
   // 画像のみのmodal
   &.-img
-    .modal-body
+    // .modal-body
+    .galleryshow-body
       background none
       border-radius 0
       border none
@@ -36,8 +30,7 @@
     bottom 0
     left 0
     right 0
-    // background-color rgba(0, 0, 0, 0.8)
-    background-color rgba(237, 116, 115, 0.9)
+    background-color rgba(0, 0, 0, 0.8)
 
   &-dialog
     position fixed
@@ -46,36 +39,26 @@
     z-index 4000
     /* height: 100%; */
     transform translate(-50%, -50%)
-    // width per(1956,2589)
-    width 100%
 
     +sp()
       top 50%
       width 100%
 
   &-content
-    // width 510px
+    width 510px
     margin 0 auto
-
-    +pc()
-      width per(1956, 2560)
-      overflow-y scroll
-      height 100%
 
     +sp()
       width calc(100% - 20px)
 
     .swiper-slide
-      .swiper-content
-        width 100%
-
       img
         width 100%
 
   &-body
     background #fff
-    // border 3px solid #1eb9ee
-    // border-radius 20px
+    border 3px solid #1eb9ee
+    border-radius 20px
     overflow hidden
     position relative
     z-index 1
@@ -96,12 +79,15 @@
         width calc(100% - 40%)
 
 // モーダル内のスライダーCSSを下記に記載
-.modal-body .swiper-slide,
-.modal-body .swiper-img
+// .modal-body .swiper-slide,
+// .modal-body .swiper-img
+.galleryshow-body .swiper-slide,
+.galleryshow-body .swiper-img
   img
     width 100%
 
-.modal-body .swiper-text
+// .modal-body .swiper-text
+.galleryshow-body .swiper-text
   width calc(100% - 10px)
   padding 15px 25px 10px
   margin 5px auto 0
@@ -129,8 +115,8 @@
     line-height 1.8
     color #5e5e5e
 
-.modal-body .swiper-button
-  display none
+// .modal-body .swiper-button
+.galleryshow-body .swiper-button
   width calc(100% - 10px)
   min-height 40px
   margin 0 auto 5px

@@ -57,18 +57,22 @@ block main
 
 
       // 以下modal
-      #js-galleryModal.modal
-        #js-galleryModalOverlay.modal-overlay
-        .modal-dialog
-          .modal-content
-            .modal-header
+      //- #js-galleryModal.modal
+      #js-galleryModal.galleryshow
+        //- #js-galleryModalOverlay.modal-overlay
+        #js-galleryModalOverlay.galleryshow-overlay
+        .galleryshow-dialog
+          .galleryshow-content
+            //- .modal-header
+            .galleryshow-header
               #js-galleryModalClose.modal-close
                 img(
                   src="/assets/images/common/ic_close.png"
                   alt=""
                   decoding="async"
                 )
-            .modal-body
+            //- .modal-body
+            .galleryshow-body
               #js-galleryModalSwiper.swiper-container
                 .swiper-wrapper
                   .swiper-slide

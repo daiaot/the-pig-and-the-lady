@@ -1,5 +1,5 @@
 .p-burger_container
-  ul.p-burger_menu
+  ul.p-burger_menu(data-module="Modal")
     li.p-burger_item(data-anchor="who")
       a(href='/about/')
         |ABOUT
@@ -13,7 +13,7 @@
       a(href='#news')
         |NEWS
     li.p-burger_item(data-anchor="contact")
-      a(href='#')
+      a.gallery-content__item(href='#' data-slide="3")
         |CONTACT
     li.p-burger_item(data-anchor="contact")
       a(href='/about#access')

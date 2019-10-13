@@ -2,14 +2,13 @@
 import $ from 'jquery'
 import Swiper from 'swiper'
 
-export default class GalleryShow {
+export default class Modal {
   constructor(elem) {
     this.elem = elem
     this.init()
   }
 
   init() {
-    // const modal = $('#js-galleryModal')
     const modal = $('#js-galleryModal')
     const modalClose = $('#js-galleryModalClose')
     const modalOverlay = $('#js-galleryModalOverlay')
@@ -18,16 +17,9 @@ export default class GalleryShow {
     // swiper
     const modalSwiper = new Swiper('#js-galleryModalSwiper', {
       loop: true,
-      navigation: {
-        nextEl: '#js-swiper-button-next',
-        prevEl: '#js-swiper-button-prev',
-      },
-      pagination: {
-        el: '#js-swiper-numbers',
-        type: 'fraction',
-      },
       spaceBetween: 30,
-      watchActiveIndex: true,
+      simulateTouch: false,
+      noSwiping: true,
     })
 
     // modalを開く対象の指定
@@ -36,12 +28,14 @@ export default class GalleryShow {
       e.preventDefault()
 
       const slideNum = $(this).data('slide')
+      console.log('slideNum : ' + slideNum)
+      // console.log(slideNum)
       modalSwiper.slideTo(slideNum, 0)
-
       if (!modal.hasClass(open)) {
         modal.css('visibility', 'visible').addClass(open)
         $('html').css('overflow', 'hidden')
       }
+      // console.log('modalSwiper : ' + modalSwiper.realIndex);
     })
 
     // 以下非表示系
