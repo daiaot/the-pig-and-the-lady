@@ -7,7 +7,7 @@ export default class Splash {
     this.elem = elem
     this.body = document.body
     this.innerLink = document.querySelectorAll('a')
-    TweenMax.set(this.body, { css: { overflow: 'hidden' } })
+    // TweenMax.set(this.body, { css: { overflow: 'hidden' } })
     this.isSplash = elem.classList.contains('p-splash') ? true : false
     // this.splashMask = this.createMask(this.elem, '#f0f3f5')
     // this.appendMask(this.splashMask, this.elem)
@@ -24,6 +24,9 @@ export default class Splash {
     this.bg = elem.querySelector('[data-module-loading="bg"]')
     TweenMax.set(this.kvImage, { css: { opacity: '0' } })
     // this.LottieAnimation = new LottieAnimation(this.elem)
+
+    this.toggle = elem.querySelector('[data-module-toggle="toggle"]')
+
     this.heightAdjust()
     this.prepareSlideInAnimation()
     this.animate()
@@ -58,6 +61,10 @@ export default class Splash {
         }
       })
     }
+    // this.toggle.addEventListener('click', e => {
+    //   console.log('splash toggle click')
+    //   e.preventDefault()
+    // })
   }
 
   locationHref() {
@@ -311,7 +318,7 @@ export default class Splash {
     this.topSplashDemo()
     // await this.loaded()
     // await this.showVideo()
-    await TweenMax.set(this.body, { css: { overflow: 'scroll' } })
+    // await TweenMax.set(this.body, { css: { overflow: 'scroll' } })
     await TweenMax.set(this.body, { css: { overflowX: 'hidden' } })
     await TweenMax.set(this.body, { css: { width: '100vw' } })
     await TweenMax.set(this.kvImage, { css: { opacity: '1' } })
