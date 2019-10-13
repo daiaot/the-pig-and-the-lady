@@ -32,11 +32,6 @@
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "jest": {
     "transform": {
       "^.+\\.ts$": "<rootDir>/node_modules/ts-jest",
