@@ -24,9 +24,6 @@ export default class BurgerMenu {
   }
 
   appendMask(mask, target) {
-    // target.style.position = 'relative'
-    // SP時のnewsを表示させるため、一時的に'hidden'解除
-    // target.style.overflow = 'hidden'
     target.appendChild(mask)
   }
 
@@ -39,24 +36,16 @@ export default class BurgerMenu {
       // this.animate.bind(this)
       this.animate()
     })
-
-    // this.btn.addEventListener('click', e => {
-    // this.btn.addEventListener('click', e => {
-    //   console.log('toggle click')
-    //   e.preventDefault()
-    //   this.animate.bind(this)
-    // })
   }
 
   bgSlide() {
-    console.log('bgSlide()')
-    console.log('status: ' + this.state.status)
+    // console.log('bgSlide()')
+    // console.log('status: ' + this.state.status)
 
     TweenMax.to(this.el, 0.3, {
       css: {
         right: 0,
       },
-      // onComplete: () => this.lettersFade(),
     })
   }
 
@@ -71,41 +60,14 @@ export default class BurgerMenu {
     })
   }
 
-  lettersFade() {
-    for (let i = 0; i < this.items.length; i++) {
-      const item = this.items[i]
-      this.letters = item.querySelectorAll('g')
-      TweenMax.staggerFromTo(
-        this.letters,
-        0.6,
-        {
-          y: 40*Math.random()
-        },
-        {
-          y: 0,
-          opacity: 1,
-          delay: 0.1 * i,
-          ease: Expo.easeOut
-        },
-        0.04,
-        () => {
-          if (i === this.items.length - 1) {
-            this.state.status = 'opened'
-          }
-        }
-      )
-    }
-  }
 
   openAnimation() {
     // console.log('openAnimation()')
     // console.log('status: ' + this.state.status)
-
     // this.state.status = 'animating'
     this.state.status = 'opened'
     this.toggleSlide()
     this.bgSlide()
-    // this.slideInVideoMask()
     // e.preventDefault()
     this.prepareSlideOutAnimation()
   }
@@ -189,18 +151,6 @@ export default class BurgerMenu {
   }
 
   anchorLink() {
-
-
-    // $('a[href^="#"]').click(function() {
-    //   const speed = 500
-    //   let href = $(this).attr('href')
-    //   const target = $(href === '#' || href === '' ? 'html' : href)
-    //   const position = target.offset().top
-    //   $('html, body').animate({ scrollTop: position }, speed, 'swing')
-    //   return false
-    //   thisModule.closeAnimation()
-    // })
-
     const thisModule = this
     for (let j = 0; j < this.links.length; j++) {
       this.links[j].addEventListener('click', function() {
@@ -217,17 +167,6 @@ export default class BurgerMenu {
       })
     }
   }
-
-
-  // slideInVideoMask() {
-  //   return new Promise(resolve => {
-  //     TweenMax.to(this.splashMask, 0.5, {
-  //       onComplete: () => resolve(),
-  //       x: 0,
-  //       ease: Power3.easeInOut,
-  //     })
-  //   })
-  // }
 
   slideOutVideoMask() {
     return new Promise(resolve => {
@@ -251,7 +190,4 @@ export default class BurgerMenu {
     })
   }
 
-
 }
-
-

@@ -14,7 +14,7 @@ block main
   .p-top#top
 
     .p-splash(data-module="splash" style="position: relative;")
-      .p-loading__bg(data-module-loading="bg" style="opacity: 0;")
+      .p-loading__bg(data-module-loading="bg")
         img.p-loading__msg(src=`/assets/images/top/img_splash_msg.svg` alt="")
       //- .kv.p-splash__visual(data-module-splash="visual")
 
@@ -25,8 +25,8 @@ block main
         .p-splash__navigation__wrapper
           include /_dev/_include/_inc_nav.pug
 
-      .p-kv.p-splash__visual(data-module-splash="visual")
-        //- video.p-splash__video(style="opacity: 0;" data-module-splash="video" loop muted playsinline data-object-fit="cover")
+      //- .p-kv.p-splash__visual(data-module-splash="visual")
+      .p-kv.p-splash__visual
         .p-kv__main
           .p-kv__lead
             p
@@ -45,52 +45,11 @@ block main
               |モダンベトナムレストラン
               br
               |2019年秋 恵比寿にオープン
-        //- .kv__main
-      //- div.p-splash__loading-icon(data-module-splash="loading-icon")
-        +logo-icon
 
       .p-burger_wrapper(data-module="burgerMenu")
-        //- ul.p-burger_container
-        //-   li.p-burger_item(data-anchor="who")
-        //-     +sp-nav-who
-        //-   li.p-burger_item(data-anchor="service")
-        //-     +sp-nav-service
-        //-   li.p-burger_item(data-anchor="column")
-        //-     +sp-nav-column
-        //-   li.p-burger_item(data-anchor="team")
-        //-     +sp-nav-team
-        //-   li.p-burger_item(data-anchor="contact")
-        //-     +sp-nav-contact
-
         .l-col.l-col--2
           //- .p-burger_space
           include /_dev/_include/_inc_burger_menu.pug
-          //- .p-burger_container
-          //-   ul.p-burger_menu
-          //-     li.p-burger_item(data-anchor="who")
-          //-       a(href='/#top')
-          //-         |ABOUT
-          //-     li.p-burger_item(data-anchor="service")
-          //-       a(href='/#top')
-          //-         |MENU
-          //-     li.p-burger_item(data-anchor="column")
-          //-       a(href='#service')
-          //-         |GALLERY
-          //-     li.p-burger_item(data-anchor="team")
-          //-       a(href='#column')
-          //-         |NEWS
-          //-     li.p-burger_item(data-anchor="contact")
-          //-       a(href='#team')
-          //-         |CONTACT
-          //-     li.p-burger_item(data-anchor="contact")
-          //-       a(href='#contact')
-          //-         |ACCESS
-          //-     li.p-burger_item(data-anchor="contact")
-          //-       a.c-link--color(href='#contact')
-          //-         |RESERVATION
-          //-     li.nav-sns--insta.p-burger_item(data-anchor="contact")
-          //-       a(href='#contact')
-          //-         |JP
 
       .p-scroll-icon
 
@@ -123,27 +82,6 @@ block main
                 img.u-spOnly(src=`/assets/images/top/img_about_thumb01_sp.jpg` alt="")
               //- .p-thumb.thumb__2
               //-   img(src=`/assets/images/top/img_about_thumb02.jpg` alt="")
-
-              //- .l-col.l-col--2
-              //-   .ffxi__section__list__thumb
-              //-     img(src=`/assets/images/top/img_thumb_faith_02.jpg` alt="")
-              //-   .ffxi__section__list__detail
-              //-     p.c-text__long.ffxi__section__list__detail__adjust
-              //-       span.ffxi__section__list__category.font-times
-              //-         |FAITH
-              //-     p.c-text__long
-              //-       span.ffxi__section__list__count.font-times-new-Roman
-              //-         |02/02
-              //-     p
-              //-       span.ffxi__section__list__desc
-              //-         |お友達や他のプレイヤーが
-              //-         br
-              //-         |集まらないときは、
-              //-         br
-              //-         |頼りがいのある分身たち…
-              //-         br
-              //-         |フェイスに任せてみましょう。
-
 
       .p-section.thumb
         .l-inner
@@ -212,7 +150,7 @@ block main
                   decoding="async"
                 )
             .modal-body
-              //- #js-galleryModalSwiper.swiper-container
+
               #js-galleryModalSwiper.swiper-container
                 .swiper-wrapper
                   .swiper-slide
