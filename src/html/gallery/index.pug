@@ -22,22 +22,22 @@ block main
       h2 GALLERY
       .p-section
         .l-inner
-          .p-gallery-wrap
+          .p-gallery-wrap(data-module="GalleryShow")
             .p-gallery-col--column.p-gallery-order--1
               //- a(href='/assets/images/gallery/img_photo_01.jpg' data-module="GalleryShow")
-              a(href='/assets/images/gallery/img_photo_01.jpg')
+              a.gallery-content__item(href='#' data-slide="1")
                 img(src=`/assets/images/gallery/img_photo_01.jpg` alt='PHO CHAY')
-              a(href='/assets/images/gallery/img_photo_02.jpg')
+              a.gallery-content__item(href='#' data-slide="2")
                 img(src=`/assets/images/gallery/img_photo_02.jpg` alt='PHO CHAY')
-            a.p-gallery-col.p-gallery-order--2(href='/assets/images/gallery/img_photo_03.jpg')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--2(href='#' data-slide="3")
               img(src=`/assets/images/gallery/img_photo_03.jpg` alt='PHO CHAY')
-            a.p-gallery-col.p-gallery-order--3(href='/assets/images/gallery/img_photo_04.jpg')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--3(href='#' data-slide="4")
               img(src=`/assets/images/gallery/img_photo_04.jpg` alt='PHO CHAY')
 
-            a.p-gallery-col.p-gallery-order--4(href='/assets/images/gallery/img_photo_05.jpg')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--4(href='#' data-slide="5")
               img(src=`/assets/images/gallery/img_photo_05.jpg` alt='PHO CHAY')
             .p-gallery-col--column.p-gallery-order--5
-              a(href='/assets/images/gallery/img_photo_06.jpg')
+              a.gallery-content__item(href='#' data-slide="6")
                 img(src=`/assets/images/gallery/img_photo_06.jpg` alt='PHO CHAY')
               a(href='/assets/images/gallery/img_photo_07.jpg')
                 img(src=`/assets/images/gallery/img_photo_07.jpg` alt='PHO CHAY')
@@ -54,6 +54,83 @@ block main
               a(href='/assets/images/gallery/img_photo_12.jpg')
                 img(src=`/assets/images/gallery/img_photo_12.jpg` alt='PHO CHAY')
 
+
+
+      // 以下modal
+      #js-galleryModal.modal
+        #js-galleryModalOverlay.modal-overlay
+        .modal-dialog
+          .modal-content
+            .modal-header
+              #js-galleryModalClose.modal-close
+                img(
+                  src="/assets/images/common/ic_close.png"
+                  alt=""
+                  decoding="async"
+                )
+            .modal-body
+              #js-galleryModalSwiper.swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_01.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text リゾートゲートウェイ・ステーション
+
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_02.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_01.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text 自動券売機は11台！一番多くのフリーきっぷデザインが並びます！
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_02.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_01.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text 夕日が差し込むホーム
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_02.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text 夜のライトアップで、また違う印象になります
+
+                .swiper-button
+                  #js-swiper-button-prev.swiper-button-prev
+                  #js-swiper-button-next.swiper-button-next
+                  #js-swiper-numbers.swiper-numbers
 
 
 

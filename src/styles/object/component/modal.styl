@@ -1,0 +1,145 @@
+.modal
+  visibility hidden
+
+  // 画像のみのmodal
+  &.-img
+    .modal-body
+      background none
+      border-radius 0
+      border none
+      overflow visible
+      text-align center
+
+      .modal-img
+        img
+          width calc(600 / 750 * 100%)
+
+          +sp()
+            width calc(550 / 750 * 100%)
+
+  // 画像のみのmodalcss おしまい
+  &.is-open
+    visibility visible
+
+  &-overlay
+    position fixed
+    z-index 3000
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-color rgba(0, 0, 0, 0.8)
+
+  &-dialog
+    position fixed
+    top 45%
+    left 50%
+    z-index 4000
+    /* height: 100%; */
+    transform translate(-50%, -50%)
+
+    +sp()
+      top 50%
+      width 100%
+
+  &-content
+    width 510px
+    margin 0 auto
+
+    +sp()
+      width calc(100% - 20px)
+
+    .swiper-slide
+      img
+        width 100%
+
+  &-body
+    background #fff
+    border 3px solid #1eb9ee
+    border-radius 20px
+    overflow hidden
+    position relative
+    z-index 1
+
+  &-close
+    width 45px
+    height 45px
+    margin 0 0 10px auto
+
+    img
+      width 100%
+
+    &.-buttonType
+      width 220px
+      margin 20px auto 0
+
+      +sp()
+        width calc(100% - 40%)
+
+// モーダル内のスライダーCSSを下記に記載
+.modal-body .swiper-slide,
+.modal-body .swiper-img
+  img
+    width 100%
+
+.modal-body .swiper-text
+  width calc(100% - 10px)
+  padding 15px 25px 10px
+  margin 5px auto 0
+  font-size 1.3rem
+  background url('../images/bg_hex.png') no-repeat top center
+  background-size 100%
+  text-align left
+  font-weight normal
+  line-height 1.5
+  color #5e5e5e
+
+  dl
+    padding 0 0 10px
+    text-align left
+
+  dt
+    font-size 1.6rem
+    margin-bottom 10px
+    font-weight bold
+    color #1eb9ee
+
+  dd
+    font-size 1.3rem
+    font-weight normal
+    line-height 1.8
+    color #5e5e5e
+
+.modal-body .swiper-button
+  width calc(100% - 10px)
+  min-height 40px
+  margin 0 auto 5px
+  position relative
+  background url('../images/bg_hex.png') no-repeat bottom center
+  background-size 100%
+
+  .swiper-button-prev,
+  .swiper-button-next
+    width 35px
+    height 35px
+    border 3px solid #1eb9ee
+    border-radius 50%
+    background url('../images/ic_arr.svg') no-repeat center center
+    background-size 7px
+
+  .swiper-button-next
+    transform rotate(180deg)
+
+  .swiper-numbers
+    display flex
+    justify-content center
+    align-items center
+    position absolute
+    top 50%
+    left 50%
+    font-size 1.3rem
+    font-weight bold
+    color #1eb9ee
+    text-align center
+    letter-spacing 0.5em
+    transform translate(-50%, -50%)
