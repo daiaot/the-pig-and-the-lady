@@ -1,0 +1,79 @@
+.p
+  &-reservation
+    position fixed
+    bottom 0
+    right 0
+    z-index 10
+    width 100%
+    background #fff
+
+    +pc()
+      width per(1248, 2560) !important
+
+    #tc-widget
+      // width per(1248, 2560) !important
+      width 100% !important
+
+      form
+        width 100%
+        display flex
+        flex-wrap nowrap
+
+      .tc-body
+        +sp()
+          padding-left 0
+          padding-right 0
+
+      .tc-header
+        display none
+
+      .tc-content
+        display flex
+
+        +sp()
+          width 70%
+
+      .tc-date
+        +sp()
+          width 33%
+          float none
+
+      .tc-time
+        +sp()
+          width 33%
+          float none
+
+      .tc-ppl
+        +sp()
+          width 33%
+          float none
+
+      input[type='text']
+        +sp()
+          width 100%
+
+      select
+        +sp()
+          width 100%
+
+      .tc-icon
+        display none
+        width 0
+        height 0
+
+      .tc-icon-cal
+        display none
+
+      .tc-wrap-book
+        background #ed7473
+
+        +sp()
+          width 25%
+
+      .tc-book
+        background #ed7473
+        // input[value='RESERVATION']
+
+    #tc-widget[data-theme='clear'] .tc-book
+      background #ed7473
+      border none
