@@ -18,11 +18,19 @@
 
   .p-loading__msg
     position absolute
-    width 423px
-    height 81px
+    width 85%
+    height auto
     top 50%
     left 50%
-    margin -40px 0 0 -212px
+
+    // opacity 0
+    +sp()
+      transform translate(-50%, -50%)
+
+    +pc()
+      width 423px
+      height 81px
+      margin -40px 0 0 -212px
 
   img
     width 100%
