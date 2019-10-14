@@ -1,18 +1,26 @@
 .p
   &-reservation
+    display none !important
     position fixed
     bottom 0
     right 0
     z-index 10
     width 100%
     background #fff
+    display flex
 
     +pc()
       width per(1248, 2560) !important
 
+    &__btn
+      width per(297, 1248)
+      background #ed7473
+      cursor pointer
+
     #tc-widget
       // width per(1248, 2560) !important
-      width 100% !important
+      // width 100% !important
+      width per(951, 1248) !important
 
       form
         width 100%
@@ -31,6 +39,9 @@
         display flex
 
         +sp()
+          width 70%
+
+        +pc()
           width 70%
 
       .tc-date
@@ -52,8 +63,14 @@
         +sp()
           width 100%
 
+        +pc()
+          width 100%
+
       select
         +sp()
+          width 100%
+
+        +pc()
           width 100%
 
       .tc-icon
@@ -65,15 +82,19 @@
         display none
 
       .tc-wrap-book
-        background #ed7473
-
         +sp()
           width 25%
+
+        +pc()
+          width 30%
 
       .tc-book
         background #ed7473
         // input[value='RESERVATION']
 
     #tc-widget[data-theme='clear'] .tc-book
-      background #ed7473
-      border none
+      // background #ed7473
+      border-color #000
+      color #000
+      border-radius 4px
+      background transparent

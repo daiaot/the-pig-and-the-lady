@@ -30,7 +30,8 @@
     bottom 0
     left 0
     right 0
-    background-color rgba(0, 0, 0, 0.8)
+    // background-color rgba(0, 0, 0, 0.8)
+    background-color rgba(255, 255, 255, 0.92)
 
   &-dialog
     position fixed
@@ -39,13 +40,15 @@
     z-index 4000
     /* height: 100%; */
     transform translate(-50%, -50%)
+    width per(1544, 2560)
+    height (1149 / 2560) * 100vw
 
     +sp()
       top 50%
       width 100%
 
   &-content
-    width 510px
+    // width 510px
     margin 0 auto
 
     +sp()
@@ -56,9 +59,9 @@
         width 100%
 
   &-body
-    background #fff
-    border 3px solid #1eb9ee
-    border-radius 20px
+    // background #fff
+    // border 3px solid #1eb9ee
+    // border-radius 20px
     overflow hidden
     position relative
     z-index 1
@@ -67,6 +70,27 @@
     width 45px
     height 45px
     margin 0 0 10px auto
+    position absolute
+    top -45px
+    right -45px
+    cursor pointer
+
+    &:before,
+    &:after
+      content ''
+      position absolute
+      display inline-block
+      top 12px
+      left 24px
+      width 3px
+      height 25px
+      background-color #ed7473
+
+    &:before
+      transform rotate(45deg)
+
+    &:after
+      transform rotate(-45deg)
 
     img
       width 100%
@@ -121,20 +145,21 @@
   min-height 40px
   margin 0 auto 5px
   position relative
-  background url('/assets/images/gallery/bg_hex.png') no-repeat bottom center
-  background-size 100%
 
+  // background url('/assets/images/gallery/bg_hex.png') no-repeat bottom center
+  // background-size 100%
   .swiper-button-prev,
   .swiper-button-next
     width 35px
     height 35px
-    border 3px solid #1eb9ee
+    // border 3px solid #1eb9ee
     border-radius 50%
-    background url('/assets/images/gallery/ic_arr.svg') no-repeat center center
+    // background url('/assets/images/gallery/ic_arr.svg') no-repeat center center
     background-size 7px
+    color #000
 
   .swiper-button-next
-    transform rotate(180deg)
+    // transform rotate(180deg)
 
   .swiper-numbers
     display flex
@@ -145,7 +170,14 @@
     left 50%
     font-size 1.3rem
     font-weight bold
-    color #1eb9ee
+    color #000
     text-align center
     letter-spacing 0.5em
     transform translate(-50%, -50%)
+
+    +pc()
+      font-size (30 / 2560) * 100vw
+
+  .swiper-pagination-current
+    +pc()
+      font-size (82 / 2560) * 100vw
