@@ -211,20 +211,46 @@
       width 100%
 
     &__main
-      background url('/assets/images/top/img_kv01_sp.jpg') no-repeat 50% 50%
-      background-size 100% auto
+      // background url('/assets/images/top/img_kv01_sp.jpg') no-repeat 50% 50%
+      // background-size 100% auto
       width percentage((579 / 750))
       height 0
       padding-top percentage((935 / 750))
       vertical-align middle
 
       +pc()
-        background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
-        background-size 100% auto
+        // background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
+        // background-size 100% auto
         width percentage((2098 / 2560))
         height 0
         padding-top percentage((1370 / 2560))
-        vertical-align middle
+        // vertical-align middle
+
+      &#kv01
+        background url('/assets/images/top/img_kv01_sp.jpg') no-repeat 50% 50%
+        background-size 100% auto
+        +pc()
+          background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
+          background-size 100% auto
+      &#kv02
+        background url('/assets/images/top/img_kv02_sp.jpg') no-repeat 50% 50%
+        background-size 100% auto
+        +pc()
+          background url('/assets/images/top/img_kv02.jpg') no-repeat 50% 50%
+          background-size 100% auto
+      &#kv03
+        background url('/assets/images/top/img_kv03_sp.jpg') no-repeat 50% 50%
+        background-size 100% auto
+        +pc()
+          background url('/assets/images/top/img_kv03.jpg') no-repeat 50% 50%
+          background-size 100% auto
+      &#kv04
+        background url('/assets/images/top/img_kv04_sp.jpg') no-repeat 50% 50%
+        background-size 100% auto
+        +pc()
+          background url('/assets/images/top/img_kv04.jpg') no-repeat 50% 50%
+          background-size 100% auto
+
 
     &__lead
       position absolute
