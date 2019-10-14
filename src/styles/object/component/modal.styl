@@ -84,24 +84,28 @@
     width 45px
     height 45px
     margin 0 0 10px auto
+    position absolute
+    top -45px
+    right 45px
+    cursor pointer
 
-    // position absolute
-    // top -45px
-    // right -45px
-    // &:before,
-    // &:after
-    // content ''
-    // position absolute
-    // display inline-block
-    // top 12px
-    // left 24px
-    // width 3px
-    // height 25px
-    // background-color #ed7473
-    // &:before
-    // transform: rotate(45deg);
-    // &:after
-    // transform: rotate(-45deg);
+    &:before,
+    &:after
+      content ''
+      position absolute
+      display inline-block
+      top 12px
+      left 24px
+      width 3px
+      height 25px
+      background-color #fff
+
+    &:before
+      transform rotate(45deg)
+
+    &:after
+      transform rotate(-45deg)
+
     img
       width 100%
 

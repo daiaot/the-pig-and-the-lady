@@ -154,11 +154,16 @@ export default class BurgerMenu {
     const thisModule = this
     for (let j = 0; j < this.links.length; j++) {
       this.links[j].addEventListener('click', function() {
+        console.log('-- this.dataset.anchor : ' + this.dataset.anchor)
         if (this.dataset.anchor !== undefined) {
-          const href = `#${this.dataset.anchor}`
-          const target = $(href === '#' || href === '' ? 'html' : href)
-          const top = target.offset().top
-          $('html, body').animate({ scrollTop: top }, 300, 'swing')
+          if(this.dataset.anchor !== 'contact') {
+            const href = `#${this.dataset.anchor}`
+            const target = $(href === '#' || href === '' ? 'html' : href)
+            // const top = target.offset().top
+            // $('html, body').animate({ scrollTop: top }, 300, 'swing')
+            // TweenMax.set(thisModule.btn, { className: '-=is-open' })
+            // thisModule.closeAnimation()
+          }
           TweenMax.set(thisModule.btn, { className: '-=is-open' })
           thisModule.closeAnimation()
         } else {
