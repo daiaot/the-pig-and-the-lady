@@ -577,23 +577,28 @@
       background-color #ffd7d7
       margin -1px 0
 
-    .p-thumb
-      margin-left auto
 
-      +sp()
-        padding-bottom per(376, 650)
+    &__slide
 
-      // position relative
-      &.thumb__1
-        width per(567, 650)
+      .p-thumb
+        margin-left auto
+        float right
+        +sp()
+          padding-bottom per(376, 650)
 
-        +pc()
-          max-width 1608px
-          width per(1608, 2200)
+        // position relative
+        &.thumb__1
+          width per(567, 650) !important
 
-      &.thumb__2
-        max-width 1078px
-        width per(1078, 2200)
+          +pc()
+            max-width 1608px !important
+            width per(1608, 2200) !important
+
+        &.thumb__2
+          width per(437, 650) !important
+          +pc()
+            max-width 1078px !important
+            width per(1078, 2200) !important
 
     .c-btn--1
       position absolute

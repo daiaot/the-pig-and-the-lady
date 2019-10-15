@@ -75,12 +75,14 @@ block main
                 |The Pig & The Lady, opening in Japan this year!
 
             .p-top-about
-              a.c-btn--1(href='/about') view more
-              .p-thumb.thumb__1
-                img.u-pcOnly(src=`/assets/images/top/img_about_thumb01.jpg` alt="")
-                img.u-spOnly(src=`/assets/images/top/img_about_thumb01_sp.jpg` alt="")
-              //- .p-thumb.thumb__2
-              //-   img(src=`/assets/images/top/img_about_thumb02.jpg` alt="")
+              a.c-btn--1(href='/about/') view more
+              .p-top-about__slide(data-module='slider')
+                .p-thumb.thumb__1
+                  img.u-pcOnly(src=`/assets/images/top/img_about_thumb01.jpg` alt="")
+                  img.u-spOnly(src=`/assets/images/top/img_about_thumb01_sp.jpg` alt="")
+                .p-thumb.thumb__2
+                  img.u-pcOnly(src=`/assets/images/top/img_about_thumb02.jpg` alt="")
+                  img.u-spOnly(src=`/assets/images/top/img_about_thumb02_sp.jpg` alt="")
 
       .p-section.thumb
         .l-inner

@@ -15,7 +15,7 @@
     line-height 1
     font-weight bold
     text-align center
-
+    position relative
     +pc()
       padding per(58, 2560) per(184, 2560)
       width per(633, 2200)
@@ -25,6 +25,7 @@
     &:after
       content ''
       display block
+      // display inline-block
       background url('/assets/images/top/ico_arrow01.svg') 50% 50% no-repeat
       background-size 100% auto
       position absolute
@@ -32,9 +33,11 @@
       top 50%
       transform translate(-50%, -50%)
       width per(54, 506)
-      height 0
-      padding-top per(54, 506)
-
+      height (54 / 506) * 100vw
+      // padding-top per(54, 506)
+      z-index 10
+      +sp()
+        line-height 2
       +pc()
         width per(66, 633)
         padding-top per(66, 633)

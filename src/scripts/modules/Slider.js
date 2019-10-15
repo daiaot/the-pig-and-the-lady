@@ -8,17 +8,18 @@ export default class Slider {
   }
 
   init() {
-    let prevArrow = '<div class="slick-prev"></div>'
-    let nextArrow = '<div class="slick-next"></div>'
     this.$el.slick({
-      variableWidth: true,
-      autoplay: false,
+      // variableWidth: true,
+      arrows: false,
+      autoplay: true,
       dots: false,
       slidesToScroll: 1,
       slidesToShow: 1,
-      infinite: false,
-      prevArrow: `${prevArrow}`,
-      nextArrow: `${nextArrow}`,
+      infinite: true,
+      speed: 1,
+      fade: true,
+      // cssEase: 'linear',
+      // cssEase: 'ease',
       responsive: [
         {
           breakpoint: 795,
