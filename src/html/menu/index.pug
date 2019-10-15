@@ -58,10 +58,13 @@ block main
 
       .p-section
         .l-inner
+          .p-menu-showbtn(data-module='MenuAllImageShow')
+            |ALL PHOTOS CLICK HERE
+
           .p-menu-wrap
 
-            .p-menu-showbtn(data-module='MenuAllImageShow')
-              |ALL PHOTOS CLICK HERE
+            //- .p-menu-showbtn(data-module='MenuAllImageShow')
+            //-   |ALL PHOTOS CLICK HERE
 
             #lunch.p-menu-group
               .p-menu-info
@@ -85,6 +88,27 @@ block main
                   //- .item-img-container
                   .p-menu-item__img
                     img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg` alt='PHO BO')
+
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Avo_Toast.jpg' data-caption='Hold The Rice')
+                  h3 03. PHO CHAY
+                  p.p-sub-title ベジタブルフォー
+                  p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー、野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  //- .item-img-container
+                  //- .p-menu-item__img.is-show
+                  .p-menu-item__img
+                    img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Avo_Toast.jpg` alt='PHO CHAY')
+
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Rug.jpg' data-caption='Hold The Rice')
+                  h3 04. PHO BO
+                  p.p-sub-title 牛肉のフォー
+                  p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
+                  p.p-menu-item__desc
+                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+                  //- .item-img-container
+                  .p-menu-item__img
+                    img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Rug.jpg` alt='PHO BO')
 
             #dinner.p-menu-group
               .p-menu-info
