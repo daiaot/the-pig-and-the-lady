@@ -37,13 +37,21 @@ block main
               a(href="#sweets") SWEETS
           ul.p-menu-nav__pdf
             li
-              a(href="#") PDF
+              a(href="#")
+                span.u-spOnly LUNCH 
+                |PDF
             li
-              a(href="#") PDF
+              a(href="#")
+                span.u-spOnly DINNER 
+                |PDF
             li
-              a(href="#") PDF
+              a(href="#")
+                span.u-spOnly DRINK 
+                |PDF
             li
-              a(href="#") PDF
+              a(href="#")
+                span.u-spOnly SWEETS 
+                |PDF
 
 
       h2 MENU
@@ -51,6 +59,10 @@ block main
       .p-section
         .l-inner
           .p-menu-wrap
+
+            .p-menu-showbtn
+              |ALL PHOTOS CLICK HERE
+
             #lunch.p-menu-group
               .p-menu-info
                 .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_food_01.jpg' data-caption='Hold The Rice')
@@ -60,6 +72,7 @@ block main
                   p.p-menu-item__desc
                     |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
                   //- .item-img-container
+                  //- .p-menu-item__img.is-show
                   .p-menu-item__img
                     img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
 

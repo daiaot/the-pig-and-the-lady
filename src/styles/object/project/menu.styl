@@ -5,8 +5,10 @@
       padding-top per(230, 2560)
 
     h2
-      font-size (30 / 750) * 100vw
-
+      +sp()
+        font-size (30 / 750) * 100vw
+        width per(650, 750)
+        margin-left per(140, 750)
       +pc()
         font-size (34 / 2560) * 100vw
         z-index 10
@@ -21,13 +23,18 @@
       &:before
         content ''
         display block
-        width (60 / 2560) * 100vw
-        height (4 / 2560) * 100vw
+        width (60 / 750) * 100vw
+        height (4 / 750) * 100vw
         background #000
         position absolute
         top 50%
-        left -90%
-        transform translateY(-50%)
+        left 0
+        transform translate(-150%, -100%)
+        +pc()
+          left -90%
+          transform translateY(-50%)
+          width (60 / 2560) * 100vw
+          height (4 / 2560) * 100vw
 
     h3
       font-size (38 / 750) * 100vw
@@ -43,18 +50,27 @@
       position fixed
       // top (230 / 2560) * 100vw
       // top (230 / 2560) * 100vw + (34 / 2560) * 100vw
-      top (294 / 2560) * 100vw
+      top (181 / 650) * 100vw
       left 0
       width 100vw
-      height (130 / 2560) * 100vw
+      // height (150 / 650) * 100vw
+      height (320 / 750) * 100vw
       background #fff
       z-index 10
+      +pc()
+        top (294 / 2560) * 100vw
+        height (130 / 2560) * 100vw
+
 
       &.is-fixed
-        top (230 / 2560) * 100vw
+        top (150 / 750) * 100vw
+        +pc()
+          top (230 / 2560) * 100vw
 
       ul
         display flex
+        +sp()
+          flex-wrap wrap
 
       a
         display block
@@ -63,18 +79,36 @@
           font-style italic
 
       &__food
+        +sp()
+          margin-top per(30, 650)
         li
           font-family YanoneKaffeesatz-Bold
-          font-size (70 / 2560) * 100vw
+          font-size (48 / 750) * 100vw
           line-height 1.1
           // margin 0 per(64, 2560)
-          padding 0 per(64, 2560)
+          // padding 0 per(64, 2560)
           position relative
+          +sp()
+            width 49.8%
+            text-align center
 
           +pc()
             font-size (70 / 2560) * 100vw
             // margin 0 per(64, 2560)
             padding 0 per(64, 2560)
+
+
+          +sp()
+            &:before
+              content ''
+              display block
+              position absolute
+              left 0
+              top 0
+              width (6 / 2560) * 100vw
+              // height (98 / 2560) * 100vw
+              height 100%
+              background #000
 
           &:after
             content ''
@@ -88,13 +122,25 @@
             background #000
 
           &:nth-of-type(1)
-            padding-left 0
+            &:after
+              +sp()
+                display none
+            +pc()
+              padding-left 0
+
+          &:nth-of-type(3)
+            &:after
+              +sp()
+                display none
+
 
           &:nth-of-type(4)
-            padding-right 0
+            +pc()
+              padding-right 0
 
             &:after
-              display none
+              +pc()
+                display none
 
         a
           color #000
@@ -106,42 +152,70 @@
           z-index 100
 
       &__pdf
-        margin-top per(40, 750)
-
+        margin-top per(50, 650)
+        +sp()
+          display flex
+          flex-wrap nowrap
+          justify-content space-between
         +pc()
           margin-top per(12, 2560)
 
         li
-          font-size (30 / 2560) * 100vw
+          font-size (26 / 650) * 100vw
           // padding 0 per(64, 750) 0 0
           position relative
           line-height 1
-
+          +sp()
+            width 25%
+            padding-right 1.5%
+            // padding 0 4%
           +pc()
             font-size (30 / 2560) * 100vw
             padding 0 per(226, 2560) 0 0
 
+          &:nth-of-type(1)
+            a
+              &:after
+                +sp()
+                  width 90%
+
           &:nth-of-type(2)
-            padding 0 per(244, 2560) 0 0
+            a
+              &:after
+                +sp()
+                  width 95%
+            +pc()
+              padding 0 per(244, 2560) 0 0
 
           &:nth-of-type(3)
-            padding 0 per(220, 2560) 0 0
+            a
+              &:after
+                +sp()
+                  width 88%
+            +pc()
+              padding 0 per(220, 2560) 0 0
 
           &:nth-of-type(4)
-            padding-right 0
+            a
+              &:after
+                +sp()
+                  width 90%
+            +sp()
+              padding-right 0
+            +pc()
+              padding-right 0
 
         a
           color #f37779
-
           &:after
             content ''
             display block
             width 100%
             height (4 / 750) * 100vw
             background #ed7473
-
             +pc()
               height (2 / 2560) * 100vw
+
 
     &-wrap
       position relative
@@ -157,7 +231,28 @@
         right per(180, 2560)
         z-index 11
 
+    &-showbtn
+      margin-top per(390, 650)
+      width 100%
+      font-size (28 / 650) *100vw
+      color #fff
+      background #ed7473
+      text-align center
+      cursor pointer
+      // padding-top per(390, 650)
+      padding per(20, 650)
+      border-radius 4px
+      &.is-show
+        border (2 / 650) * 100vw solid #ed7473
+        color #ed7473
+        background #fff
+
+      +pc()
+        display none
+
     &-group
+      // padding-top per(290, 650)
+      padding-top per(390, 650)
       +pc()
         // padding-top per(130, 2200)
         // グロナビ + menuナビ 分の高さ
@@ -172,6 +267,8 @@
     // //   z-index 11
     &-info
       display flex
+      +sp()
+        flex-wrap wrap
 
       +pc()
         justify-content space-between
@@ -197,6 +294,9 @@
     // +pc()
     // justify-content space-between
     &-item
+      +sp()
+        width 100%
+
       +pc()
         cursor pointer
         width per(564, 1226)
@@ -223,5 +323,6 @@
           line-height 1.2
 
       &__img
-        +pc()
-          display none
+        display none
+        &.is-show
+          display block

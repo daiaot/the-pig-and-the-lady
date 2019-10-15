@@ -5,31 +5,49 @@ export default class MenuImageShow {
 
   constructor(elem) {
 
-    console.log('-- MenuImageShow Module')
+    // console.log('-- MenuImageShow Module')
 
     this.elem = elem
     document.querySelector('#nav-toggle')
     this.thumbArea = document.querySelector('#menu-thumb')
-    console.log('-- this.thumbArea')
-    console.log(this.thumbArea)
+    // console.log('-- this.thumbArea')
+    // console.log(this.thumbArea)
 
     this.target = this.elem.getAttribute('data-image')
     this.caption = this.elem.getAttribute('data-caption')
 
-    console.log('-- this.target')
-    console.log(this.target)
+    // console.log('-- this.target')
+    // console.log(this.target)
+
+
+    // SPの処理
+    this.thumb = this.elem.querySelector('.p-menu-item__img')
+    // console.log('-- this.thumb')
+    // console.log(this.thumb)
+    this.showFlg = false
 
     this.bindEvents()
   }
 
   bindEvents() {
 
-    console.log('-- MenuImageShow bindEvents()')
+    // console.log('-- MenuImageShow bindEvents()')
 
     const ua = navigator.userAgent
 
     if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
-      console.log('-------- SP')
+      // console.log('-------- SP')
+
+      this.elem.addEventListener('click', () => {
+        if (!this.showFlg) {
+          this.thumb.classList.add('is-show')
+          this.showFlg = true
+        } else {
+          this.thumb.classList.remove('is-show')
+          this.showFlg = false
+        }
+      })
+
     } else {
 
       this.elem.addEventListener('mouseover', () => {
@@ -48,9 +66,8 @@ export default class MenuImageShow {
           this.thumbArea.appendChild(addImage)
         }
       })
-  
-      this.elem.addEventListener('mouseout', () => {
-        console.log('--- onmouseover')
+        this.elem.addEventListener('mouseout', () => {
+        // console.log('--- onmouseover')
         this.thumbArea.textContent = null
       })
   

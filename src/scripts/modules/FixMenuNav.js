@@ -19,15 +19,26 @@ export default class FixMenuNav {
     const offsetTop = this.title[0].getBoundingClientRect().top
     const ua = navigator.userAgent
 
-    if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
-
+    if (scrollTop > offsetTop) {
+      this.elem.classList.add('is-fixed')
     } else {
-      if (scrollTop > offsetTop) {
-        this.elem.classList.add('is-fixed')
-      } else {
-        this.elem.classList.remove('is-fixed')
-      }
+      this.elem.classList.remove('is-fixed')
     }
+
+    // if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+    //   if (scrollTop > offsetTop) {
+    //     this.elem.classList.add('is-fixed')
+    //   } else {
+    //     this.elem.classList.remove('is-fixed')
+    //   }
+    // } else {
+    //   if (scrollTop > offsetTop) {
+    //     this.elem.classList.add('is-fixed')
+    //   } else {
+    //     this.elem.classList.remove('is-fixed')
+    //   }
+    // }
+
   }
 
 }
