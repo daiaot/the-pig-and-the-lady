@@ -119,8 +119,10 @@
           height (2 / 2560) * 100vw
 
       &:hover
-        &:after
-          opacity 0.6
+        +pc()
+          font-style italic
+        // &:after
+        //   opacity 0.6
 
   &-sns
     display flex
@@ -158,6 +160,10 @@
 
       &:nth-of-type(1)
         margin-right per(106, 650)
+        a
+          +pc()
+            width 101%
+            height 101%
 
         +pc()
           margin-right per(132, 1100)

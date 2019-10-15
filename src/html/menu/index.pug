@@ -11,7 +11,8 @@ block vars
 block main
 
 
-  .p-menu(data-module="loadToTop")
+  //- .p-menu(data-module="loadToTop")
+  .p-menu
     header
       //- .p-splash__navigation__wrapper
       .p-lower__navigation__wrapper
@@ -52,78 +53,93 @@ block main
           .p-menu-wrap
             #lunch.p-menu-group
               .p-menu-info
-                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_food_01.jpg' data-caption='Hold The Rice')
                   h3 01. PHO CHAY
                   p.p-sub-title ベジタブルフォー
                   p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
                   p.p-menu-item__desc
                     |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  .item-img-container
-                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
+                  //- .item-img-container
+                  .p-menu-item__img
+                    img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
 
-                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
                   h3 02. PHO BO
                   p.p-sub-title 牛肉のフォー
                   p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
                   p.p-menu-item__desc
                     |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  .item-img-container
-                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO BO')
+                  //- .item-img-container
+                  .p-menu-item__img
+                    img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg` alt='PHO BO')
 
             #dinner.p-menu-group
               .p-menu-info
-                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Sorrel_Works.jpg' data-caption='Hold The Rice')
                   h3 01. PHO CHAY
                   p.p-sub-title ベジタブルフォー
                   p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
                   p.p-menu-item__desc
                     |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  .item-img-container
-                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
+                  //- .item-img-container
+                  .p-menu-item__img
+                    img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Sorrel_Works.jpg` alt='PHO CHAY')
 
-                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hash.jpg' data-caption='Hold The Rice')
                   h3 02. PHO BO
                   p.p-sub-title 牛肉のフォー
                   p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
                   p.p-menu-item__desc
                     |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  .item-img-container
-                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO BO')
+                  //- .item-img-container
+                  .p-menu-item__img
+                    img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hash.jpg` alt='PHO BO')
 
             #drink.p-menu-group
               .p-menu-info
-                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Chicken_Porr_Egg_B.jpg' data-caption='Hold The Rice')
                   h3 01. PHO CHAY
                   p.p-sub-title ベジタブルフォー
                   p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
                   p.p-menu-item__desc
                     |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  .item-img-container
-                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
+                  //- .item-img-container
+                  .p-menu-item__img
+                    img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Chicken_Porr_Egg_B.jpg` alt='PHO CHAY')
 
-                .p-menu-item.hasimage(data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg' data-caption='Hold The Rice')
+                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Quiche.jpg' data-caption='Hold The Rice')
                   h3 02. PHO BO
                   p.p-sub-title 牛肉のフォー
                   p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
                   p.p-menu-item__desc
                     |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  .item-img-container
-                  img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO BO')
+                  //- .item-img-container
+                  .p-menu-item__img
+                    img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Quiche.jpg` alt='PHO BO')
 
 
             .p-menu-thumb
-                figure#menu-image
-                  img(src=`/assets/images/menu/img_food_01.jpg` alt='Hold The Rice')
+                figure#menu-thumb
 
 
 
+      //- 以下modal
+      #js-galleryModal.modal
+        #js-galleryModalOverlay.modal-overlay
+        .modal-dialog
+          .modal-content
+            .modal-header
+              #js-galleryModalClose.modal-close
 
+            .modal-body
 
-
-
-
-
-
-
-
+              #js-galleryModalSwiper.swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    .swiper-content
+                      .swiper-content__title Contacg
+                      .swiper-content__desc
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
 
