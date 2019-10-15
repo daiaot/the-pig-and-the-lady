@@ -3,7 +3,7 @@ import { TweenMax, TimelineMax } from 'gsap'
 export default class KeyVisual {
   constructor(elem) {
 
-    console.log('KeyVisual ---- constructor()')
+    // console.log('KeyVisual ---- constructor()')
 
     this.elem = elem
     this.body = document.body
@@ -15,7 +15,7 @@ export default class KeyVisual {
 
   bindEvents() {
 
-    console.log('KeyVisual ---- bindEvents()')
+    // console.log('KeyVisual ---- bindEvents()')
 
     document.body.onload = function () {
       var num = Math.floor(Math.random() * 5)
@@ -23,7 +23,7 @@ export default class KeyVisual {
       // var d = Math.floor(date.getTime() / 1000 / 60 / 60 / 24 / )
       // console.log('---- date.getTime() : ' + date.getTime())
       // console.log('---- d : ' + d)
-      console.log('---- num : ' + num)
+      // console.log('---- num : ' + num)
       var el = document.getElementsByClassName('p-kv__main')[0];
       console.log(el)
       if(num % 5 === 0) {

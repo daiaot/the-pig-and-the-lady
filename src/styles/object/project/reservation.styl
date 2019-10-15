@@ -1,12 +1,12 @@
 .p
   &-reservation
-    display none !important
+    // display none !important
     position fixed
     bottom 0
     right 0
     z-index 10
     width 100%
-    background #fff
+    // background #fff
     display flex
 
     +pc()
@@ -15,12 +15,14 @@
     &__btn
       width per(297, 1248)
       background #ed7473
+      z-index 20
       cursor pointer
 
     #tc-widget
       // width per(1248, 2560) !important
       // width 100% !important
       width per(951, 1248) !important
+      background #fff
 
       form
         width 100%
