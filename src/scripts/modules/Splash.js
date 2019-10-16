@@ -6,7 +6,7 @@ export default class Splash {
     this.body = document.body
     this.isSplash = elem.classList.contains('p-splash') ? true : false
     this.bg = elem.querySelector('[data-module-loading="bg"]')
-    this.heightAdjust()
+    // this.heightAdjust()
     this.bindEvents()
   }
 

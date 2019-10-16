@@ -46,6 +46,8 @@ export default class ReservationScroll {
     // console.log('-- endPoint :' + endPoint)
     // console.log('-- flg :' + flg)
 
+    // console.log('-- endPoint :' + endPoint)
+
 
     console.log('-- win_top :' + win_top)
     console.log('-- relativeHeight :' + relativeHeight)
@@ -55,7 +57,8 @@ export default class ReservationScroll {
         x: '100%',
         ease: Power3.easeInOut,
       })
-    } else {
+    }
+    if (win_top < relativeHeight) {
       TweenMax.to(this.widget, 0.01, {
         x: '0%',
         ease: Power3.easeInOut,

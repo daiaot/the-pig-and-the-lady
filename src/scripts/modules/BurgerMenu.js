@@ -53,11 +53,27 @@ export default class BurgerMenu {
     // console.log('toggleSlide()')
     // console.log('status: ' + this.state.status)
 
-    TweenMax.to(this.btn, 0.3, {
-      css: {
-        right: '50%',
-      },
-    })
+    const ua = navigator.userAgent
+    let videoSrc
+    if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+      TweenMax.to(this.btn, 0.3, {
+        css: {
+          right: '43%',
+        },
+      })
+    } else {
+      TweenMax.to(this.btn, 0.3, {
+        css: {
+          right: '50%',
+        },
+      })
+    }
+
+    // TweenMax.to(this.btn, 0.3, {
+    //   css: {
+    //     right: '50%',
+    //   },
+    // })
   }
 
 

@@ -6,74 +6,227 @@
     right 0
     z-index 10
     width 100%
-    // background #fff
     display flex
-
     +pc()
       width per(1248, 2560) !important
 
     &__btn
-      width per(297, 1248)
+      width per(170, 750)
       background #ed7473
       z-index 20
       cursor pointer
+      color #fff
+      font-family Futura-Med
+      font-size (22 / 750) * 100vw
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      +pc()
+        width per(296, 1248)
+        font-size (32 / 2560) * 100vw
+      span
+        font-family Noto
+        font-size (18 / 750) * 100vw
+        +pc()
+          font-size (22 / 2560) * 100vw
+      &:hover
+        font-style italic
 
     #tc-widget
       // width per(1248, 2560) !important
       // width 100% !important
-      width per(951, 1248) !important
       background #fff
+      width per(580, 750) !important
+      padding per(28, 750) per(32, 750)
+      +sp()
+        text-align center
+      +pc()
+        width per(952, 1248) !important
+        padding per(46, 1248) per(50, 1248)
+
+      .tc-wrap
+        +sp()
+          float none
 
       form
         width 100%
         display flex
         flex-wrap nowrap
+        +sp()
+          justify-content space-between
 
       .tc-body
-        +sp()
-          padding-left 0
-          padding-right 0
+        padding 0
 
       .tc-header
         display none
 
       .tc-content
         display flex
-
+        align-items center
         +sp()
-          width 70%
-
+          // width per(406, 516)
+          width per(343, 516)
+          // width per(406, 580)
+          justify-content space-between
         +pc()
-          width 70%
+          width per(672, 852)
+          height 100%
+
+      .tc-wrap-input
+        position relative
 
       .tc-date
+        position relative
+        padding 0
+        margin 0
         +sp()
-          width 33%
+          // width per(153, 406)
+          width per(153, 343)
           float none
+        +pc()
+          width per(314, 672)
+        &:after
+          content ''
+          display block
+          border-top (16 / 750) * 100vw solid #000
+          border-left (8 / 750) * 100vw solid transparent
+          border-right (8 / 750) * 100vw solid transparent
+          position absolute
+          top 50%
+          left 80%
+          transform translateY(-50%)
+          +pc()
+            // left per(233, 314)
+            // left 36%
+            // left 85%
+            left 80%
+            border-top (16 / 2560) * 100vw solid #000
+            border-left (8 / 2560) * 100vw solid transparent
+            border-right (8 / 2560) * 100vw solid transparent
 
       .tc-time
+        position relative
+        margin 0
         +sp()
-          width 33%
+          // width per(95, 406)
+          width per(95, 343)
+          // width 33%
           float none
+        +pc()
+          // width per(222, 672)
+          width per(179, 672)
+        &:after
+          content ''
+          display block
+          border-top (16 / 750) * 100vw solid #000
+          border-left (8 / 750) * 100vw solid transparent
+          border-right (8 / 750) * 100vw solid transparent
+          position absolute
+          top 50%
+          left 70%
+          transform translateY(-50%)
+          +pc()
+            // left per(138, 222)
+            // left 48%
+            left 75%
+            border-top (16 / 2560) * 100vw solid #000
+            border-left (8 / 2560) * 100vw solid transparent
+            border-right (8 / 2560) * 100vw solid transparent
 
       .tc-ppl
+        position relative
+        margin 0
         +sp()
-          width 33%
+          // width 33%
+          // width per(95, 406)
+          width per(95, 343)
           float none
+        +pc()
+          // width per(136, 672)
+          // width per(136, 672)
+          width per(179, 672)
+        &:after
+          content ''
+          display block
+          border-top (16 / 750) * 100vw solid #000
+          border-left (8 / 750) * 100vw solid transparent
+          border-right (8 / 750) * 100vw solid transparent
+          position absolute
+          top 50%
+          left 80%
+          transform translateY(-50%)
+          +pc()
+            // left per(138, 222)
+            // left 48%
+            left 75%
+            border-top (16 / 2560) * 100vw solid #000
+            border-left (8 / 2560) * 100vw solid transparent
+            border-right (8 / 2560) * 100vw solid transparent
+
 
       input[type='text']
+        border none
+        // font-family FuturaStdBold
+        font-family Noto
+        padding 0
         +sp()
           width 100%
-
+          // font-size (20 / 750) * 100vw
+          font-size 16px
+          transform scale(0.625)
+          line-height 1
         +pc()
           width 100%
+          font-size (42 / 2560) * 100vw
+          line-height 1.4
+          height (42 / 2560) * 100vw
+
+      input[type='text'][readonly='readonly']
+        box-shadow none
 
       select
+        appearance none
+        border none
+        padding 0
+        // font-family FuturaStdBold
+        font-family Noto
         +sp()
           width 100%
-
+          font-size (20 / 750) * 100vw
+          font-size 16px
+          transform scale(0.625)
+          line-height 1
         +pc()
           width 100%
+          font-size (42 / 2560) * 100vw
+          line-height 1
+          height (42 / 2560) * 100vw
+
+      input:focus
+        border-color transparent
+        box-shadow none
+        outline 0
+      input::placeholder
+        font-family Noto
+        // font-size (20 / 750) * 100vw
+        font-size 16px
+        align-items center
+        +pc()
+          font-size (42 / 2560) * 100vw
+        // font-size (22 / 2560) * 100vw
+        color #000
+
+      select:focus
+        border-color transparent
+        box-shadow none
+      select::placeholder
+        font-family Noto
+        font-size (22 / 2560) * 100vw
+        color #000
+      select option:nth-of-type(1)
+        color #f00
 
       .tc-icon
         display none
@@ -84,11 +237,15 @@
         display none
 
       .tc-wrap-book
+        padding 0
         +sp()
-          width 25%
-
+          // width per(110, 580)
+          width per(160, 580)
+          display flex
+          align-items center
+          justify-content center
         +pc()
-          width 30%
+          width per(180, 852)
 
       .tc-book
         background #ed7473
@@ -98,5 +255,24 @@
       // background #ed7473
       border-color #000
       color #000
-      border-radius 4px
       background transparent
+      font-family Noto
+      border (4 / 750) * 100vw solid #000
+      border-radius (8 / 750) * 100vw
+      font-size (24 / 750) * 100vw
+      line-height 1
+      +sp()
+        padding per(12, 110)
+      +pc()
+        border (4 / 2560) * 100vw solid #000
+        border-radius (8 / 2560) * 100vw
+        font-size (28 / 2560) * 100vw
+
+      // &:hover
+      //   background-color transparent
+      //   font-style italic
+
+
+    #tc-widget[data-theme='clear'] .tc-book:hover
+      background-color transparent
+      font-style italic

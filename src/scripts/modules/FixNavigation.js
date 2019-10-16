@@ -39,7 +39,8 @@ export default class FixNav {
 
       if (this.isLower == false) {
         // if (top < -1200) {
-        if (winTop > 1080) {
+        // if (winTop > 1080) {
+        if (winTop > 620) {
           this.elem.classList.remove('is-hidden')
           this.elem.children[0].classList.add('is-fixed')
           // } else if (140 > relativeHeight) {

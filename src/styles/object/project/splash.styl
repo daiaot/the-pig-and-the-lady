@@ -54,37 +54,61 @@
 .p-splash
   .p-scroll-icon
     position absolute
-    overflow hidden
+    // overflow hidden
 
     +pc()
-      width 19px
-      height 69px
-      right 36px
-      bottom 207px
+      // width 19px
+      // height 69px
+      width 25px
+      width per(25, 2560)
+      height (62 / 2560) * 100vw
+      // right 36px
+      right per(70, 2560)
+      // bottom 207px
+      bottom (329 / 2560) * 100vw
       background url('/assets/images/top/ico_scroll.png') no-repeat bottom right
-      background-size 8px 51px
+      // background-size 8px 51px
+      background-size 100% auto
 
     +sp()
       // width 17.775px
       // height 65px
       // right 25px
       // bottom 70px
-      width per(36, 750)
-      height (130 / 750) * 100vw
-      right (25 / 750) * 100vw
-      bottom (270 / 750) * 100vw
+
+      // width per(36, 750)
+      // height (130 / 750) * 100vw
+      width per(20, 750)
+      height (51 / 750) * 100vw
+      // right (25 / 750) * 100vw
+      right (75 / 750) * 100vw
+      // bottom (270 / 750) * 100vw
+      bottom (22 / 750) * 100vw
       background url('/assets/images/top/ico_scroll_sp.png') no-repeat bottom right
-      background-size 8px 47.5px
+      // background-size 8px 47.5px
+      background-size 100% auto
 
     &::before
       display block
       content ''
+      overflow hidden
       position absolute
+
       width 1px
       height 100%
       background #000
       animation wipe-down-line 2s cubic-bezier(1, 0, 0.09, 0.85) infinite 1s
       transform-origin top
+      // top -120%
+      top per(-77, 51)
+      // left 50%
+      left per(4,20)
+      // transform translateX(-50%)
+      +pc()
+        top per(-96, 62)
+        left per(6,25)
+
+
 
   // .p-pig-news
   .p-news
@@ -98,13 +122,31 @@
       margin-top 5rem
       bottom 0
 
+
+
+@keyframes wipe-down-line-2
+  0%
+    opacity 1
+    transform translateY(0)
+  40%
+    opacity 0
+    transform translateY(110%)
+
+  60%
+    opacity 0
+    transform translateY(0)
+
+  100%
+    opacity 1
+    transform translateY(0)
+
 @keyframes wipe-down-line
   0%
     opacity 1
     transform translateY(0)
 
   30%
-    opacity 1
+    opacity 0
     transform translateY(110%)
 
   31%
@@ -115,7 +157,7 @@
     transform translateY(-100%)
 
   33%
-    opacity 1
+    opacity 0
     transform translateY(-100%)
 
   60%
@@ -125,3 +167,27 @@
   100%
     opacity 1
     transform translateY(0)
+
+
+
+// @keyframes wipe-down-line-org
+//   0%
+//     opacity 1
+//     transform translateY(0)
+//   30%
+//     opacity 1
+//     transform translateY(110%)
+//   31%
+//     opacity 0
+//   32%
+//     opacity 0
+//     transform translateY(-100%)
+//   33%
+//     opacity 1
+//     transform translateY(-100%)
+//   60%
+//     opacity 1
+//     transform translateY(0)
+//   100%
+//     opacity 1
+//     transform translateY(0)
