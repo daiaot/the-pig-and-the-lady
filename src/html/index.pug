@@ -12,7 +12,8 @@ block main
 
   .p-top#top
 
-    .p-splash(data-module="splash" style="position: relative;")
+    //- .p-splash(data-module="splash" style="position: relative;")
+    .p-splash
       .p-loading__bg(data-module-loading="bg")
         img.p-loading__msg(src=`/assets/images/top/img_splash_msg.svg` alt="")
       //- .kv.p-splash__visual(data-module-splash="visual")
@@ -105,14 +106,14 @@ block main
             .p-news-title
               h2 NEWS
             .p-news-lists(data-module="Modal")
-              .gallery-content__item.p-news-list(data-slide="1")
+              .gallery-content__item.p-news-list(data-slide="2")
                 dl
                   dt 2019.11.1
                   dd
                     |NOVEMBER HOLIDAY INFORMATION
                     br
                     span.u-font-noto 11月休業日のお知らせ
-              .gallery-content__item.p-news-list(data-slide="2")
+              .gallery-content__item.p-news-list(data-slide="3")
                 dl
                   dt 2019.11.1
                   dd
@@ -142,35 +143,28 @@ block main
                     span.u-font-noto 11月休業日のお知らせ
 
       //- 以下modal
-      #js-galleryModal.modal
-        #js-galleryModalOverlay.modal-overlay
-        .modal-dialog
-          .modal-content
-            .modal-header
-              #js-galleryModalClose.modal-close
+      //- #js-galleryModal.p-modal
+      #js-modal.p-modal
+        //- #js-galleryModalOverlay.p-modal-overlay
+        #js-modalOverlay.p-modal-overlay
+          #js-modalClose.p-modal-close
+
+        .p-modal-dialog
+          .p-modal-content
+            //- .p-modal-header
+              //- #js-galleryModalClose.p-modal-close
                 //- img(
                 //-   src="/assets/images/common/ic_close.png"
                 //-   alt=""
                 //-   decoding="async"
                 //- )
-            .modal-body
+            .p-modal-body
 
-              #js-galleryModalSwiper.swiper-container
+              //- #js-galleryModalSwiper.swiper-container
+              #js-modalSwiper.swiper-container
                 .swiper-wrapper
-                  .swiper-slide
-                    .swiper-content
-                      .swiper-content__title Title test 1
-                      .swiper-content__desc
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
 
-                  .swiper-slide
-                    .swiper-content
-                      .swiper-content__title Title test 2
-                      .swiper-content__desc
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
-
+                  //- 1（contact）
                   .swiper-slide
                     .swiper-content
                       .swiper-content__title Contacg
@@ -178,6 +172,108 @@ block main
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+
+                  //- 2（news）
+                  .swiper-slide
+                    .swiper-content
+                      h3 NEWS
+                      .p-modal__head
+                        p.p-modal__head__date 2019.11.1
+                        p.p-modal__head__title STAFF recruitment notice
+                        p.p-modal__head__title-sub 
+                          |STAFF
+                          span.u-font-noto 募集のお知らせ
+                      .p-modal__desc
+                        p
+                          |THE PIG & THE LADY
+                          span.u-font-noto では、
+                          br
+                          span.u-font-noto ホール、キッチン、レセプション、バーテンダーの正社員、アルバイトスタッフを募集しています。
+                        p
+                          |We are seeking new staff to join our team.
+                          br
+                          |Positions : Front of House/ Receptionist/ Bartender/Kitchen, Full-time and Part-time positions available.
+                        p
+                          span.u-font-noto 詳細はこちらから ↓
+                          br
+                          |For details please click 
+                          span.u-font-noto ↓
+
+                        a(href='https://transit-web-job.net/jobfind-pc/area/All?freeword=THE+PIG') THE PIG & THE LADY RECRUIT
+
+
+                  //- 3（news）
+                  .swiper-slide
+                    .swiper-content
+                      h3 NEWS
+                      .p-modal__head
+                        p.p-modal__head__date 2019.11.1
+                        p.p-modal__head__title September Charter Party Notice
+                        p.p-modal__head__title-sub
+                          span.u-font-noto 9月貸切パーティーのお知らせ
+                      .p-modal__desc
+                        p.u-font-noto
+                          |日頃よりご愛顧いただきありがとうございます。
+                        p.u-font-noto
+                          |9月8日(日)ディナー営業
+                          br
+                          |9月14日(土)ディナー営業
+                          br
+                          |9月15日(日)ランチ営業
+                          br
+                          |9月21日(土)ランチ営業
+                          br
+                          |9月29日(日)ディナー営業
+                          br
+                          br
+                          |の上記の時間帯は貸切営業とさせていただきます。
+                          br
+                          |お客様にはご迷惑をおかけいたしますが、何卒ご理解くださいますようお願い致します。
+                        p
+                          |Due to in-store private events, we will be closed on the following dates/ times:
+                          br
+                          br
+                          |September 8 (Sun.); Dinner
+                          |September 14 (Sat.); Dinner
+                          |September 15 (Sun.); Lunch
+                          |September 21 (Sat.); Lunch
+                          |September 29 (Sun.); Dinner
+                          br
+                          br
+                          |We apologize for the inconvenience. Thank you for your understanding.
+
+                      .p-modal__desc
+                        p.u-font-noto
+                          |日頃よりご愛顧いただきありがとうございます。
+                        p.u-font-noto
+                          |9月8日(日)ディナー営業
+                          br
+                          |9月14日(土)ディナー営業
+                          br
+                          |9月15日(日)ランチ営業
+                          br
+                          |9月21日(土)ランチ営業
+                          br
+                          |9月29日(日)ディナー営業
+                          br
+                          br
+                          |の上記の時間帯は貸切営業とさせていただきます。
+                          br
+                          |お客様にはご迷惑をおかけいたしますが、何卒ご理解くださいますようお願い致します。
+                        p
+                          |Due to in-store private events, we will be closed on the following dates/ times:
+                          br
+                          br
+                          |September 8 (Sun.); Dinner
+                          |September 14 (Sat.); Dinner
+                          |September 15 (Sun.); Lunch
+                          |September 21 (Sat.); Lunch
+                          |September 29 (Sun.); Dinner
+                          br
+                          br
+                          |We apologize for the inconvenience. Thank you for your understanding.
+
+
 
                 //- .swiper-wrapper
                 //-   .swiper-slide

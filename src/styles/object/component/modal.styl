@@ -1,5 +1,61 @@
-.modal
+.p-modal
   visibility hidden
+
+  &__head
+    padding-bottom per(20, 550)
+    margin-bottom per(50, 550)
+    border-bottom (4 / 550) * 100vw dotted #000
+    +pc()
+      // padding-bottom per(40, 1956)
+      // padding-bottom per(40, 2560)
+      padding-bottom per(40, 1680)
+      margin-bottom per(70, 1680)
+      border-bottom (4 / 2560) * 100vw dotted #000
+
+    &__date
+      font-size (24 / 750) * 100vw
+      +pc()
+        font-size (26 / 2560) * 100vw
+
+    &__title
+      font-size (42 / 750) * 100vw
+      +pc()
+        font-size (70 / 2560) * 100vw
+      &-sub
+        font-size (28 / 750) * 100vw
+        +pc()
+          font-size (36 / 2560) * 100vw
+
+  &__desc
+    p
+      font-size (24 / 750) * 100vw
+      line-height 2 !important
+      margin-bottom per(50, 1956)
+      font-family Futura-Med
+      +pc()
+        font-size (30 / 2560) * 100vw
+        line-height 1.6
+
+    a
+      font-size (30 / 2560) * 100vw
+      line-height 1.6
+      margin-bottom per(50, 1956)
+      color #ed7473
+      text-decoration underline
+      &:hover
+        font-style italic
+
+  h3
+    font-size (68 / 750) * 100vw !important
+    text-align center
+    +pc()
+      font-size (98 / 2560) * 100vw !important
+
+  p
+    line-height 1.4
+    margin-bottom per(30, 550)
+    +pc()
+      margin-bottom per(30, 1956)
 
   &-wrap
     width 80%
@@ -41,34 +97,40 @@
 
   &-dialog
     position fixed
-    top 45%
+    // top 45%
+    top 50%
     left 50%
     z-index 4000
     /* height: 100%; */
     transform translate(-50%, -50%)
     // width per(1956,2589)
-    width 100%
+    // width 100%
+    width per(650,750)
+    height (993 / 750) * 100vw
+    overflow hidden
+    +pc()
+      max-width 1600px
+      max-height: 1106px
+      width per(1956,2589)
+      height (1352 / 2560) * 100vw
 
-    +sp()
-      top 50%
-      width 100%
 
   &-content
     // width 510px
     margin 0 auto
-
+    overflow-y scroll
+    width 100%
+    height 100%
+    // +sp()
+    //   width calc(100% - 20px)
     +pc()
-      width per(1956, 2560)
-      overflow-y scroll
+      // width per(1956, 2560)
+      width 100%
       height 100%
-
-    +sp()
-      width calc(100% - 20px)
 
     .swiper-slide
       .swiper-content
         width 100%
-
       img
         width 100%
 
@@ -79,32 +141,42 @@
     overflow hidden
     position relative
     z-index 1
+    padding per(50, 650)
+    +pc()
+      padding per(138, 1956)
+
 
   &-close
-    width 45px
-    height 45px
-    margin 0 0 10px auto
     position absolute
-    top -45px
-    right 45px
+    width per(120, 750)
+    height (120 / 750) * 100vw
+    top (40 / 750) * 100vw
+    right (40 / 2560) * 100vw
     cursor pointer
+    +pc()
+      width per(145, 2560)
+      height (120 / 750) * 100vw
+      top (78 / 2560) * 100vw
+      right (78 / 2560) * 100vw
 
     &:before,
     &:after
       content ''
       position absolute
       display inline-block
-      top 12px
-      left 24px
-      width 3px
-      height 25px
       background-color #fff
+      top 50%
+      left 50%
+      width (4 / 750) * 100vw
+      height (120 / 750) * 100vw
+      +pc()
+        width (3 / 2560) * 100vw
+        height (145 / 2560) * 100vw
 
     &:before
-      transform rotate(45deg)
-
+      transform translate(-50%, -50%) rotate(45deg)
     &:after
-      transform rotate(-45deg)
+      transform translate(-50%, -50%) rotate(-45deg)
 
     img
       width 100%
@@ -184,3 +256,5 @@
     text-align center
     letter-spacing 0.5em
     transform translate(-50%, -50%)
+
+

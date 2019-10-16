@@ -9,15 +9,20 @@ export default class Modal {
   }
 
   init() {
-    const modal = $('#js-galleryModal')
-    const modalClose = $('#js-galleryModalClose')
-    const modalOverlay = $('#js-galleryModalOverlay')
+    // const modal = $('#js-galleryModal')
+    // const modalClose = $('#js-galleryModalClose')
+    // const modalOverlay = $('#js-galleryModalOverlay')
+
+    const modal = $('#js-modal')
+    const modalClose = $('#js-modalClose')
+    const modalOverlay = $('#js-modalOverlay')
     const open = 'is-open'
 
     // swiper
-    const modalSwiper = new Swiper('#js-galleryModalSwiper', {
+    // const modalSwiper = new Swiper('#js-galleryModalSwiper', {
+    const modalSwiper = new Swiper('#js-modalSwiper', {
       loop: true,
-      spaceBetween: 30,
+      // spaceBetween: 30,
       simulateTouch: false,
       noSwiping: true,
     })
