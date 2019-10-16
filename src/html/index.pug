@@ -105,15 +105,16 @@ block main
           .l-col.l-col--2
             .p-news-title
               h2 NEWS
-            .p-news-lists(data-module="Modal")
-              .gallery-content__item.p-news-list(data-slide="2")
+            //- .p-news-lists(data-module="Modal")
+            .p-news-lists
+              .gallery-content__item_01.p-news-list(data-module="NewsModal01" data-slide="1")
                 dl
                   dt 2019.11.1
                   dd
                     |NOVEMBER HOLIDAY INFORMATION
                     br
                     span.u-font-noto 11月休業日のお知らせ
-              .gallery-content__item.p-news-list(data-slide="3")
+              .gallery-content__item_02.p-news-list(data-module="NewsModal02" data-slide="2")
                 dl
                   dt 2019.11.1
                   dd
@@ -142,12 +143,13 @@ block main
                     br
                     span.u-font-noto 11月休業日のお知らせ
 
-      //- 以下modal
+
+      //- 以下modal（contace）
       //- #js-galleryModal.p-modal
-      #js-modal.p-modal
+      #js-modal00.p-modal
         //- #js-galleryModalOverlay.p-modal-overlay
-        #js-modalOverlay.p-modal-overlay
-          #js-modalClose.p-modal-close
+        #js-modalOverlay00.p-modal-overlay
+          #js-modalClose00.p-modal-close
 
         .p-modal-dialog
           .p-modal-content
@@ -161,7 +163,7 @@ block main
             .p-modal-body
 
               //- #js-galleryModalSwiper.swiper-container
-              #js-modalSwiper.swiper-container
+              #js-modalSwiper00.swiper-container
                 .swiper-wrapper
 
                   //- 1（contact）
@@ -172,6 +174,29 @@ block main
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+
+
+      //- 以下modal（news01）
+      //- #js-galleryModal.p-modal
+      #js-modal01.p-modal
+        //- #js-galleryModalOverlay.p-modal-overlay
+        #js-modal01Overlay.p-modal-overlay
+          #js-modal01Close.p-modal-close
+
+        .p-modal-dialog
+          .p-modal-content
+            //- .p-modal-header
+              //- #js-galleryModalClose.p-modal-close
+                //- img(
+                //-   src="/assets/images/common/ic_close.png"
+                //-   alt=""
+                //-   decoding="async"
+                //- )
+            .p-modal-body
+
+              //- #js-galleryModalSwiper.swiper-container
+              #js-modal01Swiper.swiper-container
+                .swiper-wrapper
 
                   //- 2（news）
                   .swiper-slide
@@ -201,6 +226,36 @@ block main
 
                         a(href='https://transit-web-job.net/jobfind-pc/area/All?freeword=THE+PIG') THE PIG & THE LADY RECRUIT
 
+
+                .swiper-button
+                  #js-swiper-button-prev.swiper-button-prev
+                  #js-swiper-button-next.swiper-button-next
+                  #js-swiper-numbers.swiper-numbers
+
+
+
+      //- 以下modal（news02）
+      //- #js-galleryModal.p-modal
+
+      #js-modal02.p-modal
+        //- #js-galleryModalOverlay.p-modal-overlay
+        #js-modal02Overlay.p-modal-overlay
+          #js-modal02Close.p-modal-close
+
+        .p-modal-dialog
+          .p-modal-content
+            //- .p-modal-header
+              //- #js-galleryModalClose.p-modal-close
+                //- img(
+                //-   src="/assets/images/common/ic_close.png"
+                //-   alt=""
+                //-   decoding="async"
+                //- )
+            .p-modal-body
+
+              //- #js-galleryModalSwiper.swiper-container
+              #js-modal02Swiper.swiper-container
+                .swiper-wrapper
 
                   //- 3（news）
                   .swiper-slide
@@ -274,67 +329,13 @@ block main
                           |We apologize for the inconvenience. Thank you for your understanding.
 
 
-
-                //- .swiper-wrapper
-                //-   .swiper-slide
-                //-     .swiper-img
-                //-       img(
-                //-         src="/assets/images/gallery/img_photo_01.jpg"
-                //-         alt=""
-                //-         decoding="async"
-                //-       )
-                //-     .swiper-text リゾートゲートウェイ・ステーション
-
-                //-   .swiper-slide
-                //-     .swiper-img
-                //-       img(
-                //-         src="/assets/images/gallery/img_photo_02.jpg"
-                //-         alt=""
-                //-         decoding="async"
-                //-       )
-                //-     .swiper-text
-
-
-                  //- .swiper-slide
-                  //-   .swiper-img
-                  //-     img(
-                  //-       src="/assets/images/gallery/img_photo_01.jpg"
-                  //-       alt=""
-                  //-       decoding="async"
-                  //-     )
-                  //-   .swiper-text 自動券売機は11台！一番多くのフリーきっぷデザインが並びます！
-
-                  //- .swiper-slide
-                  //-   .swiper-img
-                  //-     img(
-                  //-       src="/assets/images/gallery/img_photo_02.jpg"
-                  //-       alt=""
-                  //-       decoding="async"
-                  //-     )
-                  //-   .swiper-text
-
-                  //- .swiper-slide
-                  //-   .swiper-img
-                  //-     img(
-                  //-       src="/assets/images/gallery/img_photo_01.jpg"
-                  //-       alt=""
-                  //-       decoding="async"
-                  //-     )
-                  //-   .swiper-text 夕日が差し込むホーム
-
-                  //- .swiper-slide
-                  //-   .swiper-img
-                  //-     img(
-                  //-       src="/assets/images/gallery/img_photo_02.jpg"
-                  //-       alt=""
-                  //-       decoding="async"
-                  //-     )
-                  //-   .swiper-text 夜のライトアップで、また違う印象になります
-
                 .swiper-button
                   #js-swiper-button-prev.swiper-button-prev
                   #js-swiper-button-next.swiper-button-next
                   #js-swiper-numbers.swiper-numbers
+
+
+
 
   //- 予約フォーム
   //- .p-reservation(data-module='ReservationScroll')

@@ -2,7 +2,7 @@
 import $ from 'jquery'
 import Swiper from 'swiper'
 
-export default class Modal {
+export default class NewsModal01 {
   constructor(elem) {
     this.elem = elem
     this.init()
@@ -13,23 +13,23 @@ export default class Modal {
     // const modalClose = $('#js-galleryModalClose')
     // const modalOverlay = $('#js-galleryModalOverlay')
 
-    const modal = $('#js-modal')
-    const modalClose = $('#js-modalClose')
-    const modalOverlay = $('#js-modalOverlay')
+    const modal = $('#js-modal01')
+    const modalClose = $('#js-modal01Close')
+    const modalOverlay = $('#js-modal01Overlay')
     const open = 'is-open'
 
     // swiper
     // const modalSwiper = new Swiper('#js-galleryModalSwiper', {
-    const modalSwiper = new Swiper('#js-modalSwiper', {
-      loop: true,
+    const modalSwiper = new Swiper('#js-modal01Swiper', {
+      // loop: true,
       // spaceBetween: 30,
       simulateTouch: false,
-      noSwiping: true,
+      // noSwiping: true,
     })
 
     // modalを開く対象の指定
     // $('.gallery-content__item a').on('click', function(e) {
-    $('.gallery-content__item').on('click', function(e) {
+    $('.gallery-content__item_01').on('click', function(e) {
       e.preventDefault()
 
       const slideNum = $(this).data('slide')
