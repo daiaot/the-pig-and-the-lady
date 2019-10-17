@@ -13,18 +13,22 @@
       &:nth-of-type(1)
         margin-top per(70, 750)
         +sp()
-          margin-bottom per(250, 750)
+          margin-bottom per(90, 750)
         +pc()
           margin per(120, 2200) 0 per(140, 2200)
       &:nth-of-type(2)
         +sp()
-          margin-bottom per(250, 750)
+          margin-bottom per(110, 750)
         +pc()
           margin-bottom per(270, 2200)
 
+      &:nth-of-type(3)
+        +sp()
+          margin-bottom per(110, 750)
+
       &:nth-of-type(4)
         +sp()
-          margin-bottom per(250, 750)
+          margin-bottom per(120, 750)
         +pc()
           margin-bottom per(250, 2560)
 
@@ -85,18 +89,51 @@
           & > img
             +pc()
               width 100%
+          &:nth-of-type(1)
+            +sp()
+              width per(567, 650)
+              margin-bottom per(90, 650)
+          &:nth-of-type(2)
+            +sp()
+              width per(495, 650)
+              margin-left auto
+
+      &__head
+        text-align center
+        margin-bottom per(100, 2200)
+
       &__lead
         font-family Noto
         font-size (46 / 750) * 100vw
+        margin-bottom per(50, 750)
         +pc()
           font-size (62 / 2560) * 100vw
           line-height 1.4
           margin-bottom per(25, 2560)
-          &--small
-            font-size (36 / 750) * 100vw
+        &--small
+          font-size (26 / 750) * 100vw
+          +pc()
+            font-size (36 / 2560) * 100vw
+            line-height 1.4
+
+      &__text
+        margin-bottom per(100, 750)
+        +pc()
+          margin-bottom per(290, 2200)
+        p
+          font-size (26 / 750) * 100vw
+          line-height 1.8
+          margin 0
+          +pc()
+            font-size (34 / 2560) * 100vw
+          &.p-about-concept__text--jp
+            font-family Noto
+            font-size (30 / 750) * 100vw
+            line-height 2
+            margin-bottom per(50, 750)
             +pc()
-              font-size (36 / 2560) * 100vw
-              line-height 1.4
+              font-size (30 / 2560) * 100vw
+              line-height 2.2
 
 
     &-story
@@ -113,24 +150,74 @@
         padding-bottom per(250, 2200)
         border-bottom (4 / 2560) * 100vw dotted #000
 
+      h3
+        line-height 1.1
+        +sp()
+          margin-bottom per(50, 750)
+
       .l-col--2
         +pc()
           justify-content space-between
+          margin-bottom per(130, 2200)
+
         .p-about-owners__desc
           width 100%
+          +sp()
+            order 1
           +pc()
             width per(932, 2200)
+          p
+            font-size (26 / 750) * 100vw
+            line-height 1.8
+            +sp()
+              margin-bottom per(50, 650)
+            +pc()
+              font-size (34 / 2560) * 100vw
+            &.p-about-owners__desc--jp
+              font-family Noto
+              font-size (28 / 750) * 100vw
+              line-height 2.2
+              +pc()
+                font-size (28 / 2560) * 100vw
+                margin-bottom per(70, 932)
+
         .p-about-owners__figure
           width 100%
           +pc()
             width per(1150, 2200)
+          img
+            +sp()
+              margin-bottom per(50,650)
+            +pc()
+              margin-bottom per(50,932)
+          &__name
+            font-family futura-Med
+            font-size (66 / 750) * 100vw
+            line-height 1
+            margin-bottom per(20, 650)
+            +pc()
+              font-size (66 / 2560) * 100vw
+              margin-bottom per(20, 932)
+            &--jp
+              font-family Noto
+              font-size (42 / 750) * 100vw
+              line-height 1.2
+              margin-bottom per(40, 650)
+              +pc()
+                font-size (42 / 2560) * 100vw
 
     &-access
+      h3
+        +sp()
+          margin-bottom per(50, 650)
+
       .l-col--2
         +pc()
           justify-content space-between
         .p-about-access__figure
           width 100%
+          +sp()
+            margin-bottom per(80, 650)
           +pc()
             width per(1050, 2200)
         .p-about-access__info
@@ -138,3 +225,37 @@
           +pc()
             text-align right
             width per(1050, 2200)
+          dt
+            font-size (60 / 750) * 100vw
+            margin-bottom per(20, 650)
+            +pc()
+              font-size (42 / 2520) * 100vw
+              margin-bottom per(30, 1050)
+          dd
+            font-size (32 / 750) * 100vw
+            margin-bottom per(60, 650)
+            +pc()
+              font-size (32 / 2520) * 100vw
+              line-height 1.6
+              margin-bottom per(50, 1050)
+            span
+              font-family Noto
+              // &:nth-of-type(2)
+              //   +sp()
+              //     display block
+              //     margin-bottom per(60, 5650)
+            &:nth-of-type(1)
+              +sp()
+                margin-bottom per(30, 650)
+                
+      .c-link--1
+        display inline-block
+        font-size (32 / 750) * 100vw
+        font-family futura-Med
+        text-decoration underline
+        margin-bottom per(60, 650)
+        +pc()
+          font-size (34 / 2560) * 100vw
+          margin-bottom per(60, 1050)
+        &:hover
+          font-style italic

@@ -32,13 +32,16 @@ block main
       .p-section
         .l-inner
           .p-about-concept
-            .u-txtCenter
+            .u-txtCenter.p-about-concept__head
               h3 CONCEPT
-              p.p-about-concept__lead ハワイで最も人気のあるモダンベトナムレストラン
+              p.p-about-concept__lead
+                |ハワイで最も人気のある
+                br.u-spOnly
+                |モダンベトナムレストラン
               p.p-about-concept__lead--small
                 |Vietnamese restaurant from Hawaii
-            .l-col.l-col--2
-              p
+            .l-col.l-col--2.p-about-concept__text
+              p.p-about-concept__text--jp
                 |2019年 秋 ハワイ・ホノルルで最も人気のあるベトナムレストラン「THE PIG & THE LADY」が恵比寿に日本初上陸！
                 br
                 |「THE PIG & THE LADY」の料理は、フランス料理出身のオーナーシェフ アンドリュー・レイの母親が作るベトナム料理が大切なルーツとなっており、母親の作り出す秘伝の“出汁”が重要で、それを使用した料理の数々が人気を集める要因の一つです。
@@ -66,48 +69,56 @@ block main
             .l-col.l-col--2
               .p-about-owners__desc
                 .u-txtCenter
-                h3 OWNERS COMMENT
-                p
+                h3.u-pcOnly OWNERS COMMENT
+                p.p-about-owners__desc--jp
                   |オーナーのアンドリュー・レイ 氏は、ベトナム系二世。ニューヨークの料理学校を卒業後、ハワイで5つ星を獲得したコンテンポラリー・フレンチレストラン【シェフ マブロ】でスーシェフまで上り詰め、ホノルルのファーマーズマーケットに出店し爆発的な人気を呼び、2013年、チャイナタウンに「THE PIG & THE LADY」を開業しました。
                   br
                   |また、2016年には、「THE PIG & THE LADY」の姉妹店となる「PIGGY SMALLS」を開業しハワイで話題のレストランとして、さらに人気を博しているほか、2019年8月9日(金)フード、ドリンク、トラベル、エンタメの情報を提供するライフスタイルメディアサイト「Thrillist」が主催する名誉ある賞「TOP 28 Best Vietnamese Restaurants in America」を受賞いたしました。
                 p
                   |Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
               .p-about-owners__figure
+                h3.u-spOnly OWNERS COMMENT
                 img(src=`/assets/images/about/img_owners01.jpg` alt="")
-                p ANDREW LE
-                p
+                p.p-about-owners__figure__name ANDREW LE
+                p.p-about-owners__figure__name--jp
                   span アンドリュー・レイ
 
             .p-about-owners__figure
               img(src=`/assets/images/about/img_about03.jpg` alt="")
 
 
-      .p-section
+      .p-section#access
         .l-inner
           .p-about-access
             h3.u-txtCenter ACCESS
             .l-col.l-col--2
               .p-about-access__figure
-                img(src=`/assets/images/about/img_about03.jpg` alt="")
+                img(src=`/assets/images/about/img_access01.jpg` alt="")
               .p-about-access__info
+
                 dl
                   dt ADDRESS
                   dd
-                    |東京都渋谷区恵比寿南1-4-15
+                    span 東京都渋谷区恵比寿南1-4-15
                     br
-                    |恵比寿銀座クロスビル2階
+                    span 恵比寿銀座クロスビル2階
+                  dd
+                    |Ebisu Ginza Cross Bldg.2F, 1-4-15, 
+                    br
+                    |Ebisu-Minami, Shibuya-ku,Tokyo
                 a.c-link--1(href='')
                   |GOOGLE MAP
 
                 dl
                   dt OPEN
                   dd
-                    |平日 11:00 - 16:00 / 17:00 - 23:00
+                    span 平日 
+                    |11:00 - 16:00 / 17:00 - 23:00
                     br
                     |(L.O. FOOD 22:00 / DRINK 22:30)
                   dd
-                    |土日 ・ 祝 11:00 - 23:00
+                    span 土日 ・ 祝 
+                    |11:00 - 23:00
                     br
                     |(L.O. FOOD 22:00 / DRINK 22:30)
                   dt TEL
@@ -115,7 +126,8 @@ block main
                     |050-1743-1650
                   dt SHEET
                   dd
-                    |88席
+                    |88
+                    span 席
                   dt AREA
                   dd
                     |230.80㎡
