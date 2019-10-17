@@ -39,41 +39,43 @@ block main
             .p-gallery-col--column.p-gallery-order--5
               a.gallery-content__item(href='#' data-slide="6")
                 img(src=`/assets/images/gallery/img_photo_06.jpg` alt='PHO CHAY')
-              a(href='/assets/images/gallery/img_photo_07.jpg')
+              a.gallery-content__item(href='/assets/images/gallery/img_photo_07.jpg' data-slide="7")
                 img(src=`/assets/images/gallery/img_photo_07.jpg` alt='PHO CHAY')
-            a.p-gallery-col.p-gallery-order--6(href='/assets/images/gallery/img_photo_08.jpg')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--6(href='/assets/images/gallery/img_photo_08.jpg' data-slide="8")
               img(src=`/assets/images/gallery/img_photo_08.jpg` alt='PHO CHAY')
 
-            a.p-gallery-col.p-gallery-order--7(href='/assets/images/gallery/img_photo_09.jpg')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--7(href='/assets/images/gallery/img_photo_09.jpg' data-slide="9")
               img(src=`/assets/images/gallery/img_photo_09.jpg` alt='PHO CHAY')
-            a.p-gallery-col.p-gallery-order--8(href='/assets/images/gallery/img_photo_10.jpg')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--8(href='/assets/images/gallery/img_photo_10.jpg' data-slide="10")
               img(src=`/assets/images/gallery/img_photo_10.jpg` alt='PHO CHAY')
             .p-gallery-col--column.p-gallery-order--9
-              a(href='/assets/images/gallery/img_photo_11.jpg')
+              a.gallery-content__item(href='/assets/images/gallery/img_photo_11.jpg' data-slide="11")
                 img(src=`/assets/images/gallery/img_photo_11.jpg` alt='PHO CHAY')
-              a(href='/assets/images/gallery/img_photo_12.jpg')
+              a.gallery-content__item(href='/assets/images/gallery/img_photo_12.jpg' data-slide="12")
                 img(src=`/assets/images/gallery/img_photo_12.jpg` alt='PHO CHAY')
 
 
 
       // 以下modal
       //- #js-galleryModal.modal
-      #js-galleryModal.galleryshow
+      #js-galleryModal.p-galleryshow
         //- #js-galleryModalOverlay.modal-overlay
-        #js-galleryModalOverlay.galleryshow-overlay
-        .galleryshow-dialog
-          .galleryshow-content
+        #js-galleryModalOverlay.p-galleryshow-overlay
+          #js-galleryModalClose.p-galleryshow-close
+
+        .p-galleryshow-dialog
+          .p-galleryshow-content
             //- .modal-header
-            .galleryshow-header
+            //- .p-galleryshow-header
               //- #js-galleryModalClose.modal-close
-              #js-galleryModalClose.galleryshow-close
+              #js-galleryModalClose.p-galleryshow-close
                 //- img(
                 //-   src="/assets/images/common/ic_close.png"
                 //-   alt=""
                 //-   decoding="async"
                 //- )
             //- .modal-body
-            .galleryshow-body
+            .p-galleryshow-body
               #js-galleryModalSwiper.swiper-container
                 .swiper-wrapper
                   .swiper-slide
@@ -100,17 +102,7 @@ block main
                   .swiper-slide
                     .swiper-img
                       img(
-                        src="/assets/images/gallery/img_photo_01.jpg"
-                        alt=""
-                        decoding="async"
-                      )
-                    //- .swiper-text 自動券売機は11台！一番多くのフリーきっぷデザインが並びます！
-                    .swiper-text
-
-                  .swiper-slide
-                    .swiper-img
-                      img(
-                        src="/assets/images/gallery/img_photo_02.jpg"
+                        src="/assets/images/gallery/img_photo_03.jpg"
                         alt=""
                         decoding="async"
                       )
@@ -119,7 +111,7 @@ block main
                   .swiper-slide
                     .swiper-img
                       img(
-                        src="/assets/images/gallery/img_photo_01.jpg"
+                        src="/assets/images/gallery/img_photo_04.jpg"
                         alt=""
                         decoding="async"
                       )
@@ -128,7 +120,52 @@ block main
                   .swiper-slide
                     .swiper-img
                       img(
-                        src="/assets/images/gallery/img_photo_02.jpg"
+                        src="/assets/images/gallery/img_photo_05.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_06.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_07.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_08.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_09.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img(
+                        src="/assets/images/gallery/img_photo_10.jpg"
                         alt=""
                         decoding="async"
                       )

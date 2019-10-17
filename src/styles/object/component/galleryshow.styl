@@ -1,11 +1,11 @@
 // .modal
-.galleryshow
+.p-galleryshow
   visibility hidden
 
   // 画像のみのmodal
   &.-img
     // .modal-body
-    .galleryshow-body
+    .p-galleryshow-body
       background none
       border-radius 0
       border none
@@ -35,24 +35,36 @@
 
   &-dialog
     position fixed
-    top 45%
+    top 50%
     left 50%
     z-index 4000
     /* height: 100%; */
     transform translate(-50%, -50%)
-    width per(1544, 2560)
-    height (1149 / 2560) * 100vw
-
-    +sp()
-      top 50%
-      width 100%
+    // max-width 800px
+    // max-height (1336 / 1600) * 100vh
+    width 100%
+    // max-width 980px
+    max-height 80vh
+    // max-height 60vh
+    // overflow-y scroll
+    +pc()
+      top 45%
+      width per(1544, 2560)
+      // height (1149 / 2560) * 100vw
+      height (1320 / 2560) * 100vw
+      // max-height 80vh
 
   &-content
     // width 510px
     margin 0 auto
+    overflow-y scroll
 
     +sp()
       width calc(100% - 20px)
+
+    +pc()
+      width 100%
+      height 100%
 
     .swiper-slide
       img
@@ -65,32 +77,39 @@
     overflow hidden
     position relative
     z-index 1
-
+    // max-height 80vh
   &-close
-    width 45px
-    height 45px
-    margin 0 0 10px auto
     position absolute
-    top -45px
-    right -45px
+    width per(120, 750)
+    height (120 / 750) * 100vw
+    top (40 / 750) * 100vw
+    right (40 / 2560) * 100vw
     cursor pointer
+    +pc()
+      width per(145, 2560)
+      // height (120 / 750) * 100vw
+      height (145 / 2560) * 100vw
+      top (78 / 2560) * 100vw
+      right (78 / 2560) * 100vw
 
     &:before,
     &:after
       content ''
       position absolute
       display inline-block
-      top 12px
-      left 24px
-      width 3px
-      height 25px
       background-color #ed7473
+      top 50%
+      left 50%
+      width (4 / 750) * 100vw
+      height (120 / 750) * 100vw
+      +pc()
+        width (3 / 2560) * 100vw
+        height (145 / 2560) * 100vw
 
     &:before
-      transform rotate(45deg)
-
+      transform translate(-50%, -50%) rotate(45deg)
     &:after
-      transform rotate(-45deg)
+      transform translate(-50%, -50%) rotate(-45deg)
 
     img
       width 100%
@@ -105,13 +124,13 @@
 // モーダル内のスライダーCSSを下記に記載
 // .modal-body .swiper-slide,
 // .modal-body .swiper-img
-.galleryshow-body .swiper-slide,
-.galleryshow-body .swiper-img
+.p-galleryshow-body .swiper-slide,
+.p-galleryshow-body .swiper-img
   img
     width 100%
 
 // .modal-body .swiper-text
-.galleryshow-body .swiper-text
+.p-galleryshow-body .swiper-text
   width calc(100% - 10px)
   padding 15px 25px 10px
   margin 5px auto 0
@@ -140,26 +159,38 @@
     color #5e5e5e
 
 // .modal-body .swiper-button
-.galleryshow-body .swiper-button
-  width calc(100% - 10px)
+.p-galleryshow-body .swiper-button
+  // width calc(100% - 10px)
+  width 100%
   min-height 40px
-  margin 0 auto 5px
+  height (80 / 2560) * 100vw
+  // margin per(80, 2560) auto 0
+  margin 0 auto
   position relative
+  // top -20%
 
-  // background url('/assets/images/gallery/bg_hex.png') no-repeat bottom center
-  // background-size 100%
   .swiper-button-prev,
   .swiper-button-next
-    width 35px
-    height 35px
-    // border 3px solid #1eb9ee
     border-radius 50%
-    // background url('/assets/images/gallery/ic_arr.svg') no-repeat center center
-    background-size 7px
+    background url('/assets/images/common/ico_arrow03.png') no-repeat center center
+    background-size 100% auto
     color #000
+    top 0
+    width per(78, 650)
+    height (81 / 750) * 100vw
+    +pc()
+      width per(78, 2560)
+      height (81 / 2560) * 100vw
+      // top -100%
+      top 0
 
+  .swiper-button-prev
+    +pc()
+      left per(447, 1542)
   .swiper-button-next
-    // transform rotate(180deg)
+    transform rotate(180deg)
+    +pc()
+      left per(1018, 1542)
 
   .swiper-numbers
     display flex
@@ -172,12 +203,32 @@
     font-weight bold
     color #000
     text-align center
-    letter-spacing 0.5em
+    // letter-spacing 0.5em
     transform translate(-50%, -50%)
-
+    font-family NotoLight
+    font-size (70 / 750) * 100vw
     +pc()
-      font-size (30 / 2560) * 100vw
+      // font-size (30 / 2560) * 100vw
+      font-size (70 / 2560) * 100vw
 
   .swiper-pagination-current
+    // font-family futura-Med
+    font-size (82 / 750) * 100vw
+    padding-right per(60, 750)
+    line-height 1
     +pc()
       font-size (82 / 2560) * 100vw
+      padding-right per(60, 2560)
+
+  .swiper-pagination-total
+    font-size (40 / 750) * 100vw
+    padding-top per(45, 750)
+    padding-left per(40, 750)
+    +pc()
+      font-size (40 / 2560) * 100vw
+      // letter-spacing 0
+      padding-top per(45, 2560)
+      padding-left per(40, 2560)
+
+// .swiper-container
+//   height 60vh
