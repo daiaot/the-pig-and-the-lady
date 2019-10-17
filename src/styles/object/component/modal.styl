@@ -48,6 +48,7 @@
   h3
     font-size (68 / 750) * 100vw !important
     text-align center
+    font-family Futura-Med
     +pc()
       font-size (98 / 2560) * 100vw !important
 
@@ -202,32 +203,47 @@
   &-contact
     margin-top per(124, 2560)
     &__link
-      padding 0 per(122, 2560)
+      width 100%
       text-align center
+      +pc()
+        padding 0 per(122, 2560)
       &:nth-of-type(1)
-        width per(841, 1688)
-        border-right (4 / 2560) * 100vw dotted #000
-        // &:after
-        //   content ''
-        //   display block
-        //   width per(4, 2560)
-        //   height 100%
-        //   border-bottom (4 / 650) * 100vw dotted #000
+        +sp()
+          padding-bottom per(90, 650)
+          border-bottom (4 / 650) * 100vw dotted #000
+          margin-bottom per(78, 650)
+        +pc()
+          width per(841, 1688)
+          border-right (4 / 2560) * 100vw dotted #000
+          // &:after
+          //   content ''
+          //   display block
+          //   width per(4, 2560)
+          //   height 100%
+          //   border-bottom (4 / 650) * 100vw dotted #000
       &:nth-of-type(2)
-        width per(837, 1688)
+        +sp()
+          margin-bottom per(70, 650)
+        +pc()
+          width per(837, 1688)
     &__title
+      font-size (60 / 750) * 100vw
       +pc()
         font-size (80 / 2560) * 100vw
     &__sub
       font-family Noto
+      font-size (28 / 750) * 100vw
+      margin-bottom per(44, 650)
       +pc()
         font-size (32 / 2560) * 100vw
         margin-bottom per(50, 607)
 
     &__btn
       .c-btn--2
-        &:hover
-          font-style italic
+        width 100%
+        padding per(34, 650) per(10, 650)
+        font-size (22 / 750) * 100vw
+        letter-spacing .1rem
         +pc()
           // width per(607, 839)
           width per(820, 839)
@@ -237,13 +253,16 @@
           padding per(34, 607) per(10, 607)
           letter-spacing .1rem
         &:after
+          width per(51, 630)
+          height (51 / 750) * 100vw
           +pc()
             // width per(51, 539)
             // height (51 / 2560) * 100vw
             width per(32, 539)
-            // height (32 / 2560) * 100vw
+            // height (51 / 2560) * 100vw
             height (32 / 1680) * 100vw
-
+        &:hover
+          font-style italic
 
 
 // モーダル内のスライダーCSSを下記に記載
