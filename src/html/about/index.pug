@@ -121,19 +121,29 @@ block main
                     |230.80㎡
 
 
+      //- 以下modal（contace）
+      //- #js-galleryModal.p-modal
+      #js-modal00.p-modal
+        //- #js-galleryModalOverlay.p-modal-overlay
+        #js-modalOverlay00.p-modal-overlay
+          #js-modalClose00.p-modal-close
 
-      //- 以下modal
-      #js-galleryModal.modal
-        #js-galleryModalOverlay.modal-overlay
-        .modal-dialog
-          .modal-content
-            .modal-header
-              #js-galleryModalClose.modal-close
+        .p-modal-dialog
+          .p-modal-content
+            //- .p-modal-header
+              //- #js-galleryModalClose.p-modal-close
+                //- img(
+                //-   src="/assets/images/common/ic_close.png"
+                //-   alt=""
+                //-   decoding="async"
+                //- )
+            .p-modal-body
 
-            .modal-body
-
-              #js-galleryModalSwiper.swiper-container
+              //- #js-galleryModalSwiper.swiper-container
+              #js-modalSwiper00.swiper-container
                 .swiper-wrapper
+
+                  //- 1（contact）
                   .swiper-slide
                     .swiper-content
                       .swiper-content__title Contacg
@@ -141,5 +151,26 @@ block main
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
                         p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+
+
+      //- //- 以下modal
+      //- #js-galleryModal.modal
+      //-   #js-galleryModalOverlay.modal-overlay
+      //-   .modal-dialog
+      //-     .modal-content
+      //-       .modal-header
+      //-         #js-galleryModalClose.modal-close
+
+      //-       .modal-body
+
+      //-         #js-galleryModalSwiper.swiper-container
+      //-           .swiper-wrapper
+      //-             .swiper-slide
+      //-               .swiper-content
+      //-                 .swiper-content__title Contacg
+      //-                 .swiper-content__desc
+      //-                   p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
+      //-                   p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+      //-                   p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
 
 
