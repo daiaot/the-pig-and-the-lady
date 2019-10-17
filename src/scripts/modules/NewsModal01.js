@@ -5,6 +5,9 @@ import Swiper from 'swiper'
 export default class NewsModal01 {
   constructor(elem) {
     this.elem = elem
+    this.target = elem.getAttribute('data-modal-target')
+    this.targetModal = `#${this.target}`
+    // console.log(this.targetModal)
     this.init()
   }
 
@@ -13,7 +16,11 @@ export default class NewsModal01 {
     // const modalClose = $('#js-galleryModalClose')
     // const modalOverlay = $('#js-galleryModalOverlay')
 
-    const modal = $('#js-modal01')
+    // const modal = $('#js-modal01')
+    // const modal = $('#js-modal01')
+    const modal = $(this.targetModal)
+    // console.log(modal)
+
     const modalClose = $('#js-modal01Close')
     const modalOverlay = $('#js-modal01Overlay')
     const open = 'is-open'
@@ -33,7 +40,7 @@ export default class NewsModal01 {
       e.preventDefault()
 
       const slideNum = $(this).data('slide')
-      console.log('slideNum : ' + slideNum)
+      // console.log('slideNum : ' + slideNum)
       // console.log(slideNum)
       modalSwiper.slideTo(slideNum, 0)
       if (!modal.hasClass(open)) {

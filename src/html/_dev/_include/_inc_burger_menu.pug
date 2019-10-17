@@ -13,9 +13,10 @@
     li.p-burger_item(data-anchor="news")
       a(href='/#news')
         |NEWS
-    li.p-burger_item(data-anchor="contact")
+    //- li.p-burger_item(data-anchor="contact")
       //- a.gallery-content__item(href='#contact' data-slide="1")
-      a.p-contanc__item(data-slide="1")
+    li.p-burger_item(data-anchor="contact")
+      a.p-contanc__item(href='#' data-module="ModalContact" data-slide="1")
         |CONTACT
     li.p-burger_item
       a(href='/about#access')

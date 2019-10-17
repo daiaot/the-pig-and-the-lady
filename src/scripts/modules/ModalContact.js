@@ -13,14 +13,14 @@ export default class ModalContact {
     // const modalClose = $('#js-galleryModalClose')
     // const modalOverlay = $('#js-galleryModalOverlay')
 
-    const modal = $('#js-modal')
-    const modalClose = $('#js-modalClose')
-    const modalOverlay = $('#js-modalOverlay')
+    const modal = $('#js-contanc-modal')
+    const modalClose = $('#js-contanc-modalClose')
+    const modalOverlay = $('#js-contanc-modalOverlay')
     const open = 'is-open'
 
     // swiper
     // const modalSwiper = new Swiper('#js-galleryModalSwiper', {
-    const modalSwiper = new Swiper('#js-modalSwiper', {
+    const modalSwiper = new Swiper('#js-contanc-modalSwiper', {
       // loop: true,
       // spaceBetween: 30,
       simulateTouch: false,
@@ -29,7 +29,7 @@ export default class ModalContact {
 
     // modalを開く対象の指定
     // $('.gallery-content__item a').on('click', function(e) {
-    $('.gallery-content__item').on('click', function(e) {
+    $('.p-contanc__item').on('click', function(e) {
       e.preventDefault()
 
       const slideNum = $(this).data('slide')

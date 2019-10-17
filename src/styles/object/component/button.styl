@@ -21,7 +21,6 @@
       width per(633, 2200)
       font-size (43 / 2560) * 100vw
       // font-size (43 / 2200) * 100vw
-
     &:after
       content ''
       display block
@@ -40,4 +39,40 @@
         line-height 2
       +pc()
         width per(66, 633)
-        padding-top per(66, 633)
+        height (66 / 2560) * 100vw
+        // padding-top per(66, 633)
+
+  &--2
+    display block
+    border-radius 8px
+    background #ed7473
+    color #fff
+    padding per(34, 650) per(122, 650)
+    width per(506, 650)
+    font-size (34 / 506) * 100vw
+    line-height 1
+    font-weight bold
+    text-align center
+    position relative
+    +pc()
+      padding per(58, 2560) per(184, 2560)
+      width per(633, 2200)
+      font-size (43 / 2560) * 100vw
+    &:after
+      content ''
+      display block
+      background url('/assets/images/common/ico_arrow02.png') 50% 50% no-repeat
+      background-size 100% auto
+      position absolute
+      right 0
+      top 50%
+      transform translate(-50%, -50%)
+      width per(51, 506)
+      height (51 / 506) * 100vw
+      z-index 10
+      +sp()
+        line-height 2
+      +pc()
+        width per(51, 633)
+        height (51 / 2560) * 100vw
+

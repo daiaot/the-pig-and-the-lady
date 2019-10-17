@@ -107,14 +107,14 @@ block main
               h2 NEWS
             //- .p-news-lists(data-module="Modal")
             .p-news-lists
-              .gallery-content__item_01.p-news-list(data-module="NewsModal01" data-slide="1")
+              .gallery-content__item_01.p-news-list(data-module="NewsModal01" data-slide="1" data-modal-target='js-modal01')
                 dl
                   dt 2019.11.1
                   dd
                     |NOVEMBER HOLIDAY INFORMATION
                     br
                     span.u-font-noto 11月休業日のお知らせ
-              .gallery-content__item_02.p-news-list(data-module="NewsModal02" data-slide="2")
+              .gallery-content__item_02.p-news-list(data-module="NewsModal02" data-slide="2" data-modal-target='js-modal02')
                 dl
                   dt 2019.11.1
                   dd
@@ -146,34 +146,34 @@ block main
 
       //- 以下modal（contace）
       //- #js-galleryModal.p-modal
-      #js-modal00.p-modal
+      #js-contanc-modal.p-modal
         //- #js-galleryModalOverlay.p-modal-overlay
-        #js-modalOverlay00.p-modal-overlay
-          #js-modalClose00.p-modal-close
+        #js-contanc-modalOverlay.p-modal-overlay
+          #js-contanc-modalClose.p-modal-close
 
         .p-modal-dialog
           .p-modal-content
-            //- .p-modal-header
-              //- #js-galleryModalClose.p-modal-close
-                //- img(
-                //-   src="/assets/images/common/ic_close.png"
-                //-   alt=""
-                //-   decoding="async"
-                //- )
             .p-modal-body
-
               //- #js-galleryModalSwiper.swiper-container
-              #js-modalSwiper00.swiper-container
+              #js-contanc-modalSwiper.swiper-container
                 .swiper-wrapper
 
                   //- 1（contact）
                   .swiper-slide
                     .swiper-content
-                      .swiper-content__title Contacg
-                      .swiper-content__desc
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
+                      h3 CONTACT US
+                      .p-modal-contact
+                        .l-col.l-col--2
+                          .p-modal-contact__link
+                            .p-modal-contact__title FOR THE STORE
+                            .p-modal-contact__sub 店舗についてのお問い合わせ
+                            .p-modal-contact__btn
+                              a.c-btn--2(href='mailto:infothepigandthelady@transit-web.com') infothepigandthelady@transit-web.com
+                          .p-modal-contact__link
+                            .p-modal-contact__title FOR THE PRESS
+                            .p-modal-contact__sub プレスについてのお問い合わせ
+                            .p-modal-contact__btn
+                                a.c-btn--2(href='mailto:tgo-press@transit-web.com') tgo-press@transit-web.com
 
 
       //- 以下modal（news01）
