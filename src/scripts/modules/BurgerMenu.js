@@ -30,8 +30,7 @@ export default class BurgerMenu {
   bindEvent() {
     // this.btn.addEventListener('click', this.animate.bind(this))
 
-    // this.btn.addEventListener('click', e => {
-    this.btn.addEventListener('click', () => {
+    this.btn.addEventListener('click', e => {
       TweenMax.set(this.body, { css: { overflow: 'hidden' } })
       e.preventDefault()
       // this.animate.bind(this)
