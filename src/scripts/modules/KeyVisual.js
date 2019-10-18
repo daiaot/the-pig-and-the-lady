@@ -26,19 +26,19 @@ export default class KeyVisual {
       // console.log('---- num : ' + num)
       var el = document.getElementsByClassName('p-kv__main')[0];
       // console.log(el)
-      // if(num % 5 === 0) {
-      //   console.log('1');
-      //   el.setAttribute('id','kv01')
-      // } else if(num % 5 === 1) {
-      //   console.log('2');
-      //   el.setAttribute('id','kv02')
-      // } else if(num % 5 === 2) {
-      //   console.log('3');
-      //   el.setAttribute('id','kv03')
-      // } else {
-      //   console.log('4');
-      //   el.setAttribute('id','kv04')
-      // }
+      if(num % 5 === 0) {
+        // console.log('1');
+        el.setAttribute('id','kv01')
+      } else if(num % 5 === 1) {
+        // console.log('2');
+        el.setAttribute('id','kv02')
+      } else if(num % 5 === 2) {
+        // console.log('3');
+        el.setAttribute('id','kv03')
+      } else {
+        // console.log('4');
+        el.setAttribute('id','kv04')
+      }
     }
 
     // let date = new Date()
