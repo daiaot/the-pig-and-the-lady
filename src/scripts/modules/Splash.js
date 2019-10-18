@@ -7,9 +7,6 @@ export default class Splash {
     this.isSplash = elem.classList.contains('p-splash') ? true : false
     this.bg = elem.querySelector('[data-module-loading="bg"]')
     this.msg = elem.querySelectorAll('.p-loading__msg')
-    // console.log('--- this.msg')
-    // console.log(this.msg)
-
     // this.heightAdjust()
     this.bindEvents()
   }
@@ -40,17 +37,17 @@ export default class Splash {
     this.animate()
   }
 
-  locationHref() {
-    location.href = this.href
-  }
+  // locationHref() {
+  //   location.href = this.href
+  // }
 
-  prepareSlideOutAnimation() {
-    return new Promise(resolve => {
-      TweenMax.set(this.elem, { display: 'block' })
-      TweenMax.set(this.body, { css: { overflow: 'hidden' } })
-      resolve()
-    })
-  }
+  // prepareSlideOutAnimation() {
+  //   return new Promise(resolve => {
+  //     TweenMax.set(this.elem, { display: 'block' })
+  //     TweenMax.set(this.body, { css: { overflow: 'hidden' } })
+  //     resolve()
+  //   })
+  // }
 
   topSplash() {
     return new Promise(() => {
@@ -113,12 +110,5 @@ export default class Splash {
     //   opacity: 1,
     // })
 
-    // await TweenMax.set(this.body, { css: { overflow: 'scroll' } })
-    // await TweenMax.set(this.body, { css: { overflowX: 'hidden' } })
-    // await TweenMax.set(this.body, { css: { width: '100vw' } })
-
-    // await TweenMax.set(this.body, { css: { overflow: '' } })
-    // await TweenMax.set(this.body, { css: { posison: '' } })
-    // await TweenMax.set(this.body, { css: { top: '' } })
   }
 }

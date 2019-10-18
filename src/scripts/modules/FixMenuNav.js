@@ -1,9 +1,10 @@
 import $ from 'jquery'
 
 export default class FixMenuNav {
-  constructor(elem, opts = '') {
+  // constructor(elem, opts = '') {
+  constructor(elem) {
     this.elem = elem
-    this.opts = opts
+    // this.opts = opts
     this.title = document.querySelectorAll('h2')
     this.addEvents()
   }

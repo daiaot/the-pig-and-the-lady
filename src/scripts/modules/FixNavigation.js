@@ -1,14 +1,9 @@
-export default class FixNav {
+export default class FixNavigation {
   constructor(elem, opts = '') {
     this.elem = elem
     this.opts = opts
     this.fixFlg = false
-    // this.current = document.querySelectorAll('.top')
-    // console.log(this.current)
-
     this.isLower = elem.classList.contains('nav-bar-lower') ? true : false
-    // console.log(this.isLower)
-
     this.addEvents()
   }
   addEvents() {

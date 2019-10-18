@@ -16,7 +16,7 @@ export default class BurgerMenu {
 
     // ナビオープン時のバックグラウンド
     this.splashMask = this.createMask(this.el, '#fff')
-    // this.appendMask(this.splashMask, this.el)
+    this.appendMask(this.splashMask, this.el)
     this.appendMask(this.splashMask, this.body)
 
     this.bindEvent()
@@ -50,9 +50,6 @@ export default class BurgerMenu {
   }
 
   toggleSlide() {
-    // console.log('toggleSlide()')
-    // console.log('status: ' + this.state.status)
-
     const ua = navigator.userAgent
     let videoSrc
     if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
@@ -68,19 +65,10 @@ export default class BurgerMenu {
         },
       })
     }
-
-    // TweenMax.to(this.btn, 0.3, {
-    //   css: {
-    //     right: '50%',
-    //   },
-    // })
   }
 
 
   openAnimation() {
-    // console.log('openAnimation()')
-    // console.log('status: ' + this.state.status)
-    // this.state.status = 'animating'
     this.state.status = 'opened'
     this.toggleSlide()
     this.bgSlide()
@@ -125,13 +113,8 @@ export default class BurgerMenu {
   }
 
   closeAnimation() {
-    // console.log('closeAnimation()')
-    // console.log(this.state.status)
 
     this.state.status = 'animating'
-    // this.allLetters = this.el.querySelectorAll('g')
-    // TweenMax.to(this.allLetters, 0.2, { opacity: 0 })
-
     this.body.classList.remove("hoge");
     TweenMax.set(this.body, { css: { overflow: 'scroll' } })
     TweenMax.set(this.body, { css: { touchAction: '' } })
@@ -149,12 +132,11 @@ export default class BurgerMenu {
       onComplete: () => (this.state.status = 'closed'),
     })
 
-    this.slideOutVideoMask()
+    // this.slideOutVideoMask()
+    this.slideOutNav()
   }
 
   animate() {
-    // console.log('animate()')
-    // console.log('status: ' + this.state.status)
     if (this.state.status === 'closed') {
       TweenMax.set(this.btn, { className: '+=is-open' })
       this.openAnimation()
@@ -170,7 +152,6 @@ export default class BurgerMenu {
     const thisModule = this
     for (let j = 0; j < this.links.length; j++) {
       this.links[j].addEventListener('click', function() {
-        // console.log('-- this.dataset.anchor : ' + this.dataset.anchor)
         if (this.dataset.anchor !== undefined) {
           if(this.dataset.anchor !== 'contact') {
             const href = `#${this.dataset.anchor}`
@@ -189,7 +170,8 @@ export default class BurgerMenu {
     }
   }
 
-  slideOutVideoMask() {
+  // slideOutVideoMask() {
+  slideOutNav() {
     return new Promise(resolve => {
       resolve()
       TweenMax.set(this.nav, { css: { zIndex: 1 } })
@@ -201,13 +183,13 @@ export default class BurgerMenu {
         x: 0,
         zIndex: 0,
       })
-      // TweenMax.to(this.splashMask, 0.5, {
-      //   onComplete: function() {
-      //     this.target.style.display = 'none'
-      //   },
-      //   x: this.splashMask.clientWidth,
-      //   ease: Expo.easeInOut,
-      // })
+      TweenMax.to(this.splashMask, 0.5, {
+        onComplete: function() {
+          this.target.style.display = 'none'
+        },
+        x: this.splashMask.clientWidth,
+        ease: Expo.easeInOut,
+      })
     })
   }
 
