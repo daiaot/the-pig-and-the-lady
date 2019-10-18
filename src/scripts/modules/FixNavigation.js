@@ -7,7 +7,7 @@ export default class FixNav {
     // console.log(this.current)
 
     this.isLower = elem.classList.contains('nav-bar-lower') ? true : false
-    console.log(this.isLower)
+    // console.log(this.isLower)
 
     this.addEvents()
   }
@@ -49,7 +49,7 @@ export default class FixNav {
           this.elem.children[0].classList.remove('is-fixed')
         }
       } else {
-        console.log('test')
+        // console.log('test')
         this.elem.classList.remove('is-hidden')
         this.elem.classList.add('is-fixed')
       }

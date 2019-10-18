@@ -33,7 +33,7 @@ export default class NewsModal02 {
       e.preventDefault()
 
       const slideNum = $(this).data('slide')
-      console.log('slideNum : ' + slideNum)
+      // console.log('slideNum : ' + slideNum)
       // console.log(slideNum)
       modalSwiper.slideTo(slideNum, 0)
       if (!modal.hasClass(open)) {

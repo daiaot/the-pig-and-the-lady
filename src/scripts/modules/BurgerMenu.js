@@ -125,8 +125,8 @@ export default class BurgerMenu {
   }
 
   closeAnimation() {
-    console.log('closeAnimation()')
-    console.log(this.state.status)
+    // console.log('closeAnimation()')
+    // console.log(this.state.status)
 
     this.state.status = 'animating'
     // this.allLetters = this.el.querySelectorAll('g')
@@ -153,8 +153,8 @@ export default class BurgerMenu {
   }
 
   animate() {
-    console.log('animate()')
-    console.log('status: ' + this.state.status)
+    // console.log('animate()')
+    // console.log('status: ' + this.state.status)
     if (this.state.status === 'closed') {
       TweenMax.set(this.btn, { className: '+=is-open' })
       this.openAnimation()
@@ -170,7 +170,7 @@ export default class BurgerMenu {
     const thisModule = this
     for (let j = 0; j < this.links.length; j++) {
       this.links[j].addEventListener('click', function() {
-        console.log('-- this.dataset.anchor : ' + this.dataset.anchor)
+        // console.log('-- this.dataset.anchor : ' + this.dataset.anchor)
         if (this.dataset.anchor !== undefined) {
           if(this.dataset.anchor !== 'contact') {
             const href = `#${this.dataset.anchor}`

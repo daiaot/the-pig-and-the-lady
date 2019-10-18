@@ -4,7 +4,7 @@ export default class Navigation {
 
   constructor(el) {
     this.elem = el
-    console.log('Navigation constructor()')
+    // console.log('Navigation constructor()')
     this.bindEvents()
   }
 
