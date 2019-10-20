@@ -2,7 +2,7 @@ import $ from 'jquery'
 import { TweenMax } from 'gsap'
 
 export default class BurgerMenu {
-  constructor(elem, opts) {
+  constructor(elem) {
     this.el = elem
     this.body = document.body
     this.items = this.el.querySelectorAll('.c-svg_container')
@@ -29,11 +29,8 @@ export default class BurgerMenu {
 
   bindEvent() {
     // this.btn.addEventListener('click', this.animate.bind(this))
-
-    this.btn.addEventListener('click', e => {
+    this.btn.addEventListener('click', () => {
       TweenMax.set(this.body, { css: { overflow: 'hidden' } })
-      e.preventDefault()
-      // this.animate.bind(this)
       this.animate()
     })
   }
