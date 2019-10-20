@@ -1,6 +1,9 @@
 import $ from 'jquery'
 import { TweenMax } from 'gsap'
 
+
+var current_scrollY
+
 export default class BurgerMenu {
   constructor(elem) {
     this.el = elem
@@ -10,6 +13,8 @@ export default class BurgerMenu {
     this.links = this.el.querySelectorAll('.p-burger_item')
     this.nav = this.el.querySelectorAll('.p-burger_container')
     this.flg = false
+    this.current = 0
+    // this.current_scrollY
     this.state = {
       status: 'closed',
     }
@@ -30,7 +35,27 @@ export default class BurgerMenu {
   bindEvent() {
     // this.btn.addEventListener('click', this.animate.bind(this))
     this.btn.addEventListener('click', () => {
-      TweenMax.set(this.body, { css: { overflow: 'hidden' } })
+    // this.btn.addEventListener('click', e => {
+
+      // e.preventDefault()
+
+      //- click時のtop位置を取得
+      // this.current = this.el.getBoundingClientRect().top
+      // this.current = document.body.getBoundingClientRect().top * -1
+      // console.log('---- this.current')
+      // console.log(this.current)
+
+      // $(window).on('touchmove', function(event) {
+      //   event.preventDefault();
+      // });
+
+
+      // TweenMax.set(this.body, { css: { overflow: 'hidden' } })
+      // TweenMax.set(this.body, { css: { position: 'fixed' } })
+      // TweenMax.set(this.body, { css: { top: '`this.current`' } })
+      // TweenMax.set(this.body, { css: { top: 'this.current' } })
+
+
       this.animate()
     })
   }
@@ -66,6 +91,7 @@ export default class BurgerMenu {
 
 
   openAnimation() {
+    // $('html').addClass('scroll-prevent')
     this.state.status = 'opened'
     this.toggleSlide()
     this.bgSlide()
@@ -77,12 +103,26 @@ export default class BurgerMenu {
     return new Promise(resolve => {
       TweenMax.set(this.el, { display: 'block' })
 
-      this.body.classList.add("hoge");
+      // this.body.classList.add("hoge");
+
       TweenMax.set(this.body, { css: { overflow: 'hidden' } })
       // TweenMax.set(this.body, { css: { overflow: 'auto' } })
       TweenMax.set(this.body, { css: { height: '100%' } })
       // TweenMax.set(this.body, { css: { zIndex: '0' } })
       TweenMax.set(this.body, { css: { touchAction: 'none' } })
+
+      // add by aotsuka
+      // // this.current_scrollY = $( window ).scrollTop()
+      // TweenMax.set(this.body, { css: { width: '100%' } })
+      // current_scrollY = $( window ).scrollTop()
+      // TweenMax.set(this.body, { css: { position: 'fixed' } })
+      // console.log('-- open()')
+      // console.log('-- current_scrollY : ' + current_scrollY)
+      // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
+      // TweenMax.set(this.body, { css: { width: '100%' } })
+      // // TweenMax.set(this.body, { css: { zIndex: '-1' } })
+
+
       TweenMax.set(this.nav, { css: { zIndex: 20 } })
       TweenMax.set(this.splashMask, {
         opacity: .5,
@@ -112,9 +152,22 @@ export default class BurgerMenu {
   closeAnimation() {
 
     this.state.status = 'animating'
-    this.body.classList.remove("hoge");
+    // this.body.classList.remove("hoge");
     TweenMax.set(this.body, { css: { overflow: 'scroll' } })
     TweenMax.set(this.body, { css: { touchAction: '' } })
+    TweenMax.set(this.body, { css: { position: '' } })
+    // TweenMax.set(this.body, { css: { scrollTop: '' } })
+
+    // add by aotsuka
+    // console.log('-- close()')
+    // console.log('-- current_scrollY : ' + (-1 * current_scrollY))
+    // TweenMax.set(this.body, { css: { width: '' } })
+    // TweenMax.set(this.body, { css: { height: '' } })
+    // // TweenMax.set(this.body, { css: { position: 'relative' } })
+    // // TweenMax.set(this.body, { css: { top: -1 * this.current_scrollY } })
+    // // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
+    // $( 'html, body' ).prop( { scrollTop: current_scrollY } );
+    // // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
 
     TweenMax.to(this.btn, 0.3, {
       css: {
@@ -136,9 +189,13 @@ export default class BurgerMenu {
   animate() {
     if (this.state.status === 'closed') {
       TweenMax.set(this.btn, { className: '+=is-open' })
+      // $('html').addClass('scroll-prevent')
+      $('body').addClass('scroll-prevent')
       this.openAnimation()
     } else if (this.state.status === 'opened') {
       TweenMax.set(this.btn, { className: '-=is-open' })
+      // $('body').removeclass('scroll-prevent')
+      $('body').removeClass('scroll-prevent')
       this.closeAnimation()
     } else {
       return false
@@ -174,6 +231,11 @@ export default class BurgerMenu {
       TweenMax.set(this.nav, { css: { zIndex: 1 } })
       TweenMax.set(this.body, { css: { overflow: '' } })
       TweenMax.set(this.body, { css: { height: '' } })
+
+      // add by aotsuka
+      // TweenMax.set(this.body, { css: { width: '' } })
+      // TweenMax.set(this.body, { css: { zIndex: '0' } })
+
       TweenMax.set(this.splashMask, {
         opacity: 0,
         display: 'none',
