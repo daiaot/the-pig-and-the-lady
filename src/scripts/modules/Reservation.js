@@ -33,33 +33,43 @@ export default class Reservation {
     const win_top = document.body.getBoundingClientRect().top * -1
     const relativeHeight = this.elem.getBoundingClientRect().height * 3
 
-    if (win_top > relativeHeight) { //-先頭以外
+    console.log('-- win_top: ' + win_top)
+    console.log('-- relativeHeight: ' + relativeHeight)
 
-      //- スクロールでウィジェットを隠す
 
-      if(this.toggleFlg == false) {
+    const ua = navigator.userAgent
+    if (!ua.match(/(iPhone|iPad|iPod|Android)/i)) {
 
-        // トグルクリック履歴がなければイベントを発生
+      if (win_top > relativeHeight) { //-先頭以外
+
+        //- スクロールでウィジェットを隠す
+
+        if (this.toggleFlg == false) {
+
+          // トグルクリック履歴がなければイベントを発生
+          TweenMax.to(this.widget, 0.01, {
+            x: '101%',
+            ease: Power3.easeInOut,
+          })
+          // ウィジェット表示フラグ
+          this.showWidget = false
+        }
+
+      } else if (win_top < relativeHeight) {  //-先頭
+
         TweenMax.to(this.widget, 0.01, {
-          x: '100%',
+          x: '0%',
           ease: Power3.easeInOut,
         })
         // ウィジェット表示フラグ
-        this.showWidget = false
+        this.showWidget = true
+        // トグルクリック履歴フラグをリセット
+        this.toggleFlg = false
+
       }
 
-    } else if (win_top < relativeHeight) {  //-先頭
-
-      TweenMax.to(this.widget, 0.01, {
-        x: '0%',
-        ease: Power3.easeInOut,
-      })
-      // ウィジェット表示フラグ
-      this.showWidget = true
-      // トグルクリック履歴フラグをリセット
-      this.toggleFlg = false
-
     }
+
   }
 
 
@@ -71,7 +81,7 @@ export default class Reservation {
     if (this.showWidget) { //- ウィジェットが表示されている
 
       TweenMax.to(this.widget, 0.5, {
-        x: '100%',
+        x: '101%',
         ease: Power3.easeInOut,
       })
       this.showWidget = false

@@ -22,6 +22,7 @@
       +pc()
         font-size (70 / 2560) * 100vw
       &-sub
+        font-weight bold
         font-size (28 / 750) * 100vw
         +pc()
           font-size (36 / 2560) * 100vw
@@ -37,13 +38,15 @@
         line-height 1.6
 
     a
-      font-size (30 / 2560) * 100vw
+      font-size (26 / 750) * 100vw
       line-height 1.6
       margin-bottom per(50, 1956)
       color #ed7473
       text-decoration underline
       &:hover
         font-style italic
+      +pc()
+        font-size (30 / 2560) * 100vw
 
   h3
     font-size (68 / 750) * 100vw !important
@@ -94,7 +97,11 @@
     left 0
     right 0
     // background-color rgba(0, 0, 0, 0.8)
-    background-color rgba(237, 116, 115, 0.9)
+    // background-color rgba(237, 116, 115, 0.9)
+    background-color rgba(237, 116, 115, 0.97)
+
+    +sp()
+      overflow-y scroll
 
   &-dialog
     position fixed
@@ -103,7 +110,8 @@
     left 50%
     z-index 4000
     /* height: 100%; */
-    height (993 / 750) * 100vw
+    // height (993 / 750) * 100vw
+    height (840 / 750) * 100vw
     transform translate(-50%, -50%)
     // width per(1956,2589)
     // width 100%
@@ -119,6 +127,10 @@
       // max-width 980px
       // max-height: 677px
     &.contact
+      +sp()
+        top 60%
+        height (1102 / 750) * 100vw
+        max-height 80vh
       +pc()
         height (912 / 2560) * 100vw
         max-height 80vh
@@ -231,6 +243,7 @@
         font-size (80 / 2560) * 100vw
     &__sub
       font-family Noto
+      font-weight bold
       font-size (28 / 750) * 100vw
       margin-bottom per(44, 650)
       +pc()
@@ -240,7 +253,9 @@
     &__btn
       .c-btn--2
         width 100%
-        padding per(34, 650) per(10, 650)
+        // padding per(34, 650) per(10, 650)
+        // padding per(34, 550) per(10, 650)
+        padding per(48, 550) per(10, 650)
         font-size (22 / 750) * 100vw
         letter-spacing .1rem
         +pc()
@@ -298,7 +313,8 @@
     line-height 1.8
     color #5e5e5e
 
-.modal-body .swiper-button
+// .modal-body .swiper-button
+.p-modal-body .swiper-button
   display none
   width calc(100% - 10px)
   min-height 40px

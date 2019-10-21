@@ -97,7 +97,8 @@ export default class Splash {
     // }
 
     TweenMax.to(this.msg, 2.0, { ease: Expo.easeInOut, opacity: 1 })
-    await TweenMax.to(this.bg, 4.0, { ease: Expo.easeInOut, opacity: 0, zIndex: -1, delay: 2.0 })
+    // await TweenMax.to(this.bg, 4.0, { ease: Expo.easeInOut, opacity: 0, zIndex: -1, delay: 2.0 })
+    await TweenMax.to(this.bg, 0.5, { opacity: 0, zIndex: -1, delay: 3.0 })
 
     // await TweenMax.to(this.msg, 3.0, { opacity: 0 })
 

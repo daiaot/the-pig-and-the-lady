@@ -4,7 +4,7 @@
     position fixed
     bottom 0
     right 0
-    z-index 10
+    z-index 20
     width 100%
     display flex
     +pc()
@@ -22,28 +22,36 @@
       flex-direction column
       justify-content center
       align-items center
+      letter-spacing 0.04em
       +pc()
         width per(296, 1248)
         font-size (32 / 2560) * 100vw
       span
         font-family Noto
         font-size (18 / 750) * 100vw
+        color #ffe4e4
+        letter-spacing 0.08em
+        font-weight 600
         +pc()
           font-size (22 / 2560) * 100vw
       &:hover
         font-style italic
 
+    // #tc-widget[data-layout='horizontal']
     #tc-widget
       // width per(1248, 2560) !important
       // width 100% !important
       background #fff
       width per(580, 750) !important
-      padding per(28, 750) per(32, 750)
+      // padding per(28, 750) per(32, 750)
+      padding per(28, 750) per(20, 750)
+      padding per(28, 750) per(20, 750)
       +sp()
         text-align center
       +pc()
         width per(952, 1248) !important
         padding per(46, 1248) per(50, 1248)
+        // height auto
 
       .tc-wrap
         +sp()
@@ -67,8 +75,10 @@
         align-items center
         +sp()
           // width per(406, 516)
-          width per(343, 516)
+          // width per(343, 516)
+          // width per(406, 516)
           // width per(406, 580)
+          width per(420, 580)
           justify-content space-between
         +pc()
           width per(672, 852)
@@ -83,7 +93,9 @@
         margin 0
         +sp()
           // width per(153, 406)
-          width per(153, 343)
+          // width per(153, 343)
+          // width per(200, 343)
+          width per(230, 420)
           float none
         +pc()
           width per(314, 672)
@@ -111,7 +123,8 @@
         margin 0
         +sp()
           // width per(95, 406)
-          width per(95, 343)
+          // width per(95, 343)
+          width per(105, 420)
           // width 33%
           float none
         +pc()
@@ -125,7 +138,8 @@
           border-right (8 / 750) * 100vw solid transparent
           position absolute
           top 50%
-          left 70%
+          // left 70%
+          left 80%
           transform translateY(-50%)
           +pc()
             // left per(138, 222)
@@ -141,7 +155,8 @@
         +sp()
           // width 33%
           // width per(95, 406)
-          width per(95, 343)
+          // width per(95, 343)
+          width per(105, 420)
           float none
         +pc()
           // width per(136, 672)
@@ -166,11 +181,16 @@
             border-right (8 / 2560) * 100vw solid transparent
 
 
+      input[type='text']::placeholder
+        color #000
+
       input[type='text']
         border none
         // font-family FuturaStdBold
         font-family Noto
         padding 0
+        color #000
+        font-weight 700
         +sp()
           width 100%
           // font-size (20 / 750) * 100vw
@@ -190,8 +210,9 @@
         appearance none
         border none
         padding 0
-        // font-family FuturaStdBold
         font-family Noto
+        color #000
+        font-weight 700
         +sp()
           width 100%
           font-size (20 / 750) * 100vw
@@ -213,10 +234,11 @@
         // font-size (20 / 750) * 100vw
         font-size 16px
         align-items center
+        color #000
         +pc()
           font-size (42 / 2560) * 100vw
-        // font-size (22 / 2560) * 100vw
-        color #000
+          // font-size (22 / 2560) * 100vw
+          color #000
 
       select:focus
         border-color transparent
@@ -240,7 +262,8 @@
         padding 0
         +sp()
           // width per(110, 580)
-          width per(160, 580)
+          // width per(160, 580)
+          width per(140, 580)
           display flex
           align-items center
           justify-content center
@@ -276,3 +299,114 @@
     #tc-widget[data-theme='clear'] .tc-book:hover
       background-color transparent
       font-style italic
+
+
+
+
+
+
+    // #tc-widget[data-layout='horizontal'] .tc-date
+    //   position relative
+    //   padding 0
+    //   margin 0
+    //   +sp()
+    //     // width per(153, 406)
+    //     width per(153, 343)
+    //     float none
+    //   +pc()
+    //     width per(314, 672)
+    //   &:after
+    //     content ''
+    //     display block
+    //     border-top (16 / 750) * 100vw solid #000
+    //     border-left (8 / 750) * 100vw solid transparent
+    //     border-right (8 / 750) * 100vw solid transparent
+    //     position absolute
+    //     top 50%
+    //     left 80%
+    //     transform translateY(-50%)
+    //     +pc()
+    //       // left per(233, 314)
+    //       // left 36%
+    //       // left 85%
+    //       left 80%
+    //       border-top (16 / 2560) * 100vw solid #000
+    //       border-left (8 / 2560) * 100vw solid transparent
+    //       border-right (8 / 2560) * 100vw solid transparent
+
+
+    // #tc-widget[data-layout='horizontal'] .tc-time
+    //   position relative
+    //   margin 0
+    //   +sp()
+    //     // width per(95, 406)
+    //     width per(95, 343)
+    //     // width 33%
+    //     float none
+    //   +pc()
+    //     // width per(222, 672)
+    //     width per(179, 672)
+    //   &:after
+    //     content ''
+    //     display block
+    //     border-top (16 / 750) * 100vw solid #000
+    //     border-left (8 / 750) * 100vw solid transparent
+    //     border-right (8 / 750) * 100vw solid transparent
+    //     position absolute
+    //     top 50%
+    //     left 70%
+    //     transform translateY(-50%)
+    //     +pc()
+    //       // left per(138, 222)
+    //       // left 48%
+    //       left 75%
+    //       border-top (16 / 2560) * 100vw solid #000
+    //       border-left (8 / 2560) * 100vw solid transparent
+    //       border-right (8 / 2560) * 100vw solid transparent
+
+
+    // #tc-widget[data-layout='horizontal'] .tc-ppl
+    //   position relative
+    //   margin 0
+    //   +sp()
+    //     // width 33%
+    //     // width per(95, 406)
+    //     width per(95, 343)
+    //     float none
+    //   +pc()
+    //     // width per(136, 672)
+    //     // width per(136, 672)
+    //     width per(179, 672)
+    //   &:after
+    //     content ''
+    //     display block
+    //     border-top (16 / 750) * 100vw solid #000
+    //     border-left (8 / 750) * 100vw solid transparent
+    //     border-right (8 / 750) * 100vw solid transparent
+    //     position absolute
+    //     top 50%
+    //     left 80%
+    //     transform translateY(-50%)
+    //     +pc()
+    //       // left per(138, 222)
+    //       // left 48%
+    //       left 75%
+    //       border-top (16 / 2560) * 100vw solid #000
+    //       border-left (8 / 2560) * 100vw solid transparent
+    //       border-right (8 / 2560) * 100vw solid transparent
+
+
+    // #tc-widget[data-layout='horizontal'] .tc-wrap-book
+    //   padding 0
+    //   +sp()
+    //     // width per(110, 580)
+    //     width per(160, 580)
+    //     display flex
+    //     align-items center
+    //     justify-content center
+    //   +pc()
+    //     width per(180, 852)
+
+
+
+

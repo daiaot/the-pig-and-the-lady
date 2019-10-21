@@ -22,7 +22,7 @@ export default class BurgerMenu {
     // ナビオープン時のバックグラウンド
     this.splashMask = this.createMask(this.el, '#fff')
     this.appendMask(this.splashMask, this.el)
-    this.appendMask(this.splashMask, this.body)
+    // this.appendMask(this.splashMask, this.body)
 
     this.bindEvent()
     this.anchorLink()
@@ -31,6 +31,11 @@ export default class BurgerMenu {
   appendMask(mask, target) {
     target.appendChild(mask)
   }
+
+  removeMask(mask, target) {
+    target.removeChild(mask)
+  }
+
 
   bindEvent() {
     // this.btn.addEventListener('click', this.animate.bind(this))
@@ -151,12 +156,29 @@ export default class BurgerMenu {
 
   closeAnimation() {
 
+    console.log('--------- closeAnimation()')
+
+
     this.state.status = 'animating'
     // this.body.classList.remove("hoge");
     TweenMax.set(this.body, { css: { overflow: 'scroll' } })
     TweenMax.set(this.body, { css: { touchAction: '' } })
     TweenMax.set(this.body, { css: { position: '' } })
     // TweenMax.set(this.body, { css: { scrollTop: '' } })
+
+
+    // add by aotsuka
+    // this.removeMask(this.splashMask, this.el)
+    $('body').removeClass('scroll-prevent')
+
+
+    // TweenMax.to(this.splashMask, 0.5, {
+    //   onComplete: function() {
+    //     this.target.style.display = 'none'
+    //   },
+    //   x: this.splashMask.clientWidth,
+    //   ease: Expo.easeInOut,
+    // })
 
     // add by aotsuka
     // console.log('-- close()')
@@ -236,19 +258,22 @@ export default class BurgerMenu {
       // TweenMax.set(this.body, { css: { width: '' } })
       // TweenMax.set(this.body, { css: { zIndex: '0' } })
 
-      TweenMax.set(this.splashMask, {
-        opacity: 0,
-        display: 'none',
-        x: 0,
-        zIndex: 0,
-      })
-      TweenMax.to(this.splashMask, 0.5, {
-        onComplete: function() {
-          this.target.style.display = 'none'
-        },
-        x: this.splashMask.clientWidth,
-        ease: Expo.easeInOut,
-      })
+      this.removeMask(this.splashMask, this.el)
+      $('body').removeClass('scroll-prevent')
+
+      // TweenMax.set(this.splashMask, {
+      //   opacity: 0,
+      //   display: 'none',
+      //   x: 0,
+      //   zIndex: 0,
+      // })
+      // TweenMax.to(this.splashMask, 0.5, {
+      //   onComplete: function() {
+      //     this.target.style.display = 'none'
+      //   },
+      //   x: this.splashMask.clientWidth,
+      //   ease: Expo.easeInOut,
+      // })
     })
   }
 
