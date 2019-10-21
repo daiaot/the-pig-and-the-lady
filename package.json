@@ -91,10 +91,10 @@
     "querystring": "0.2.0",
     "regenerator-runtime": "0.13.1",
     "rimraf": "2.6.2",
-    "scrollreveal": "4.0.5",
     "slick-carousel": "1.8.1",
     "stylus": "0.54.5",
     "stylus-supremacy": "2.12.7",
+    "swiper": "4.5.0",
     "ts-jest": "23.10.5",
     "ts-loader": "5.3.3",
     "tslint": "5.12.1",
@@ -107,7 +107,6 @@
     "babel-polyfill": "6.26.0",
     "magnific-popup": "1.1.0",
     "normalize.css": "8.0.0",
-    "swiper": "5.0.4",
     "whatwg-fetch": "2.0.3"
   }
 }
