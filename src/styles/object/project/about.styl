@@ -63,11 +63,13 @@
           height (4 / 2560) * 100vw
 
     h3
-      font-size (84 / 750) * 100vw
+      // font-size (84 / 750) * 100vw
+      font-size 13.2vw
       +pc()
         // font-size (130 / 2560) * 100vw
         font-size (130 / 2560) * 100vw
-        margin-bottom per(50, 2560)
+        // margin-bottom per(50, 2560)
+        margin-bottom 3.953125%
 
     &-concept
       .l-col--2
@@ -105,15 +107,20 @@
       &__lead
         font-family Noto
         font-size (46 / 750) * 100vw
-        margin-bottom per(50, 750)
+        // margin-bottom per(50, 750)
+        font-weight 600
+        line-height 1.6
+        margin-bottom 2.666667%
         +pc()
           font-size (62 / 2560) * 100vw
           line-height 1.4
           margin-bottom per(25, 2560)
         &--small
-          font-size (26 / 750) * 100vw
+          // font-size (26 / 750) * 100vw
+          font-size 6.2vw
           +pc()
-            font-size (36 / 2560) * 100vw
+            // font-size (36 / 2560) * 100vw
+            font-size 2.40625vw
             line-height 1.4
 
       &__text
@@ -196,15 +203,19 @@
             line-height 1
             margin-bottom per(20, 650)
             +pc()
-              font-size (66 / 2560) * 100vw
-              margin-bottom per(20, 932)
+              // font-size (66 / 2560) * 100vw
+              // margin-bottom per(20, 932)
+              font-size 3.0vw
+              margin-bottom 1.0%
+
             &--jp
               font-family Noto
               font-size (42 / 750) * 100vw
               line-height 1.2
               margin-bottom per(40, 650)
               +pc()
-                font-size (42 / 2560) * 100vw
+                // font-size (42 / 2560) * 100vw
+                font-size 1.5vw
 
     &-access
       h3
@@ -229,7 +240,8 @@
             font-size (60 / 750) * 100vw
             margin-bottom per(20, 650)
             +pc()
-              font-size (42 / 2520) * 100vw
+              // font-size (42 / 2520) * 100vw
+              font-size 2.3vw
               margin-bottom per(30, 1050)
           dd
             font-size (32 / 750) * 100vw
@@ -237,16 +249,23 @@
             +pc()
               font-size (32 / 2520) * 100vw
               line-height 1.6
-              margin-bottom per(50, 1050)
+              // margin-bottom per(50, 1050)
+              margin-bottom 1.761905%
+              letter-spacing 0.04em
             span
               font-family Noto
               // &:nth-of-type(2)
               //   +sp()
               //     display block
               //     margin-bottom per(60, 5650)
+              letter-spacing 0
+
             &:nth-of-type(1)
               +sp()
                 margin-bottom per(30, 650)
+            & + dt
+              +pc()
+                margin-top per(60, 1050)
                 
       .c-link--1
         display inline-block
@@ -257,5 +276,6 @@
         +pc()
           font-size (34 / 2560) * 100vw
           margin-bottom per(60, 1050)
+          margin-top 21px
         &:hover
           font-style italic

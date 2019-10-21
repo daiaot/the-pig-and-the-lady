@@ -39,12 +39,13 @@
           height (4 / 2560) * 100vw
 
     h3
-      font-family Futura-Med
+      // font-family Futura-Med
       font-size (54 / 650) * 100vw
       +sp()
         margin-bottom 0
       +pc()
-        font-size (38 / 2560) * 100vw
+        // font-size (38 / 2560) * 100vw
+        font-size 1.7vw
 
     .p-section
       margin-bottom per(180, 650)
@@ -85,7 +86,8 @@
         // +sp()
         //   margin-top per(30, 650)
         li
-          font-family YanoneKaffeesatz-Bold
+          // font-family YanoneKaffeesatz-Bold
+          font-family YanoneKaffeesatz-Regular
           font-size (48 / 750) * 100vw
           line-height 1.1
           // margin 0 per(64, 2560)
@@ -256,7 +258,8 @@
         z-index 11
 
     &-showbtn
-      margin-top per(390, 650)
+      // margin-top per(390, 650)
+      margin-top 54%
       width 100%
       font-size (28 / 650) *100vw
       color #fff
@@ -277,12 +280,19 @@
         display none
 
     &-group
-      padding-top per(460, 650)
+      padding-top 17.769231%
+      // padding-top per(460, 650)
       +pc()
         // グロナビ + menuナビ分の高さ
         // padding-top per(360, 2200)
         // padding-top per(400, 2200)
-        padding-top per(480, 2200)
+        padding-top 12.818182%
+
+
+      &:nth-of-type(1)
+        padding-top per(460, 650)
+        +pc()
+          padding-top per(480, 2200)
 
     &-info
       display flex
@@ -328,6 +338,7 @@
       .u-font-noto
         font-size (26 / 650) * 100vw
         line-height 1.6
+        font-weight 600
         +sp()
           margin-bottom per(30, 650)
         +pc()
