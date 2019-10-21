@@ -1,6 +1,6 @@
 
 import $ from 'jquery'
-import Swiper from 'swiper'
+import Swiper from 'swiper/dist/js/swiper'
 
 export default class NewsModal01 {
   constructor(elem) {
