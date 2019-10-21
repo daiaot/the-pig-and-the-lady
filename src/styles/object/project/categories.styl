@@ -214,48 +214,59 @@
       // background url('/assets/images/top/img_kv01_sp.jpg') no-repeat 50% 50%
       // background-size 100% auto
       width percentage((579 / 750))
-      height 0
-      padding-top percentage((935 / 750))
+      height calc(100vh - 180px)
+      // height 0
+      // padding-top percentage((935 / 750))
       vertical-align middle
 
       +pc()
         // background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
         // background-size 100% auto
         width percentage((2098 / 2560))
-        height 0
-        padding-top percentage((1370 / 2560))
+        height 100vh
+        // height (1370 / 2560) * 100vw
+        // padding-top percentage((1370 / 2560))
         // vertical-align middle
 
       &#kv01
         background url('/assets/images/top/img_kv01_sp.jpg') no-repeat 50% 50%
-        background-size 100% auto
+        // background-size 100% auto
+        background-size cover
         +pc()
           background url('/assets/images/top/img_kv01.jpg') no-repeat 50% 50%
-          background-size 100% auto
+          // background-size 100% auto
+          background-size cover
       &#kv02
         background url('/assets/images/top/img_kv02_sp.jpg') no-repeat 50% 50%
-        background-size 100% auto
+        // background-size 100% auto
+        background-size cover
         +pc()
           background url('/assets/images/top/img_kv02.jpg') no-repeat 50% 50%
-          background-size 100% auto
+          // background-size 100% auto
+          background-size cover
       &#kv03
         background url('/assets/images/top/img_kv03_sp.jpg') no-repeat 50% 50%
-        background-size 100% auto
+        // background-size 100% auto
+        background-size cover
         +pc()
           background url('/assets/images/top/img_kv03.jpg') no-repeat 50% 50%
-          background-size 100% auto
+          // background-size 100% auto
+          background-size cover
       &#kv04
         background url('/assets/images/top/img_kv04_sp.jpg') no-repeat 50% 50%
-        background-size 100% auto
+        // background-size 100% auto
+        background-size cover
         +pc()
           background url('/assets/images/top/img_kv04.jpg') no-repeat 50% 50%
-          background-size 100% auto
+          // background-size 100% auto
+          background-size cover
 
 
     &__lead
       position absolute
       top per(378, 935)
       left per(50, 579)
+      text-shadow 1px 2px 43px #000
 
       +pc()
         top 50%
@@ -575,6 +586,10 @@
     &-body
       background-color #ffd7d7
       margin -1px 0
+
+      &__lead
+        +sp()
+          font-weight bold
 
 
     &__slide
