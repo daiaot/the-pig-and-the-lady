@@ -2,7 +2,7 @@ import $ from 'jquery'
 import { TweenMax } from 'gsap'
 
 
-// let current_scrollY
+let current_scrollY
 
 export default class BurgerMenu {
   constructor(elem) {
@@ -14,7 +14,6 @@ export default class BurgerMenu {
     this.nav = this.el.querySelectorAll('.p-burger_container')
     this.flg = false
     this.current = 0
-    // this.current_scrollY
     this.state = {
       status: 'closed',
     }
@@ -105,6 +104,9 @@ export default class BurgerMenu {
   }
 
   prepareSlideOutAnimation() {
+
+    // console.log('--------- openAnimation()')
+
     return new Promise(resolve => {
       TweenMax.set(this.el, { display: 'block' })
 
@@ -117,15 +119,15 @@ export default class BurgerMenu {
       TweenMax.set(this.body, { css: { touchAction: 'none' } })
 
       // add by aotsuka
-      // // this.current_scrollY = $( window ).scrollTop()
-      // TweenMax.set(this.body, { css: { width: '100%' } })
-      // current_scrollY = $( window ).scrollTop()
-      // TweenMax.set(this.body, { css: { position: 'fixed' } })
+      // this.current_scrollY = $( window ).scrollTop()
+      TweenMax.set(this.body, { css: { width: '100%' } })
+      current_scrollY = $( window ).scrollTop()
+      TweenMax.set(this.body, { css: { position: 'fixed' } })
       // console.log('-- open()')
       // console.log('-- current_scrollY : ' + current_scrollY)
-      // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
-      // TweenMax.set(this.body, { css: { width: '100%' } })
-      // // TweenMax.set(this.body, { css: { zIndex: '-1' } })
+      TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
+      TweenMax.set(this.body, { css: { width: '100%' } })
+      // TweenMax.set(this.body, { css: { zIndex: '-1' } })
 
 
       TweenMax.set(this.nav, { css: { zIndex: 20 } })
@@ -156,7 +158,7 @@ export default class BurgerMenu {
 
   closeAnimation() {
 
-    console.log('--------- closeAnimation()')
+    // console.log('--------- closeAnimation()')
 
 
     this.state.status = 'animating'
@@ -183,13 +185,13 @@ export default class BurgerMenu {
     // add by aotsuka
     // console.log('-- close()')
     // console.log('-- current_scrollY : ' + (-1 * current_scrollY))
-    // TweenMax.set(this.body, { css: { width: '' } })
-    // TweenMax.set(this.body, { css: { height: '' } })
-    // // TweenMax.set(this.body, { css: { position: 'relative' } })
-    // // TweenMax.set(this.body, { css: { top: -1 * this.current_scrollY } })
-    // // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
-    // $( 'html, body' ).prop( { scrollTop: current_scrollY } );
-    // // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
+    TweenMax.set(this.body, { css: { width: '' } })
+    TweenMax.set(this.body, { css: { height: '' } })
+    // TweenMax.set(this.body, { css: { position: 'relative' } })
+    // TweenMax.set(this.body, { css: { top: -1 * this.current_scrollY } })
+    // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
+    $( 'html, body' ).prop( { scrollTop: current_scrollY } );
+    // TweenMax.set(this.body, { css: { top: -1 * current_scrollY } })
 
     TweenMax.to(this.btn, 0.3, {
       css: {
@@ -204,20 +206,17 @@ export default class BurgerMenu {
       onComplete: () => (this.state.status = 'closed'),
     })
 
-    // this.slideOutVideoMask()
     this.slideOutNav()
   }
 
   animate() {
     if (this.state.status === 'closed') {
       TweenMax.set(this.btn, { className: '+=is-open' })
-      // $('html').addClass('scroll-prevent')
-      $('body').addClass('scroll-prevent')
+      // $('body').addClass('scroll-prevent')
       this.openAnimation()
     } else if (this.state.status === 'opened') {
       TweenMax.set(this.btn, { className: '-=is-open' })
-      // $('body').removeclass('scroll-prevent')
-      $('body').removeClass('scroll-prevent')
+      // $('body').removeClass('scroll-prevent')
       this.closeAnimation()
     } else {
       return false
@@ -249,8 +248,13 @@ export default class BurgerMenu {
           console.log('---- URL: ' + url)
           let reg = new RegExp("^(https?:)?\/\/"+document.domain)
           if (url.match(reg) || url.charAt(0) === "/") {
-            //内部リンク時の処理
-            window.location = this.dataset.path
+            // //内部リンク時の処理
+            // console.log('---- this.dataset.path')
+            // console.log(this.dataset.path)
+            // window.location = this.dataset.path
+            window.location = url
+            // console.log('---- window.location')
+            // console.log(window.location)
           }
           // thisModule.closeAnimation()
         }
@@ -260,7 +264,6 @@ export default class BurgerMenu {
     }
   }
 
-  // slideOutVideoMask() {
   slideOutNav() {
     return new Promise(resolve => {
       resolve()

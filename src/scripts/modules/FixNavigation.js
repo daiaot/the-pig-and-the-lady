@@ -21,7 +21,7 @@ export default class FixNavigation {
     const relativeHeight = this.elem.getBoundingClientRect().height * -1
     const ua = navigator.userAgent
     // console.log(this.elem.getBoundingClientRect().top)
-    // console.log(this.elem.getBoundingClientRect().win_top)
+    // console.log(document.body.getBoundingClientRect().top)
     // console.log(this.elem.getBoundingClientRect().height * -1)
     // console.log(window.pageYOffset)
     if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
@@ -35,7 +35,9 @@ export default class FixNavigation {
       if (this.isLower == false) {
         // if (top < -1200) {
         // if (winTop > 1080) {
-        if (winTop > 620) {
+        // if (winTop > 620) {
+        // if (win_top > 620) {
+        if (win_top < -620) {
           this.elem.classList.remove('is-hidden')
           this.elem.children[0].classList.add('is-fixed')
           // } else if (140 > relativeHeight) {

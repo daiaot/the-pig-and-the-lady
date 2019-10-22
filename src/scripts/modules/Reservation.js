@@ -33,8 +33,8 @@ export default class Reservation {
     const win_top = document.body.getBoundingClientRect().top * -1
     const relativeHeight = this.elem.getBoundingClientRect().height * 3
 
-    console.log('-- win_top: ' + win_top)
-    console.log('-- relativeHeight: ' + relativeHeight)
+    // console.log('-- win_top: ' + win_top)
+    // console.log('-- relativeHeight: ' + relativeHeight)
 
 
     const ua = navigator.userAgent
