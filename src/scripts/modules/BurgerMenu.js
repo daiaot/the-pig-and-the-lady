@@ -275,15 +275,15 @@ export default class BurgerMenu {
       // TweenMax.set(this.body, { css: { width: '' } })
       // TweenMax.set(this.body, { css: { zIndex: '0' } })
 
-      this.removeMask(this.splashMask, this.el)
-      $('body').removeClass('scroll-prevent')
+      // this.removeMask(this.splashMask, this.el)
+      // $('body').removeClass('scroll-prevent')
 
-      // TweenMax.set(this.splashMask, {
-      //   opacity: 0,
-      //   display: 'none',
-      //   x: 0,
-      //   zIndex: 0,
-      // })
+      TweenMax.set(this.splashMask, {
+        opacity: 0,
+        display: 'none',
+        // x: 0,
+        zIndex: -1,
+      })
       // TweenMax.to(this.splashMask, 0.5, {
       //   onComplete: function() {
       //     this.target.style.display = 'none'
