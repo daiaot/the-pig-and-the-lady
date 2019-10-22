@@ -2,7 +2,7 @@ import $ from 'jquery'
 import { TweenMax } from 'gsap'
 
 
-var current_scrollY
+// let current_scrollY
 
 export default class BurgerMenu {
   constructor(elem) {
@@ -226,7 +226,10 @@ export default class BurgerMenu {
 
   anchorLink() {
     const thisModule = this
+    // console.log('---- thisModule')
+    // console.log(thisModule)
     for (let j = 0; j < this.links.length; j++) {
+
       this.links[j].addEventListener('click', function() {
         if (this.dataset.anchor !== undefined) {
           if(this.dataset.anchor !== 'contact') {
@@ -236,12 +239,23 @@ export default class BurgerMenu {
             // $('html, body').animate({ scrollTop: top }, 300, 'swing')
             // TweenMax.set(thisModule.btn, { className: '-=is-open' })
             // thisModule.closeAnimation()
+          } else {
+            // contactの場合
           }
-          TweenMax.set(thisModule.btn, { className: '-=is-open' })
-          thisModule.closeAnimation()
+          // TweenMax.set(thisModule.btn, { className: '-=is-open' })
+          // thisModule.closeAnimation()
         } else {
-          window.location = this.dataset.path
+          let url = this.querySelector('a').getAttribute('href')
+          console.log('---- URL: ' + url)
+          let reg = new RegExp("^(https?:)?\/\/"+document.domain)
+          if (url.match(reg) || url.charAt(0) === "/") {
+            //内部リンク時の処理
+            window.location = this.dataset.path
+          }
+          // thisModule.closeAnimation()
         }
+        TweenMax.set(thisModule.btn, { className: '-=is-open' })
+        thisModule.closeAnimation()
       })
     }
   }
