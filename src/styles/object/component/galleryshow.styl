@@ -193,6 +193,7 @@
     // top 0
     width per(78, 730)
     height (81 / 750) * 100vw
+    border 0
     +pc()
       // width per(78, 2560)
       margin-top (-22 / 1544) * 100vw
@@ -209,6 +210,11 @@
     transform rotate(180deg)
     +pc()
       left per(1018, 1542)
+
+  .swiper-button-prev:focus
+    outline none
+  .swiper-button-next:focus
+    outline none
 
   .swiper-numbers
     display flex
