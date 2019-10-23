@@ -87,7 +87,7 @@ export default class BurgerMenu {
     } else {
       TweenMax.to(this.btn, 0.3, {
         css: {
-          right: '50%',
+          right: '17.4%',
         },
       })
     }

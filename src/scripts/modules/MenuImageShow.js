@@ -6,9 +6,12 @@ export default class MenuImageShow {
   constructor(elem) {
 
     this.elem = elem
+    this.thumbBody = document.querySelector('.p-menu-thumb')
+
     this.thumbArea = document.querySelector('#menu-thumb')
     this.target = this.elem.getAttribute('data-image')
     this.caption = this.elem.getAttribute('data-caption')
+    this.jpCaption = this.elem.getAttribute('data-jp-caption')
 
     // SPの処理
     this.thumb = this.elem.querySelector('.p-menu-item__img')
@@ -32,16 +35,33 @@ export default class MenuImageShow {
         }
       })
     } else {
-      this.elem.addEventListener('mouseover', () => {
-        if (this.target) {
-          let addImage = document.createElement('img')
-          addImage.setAttribute('src', this.target)
-          addImage.setAttribute('alt', this.caption)
-          this.thumbArea.appendChild(addImage)
-        }
+        // this.elem.addEventListener('click', () => {
+        this.elem.addEventListener('mouseover', () => {
+          if (this.target) {
+            let addImage = document.createElement('img')
+            addImage.setAttribute('src', this.target)
+            addImage.setAttribute('alt', this.caption)
+
+            let addCaption = document.createElement('p')
+            addCaption.classList.add('p-menu-thumb__name')
+            addCaption.innerHTML = this.caption
+
+            let addJpCaption = document.createElement('p')
+            addJpCaption.classList.add('p-menu-thumb__name--jp')
+            addJpCaption.innerHTML = this.jpCaption
+
+            this.thumbArea.appendChild(addImage)
+            this.thumbArea.appendChild(addCaption)
+            this.thumbArea.appendChild(addJpCaption)
+            // this.thumbBody.appendChild(addCaption)
+            // this.thumbBody.appendChild(addJpCaption)
+
+          }
       })
-        this.elem.addEventListener('mouseout', () => {
+      this.elem.addEventListener('mouseout', () => {
         this.thumbArea.textContent = null
+        // this.thumbBody.textContent = null
+        // this.thumbBody.removeChild(p)
       })
     }
 
