@@ -9,22 +9,41 @@ export default class Reservation {
     // flag
     this.showWidget = false //- ウィジェット表示状態：true（表示）／false（非表示）
     this.toggleFlg = false //- トグルクリック履歴：true（履歴あり）／false（履歴あり）
+    this.location = window.location.pathname
 
     this.init()
   }
 
   init() {
+    const ua = navigator.userAgent
+    if ((this.location != '/') && (!ua.match(/(iPhone|iPad|iPod|Android)/i))) {
+      // 下層ページ（PC）のとき
+      this.hiddenWidget()
+    }
+    if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+      // SPのとき
+      this.showWidget = true
+    }
+
     this.addEvents()
   }
 
 
   addEvents() {
-    window.addEventListener('scroll', this.onScroll.bind(this))
-    // this.toggle.addEventListener('click', e => {
-    this.toggle.addEventListener('click', () => {
-      // e.preventDefault()
-      this.toggleClick()
-    })
+    if (this.location === '/') {
+      window.addEventListener('scroll', this.onScroll.bind(this))
+      // this.toggle.addEventListener('click', e => {
+      this.toggle.addEventListener('click', () => {
+        // e.preventDefault()
+        this.toggleClick()
+      })
+    }
+    else {
+      this.toggle.addEventListener('click', () => {
+        // e.preventDefault()
+        this.toggleClick()
+      })
+    }
   }
 
 
@@ -33,43 +52,52 @@ export default class Reservation {
     const win_top = document.body.getBoundingClientRect().top * -1
     const relativeHeight = this.elem.getBoundingClientRect().height * 3
 
-    // console.log('-- win_top: ' + win_top)
-    // console.log('-- relativeHeight: ' + relativeHeight)
-
-
     const ua = navigator.userAgent
     if (!ua.match(/(iPhone|iPad|iPod|Android)/i)) {
 
-      if (win_top > relativeHeight) { //-先頭以外
+      if (this.location === '/') {
 
-        //- スクロールでウィジェットを隠す
+        if (win_top > relativeHeight) { //-先頭以外
 
-        if (this.toggleFlg == false) {
+          //- スクロールでウィジェットを隠す
 
-          // トグルクリック履歴がなければイベントを発生
+          if (this.toggleFlg == false) {
+
+            // トグルクリック履歴がなければイベントを発生
+            TweenMax.to(this.widget, 0.01, {
+              x: '101%',
+              ease: Power3.easeInOut,
+            })
+            // ウィジェット表示フラグ
+            this.showWidget = false
+          }
+
+        } else if (win_top < relativeHeight) {  //-先頭
+
           TweenMax.to(this.widget, 0.01, {
-            x: '101%',
+            x: '0%',
             ease: Power3.easeInOut,
           })
           // ウィジェット表示フラグ
-          this.showWidget = false
+          this.showWidget = true
+          // トグルクリック履歴フラグをリセット
+          this.toggleFlg = false
+
         }
-
-      } else if (win_top < relativeHeight) {  //-先頭
-
-        TweenMax.to(this.widget, 0.01, {
-          x: '0%',
-          ease: Power3.easeInOut,
-        })
-        // ウィジェット表示フラグ
-        this.showWidget = true
-        // トグルクリック履歴フラグをリセット
-        this.toggleFlg = false
 
       }
 
     }
 
+  }
+
+  hiddenWidget() {
+    TweenMax.to(this.widget, 0.01, {
+      x: '101%',
+      ease: Power3.easeInOut,
+    })
+    // ウィジェット表示フラグ
+    this.showWidget = false
   }
 
 
