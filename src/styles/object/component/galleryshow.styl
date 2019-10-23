@@ -45,14 +45,15 @@
     width 100%
     // max-width 980px
     // height 100%
-    max-height 80vh
+    // max-height 80vh
     // max-height 60vh
     // overflow-y scroll
     +pc()
       // top 45%
+      max-width 1280px
       width per(1544, 2560)
       // height (1149 / 2560) * 100vw
-      height (1320 / 2560) * 100vw
+      // height (1320 / 2560) * 100vw
       // max-height 80vh
       // max-width 980px
       // max-width 840px
@@ -62,7 +63,7 @@
   &-content
     // width 510px
     margin 0 auto
-    overflow-y scroll
+    // overflow-y scroll
 
     +sp()
       width calc(100% - 20px)
@@ -108,7 +109,8 @@
       width (4 / 750) * 100vw
       height (120 / 750) * 100vw
       +pc()
-        width (3 / 2560) * 100vw
+        // width (3 / 2560) * 100vw
+        width (5 / 2560) * 100vw
         height (145 / 2560) * 100vw
 
     &:before
@@ -146,6 +148,7 @@
   font-weight normal
   line-height 1.5
   color #5e5e5e
+  display none
 
   dl
     padding 0 0 10px
@@ -168,26 +171,36 @@
   // width calc(100% - 10px)
   width 100%
   min-height 40px
-  height (80 / 2560) * 100vw
+  // height (80 / 2560) * 100vw
+  height (84 / 750) * 100vw
   // margin per(80, 2560) auto 0
-  margin 0 auto
+  margin per(70, 710) auto 0
   position relative
   // top -20%
+
+  +pc()
+    height (100 / 2560) * 100vw
+    // height (80 / 2560) * 100vw
+    margin-top per(80, 2560)
 
   .swiper-button-prev,
   .swiper-button-next
     border-radius 50%
     background url('/assets/images/common/ico_arrow03.png') no-repeat center center
+    // background url('/assets/images/common/ico_arrow03.svg') no-repeat center center
     background-size 100% auto
     color #000
-    top 0
-    width per(78, 650)
+    // top 0
+    width per(78, 730)
     height (81 / 750) * 100vw
     +pc()
-      width per(78, 2560)
+      // width per(78, 2560)
+      margin-top (-22 / 1544) * 100vw
+      width per(78, 1544)
+      // height (81 / 2560) * 100vw
       height (81 / 2560) * 100vw
       // top -100%
-      top 0
+      // top 0
 
   .swiper-button-prev
     +pc()
@@ -210,29 +223,35 @@
     text-align center
     // letter-spacing 0.5em
     transform translate(-50%, -50%)
+    // font-family Futura-Boo
     font-family NotoLight
-    font-size (70 / 750) * 100vw
+    // font-size (70 / 750) * 100vw
+    font-size (60 / 750) * 100vw
     +pc()
       // font-size (30 / 2560) * 100vw
       font-size (70 / 2560) * 100vw
 
   .swiper-pagination-current
-    // font-family futura-Med
+    font-family Futura-Boo
     font-size (82 / 750) * 100vw
-    padding-right per(60, 750)
+    // padding-right per(60, 750)
+    padding 3% 1% 0 0
     line-height 1
     +pc()
       font-size (82 / 2560) * 100vw
+      padding-top per(45, 2560)
       padding-right per(60, 2560)
 
   .swiper-pagination-total
+    font-family Futura-Boo
     font-size (40 / 750) * 100vw
-    padding-top per(45, 750)
-    padding-left per(40, 750)
+    // padding-top per(45, 750)
+    // padding-left per(40, 750)
+    padding 6% 0 0 1%
     +pc()
       font-size (40 / 2560) * 100vw
       // letter-spacing 0
-      padding-top per(45, 2560)
+      padding-top per(80, 2560)
       padding-left per(40, 2560)
 
 // .swiper-container

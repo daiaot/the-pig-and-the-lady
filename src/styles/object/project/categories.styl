@@ -270,7 +270,8 @@
 
       +pc()
         // top 50%
-        top 44%
+        // top 44%
+        top 40%
         left per(180, 2560)
 
       p
@@ -601,12 +602,15 @@
 
     &__slide
 
+
       .p-thumb
         margin-left auto
         float right
         +sp()
           padding-bottom per(376, 650)
 
+        img
+          vertical-align middle
         // position relative
         &.thumb__1
           width per(567, 650) !important
@@ -620,6 +624,23 @@
           +pc()
             max-width 1078px !important
             width per(1078, 2200) !important
+
+        &.thumb__3
+          width per(356, 650) !important
+
+          +pc()
+            max-width 790px !important
+            width per(790, 2200) !important
+
+
+        &.thumb__4
+          width per(650, 650) !important
+
+          +pc()
+            max-width 1380px !important
+            width per(1380, 2200) !important
+
+
 
     .c-btn--1
       position absolute

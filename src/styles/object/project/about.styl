@@ -65,6 +65,7 @@
     h3
       // font-size (84 / 750) * 100vw
       font-size 13.2vw
+      margin-bottom per(40, 650)
       +pc()
         // font-size (130 / 2560) * 100vw
         font-size (130 / 2560) * 100vw
@@ -102,7 +103,9 @@
 
       &__head
         text-align center
-        margin-bottom per(100, 2200)
+        margin-bottom 9.545455%
+        +pc()
+          margin-bottom per(100, 2200)
 
       &__lead
         font-family Noto
@@ -129,6 +132,7 @@
           margin-bottom per(290, 2200)
         p
           font-size (26 / 750) * 100vw
+          font-size 3.7vw
           line-height 1.8
           margin 0
           +pc()
@@ -138,6 +142,8 @@
             font-size (30 / 750) * 100vw
             line-height 2
             margin-bottom per(50, 750)
+            +sp()
+               font-weight 600
             +pc()
               font-size (30 / 2560) * 100vw
               line-height 2.2
@@ -178,12 +184,15 @@
             line-height 1.8
             +sp()
               margin-bottom per(50, 650)
+              margin-bottom per(50, 650)
             +pc()
               font-size (34 / 2560) * 100vw
             &.p-about-owners__desc--jp
               font-family Noto
               font-size (28 / 750) * 100vw
               line-height 2.2
+              +sp()
+                font-weight 600
               +pc()
                 font-size (28 / 2560) * 100vw
                 margin-bottom per(70, 932)
@@ -212,7 +221,8 @@
               font-family Noto
               font-size (42 / 750) * 100vw
               line-height 1.2
-              margin-bottom per(40, 650)
+              // margin-bottom per(40, 650)
+              margin-bottom 10.153846%
               +pc()
                 // font-size (42 / 2560) * 100vw
                 font-size 1.5vw
