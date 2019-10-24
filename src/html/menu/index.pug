@@ -162,69 +162,9 @@ block main
                 //- p.p-menu-thumb__name--jp ベジタブルフォー
 
 
+      //- 以下modal（contact）
+      include /_dev/_include/_inc_contact_modal.pug
 
-      //- 以下modal（contace）
-      //- #js-galleryModal.p-modal
-      #js-modal00.p-modal
-        //- #js-galleryModalOverlay.p-modal-overlay
-        #js-modalOverlay00.p-modal-overlay
-          #js-modalClose00.p-modal-close
-
-        .p-modal-dialog
-          .p-modal-content
-            //- .p-modal-header
-              //- #js-galleryModalClose.p-modal-close
-                //- img(
-                //-   src="/assets/images/common/ic_close.png"
-                //-   alt=""
-                //-   decoding="async"
-                //- )
-            .p-modal-body
-
-              //- #js-galleryModalSwiper.swiper-container
-              #js-modalSwiper00.swiper-container
-                .swiper-wrapper
-
-                  //- 1（contact）
-                  .swiper-slide
-                    .swiper-content
-                      .swiper-content__title Contacg
-                      .swiper-content__desc
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy 
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
-                        p dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
-
-
-      //- 以下modal（contace）
-      //- #js-galleryModal.p-modal
-      #js-contanc-modal.p-modal
-        //- #js-galleryModalOverlay.p-modal-overlay
-        #js-contanc-modalOverlay.p-modal-overlay
-          #js-contanc-modalClose.p-modal-close
-
-        .p-modal-dialog.contact
-          .p-modal-content
-            .p-modal-body
-              //- #js-galleryModalSwiper.swiper-container
-              #js-contanc-modalSwiper.swiper-container
-                .swiper-wrapper
-
-                  //- 1（contact）
-                  .swiper-slide
-                    .swiper-content
-                      h3 CONTACT US
-                      .p-modal-contact
-                        .l-col.l-col--2
-                          .p-modal-contact__link.l-col__item
-                            .p-modal-contact__title FOR THE STORE
-                            .p-modal-contact__sub 店舗についてのお問い合わせ
-                            .p-modal-contact__btn
-                              a.c-btn--2(href='mailto:infothepigandthelady@transit-web.com') MAIL
-                          .p-modal-contact__link.l-col__item
-                            .p-modal-contact__title FOR THE PRESS
-                            .p-modal-contact__sub プレスについてのお問い合わせ
-                            .p-modal-contact__btn
-                                a.c-btn--2(href='mailto:tgo-press@transit-web.com') MAIL
 
   //- 予約フォーム
   include /_dev/_include/_inc_reserv_widget.pug
