@@ -11,6 +11,12 @@ export default class Reservation {
     this.toggleFlg = false //- トグルクリック履歴：true（履歴あり）／false（履歴あり）
     this.location = window.location.pathname
 
+    // 日付用デートピッカー
+    // this.datePicker = this.widget.querySelector('.tc-date')
+    this.datePicker
+    // console.log('日付用デートピッカー')
+    // console.log(this.datePicker)
+
     this.init()
   }
 
@@ -25,29 +31,108 @@ export default class Reservation {
       this.showWidget = true
     }
 
+    this.getDatePicker()
     this.addEvents()
   }
 
+  getDatePicker() {
+
+    console.log('---- getDatePicker()')
+    // this.datePicker = this.elem.querySelector('#reservation_start_date')
+    // console.log('---- 日付用デートピッカー取得')
+    // console.log(this.datePicker)
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        this.datePicker = this.elem.querySelector('#reservation_start_date')
+        this.pikaSingle = document.querySelectorAll('.pika-single')[0]
+        console.log('---- 日付用デートピッカー取得')
+        console.log(this.datePicker)
+
+        console.log('---- ピッカー取得')
+        console.log(this.pikaSingle)
+
+        resolve()
+      }, 2000)
+    })
+
+    // promise.then(() => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log('---- 日付用デートピッカー取得')
+    //       this.datePicker = this.elem.querySelector('#reservation_start_date')
+    //       resolve()
+    //     }, 1000)
+    //   })
+    // }).catch(() => { // エラーハンドリング
+    //   console.error('Something wrong!')
+    // })
+
+    // return new Promise((resolve) => {
+    //   setTimeout(resolve, 5000)
+    //   this.datePicker = this.elem.querySelector('#reservation_start_date')
+    // })
+  }
 
   addEvents() {
+
+    const ua = navigator.userAgent
     if (this.location === '/') {
       window.addEventListener('scroll', this.onScroll.bind(this))
+
       // this.toggle.addEventListener('click', e => {
       this.toggle.addEventListener('click', () => {
         // e.preventDefault()
         this.toggleClick()
       })
-    }
-    else {
+      if (ua.match(/(iPhone)/i)) {
+        console.log('---- iphone')
+        return new Promise((resolve, reject) => {
+          console.log('---- 日付用デートピッカー イベントリスナー')
+          setTimeout(() => {
+            this.datePicker.addEventListener('click', () => {
+              this.datePickerClick()
+              this.datePickerAfterProc()
+            }, false)
+            resolve()
+          }, 2500)
+        })
+      }
+
+      // this.datePicker.addEventListener('click', () => {
+      //   this.datePickerClick()
+      // })
+
+    } else {
       this.toggle.addEventListener('click', () => {
         // e.preventDefault()
         this.toggleClick()
       })
+      if (ua.match(/(iPhone)/i)) {
+        console.log('---- iphone')
+        return new Promise((resolve, reject) => {
+          console.log('---- 日付用デートピッカー イベントリスナー')
+          setTimeout(() => {
+            this.datePicker.addEventListener('click', () => {
+              this.datePickerClick()
+              this.datePickerAfterProc()
+            }, false)
+            resolve()
+          }, 2500)
+        })
+      }
+      // this.datePicker.addEventListener('click', () => {
+      //   this.datePickerClick()
+      // })
     }
   }
 
 
   onScroll() {
+
+    // let scrollTop = window.scrollY
+    // console.log('---- window.scrollY')
+    // console.log(window.scrollY)
 
     const win_top = document.body.getBoundingClientRect().top * -1
     const relativeHeight = this.elem.getBoundingClientRect().height * 3
@@ -124,6 +209,47 @@ export default class Reservation {
     }
 
     return false
+
+  }
+
+  datePickerClick() {
+
+    console.log('---- datePickerClick()')
+    let scrollTop = window.scrollY
+    // let scrollTop = window.document.scrollTop
+    console.log('---- window.scrollY')
+    console.log(scrollTop)
+
+    const top = this.elem.getBoundingClientRect().top
+    const bottom = this.elem.getBoundingClientRect().bottom
+    const height = this.elem.getBoundingClientRect().height
+    console.log('---- getBoundingClientRect().top')
+    console.log(top)
+    console.log('---- getBoundingClientRect().bottom')
+    console.log(bottom)
+    console.log('---- getBoundingClientRect().height')
+    console.log(height)
+    const pos = scrollTop + top
+
+
+
+    // TweenMax.set(this.elem, { css: { position: 'absolute' } })
+    // TweenMax.set(this.pikaSingle, { css: { top: scrollTop } })
+    TweenMax.set(this.pikaSingle, { css: { top: pos } })
+    // TweenMax.set(this.pikaSingle, { css: { bottom: top } })
+
+    // TweenMax.set(this.elem, { css: { top: scrollTop } })
+    // TweenMax.set(this.elem, { css: { bottom: 0 } })
+
+  }
+
+  datePickerAfterProc() {
+    console.log('---- datePickerAfterProc()')
+
+    // TweenMax.set(this.pikaSingle, { css: { top: '' } })
+    // TweenMax.set(this.elem, { css: { position: '' } })
+    // TweenMax.set(this.elem, { css: { top: '' } })
+
 
   }
 }
