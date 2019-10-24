@@ -36,22 +36,37 @@ block main
 
             a.gallery-content__item.p-gallery-col.p-gallery-order--4(href='#' data-slide="5")
               img(src=`/assets/images/gallery/img_photo_05.jpg` alt='PHO CHAY')
+
             .p-gallery-col--column.p-gallery-order--5
-              a.gallery-content__item(href='#' data-slide="6")
+              a.gallery-content__item.u-pcOnly(href='#' data-slide="6")
                 img(src=`/assets/images/gallery/img_photo_06.jpg` alt='PHO CHAY')
-              a.gallery-content__item(href='/assets/images/gallery/img_photo_07.jpg' data-slide="7")
+              a.gallery-content__item.u-spOnly(href='#' data-slide="7")
+                img(src=`/assets/images/gallery/img_photo_06.jpg` alt='PHO CHAY')
+
+              a.gallery-content__item.u-pcOnly(href='/assets/images/gallery/img_photo_07.jpg' data-slide="7")
                 img(src=`/assets/images/gallery/img_photo_07.jpg` alt='PHO CHAY')
-            a.gallery-content__item.p-gallery-col.p-gallery-order--6(href='/assets/images/gallery/img_photo_08.jpg' data-slide="8")
+              a.gallery-content__item.u-spOnly(href='/assets/images/gallery/img_photo_07.jpg' data-slide="8")
+                img(src=`/assets/images/gallery/img_photo_07.jpg` alt='PHO CHAY')
+
+            a.gallery-content__item.p-gallery-col.p-gallery-order--6.u-pcOnly(href='/assets/images/gallery/img_photo_08.jpg' data-slide="8")
+              img(src=`/assets/images/gallery/img_photo_08.jpg` alt='PHO CHAY')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--6.u-spOnly(href='/assets/images/gallery/img_photo_08.jpg' data-slide="6")
               img(src=`/assets/images/gallery/img_photo_08.jpg` alt='PHO CHAY')
 
             a.gallery-content__item.p-gallery-col.p-gallery-order--7(href='/assets/images/gallery/img_photo_09.jpg' data-slide="9")
               img(src=`/assets/images/gallery/img_photo_09.jpg` alt='PHO CHAY')
-            a.gallery-content__item.p-gallery-col.p-gallery-order--8(href='/assets/images/gallery/img_photo_10.jpg' data-slide="10")
+            a.gallery-content__item.p-gallery-col.p-gallery-order--8.u-pcOnly(href='/assets/images/gallery/img_photo_10.jpg' data-slide="10")
+              img(src=`/assets/images/gallery/img_photo_10.jpg` alt='PHO CHAY')
+            a.gallery-content__item.p-gallery-col.p-gallery-order--8.u-spOnly(href='/assets/images/gallery/img_photo_10.jpg' data-slide="12")
               img(src=`/assets/images/gallery/img_photo_10.jpg` alt='PHO CHAY')
             .p-gallery-col--column.p-gallery-order--9
-              a.gallery-content__item(href='/assets/images/gallery/img_photo_11.jpg' data-slide="11")
+              a.gallery-content__item.u-pcOnly(href='/assets/images/gallery/img_photo_11.jpg' data-slide="11")
                 img(src=`/assets/images/gallery/img_photo_11.jpg` alt='PHO CHAY')
-              a.gallery-content__item(href='/assets/images/gallery/img_photo_12.jpg' data-slide="12")
+              a.gallery-content__item.u-spOnly(href='/assets/images/gallery/img_photo_11.jpg' data-slide="10")
+                img(src=`/assets/images/gallery/img_photo_11.jpg` alt='PHO CHAY')
+              a.gallery-content__item.u-pcOnly(href='/assets/images/gallery/img_photo_12.jpg' data-slide="12")
+                img(src=`/assets/images/gallery/img_photo_12.jpg` alt='PHO CHAY')
+              a.gallery-content__item.u-spOnly(href='/assets/images/gallery/img_photo_12.jpg' data-slide="11")
                 img(src=`/assets/images/gallery/img_photo_12.jpg` alt='PHO CHAY')
 
 
@@ -128,7 +143,26 @@ block main
 
                   .swiper-slide
                     .swiper-img
-                      img(
+                      img.u-pcOnly(
+                        src="/assets/images/gallery/img_photo_06.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                      img.u-spOnly(
+                        src="/assets/images/gallery/img_photo_08.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img.u-pcOnly(
+                        src="/assets/images/gallery/img_photo_07.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                      img.u-spOnly(
                         src="/assets/images/gallery/img_photo_06.jpg"
                         alt=""
                         decoding="async"
@@ -137,17 +171,13 @@ block main
 
                   .swiper-slide
                     .swiper-img
-                      img(
-                        src="/assets/images/gallery/img_photo_07.jpg"
+                      img.u-pcOnly(
+                        src="/assets/images/gallery/img_photo_08.jpg"
                         alt=""
                         decoding="async"
                       )
-                    .swiper-text
-
-                  .swiper-slide
-                    .swiper-img
-                      img(
-                        src="/assets/images/gallery/img_photo_08.jpg"
+                      img.u-spOnly(
+                        src="/assets/images/gallery/img_photo_07.jpg"
                         alt=""
                         decoding="async"
                       )
@@ -164,7 +194,40 @@ block main
 
                   .swiper-slide
                     .swiper-img
-                      img(
+                      img.u-pcOnly(
+                        src="/assets/images/gallery/img_photo_10.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                      img.u-spOnly(
+                        src="/assets/images/gallery/img_photo_01.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img.u-pcOnly(
+                        src="/assets/images/gallery/img_photo_01.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                      img.u-spOnly(
+                        src="/assets/images/gallery/img_photo_02.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                    .swiper-text
+
+                  .swiper-slide
+                    .swiper-img
+                      img.u-pcOnly(
+                        src="/assets/images/gallery/img_photo_02.jpg"
+                        alt=""
+                        decoding="async"
+                      )
+                      img.u-spOnly(
                         src="/assets/images/gallery/img_photo_10.jpg"
                         alt=""
                         decoding="async"
