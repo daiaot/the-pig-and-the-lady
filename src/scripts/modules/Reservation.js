@@ -31,7 +31,7 @@ export default class Reservation {
       this.showWidget = true
     }
 
-    this.getDatePicker()
+    // this.getDatePicker()
     this.addEvents()
   }
 
@@ -85,45 +85,41 @@ export default class Reservation {
         // e.preventDefault()
         this.toggleClick()
       })
-      if (ua.match(/(iPhone)/i)) {
-        console.log('---- iphone')
-        return new Promise((resolve, reject) => {
-          console.log('---- 日付用デートピッカー イベントリスナー')
-          setTimeout(() => {
-            this.datePicker.addEventListener('click', () => {
-              this.datePickerClick()
-              this.datePickerAfterProc()
-            }, false)
-            resolve()
-          }, 2500)
-        })
-      }
-
-      // this.datePicker.addEventListener('click', () => {
-      //   this.datePickerClick()
-      // })
+      // if (ua.match(/(iPhone)/i)) {
+      //   console.log('---- iphone')
+      //   return new Promise((resolve, reject) => {
+      //     console.log('---- 日付用デートピッカー イベントリスナー')
+      //     setTimeout(() => {
+      //       this.datePicker.addEventListener('click', () => {
+      //         this.datePickerClick()
+      //         this.datePickerAfterProc()
+      //       }, false)
+      //       resolve()
+      //     }, 2500)
+      //   })
+      // }
+      // // this.datePicker.addEventListener('click', () => {
+      // //   this.datePickerClick()
+      // // })
 
     } else {
       this.toggle.addEventListener('click', () => {
         // e.preventDefault()
         this.toggleClick()
       })
-      if (ua.match(/(iPhone)/i)) {
-        console.log('---- iphone')
-        return new Promise((resolve, reject) => {
-          console.log('---- 日付用デートピッカー イベントリスナー')
-          setTimeout(() => {
-            this.datePicker.addEventListener('click', () => {
-              this.datePickerClick()
-              this.datePickerAfterProc()
-            }, false)
-            resolve()
-          }, 2500)
-        })
-      }
-      // this.datePicker.addEventListener('click', () => {
-      //   this.datePickerClick()
-      // })
+      // if (ua.match(/(iPhone)/i)) {
+      //   console.log('---- iphone')
+      //   return new Promise((resolve, reject) => {
+      //     console.log('---- 日付用デートピッカー イベントリスナー')
+      //     setTimeout(() => {
+      //       this.datePicker.addEventListener('click', () => {
+      //         this.datePickerClick()
+      //         this.datePickerAfterProc()
+      //       }, false)
+      //       resolve()
+      //     }, 2500)
+      //   })
+      // }
     }
   }
 
@@ -153,6 +149,8 @@ export default class Reservation {
               x: '101%',
               ease: Power3.easeInOut,
             })
+
+
             // ウィジェット表示フラグ
             this.showWidget = false
           }
