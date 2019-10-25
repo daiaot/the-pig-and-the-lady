@@ -575,21 +575,31 @@
       content ''
       display block
       position absolute
-      left per(-40, 650)
-      bottom per(100, 754)
-      background url('/assets/images/top/img_pig01_sp.png') no-repeat 0 0
+      // background url('/assets/images/top/img_pig01_sp.png') no-repeat 0 0
+      background url('/assets/images/top/img_pig02.png') no-repeat 0 0
       background-size 100% auto
-      width per(265, 650)
+      // width per(265, 650)
+      // width per(256, 650)
+      width per(308, 650)
       height 0
-      padding-top per(189, 650)
-
+      // padding-top per(189, 650)
+      padding-top per(230, 650)
+      +sp()
+        // left per(-40, 650)
+        bottom per(100, 754)
+        // bottom per(80, 754)
       +pc()
-        background url('/assets/images/top/img_pig01.png') no-repeat 0 0
+        // background url('/assets/images/top/img_pig01.png') no-repeat 0 0
+        background url('/assets/images/top/img_pig02.png') no-repeat 0 0
         background-size 100% auto
-        left 0
-        bottom per(45, 1078)
-        width per(413, 2560)
-        padding-top per(297, 2560)
+        // left 0
+        left per(126, 2200)
+        // bottom per(45, 1078)
+        top per(552, 1183)
+        // width per(413, 2560)
+        width per(512, 2560)
+        // padding-top per(297, 2560)
+        padding-top per(384, 2560)
 
     &-body
       background-color #ffd7d7
