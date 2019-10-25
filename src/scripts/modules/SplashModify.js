@@ -1,33 +1,27 @@
 import { TweenMax, TimelineMax } from 'gsap'
 
-export default class Splash {
+export default class splashModify {
   constructor(elem) {
     this.elem = elem
     this.body = document.body
-    this.isSplash = elem.classList.contains('p-splash') ? true : false
+    this.content = document.getElementById('top')
+    // this.isSplash = elem.classList.contains('p-splash') ? true : false
     this.bg = elem.querySelector('[data-module-loading="bg"]')
-    this.msg = elem.querySelectorAll('.p-loading__msg')
-    // this.msg
+    // this.msg = elem.querySelectorAll('.p-loading__msg')
+    this.msg
     this.session = sessionStorage
         // this.heightAdjust()
 
-    // this.splashBg = this.createSplashBg(this.elem, '#f37779')
-    // this.appendSplashBg(this.splashBg, this.elem)
+    if (!this.session.getItem('pig_session')) {
+      // TweenMax.to(this.content, 0.01, { ease: Expo.easeInOut, opacity: 0 })
+      TweenMax.to(this.body, 0.01, { ease: Expo.easeInOut, opacity: 0 })
+    }
+    this.splashBg = this.createSplashBg(this.elem, '#f37779')
+    this.appendSplashBg(this.splashBg, this.elem)
     // this.appendSplashBg(this.splashBg, this.msg)
     // this.slideInVideoMask()
-    // this.addSplashContent()
-
-    if (this.session.getItem('pig_session')) {
-    // if (!this.session.getItem('pig_session')) {
-      // TweenMax.to(this.content, 0.01, { ease: Expo.easeInOut, opacity: 0 })
-      // TweenMax.to(this.bg, 0, { ease: Expo.easeInOut, opacity: 0 })
-      this.bg.classList.add('is-hidden')
-      // this.bg.classList.remove('is-hidden')
-      // this.hiddenSplash()
-    }
-
-
-    // this.init()
+    this.init()
+    this.addSplashContent()
 
     this.bindEvents()
   }
@@ -58,6 +52,9 @@ export default class Splash {
   init() {
     console.log('---- init()')
     // this.splashBgDelete()
+
+    // this.body.style.opacity = '0'
+
     if (!this.session.getItem('pig_session')) {
       // this.splashBg = this.createSplashBg(this.elem, '#f37779')
       // this.appendSplashBg(this.splashBg, this.elem)
@@ -65,31 +62,70 @@ export default class Splash {
     }
   }
 
+  appendSplashBg(bg, target) {
+
+    console.log('---- appendSplashBg()')
+
+    if (!this.session.getItem('pig_session')) {
+
+      // TweenMax.to(this.body, 0.01, { ease: Expo.easeInOut, opacity: 0 })
+
+      // target.appendChild(bg)
+      // target.insertBefore(bg)
+      bg.classList.add('p-loading__bg')
+      // bg.appendChild(addImage)
+
+      var opening = document.createElement('img')
+      opening.classList.add('p-loading__msg')
+      opening.setAttribute('src', '/assets/images/top/img_splash_msg.svg')
+      // opening.innerHTML = splashMsg
+
+      var parentDiv = target.parentNode;
+      // parentDiv.insertBefore(bg, target.nextElementSibling)
+      target.insertBefore(bg, target.firstChild)
+      bg.insertBefore(opening, bg.firstChild)
+      this.msg = this.elem.querySelectorAll('.p-loading__msg')
+    }
+  }
+
+  createSplashBg(elem, maskColor) {
+
+    console.log('---- createSplashBg()')
+
+    const mask = document.createElement('div')
+    mask.style.width = `${elem.clientWidth + 1}px`
+    mask.style.height = `100vh`
+    mask.style.backgroundColor = maskColor
+    mask.style.position = 'fixed'
+    mask.style.zIndex = '-1'
+    mask.style.top = '0px'
+    // mask.style.right = '0px'
+    // mask.style.left = '0px'
+    mask.style.opacity = '0'
+    mask.style.display = 'none'
+    return mask
+  }
+
   bindEvents() {
 
     console.log('---- bindEvents()')
 
-    // this.animate()
     if (!this.session.getItem('pig_session')) {
       this.animate()
-      // this.splashBgDelete()
-    // } else {
-    //   this.splashHide()
     }
   }
 
+  // locationHref() {
+  //   location.href = this.href
+  // }
 
-  hiddenSplash() {
-    console.log('---- hiddenSplash()')
-    return new Promise(() => {
-      // TweenMax.set(this.bg, {
-      TweenMax.to(this.bg, 0.1, {
-        // ease: Expo.easeInOut,
-        opacity: 0,
-        zIndex: -1,
-      })
-    })
-  }
+  // prepareSlideOutAnimation() {
+  //   return new Promise(resolve => {
+  //     TweenMax.set(this.elem, { display: 'block' })
+  //     TweenMax.set(this.body, { css: { overflow: 'hidden' } })
+  //     resolve()
+  //   })
+  // }
 
   topSplash() {
     return new Promise(() => {
@@ -133,26 +169,26 @@ export default class Splash {
   }
 
   // slideInVideoMask() {
-  //   addSplashContent() {
+    addSplashContent() {
 
-  //   console.log('---- addSplashContent()')
+    console.log('---- addSplashContent()')
 
-  //   // TweenMax.to(this.splashBg, 0, {
-  //   //   display: 'block',
-  //   //   opacity: 1,
-  //   //   zIndex: 100,
-  //   // })
+    // TweenMax.to(this.splashBg, 0, {
+    //   display: 'block',
+    //   opacity: 1,
+    //   zIndex: 100,
+    // })
 
-  //   return new Promise(resolve => {
-  //     TweenMax.to(this.splashBg, 0, {
-  //       onComplete: () => resolve(),
-  //       display: 'block',
-  //       opacity: 1,
-  //       zIndex: 100,
-  //       // ease: Power3.easeInOut,
-  //     })
-  //   })
-  // }
+    return new Promise(resolve => {
+      TweenMax.to(this.splashBg, 0.01, {
+        onComplete: () => resolve(),
+        display: 'block',
+        opacity: 1,
+        zIndex: 100,
+        // ease: Power3.easeInOut,
+      })
+    })
+  }
 
   async animate() {
 
@@ -167,15 +203,19 @@ export default class Splash {
 
     // TweenMax.set(this.splashBg, { display: 'block', opacity: 1, zIndex: 100 })
 
-    TweenMax.set(this.bg, { opacity: 1, zIndex: 100 })
+    // TweenMax.set(this.bg, { opacity: 1, zIndex: 100 })
+
+    // TweenMax.to(this.content, 0.01, { ease: Expo.easeInOut, opacity: 1 })
+    TweenMax.to(this.body, 0.01, { ease: Expo.easeInOut, opacity: 1 })
 
     TweenMax.to(this.msg, 2.0, { ease: Expo.easeInOut, opacity: 1, zIndex: 120 })
     // await TweenMax.to(this.bg, 4.0, { ease: Expo.easeInOut, opacity: 0, zIndex: -1, delay: 2.0 })
 
-    await TweenMax.to(this.bg, 0.5, { opacity: 0, zIndex: -1, delay: 3.0 })
+    // await TweenMax.to(this.bg, 0.5, { opacity: 0, zIndex: -1, delay: 3.0 })
+    await TweenMax.to(this.splashBg, 0.5, { display: 'none', opacity: 0, zIndex: -1, delay: 3.0 })
     // await TweenMax.to(this.msg, 3.0, { display: 'none'})
 
-    await TweenMax.to(this.msg, 0.1, { display: 'none', opacity: 0, delay: 3.0 })
+    // await TweenMax.to(this.msg, 0.1, { display: 'none', opacity: 0, delay: 3.0 })
 
     // await TweenMax.to(this.msg, 1.0, { opacity: 0, zIndex: -1, delay: 3.0})
 
