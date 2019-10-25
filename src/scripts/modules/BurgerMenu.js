@@ -245,18 +245,23 @@ export default class BurgerMenu {
           // thisModule.closeAnimation()
         } else {
           let url = this.querySelector('a').getAttribute('href')
-          console.log('---- URL: ' + url)
+          // console.log('---- URL: ' + url)
+          // console.log(url.substring(0,5))
           let reg = new RegExp("^(https?:)?\/\/"+document.domain)
-          if (url.match(reg) || url.charAt(0) === "/") {
-            // //内部リンク時の処理
-            // console.log('---- this.dataset.path')
-            // console.log(this.dataset.path)
-            // window.location = this.dataset.path
-            window.location = url
-            // console.log('---- window.location')
-            // console.log(window.location)
+
+          if (url.substring(0,5) !== '/pdf/') {
+            if (url.match(reg) || url.charAt(0) === "/") {
+              // //内部リンク時の処理
+              // console.log('---- this.dataset.path')
+              // console.log(this.dataset.path)
+              // window.location = this.dataset.path
+              window.location = url
+              // console.log('---- window.location')
+              // console.log(window.location)
+            }
+            // thisModule.closeAnimation()
           }
-          // thisModule.closeAnimation()
+
         }
         TweenMax.set(thisModule.btn, { className: '-=is-open' })
         thisModule.closeAnimation()
