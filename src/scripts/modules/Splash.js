@@ -21,9 +21,9 @@ export default class Splash {
     // if (!this.session.getItem('pig_session')) {
       // TweenMax.to(this.content, 0.01, { ease: Expo.easeInOut, opacity: 0 })
       // TweenMax.to(this.bg, 0, { ease: Expo.easeInOut, opacity: 0 })
-      this.bg.classList.add('is-hidden')
+      // this.bg.classList.add('is-hidden')
       // this.bg.classList.remove('is-hidden')
-      // this.hiddenSplash()
+      this.hiddenSplash()
     }
 
 
