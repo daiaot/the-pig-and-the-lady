@@ -10,12 +10,14 @@ block vars
 
 block main
 
+  //- .p-top#top(data-module="loadToTop")
   .p-top#top
 
     //- .p-splash(data-module="splash" style="position: relative;")
     //- .p-splash(data-module="splashModify")
     .p-splash(data-module="splash")
-      .p-loading__bg(data-module-loading="bg")
+      .p-loading__cover
+      .p-loading__bg.is-hidden(data-module-loading="bg")
         img.p-loading__msg(src=`/assets/images/top/img_splash_msg.svg` alt="")
       //- .kv.p-splash__visual(data-module-splash="visual")
 

@@ -9,6 +9,7 @@ export default class Splash {
     this.msg = elem.querySelectorAll('.p-loading__msg')
     // this.msg
     this.session = sessionStorage
+    this.cover = document.querySelector('.p-loading__cover')
         // this.heightAdjust()
 
     // this.splashBg = this.createSplashBg(this.elem, '#f37779')
@@ -17,13 +18,35 @@ export default class Splash {
     // this.slideInVideoMask()
     // this.addSplashContent()
 
+    // this.splashMask = this.createMask(this.elem, '#fff')
+    // this.appendMask(this.splashMask, this.elem)
+    // this.bg.classList.add('is-hidden')
+
+
     if (this.session.getItem('pig_session')) {
     // if (!this.session.getItem('pig_session')) {
       // TweenMax.to(this.content, 0.01, { ease: Expo.easeInOut, opacity: 0 })
       // TweenMax.to(this.bg, 0, { ease: Expo.easeInOut, opacity: 0 })
       // this.bg.classList.add('is-hidden')
       // this.bg.classList.remove('is-hidden')
-      this.hiddenSplash()
+      // this.splashMask = this.createMask(this.elem, '#fff')
+      // this.appendMask(this.splashMask, this.elem)
+      // this.bg.classList.add('is-hidden')
+      // this.hiddenSplash()
+
+      this.hiddenMask()
+
+      // TweenMax.set(this.cover, { display: 'none' })
+      // TweenMax.to(this.cover, 0, { backgroundColor: '#fff' })
+      // TweenMax.to(this.cover, 0.01, { backgroundColor: '#f37779' })
+
+    } else {
+      // TweenMax.set(this.cover, { display: 'none' })
+
+      // TweenMax.to(this.cover, 0.01, { backgroundColor: '#f37779' })
+      // TweenMax.to(this.cover, 0.01, { backgroundColor: '#f37779' })
+      this.bg.classList.remove('is-hidden')
+      // TweenMax.to(this.cover, 0.0001, { backgroundColor: '#f37779' })
     }
 
 
@@ -32,6 +55,32 @@ export default class Splash {
     this.bindEvents()
   }
 
+  createMask(elem, maskColor) {
+    const mask = document.createElement('div')
+    mask.style.width = `${elem.clientWidth + 1}px`
+    mask.style.height = `${elem.clientHeight + 1}px`
+    mask.style.backgroundColor = maskColor
+    mask.style.zIndex = '999'
+    mask.style.position = 'absolute'
+    mask.style.top = '0px'
+    mask.style.left = '0px'
+    return mask
+  }
+
+  appendMask(mask, target) {
+    // target.style.position = 'relative'
+    target.style.overflow = 'hidden'
+    target.appendChild(mask)
+  }
+
+  hiddenMask() {
+    // target.style.position = 'relative'
+    // this.elem.removeChild(this.splashMask)
+    // TweenMax.to(this.cover, 0.1, { opacity: 0, zIndex: -1 })
+    TweenMax.to(this.cover, 0.01, { display: 'none', zIndex: -1 })
+    // TweenMax.to(this.splashMask, 0.1, { ooacity: 0, zIndex: -1, delay: 1.0 })
+    // target.appendChild(mask)
+  }
 
   // heightAdjust() {
   //   let target = document.getElementsByClassName('p-splash')
@@ -55,32 +104,35 @@ export default class Splash {
   //   }
   // }
 
-  init() {
-    console.log('---- init()')
-    // this.splashBgDelete()
-    if (!this.session.getItem('pig_session')) {
-      // this.splashBg = this.createSplashBg(this.elem, '#f37779')
-      // this.appendSplashBg(this.splashBg, this.elem)
-      // this.addSplashContent()
-    }
-  }
+  // init() {
+
+  //   // this.splashBgDelete()
+  //   if (!this.session.getItem('pig_session')) {
+  //     // this.splashBg = this.createSplashBg(this.elem, '#f37779')
+  //     // this.appendSplashBg(this.splashBg, this.elem)
+  //     // this.addSplashContent()
+  //   }
+  // }
+
 
   bindEvents() {
-
-    console.log('---- bindEvents()')
-
     // this.animate()
+    // this.hiddenMask(this.splashMask, this.elem)
     if (!this.session.getItem('pig_session')) {
+      this.bg.classList.remove('is-hidden')
       this.animate()
+      this.hiddenMask()
       // this.splashBgDelete()
-    // } else {
-    //   this.splashHide()
+    } else {
+      // this.hiddenMask(this.splashMask, this.elem)
+      this.hiddenMask()
+      // this.splashHide()
     }
   }
 
 
   hiddenSplash() {
-    console.log('---- hiddenSplash()')
+
     return new Promise(() => {
       // TweenMax.set(this.bg, {
       TweenMax.to(this.bg, 0.1, {
@@ -156,7 +208,6 @@ export default class Splash {
 
   async animate() {
 
-    console.log('---- animate()')
     // const ua = navigator.userAgent
     // if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
     // } else {
@@ -167,17 +218,18 @@ export default class Splash {
 
     // TweenMax.set(this.splashBg, { display: 'block', opacity: 1, zIndex: 100 })
 
-    TweenMax.set(this.bg, { opacity: 1, zIndex: 100 })
+    // TweenMax.set(this.bg, { opacity: 1, zIndex: 110 })
 
-    TweenMax.to(this.msg, 2.0, { ease: Expo.easeInOut, opacity: 1, zIndex: 120 })
+    TweenMax.to(this.msg, 3.0, { ease: Expo.easeInOut, opacity: 1, zIndex: 120 })
     // await TweenMax.to(this.bg, 4.0, { ease: Expo.easeInOut, opacity: 0, zIndex: -1, delay: 2.0 })
 
-    await TweenMax.to(this.bg, 0.5, { opacity: 0, zIndex: -1, delay: 3.0 })
+    await TweenMax.to(this.bg, 0.5, { opacity: 0, delay: 3.5 })
     // await TweenMax.to(this.msg, 3.0, { display: 'none'})
 
-    await TweenMax.to(this.msg, 0.1, { display: 'none', opacity: 0, delay: 3.0 })
+    await TweenMax.to(this.msg, 0.5, { display: 'none', delay: 5.0 })
 
-    // await TweenMax.to(this.msg, 1.0, { opacity: 0, zIndex: -1, delay: 3.0})
+    await TweenMax.to(this.bg, 0.1, { display: 'none', zIndex: -1, delay: 5.0 })
+    await TweenMax.to(this.msg, 1.0, { opacity: 0, zIndex: -1, delay: 5.0})
 
 
     // await TweenMax.to(this.msg, 3.0, { opacity: 0 })
@@ -193,7 +245,12 @@ export default class Splash {
 
     // sessionStorage設定
     this.session.setItem('pig_session', 'true')
-
+    try {
+      this.session.setItem('pig_session', 'true')
+    } catch(e) {
+      // setItemがうまくいかなかったとき(とりあえず空で問題なし)
+      console.error(e)
+  }
     // console.log('---- sessionStorage')
     // console.log(this.session.getItem('pig_session'))
 
