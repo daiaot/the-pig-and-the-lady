@@ -3,6 +3,7 @@ export default class FixNavigationLower {
     this.elem = elem
     this.opts = opts
     this.fixFlg = false
+    this.toggle = document.querySelectorAll('#nav-toggle')[0]
     this.addEvents()
   }
   addEvents() {
@@ -15,8 +16,10 @@ export default class FixNavigationLower {
     const relativeHeight = this.elem.getBoundingClientRect().height * -1
     if (top < 0) {
       this.elem.children[0].classList.add('is-fixed')
+      this.toggle.classList.add('is-fixed')
     } else if (top > relativeHeight) {
       this.elem.children[0].classList.remove('is-fixed')
+      this.toggle.classList.remove('is-fixed')
     }
   }
 

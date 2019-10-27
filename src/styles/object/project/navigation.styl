@@ -11,7 +11,8 @@ header
   +sp()
     position fixed
     top 0
-    z-index 100
+    // z-index 100
+    z-index 50
 
 .nav-bar-wrap
   width 100%
@@ -32,7 +33,7 @@ header
   position relative
   width 100%
   top 0
-  z-index 100
+  z-index 50
 
   .nav-bar
     background #fff
@@ -64,7 +65,7 @@ header
     top 0
     left 0
     // z-index 4
-    z-index 100
+    z-index 50
 
     &:not(.lower)
       // +pc()
@@ -472,24 +473,36 @@ nav
   // top 50%
   // left 50%
   // margin-top -13px
+  // z-index 120
+  z-index 100
   cursor pointer
   // padding 10px 35px 16px 0px
   // opacity 0
-  opacity 1
+  // opacity 1
   // transform translate(-50%, -50%)
+  transform translate(-50%, 50%)
   width per(126, 2560)
-  position absolute
-  top 50%
+  // position absolute
+  position fixed
+  // top 50%
+  top per(48, 750)
+  // top per(72, 750)
   right 0
+  transform translate(-50%, -50%)
   // transform translateY(-50%)
   // background transparent
   // height $nav-height
   // width $nav-height
   background #ed7473
   border-radius 50%
-  transform translate(percentage((-44 / 80)), -50%)
+  // transform translate(percentage((-44 / 80)), -50%)
+
+  &.is-hidden
+    display none
 
   +sp()
+    // top per(44, 750)
+    // top per(44, 750)
     width per(88, 750)
     padding-top per(88, 750)
     display block
@@ -501,10 +514,12 @@ nav
     width per(124, 2560)
     // height per(126,2560)
     padding-top per(124, 2560)
-    transform translate(percentage((-80 / 124)), -50%)
+    top 0
+    // transform translate(percentage((-80 / 124)), 50%)
+    transform translate(percentage((-80 / 124)), 40%)
     // transform translate(percentage((-80 / 124)), 0)
     // transform translate(-80px, 0)
-    opacity 1
+    // opacity 1
 
   span
     display block

@@ -7,7 +7,6 @@ export default class Splash {
     this.isSplash = elem.classList.contains('p-splash') ? true : false
     this.bg = elem.querySelector('[data-module-loading="bg"]')
     this.msg = elem.querySelectorAll('.p-loading__msg')
-    // this.msg
     this.session = sessionStorage
     this.cover = document.querySelector('.p-loading__cover')
         // this.heightAdjust()
@@ -15,7 +14,6 @@ export default class Splash {
     // this.splashBg = this.createSplashBg(this.elem, '#f37779')
     // this.appendSplashBg(this.splashBg, this.elem)
     // this.appendSplashBg(this.splashBg, this.msg)
-    // this.slideInVideoMask()
     // this.addSplashContent()
 
     // this.splashMask = this.createMask(this.elem, '#fff')
@@ -184,7 +182,6 @@ export default class Splash {
     })
   }
 
-  // slideInVideoMask() {
   //   addSplashContent() {
 
   //   console.log('---- addSplashContent()')
