@@ -102,12 +102,22 @@ block main
       .p-section.thumb
         .l-inner
           .l-col.l-col--2
-            a.p-thumb(href='/menu/')
-              p MENU
+
+            .p-thumb.l-col__item
               img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
-            a.p-thumb(href='/gallery/')
-              p GALLERY
+              a.p-thumb(href='/menu/')
+                p MENU
+            .p-thumb.l-col__item
               img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
+              a.p-thumb(href='/gallery/')
+                p GALLERY
+
+            //- a.p-thumb(href='/menu/')
+            //-   p MENU
+            //-   img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
+            //- a.p-thumb(href='/gallery/')
+            //-   p GALLERY
+            //-   img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
 
       .p-section.news#news
         .l-inner
@@ -128,7 +138,7 @@ block main
                 dl
                   dt 2019.10.30
                   dd
-                    |THE PIG &amp; THE LADY WEB SITE OPEN
+                    |The Pig &amp; The Lady Website Information
                     br
                     span.p-news-list__small  THE PIG &amp; THE LADY web
                     span.u-font-noto サイト開設のお知らせ
