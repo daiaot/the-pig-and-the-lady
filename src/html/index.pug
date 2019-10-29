@@ -99,17 +99,21 @@ block main
                   img.u-pcOnly(src=`/assets/images/top/img_about_thumb04.jpg` alt="")
                   img.u-spOnly(src=`/assets/images/top/img_about_thumb04_sp.jpg` alt="")
 
-      .p-section.thumb
+      .p-section.thumb.u-pcOnly
         .l-inner
           .l-col.l-col--2
-            //- .p-thumb.l-col__item
-            //-   img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
-            //-   a.p-thumb(href='/menu/')
-            //-     p MENU
-            //- .p-thumb.l-col__item
-            //-   img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
-            //-   a.p-thumb(href='/gallery/')
-            //-     p GALLERY
+            .p-thumb.l-col__item
+              img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
+              a.p-thumb(href='/menu/')
+                p MENU
+            .p-thumb.l-col__item
+              img(src=`/assets/images/top/img_gallery_thumb01.jpg` alt="")
+              a.p-thumb(href='/gallery/')
+                p GALLERY
+
+      .p-section.thumb.u-spOnly
+        .l-inner
+          .l-col.l-col--2
             a.p-thumb(href='/menu/')
               p MENU
               img(src=`/assets/images/top/img_menu_thumb01.jpg` alt="")
