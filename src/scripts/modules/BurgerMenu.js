@@ -130,7 +130,7 @@ export default class BurgerMenu {
       // TweenMax.set(this.body, { css: { zIndex: '-1' } })
 
 
-      TweenMax.set(this.nav, { css: { zIndex: 20 } })
+      TweenMax.set(this.nav, { css: { zIndex: 100 } })
       TweenMax.set(this.splashMask, {
         opacity: .5,
         display: 'block',
