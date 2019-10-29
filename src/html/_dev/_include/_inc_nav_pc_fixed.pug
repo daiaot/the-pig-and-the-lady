@@ -6,8 +6,8 @@
         a(href='/')
           +header-logo
 nav.pc-fixed
-  //- ul.nav-list.nav-list(data-module="naviAnchor")
-  ul.nav-list.nav-list
+  //- ul.nav-list.nav-list
+  ul.nav-list.nav-list(data-module="NaviAnchor")
     //- li.nav-top.is-current(data-module-splash="navigation-content-links")
     li.nav-top
       a(href='/about/')
@@ -17,7 +17,7 @@ nav.pc-fixed
         |MENU
     li.nav-about
       //- a(href='/pdf/lunch_menu_190708.pdf' target='_blank')
-      a(href='/menu/#takeout')
+      a(href='/menu/?id=takeout')
         |TAKE OUT
     li.nav-service
       a(href='/gallery/')

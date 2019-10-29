@@ -7,8 +7,8 @@ export default class FixNavigation {
 
     this.toggle = document.querySelectorAll('#nav-toggle')[0]
 
-    console.log('---- this.toggle')
-    console.log(this.toggle)
+    // console.log('---- this.toggle')
+    // console.log(this.toggle)
 
     this.addEvents()
   }
