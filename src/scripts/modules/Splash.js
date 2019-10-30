@@ -83,7 +83,7 @@ export default class Splash {
 
 
   hiddenMaskDelay() {
-    console.log('---- hiddenMaskDelay()')
+    // console.log('---- hiddenMaskDelay()')
     // TweenMax.to(this.cover, 0.5, { display: 'none', zIndex: -1, delay: 50.0 })
 
     return new Promise(resolve => {

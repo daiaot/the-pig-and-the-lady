@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import { TweenMax, TimelineMax } from 'gsap'
 
 export default class MenuAnchorAdjust {
@@ -6,19 +5,32 @@ export default class MenuAnchorAdjust {
   constructor(elem) {
     this.target = document.querySelectorAll('#lunch')[0]
     this.anchor = elem.querySelector('[data-module-adjust="lunch"]')
-    // console.log('---- target')
-    // console.log(this.target)
+    this.link = elem.querySelectorAll('li a')
     this.bindEvents()
   }
 
   bindEvents() {
-    // console.log('---- bindEvents()')
-    this.anchor.addEventListener('click', () => {
-      this.target.classList.add('is-adjust')
-      // $('html, body').animate({ scrollTop: position }, speed, 'swing')
-      return false
-    })
+    for (let i = 0; i < this.link.length; i++) {
+      this.link[i].addEventListener('click', () => {
+        var path = this.link[i].getAttribute('href')
+        if (path == '#lunch') {
+          this.target.classList.add('is-adjust')
+          window.addEventListener('scroll', this.onScroll.bind(this))
+        } else {
+          this.target.classList.remove('is-adjust')
+        }
+        return false
+      })
+    }
   }
 
-
+  onScroll() {
+    const pos = this.target.getBoundingClientRect().top
+    // console.log('---- position')
+    // console.log(pos)
+    if ( pos < 0 ) {
+      this.target.classList.remove('is-adjust')
+    }
+    return false
+  }
 }
