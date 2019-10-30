@@ -77,7 +77,8 @@
       background #fff
       z-index 10
       +pc()
-        top (294 / 2560) * 100vw
+        // top (294 / 2560) * 100vw
+        top (230 / 2560) * 100vw
         height (130 / 2560) * 100vw
 
 
@@ -85,6 +86,7 @@
         top (150 / 750) * 100vw
         +pc()
           top (230 / 2560) * 100vw
+          // top (294 / 2560) * 100vw
 
       ul
         display flex
@@ -287,6 +289,8 @@
     &-showbtn
       // margin-top per(390, 650)
       margin-top 54%
+      // margin-top 64%
+      // margin-top per(450, 650)
       width 100%
       font-size (28 / 650) *100vw
       color #fff
@@ -307,22 +311,30 @@
         display none
 
     &-group
-      padding-top 17.769231%
+      // padding-top 17.769231%
       // padding-top per(460, 650)
+      padding-top per(460, 650)
       +pc()
         // グロナビ + menuナビ分の高さ
         // padding-top per(360, 2200)
-        // padding-top per(400, 2200)
+        padding-top per(400, 2200)
         // padding-top 12.818182%
-        padding 0
+        // padding 0
 
 
       &:nth-of-type(1)
         // padding-top per(460, 650)
         padding-top 17.769231%
+        // padding-top per(300, 650)
+        // padding-top per(460, 650)
         +pc()
           // padding-top per(480, 2200)
-          padding-top 12.818182%
+          // padding-top 12.818182%
+          padding-top per(400, 2200)
+          // padding-top per(380, 2200)
+        &.is-adjust
+          +sp()
+            padding-top per(460, 650)
 
     &-info
       display flex

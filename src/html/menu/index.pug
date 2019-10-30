@@ -307,8 +307,8 @@ block vars
       name_jp: `P&L サワー`,
       food_jp: `バーボンウィスキー、ライム、アプリコット、タマリンド`,
       food: `BOURBON, LIME, APRICOT, TAMARIND`,
-      thumb: `img_food_01.jpg`,
-      alt: `CHINESE PORK SAUSAGE &amp; FERMENTED SHRIMP`
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }, {
       name: `02. RUMAWAY CLUB`,
       name_jp: `ラムアウェイクラブ`,
@@ -491,9 +491,9 @@ block main
 
       .p-menu-nav(data-module="FixMenuNav")
         .l-inner
-          ul.p-menu-nav__food
+          ul.p-menu-nav__food(data-module="MenuAnchorAdjust")
             li
-              a(href='#lunch') LUNCH
+              a(href='#lunch' data-module-adjust="lunch") LUNCH
             li
               a(href='#dinner') DINNER
             li
