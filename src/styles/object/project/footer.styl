@@ -153,8 +153,10 @@ _::-webkit-full-page-media, _:future, :root .p-footer
       margin-right per(8, 650)
 
       +pc()
-        width per(96, 1100)
+        // width per(96, 1100)
+        width per(116, 1100)
         margin-right per(10, 1100)
+        text-align center
 
       &:before
         font-family FuturaMdCnBT
@@ -174,8 +176,9 @@ _::-webkit-full-page-media, _:future, :root .p-footer
         margin-right per(106, 650)
         a
           +pc()
-            width 101%
-            height 101%
+            // width 101%
+            width 96%
+            // height 101%
 
         +pc()
           margin-right per(132, 1100)
@@ -203,6 +206,9 @@ _::-webkit-full-page-media, _:future, :root .p-footer
         vertical-align middle
         width 100%
         padding-top 100%
+        +pc()
+          padding-top 110%
+          width 96%
         &:hover
           opacity 0.6
 
