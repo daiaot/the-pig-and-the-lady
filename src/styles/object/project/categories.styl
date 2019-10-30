@@ -791,26 +791,48 @@
                 // width (114 / 2560) * 7 * 100vw + (40 / 2560) * 100vw
                 width (114 / 2560) * 5 * 100vw
 
-          a
-            display inline-block
-            &:hover
-              p
-                font-style italic
+          .p-thumb
+            position relative
+            width 100%
+            height 100%
+            // +pc()
+            //   position relative
+            //   width 100%
+            //   height 100%
+            //   &::nth-of-type(1)
+            //     background url('/assets/images/top/img_menu_thumb01.jpg') no-repeat 50% 50%
+            //     background-size 100% auto
+            //     width percentage((1216 / 1440))
+            //     height 0
+            //     padding-top percentage((1238 / 1440))
+                // vertical-align middle
 
-          p
-            position absolute
-            left 50%
-            top 50%
-            // transform translate(-50%, -50%)
-            transform translate(-50%, -50%)
-            color #fff
-            font-size (82 / 650) * 100vw
-            line-height 1
-            margin 0
+            a
+              display inline-block
+              position absolute
+              left 50%
+              top 50%
+              transform translate(-50%, -50%)
 
-            +pc()
-              font-size (114 / 2560) * 100vw
-              text-align center
+              &:hover
+                p
+                  font-style italic
+
+
+            p
+              // position absolute
+              // left 50%
+              // top 50%
+              // transform translate(-50%, -50%)
+              // transform translate(-50%, -50%)
+              color #fff
+              font-size (82 / 650) * 100vw
+              line-height 1
+              margin 0
+
+              +pc()
+                font-size (114 / 2560) * 100vw
+                text-align center
 
 
 
