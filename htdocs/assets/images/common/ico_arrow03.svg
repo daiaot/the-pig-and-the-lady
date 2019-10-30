@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77.18" height="80.53" viewBox="0 0 77.18 80.53">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ico_arrow03.svg" class="cls-1">
+    <path id="長方形_2" data-name="長方形 2" class="cls-2" d="M1149.6,2518.65l-74.53-.68-0.04-4.26,74.53,0.68Zm-36.95,37.89-40.25-40.25,3.02-3.03,40.25,40.25Zm-36.53-37.96-3.01-3.01,39.58-39.58,3.01,3.01Z" transform="translate(-1072.41 -2476)"/>
+  </g>
+</svg>
