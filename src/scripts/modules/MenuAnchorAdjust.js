@@ -15,7 +15,7 @@ export default class MenuAnchorAdjust {
         var path = this.link[i].getAttribute('href')
         if (path == '#lunch') {
           this.target.classList.add('is-adjust')
-          window.addEventListener('scroll', this.onScroll.bind(this))
+          // window.addEventListener('scroll', this.onScroll.bind(this))
         } else {
           this.target.classList.remove('is-adjust')
         }
