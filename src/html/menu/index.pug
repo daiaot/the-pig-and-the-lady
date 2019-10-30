@@ -10,100 +10,462 @@ block vars
 
   -
     var lunch = [{
-      name: `01. PHO CHAY`,
-      name_jp: `ベジタブルフォー`,
-      food_jp: `野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa`,
-      thumb: `img_food_01.jpg`,
-      alt: `PHO CHAY`
+      name: `01. FRENCH DIP BANH MI`,
+      name_jp: `牛バラのバインミーフレンチディップスタイル`,
+      food_jp: `牛バラ肉の煮込み、ホイズンソース、バジルペースト、もやし、玉ねぎ、自家製なます`,
+      food: `Brisket, Bean Sprouts, Onions, Hoison Sauce, Basil Paste, Housemade Pickles`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }, {
-      name: `02. PHO BO`,
+      name: `02. GRILLED PORK BANH MI`,
+      name_jp: `豚バラのバインミー`,
+      food_jp: `BBQポーク、チリソース、ネギ、自家製なます`,
+      food: `BBQ Pork, Green Onions, Chili Sauce, Housemade Pickles`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `03. VEGETABLE BANH MI`,
+      name_jp: `ベジタブルバインミーフレンチディップスタイル`,
+      food_jp: `きのこ、ズッキーニ、豆腐`,
+      food: `Mushroom, Zucchini, Tofu`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `04. PHO 19`,
       name_jp: `牛肉のフォー`,
-      food_jp: `ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa`,
-      thumb: `img_food_01.jpg`,
-      alt: `PHO BO`
+      food_jp: `牛肉、卵黄、ネギ、パクチー、チリ、生姜`,
+      food: `Beef, Egg Yolk, Green Onion, Chili, Ginger, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }, {
-      name: `03. FRIED DAIKON RICE CAKE`,
-      name_jp: `アンドリューのフライドチキン`,
-      food_jp: `手羽先、ライム、エシャロット、ピーナッツ、赤キャベツ、マニーソース`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa`,
-      thumb: `img_food_01.jpg`,
-      alt: `FRIED DAIKON RICE CAKE`
+      name: `05. PHO GA`,
+      name_jp: `チキンのフォー`,
+      food_jp: `蒸し鶏、もやし、ネギ、パクチー`,
+      food: `Steamed Chicken, Bean Sprouts, Green Onions, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }, {
-      name: `04. FRENCH DIP BANH MI`,
-      name_jp: `牛バラのバインミー フレンチディップスタイル`,
-      food_jp: `12時間焼いた牛バラ、ホイズンソース、バジルペースト、もやし&玉ねぎ、バゲット、フォーのスープ(バインミーをディップする用)&自家製なます`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa`,
-      thumb: `img_food_01.jpg`,
-      alt: `FRENCH DIP BANH MI`
+      name: `06. PHO CHAY`,
+      name_jp: `ベジタブルフォー`,
+      food_jp: `エノキ、トマト、ネギ、パクチー`,
+      food: `Enoki Mushrooms, Tomato, Green Onions, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `07. GRILLED SEAFOOD CURRY`,
+      name_jp: `シーフードグリル イエローカレーソース`,
+      food_jp: `シーフード、ココナッツカレー、タイバジル`,
+      food: `Seafood, Coconut Curry, Thai Basil`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `08. HANOI EGG COFFEE`,
+      name_jp: `ハノイエッグコーヒー`,
+      food_jp: `卵黄、練乳、シュガー、コーヒー`,
+      food: `Coffee, Egg Yolk, Condensed Milk, Sugar`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `09. BIG ISLAND GOAT CHEESE PANNACOTTA`,
+      name_jp: `シェーブルチーズパンナコッタ`,
+      food_jp: `シェーブルチーズ、イチゴのピクルス、イチゴのグラニテ、松の実、ミント`,
+      food: `Goat Milk Cheese, Pickled Strawberry, Strawberry Granita, Pine Nuts, Mint`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `10. CHOCOLATE MOUSSE`,
+      name_jp: `チョコレートムース`,
+      food_jp: `チョコレートムース、ヨーグルトクリーム、キャンディナッツ`,
+      food: `Chocolate Mousse, Yogurt Cream, Candied Nuts`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `11. LILIKOI MALASADAS`,
+      name_jp: `リリコイ マラサダ`,
+      food_jp: `ハワイ風ドーナツ、パッションフルーツクリーム、マンゴー、黒ゴマのアイスクリーム`,
+      food: `Hawaii-Style Donuts, Passionfruit Cream, Mango, Black Sesame Ice Cream`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `12. YUZU SEMIFREDDO`,
+      name_jp: `柚子のセミフレッド`,
+      food_jp: `柚子のセミフレッド、コーンフレーク、イチゴのロースト、ベリーソース`,
+      food: `Yuzu Semifredo, Corn Flakes, Roasted Strawberry, Berry Sauce`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `13. P&L SOFT SERVE`,
+      name_jp: `P & L ソフトサーブ`,
+      food_jp: `2種類のフレーバーを使ったソフトクリーム`,
+      food: `2 Flavors of Soft Serve`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `14. P&L SUNDAE FUNDAY`,
+      name_jp: `P & L サンデーファンデー`,
+      food_jp: `2種類のフレーバーを使ったソフトクリーム、ワッフル、季節のフルーツ、フィッシュソース`,
+      food: `2 Flavors of Soft Serve, Waffle Cup, Seasonal Fruits, Caramel Fish Sauce`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }];
-
 
   -
     var dinner = [{
-      name: `01. CHINESE PORK SAUSAGE &amp; FERMENTED SHRIMP`,
-      name_jp: `豚肉のソーセージ&amp;発酵エビ`,
-      food_jp: `焼いたライスペーパー、豚肉のソーセージ、発酵エビ、揚げエシャロット、チーズ、ハラペーニョ、ネギ、パクチー、卵`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa`,
-      thumb: `img_food_01.jpg`,
-      alt: `CHINESE PORK SAUSAGE &amp; FERMENTED SHRIMP`
-    }, {
-      name: `02. BURMESE TEA SALAD`,
-      name_jp: `バーミーズ ティーサラダ`,
-      food_jp: `グリーンパパイア、トマト、エシャロット、にんにく、ゴマ、ナッツ、塩レモン、発行したお茶の葉`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa`,
-      thumb: `img_food_01.jpg`,
-      alt: `PHO BO`
-    }];
-
-
-  -
-    var drink = [{
       name: `01. DAD'S TOAST`,
       name_jp: `DAD'S トースト`,
       food_jp: `ソーセージ、イワシ、トマトソース、バゲット`,
-      food: `drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text, drink dummy text`,
+      food: `Sausage, Sardine, Tomato Sauce, Baguette`,
       thumb: `img_comingsoon.jpg`,
-      alt: `DAD'S TOAST`
+      alt: `Coming Soon`
     }, {
       name: `02. MOM'S PATE CHAUD`,
       name_jp: `MOM'S パテ`,
       food_jp: `豚肉のパイ包み焼き、豚レバーのムース、ハラペーニョピクルス`,
-      food: `the pig and the lady test text, the pig and the lady test text, the pig and the lady test text, the pig and the lady test text, the pig and the lady test text, the pig and the lady test text...`,
+      food: `Pork Pie, Pork Liver Paste, Jalapeno Pickles`,
       thumb: `img_comingsoon.jpg`,
-      alt: `MOM'S PATE CHAUD`
+      alt: `Coming Soon`
+    }, {
+      name: `03. VEGETABLE SPRING ROLLS`,
+      name_jp: `ベジタブル揚げ春巻き`,
+      food_jp: `金糸瓜、ニンジン、豆腐、春雨、タロ、ヒカマ、レタス、ミント、シソ、ヌクチャムソース`,
+      food: `Spaghetti Squash, Carrot, Glass Noodles, Taro, Jicama, Mint, Shiso, Nuoc Cham Sauce`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `04. BURMESE TEA SALAD`,
+      name_jp: `バーミーズ ティー サラダ`,
+      food_jp: `グリーンパパイヤ、トマト、ニンニク、ゴマ、ナッツ、レモン、発酵したお茶の葉ドレッシング`,
+      food: `Green Papaya, Tomato, Garlic, Sesame, Nuts, Lemon, Fermented Tea Dressing`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `05. LE FRIED CHICKEN`,
+      name_jp: `アンドリューのフライドチキン`,
+      food_jp: `手羽先、ライム、エシャロット、ピーナッツ、赤キャベツ、＄＄ソース`,
+      food: `Chicken Wings, Lime, Shallot, Peanuts, Red Cabbage, $$ Sauce`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `06. MELON CARPACCIO`,
+      name_jp: `メロンカルパッチョ`,
+      food_jp: `メロン、イカ、エシャロット、ミント、グリーンパパイヤのチャツネソース`,
+      food: `Melon, Shallot, Mint, Green Papaya Chutney Sauce`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `07. FRIED DAIKON RICE CAKE`,
+      name_jp: `大根ケーキ`,
+      food_jp: `大根、米粉、マスの卵、キュウリ、パクチー、卵黄とビネガーのソース`,
+      food: `Radish, Rice Flour, Quail Eggs, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `08. BROCCOLINI`,
+      name_jp: `ブロッコリーニ`,
+      food_jp: `ブロッコリー、トマト、シソ、パルメザンチーズ、ライム、バルサミコ`,
+      food: `Broccoli, Tomato, Shiso, Parmesan Cheese, Lime, Balsamic`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `09. SWEET CORN & TRUFFLE`,
+      name_jp: `スウィートコーン&トリュフ`,
+      food_jp: `コーン、トリュフペースト、マッシュルーム、パルメザンチーズ、卵、ライスペーパー`,
+      food: `Corn, Mushroom, Truffle Paste, Parmesan Cheese`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `10. CHINESE PORK SAUSAGE & FERMENTED SHRIMP`,
+      name_jp: `豚肉のソーセージ&発酵エビ`,
+      food_jp: `豚肉のソーセージ、発酵エビ、揚げエシャロット、チーズ、ハラペーニョ、ネギ、パクチー、卵、ライスペーパー`,
+      food: `Pork Sausage, Fermented Shrimp, Fried Shallot, Jalapeno, Green Onion, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `11. MARY'S CHICKEN \`CHAM CHEO\``,
+      name_jp: `ベトナム風グリルチキン チャムチェオソース`,
+      food_jp: `チキン、たけのこ、パクチー、タイバジル、ライム`,
+      food: `Chicken, Bamboo, Coriander, Thai Basil, Lime`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `12. GRILLED SEAFOOD CURRY`,
+      name_jp: `シーフードグリル イエローカレーソース`,
+      food_jp: `シーフード、ココナッツカレー、梨、タイバジル`,
+      food: `Seafood, Coconut Curry, Thai Basil`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `13. SPICED BAI CHA PUL PORK CHOP`,
+      name_jp: `バイチャプーポークチョップ`,
+      food_jp: `豚ロース、バイチャプー、チリ、フライドガーリック、ハーブサラダ`,
+      food: `Roasted Pork, Bai Cha Pul Leaf, Chili, Fried Garlic, Herb Salad`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `14. PHO 19`,
+      name_jp: `牛肉のフォー`,
+      food_jp: `牛肉、卵黄、ネギ、パクチー、チリ、ライム、生姜、ビーフスープ`,
+      food: `Beef, Egg Yolk, Green Onion, Chili, Ginger, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `15. PHO GA`,
+      name_jp: `チキンのフォー`,
+      food_jp: `蒸し鶏、もやし、ネギ、パクチー、ライム、チキンスープ`,
+      food: `Steamed Chicken, Bean Sprouts, Green Onions, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `16. PHO CHAY`,
+      name_jp: `ベジタブルフォー`,
+      food_jp: `エノキ、トマト、ネギ、パクチー、ライム、野菜スープ`,
+      food: `Enoki Mushrooms, Tomato, Green Onions, Coriander`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `17. FRIED EGGS`,
+      name_jp: `目玉焼き`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `18. BAGUETTE`,
+      name_jp: `バゲット`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `19. JASMINE RICE`,
+      name_jp: `ジャスミンライス`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `20. BOWL OF BROTH`,
+      name_jp: `フォーのスープ`,
+      food_jp: `ビーフまたはチキンまたはベジタブル`,
+      food: `Choice of beef, chicken or vegetable`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `21. HANOI EGG COFFEE`,
+      name_jp: `ハノイエッグコーヒー`,
+      food_jp: `卵黄、練乳、シュガー、コーヒー`,
+      food: `Coffee, Egg Yolk, Condensed Milk, Sugar`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `22. BIG ISLAND GOAT CHEESE PANNACOTTA`,
+      name_jp: `シェーブルチーズパンナコッタ`,
+      food_jp: `シェーブルチーズ、イチゴのピクルス、イチゴのグラニテ、松の実、ミント`,
+      food: `Goat Milk Cheese, Pickled Strawberry, Strawberry Granita, Pine Nuts, Mint`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `23. CHOCOLATE MOUSSE`,
+      name_jp: `チョコレートムース`,
+      food_jp: `チョコレートムース、ヨーグルトクリーム、キャンディナッツ`,
+      food: `Chocolate Mousse, Yogurt Cream, Candied Nuts`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `24. LILIKOI MALASADAS`,
+      name_jp: `リリコイ マラサダ`,
+      food_jp: `ハワイ風ドーナツ、パッションフルーツクリーム、マンゴー、黒ゴマのアイスクリーム`,
+      food: `Hawaii-Style Donuts, Passionfruit Cream, Mango, Black Sesame Ice Cream`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `25. YUZU SEMIFREDDO`,
+      name_jp: `柚子のセミフレッド`,
+      food_jp: `柚子のセミフレッド、コーンフレーク、イチゴのロースト、ベリーソース`,
+      food: `Yuzu Semifredo, Corn Flakes, Roasted Strawberry, Berry Sauce`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `26. P&L SOFT SERVE FLAVORS`,
+      name_jp: `P & L ソフトサーブ`,
+      food_jp: `2種類のフレーバーを使ったソフトクリーム`,
+      food: `2 Flavors of Soft Serve`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `27. P&L SUNDAE FUNDAY`,
+      name_jp: `P & L サンデーファンデー`,
+      food_jp: `2種類のフレーバーを使ったソフトクリーム、ワッフル、季節のフルーツ、フィッシュソース`,
+      food: `2 Flavors of Soft Serve, Waffle Cup, Seasonal Fruits, Caramel Fish Sauce`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }];
+
+  -
+    var drink = [{
+      name: `01. P&L SOUR`,
+      name_jp: `P&L サワー`,
+      food_jp: `バーボンウィスキー、ライム、アプリコット、タマリンド`,
+      food: `BOURBON, LIME, APRICOT, TAMARIND`,
+      thumb: `img_food_01.jpg`,
+      alt: `CHINESE PORK SAUSAGE &amp; FERMENTED SHRIMP`
+    }, {
+      name: `02. RUMAWAY CLUB`,
+      name_jp: `ラムアウェイクラブ`,
+      food_jp: ``,
+      food: `KOHANA RUM AGRICOLE, CINNAMON, GRAPEFRUIT,CALAMANSI, LIME`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `03. FROND FILES`,
+      name_jp: `フロンドファイルズ`,
+      food_jp: ``,
+      food: `GIN,PANDAN SYRUP,ALOE LIQUOR,LIME`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `04. TAMARIND BEER`,
+      name_jp: `タマリンドビア`,
+      food_jp: ``,
+      food: `TAMARIND,BEER`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `05. PANDAN PIINYA`,
+      name_jp: `パンダンピーニャ`,
+      food_jp: ``,
+      food: `RUM,PINEAPPLE,COCONUT MILK,GUAVA,PANDAN LEAF,CINNAMON`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `06. GOLDENPIG`,
+      name_jp: `ゴールデンピグ`,
+      food_jp: ``,
+      food: `SPARKLING ROSE,LEMON,MINT,THAI BASIL,LEMONGRASS`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `07. CHANH MUÔI SOUR`,
+      name_jp: `チャンムイサワー`,
+      food_jp: ``,
+      food: `SALTED LEMON,VODKA,SODA`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `08. BOTTLED KONA BIG WAVE`,
+      name_jp: `コナビッグウェーブ`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `09. BOTTLED KONA FIRE ROCK`,
+      name_jp: `コナファイアーロック`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `10. BOTTLED KONA HANALEI IPA`,
+      name_jp: `コナハナレイ`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `11. BOTTLED SAIGON`,
+      name_jp: `サイゴン`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `12. BOTTLED SAIGON SPECIAL`,
+      name_jp: `サイゴンスペシャル`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `13. MAUI BIG SWELL`,
+      name_jp: `マウイ ビッグスウェル`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `14. MAUI COCONUT HIWA`,
+      name_jp: `マウイ ココナッツヒワ`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `15. MAUI PINENAPPLE MANA`,
+      name_jp: `マウイ パイナップルマナ`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `16. LEMONGRASS & CINNAMON`,
+      name_jp: `レモングラス&シナモン`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `17. LEMONGRASS & GINGER ALE`,
+      name_jp: `レモングラス&ジンジャーエール`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `18. PASSION FRUITS & JASMINE`,
+      name_jp: `パッションフルーツ&ジャスミン`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `19. HAWAIAN DELIGHT`,
+      name_jp: `ハワイアンディライト`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
+    }, {
+      name: `20. CHANH MUÔI SQUASH`,
+      name_jp: `チャンムイスカッシュ`,
+      food_jp: ``,
+      food: ``,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }];
 
   -
     var takeout = [{
-      name: `01. TAKE OUT TAKE OUT`,
-      name_jp: `TAKE OUTメニュー`,
-      food_jp: `ソーセージ、イワシ、トマトソース、バゲット`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa`,
-      thumb: `img_food_01.jpg`,
-      alt: `TAKE OUT TAKE OUT`
+      name: `01. GRILLED BEEF BANH MI`,
+      name_jp: `牛バラのバインミー`,
+      food_jp: `牛バラ肉の煮込み、ホイズンソース、バジルペースト、もやし、玉ねぎ、自家製なます`,
+      food: `Brisket, Bean Sprouts, Onions, Hoison Sauce, Basil Paste, Housemade Pickles`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }, {
-      name: `02. TAKE OUT TAKE OUT`,
-      name_jp: `TAKE OUTメニュー`,
-      food_jp: `豚肉のパイ包み焼き、豚レバーのムース、ハラペーニョピクルス`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa, `,
-      thumb: `img_food_01.jpg`,
-      alt: `TAKE OUT TAKE OUT`
+      name: `02. GRILLED PORK BANH MI`,
+      name_jp: `豚バラのバインミー`,
+      food_jp: `BBQポーク、チリソース、ネギ、自家製なます`,
+      food: `BBQ Pork, Green Onions, Chili Sauce, Housemade Pickles`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }, {
-      name: `02. TAKE OUT TAKE OUT`,
-      name_jp: `TAKE OUTメニュー`,
-      food_jp: `手羽先、ライム、エシャロット、ピーナッツ、赤キャベツ、マニーソース`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa, `,
-      thumb: `img_food_01.jpg`,
-      alt: `TAKE OUT TAKE OUT`
-    }, {
-      name: `02. TAKE OUT TAKE OUT`,
-      name_jp: `TAKE OUTメニュー`,
-      food_jp: `12時間焼いた牛バラ、ホイズンソース、バジルペースト、もやし&玉ねぎ、バゲット、フォーのスープ(バインミーをディップする用)&自家製なます`,
-      food: `Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa, `,
-      thumb: `img_food_01.jpg`,
-      alt: `TAKE OUT TAKE OUT`
+      name: `03. VEGETABLE BANH MI`,
+      name_jp: `ベジタブルバインミー`,
+      food_jp: `きのこ、ズッキーニ、豆腐`,
+      food: `Mushroom, Zucchini, Tofu`,
+      thumb: `img_comingsoon.jpg`,
+      alt: `Coming Soon`
     }];
 
 
@@ -131,31 +493,31 @@ block main
         .l-inner
           ul.p-menu-nav__food
             li
-              a(href="#lunch") LUNCH
+              a(href='#lunch') LUNCH
             li
-              a(href="#dinner") DINNER
+              a(href='#dinner') DINNER
             li
-              a(href="#drink") DRINK
+              a(href='#drink') DRINK
             li
-              a(href="#takeout") TAKE OUT
+              a(href='#takeout') TAKE OUT
           ul.p-menu-nav__pdf
             li
-              a(href="#")
+              a(href='/pdf/lunch_menu.pdf' target='_blank')
                 span.u-spOnly LUNCH 
                 |PDF
             li
-              a(href="#")
+              a(href='/pdf/dinner_menu.pdf' target='_blank')
                 span.u-spOnly DINNER 
                 |PDF
             li
-              a(href="#")
+              a(href='/pdf/drink_menu.pdf' target='_blank')
                 span.u-spOnly DRINK 
                 |PDF
-            li
-              a(href="#")
-                //- span.u-spOnly SWEETS 
-                span.u-spOnly TAKE OUT 
-                |PDF
+            //- li
+            //-   a(href="#")
+            //-     //- span.u-spOnly SWEETS 
+            //-     span.u-spOnly TAKE OUT 
+            //-     |PDF
 
 
       h2 MENU
@@ -171,77 +533,103 @@ block main
             //-   |ALL PHOTOS CLICK HERE
 
             #lunch.p-menu-group
+
               .p-menu-info
-                //- .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_food_01.jpg' data-caption='01. PHO CHAY' data-jp-caption='ベジタブルフォー')
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='01. PHO CHAY' data-jp-caption='ベジタブルフォー')
-                  h3 01. PHO CHAY
-                  p.p-sub-title ベジタブルフォー
-                  p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  //- .p-menu-item__img.is-show
-                  .p-menu-item__img
-                    //- img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+                each i, index in lunch
+                  .p-menu-item.hasimage(data-module='MenuImageShow' data-image=`/assets/images/menu/${i.thumb}` data-caption=`${i.name}` data-jp-caption=`${i.name_jp}`)
+                    h3 !{i.name}
+                    p.p-sub-title !{i.name_jp}
+                    p.u-font-noto !{i.food_jp}
+                    p.p-menu-item__desc
+                      |!{i.food}
+                    //- .item-img-container
+                    .p-menu-item__img
+                      img(src=`/assets/images/menu/${i.thumb}` alt=`${i.alt}`)
 
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='02. PHO BO' data-jp-caption='牛肉のフォー')
-                  h3 02. PHO BO
-                  p.p-sub-title 牛肉のフォー
-                  p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg` alt='PHO BO')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='03. FRIED DAIKON RICE CAKE' data-jp-caption='アンドリューのフライドチキン')
-                  h3 03. FRIED DAIKON RICE CAKE
-                  p.p-sub-title アンドリューのフライドチキン
-                  p.u-font-noto 手羽先、ライム、エシャロット、ピーナッツ、赤キャベツ、マニーソース
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  //- .p-menu-item__img.is-show
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Avo_Toast.jpg` alt='PHO CHAY')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+            //-   .p-menu-info
+            //-     //- .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_food_01.jpg' data-caption='01. PHO CHAY' data-jp-caption='ベジタブルフォー')
+            //-     .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='01. PHO CHAY' data-jp-caption='ベジタブルフォー')
+            //-       h3 01. PHO CHAY
+            //-       p.p-sub-title ベジタブルフォー
+            //-       p.u-font-noto 野菜と昆布ベースのスープ、米粉麺、マッシュルーム、トマト、フライドエシャロット、ネギ、ハーブ、黒コショウ、シークワーサー
+            //-       p.p-menu-item__desc
+            //-         |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+            //-       //- .item-img-container
+            //-       //- .p-menu-item__img.is-show
+            //-       .p-menu-item__img
+            //-         //- img(src=`/assets/images/menu/img_food_01.jpg` alt='PHO CHAY')
+            //-         img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='04. FRENCH DIP BANH MI' data-jp-caption='牛バラのバインミー フレンチディップスタイル')
-                  h3 04. FRENCH DIP BANH MI
-                  p.p-sub-title 牛バラのバインミー フレンチディップスタイル
-                  p.u-font-noto 12時間焼いた牛バラ、ホイズンソース、バジルペースト、もやし&玉ねぎ、バゲット、フォーのスープ(バインミーをディップする用)&自家製なます
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Rug.jpg` alt='PHO BO')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+            //-     .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='02. PHO BO' data-jp-caption='牛肉のフォー')
+            //-       h3 02. PHO BO
+            //-       p.p-sub-title 牛肉のフォー
+            //-       p.u-font-noto ぎゅうベースのスープ、米粉麺、牛肉、牛バラ肉、ネギ、ベトナム風パクチー、黒コショウ、シークワーサー、生姜
+            //-       p.p-menu-item__desc
+            //-         |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+            //-       //- .item-img-container
+            //-       .p-menu-item__img
+            //-         //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hold.jpg` alt='PHO BO')
+            //-         img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+
+            //-     .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='03. FRIED DAIKON RICE CAKE' data-jp-caption='アンドリューのフライドチキン')
+            //-       h3 03. FRIED DAIKON RICE CAKE
+            //-       p.p-sub-title アンドリューのフライドチキン
+            //-       p.u-font-noto 手羽先、ライム、エシャロット、ピーナッツ、赤キャベツ、マニーソース
+            //-       p.p-menu-item__desc
+            //-         |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+            //-       //- .item-img-container
+            //-       //- .p-menu-item__img.is-show
+            //-       .p-menu-item__img
+            //-         //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Avo_Toast.jpg` alt='PHO CHAY')
+            //-         img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+
+            //-     .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='04. FRENCH DIP BANH MI' data-jp-caption='牛バラのバインミー フレンチディップスタイル')
+            //-       h3 04. FRENCH DIP BANH MI
+            //-       p.p-sub-title 牛バラのバインミー フレンチディップスタイル
+            //-       p.u-font-noto 12時間焼いた牛バラ、ホイズンソース、バジルペースト、もやし&玉ねぎ、バゲット、フォーのスープ(バインミーをディップする用)&自家製なます
+            //-       p.p-menu-item__desc
+            //-         |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+            //-       //- .item-img-container
+            //-       .p-menu-item__img
+            //-         //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Rug.jpg` alt='PHO BO')
+            //-         img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
             #dinner.p-menu-group
               .p-menu-info
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='01. CHINESE PORK SAUSAGE & FERMENTED SHRIMP' data-jp-caption='豚肉のソーセージ&発酵エビ')
-                  h3 01. CHINESE PORK SAUSAGE &amp; FERMENTED SHRIMP
-                  p.p-sub-title 豚肉のソーセージ&amp;発酵エビ
-                  p.u-font-noto 焼いたライスペーパー、豚肉のソーセージ、発酵エビ、揚げエシャロット、チーズ、ハラペーニョ、ネギ、パクチー、卵
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Sorrel_Works.jpg` alt='PHO CHAY')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+                each i, index in dinner
+                  .p-menu-item.hasimage(data-module='MenuImageShow' data-image=`/assets/images/menu/${i.thumb}` data-caption=`${i.name}` data-jp-caption=`${i.name_jp}`)
+                    h3 !{i.name}
+                    p.p-sub-title !{i.name_jp}
+                    p.u-font-noto !{i.food_jp}
+                    p.p-menu-item__desc
+                      |!{i.food}
+                    //- .item-img-container
+                    .p-menu-item__img
+                      img(src=`/assets/images/menu/${i.thumb}` alt=`${i.alt}`)
 
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='02. BURMESE TEA SALAD' data-jp-caption='バーミーズ ティーサラダ')
-                  h3 02. BURMESE TEA SALAD
-                  p.p-sub-title バーミーズ ティーサラダ
-                  p.u-font-noto グリーンパパイア、トマト、エシャロット、にんにく、ゴマ、ナッツ、塩レモン、発行したお茶の葉
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hash.jpg` alt='PHO BO')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+            //-   .p-menu-info
+            //-     .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='01. CHINESE PORK SAUSAGE & FERMENTED SHRIMP' data-jp-caption='豚肉のソーセージ&発酵エビ')
+            //-       h3 01. CHINESE PORK SAUSAGE &amp; FERMENTED SHRIMP
+            //-       p.p-sub-title 豚肉のソーセージ&amp;発酵エビ
+            //-       p.u-font-noto 焼いたライスペーパー、豚肉のソーセージ、発酵エビ、揚げエシャロット、チーズ、ハラペーニョ、ネギ、パクチー、卵
+            //-       p.p-menu-item__desc
+            //-         |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+            //-       //- .item-img-container
+            //-       .p-menu-item__img
+            //-         //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Sorrel_Works.jpg` alt='PHO CHAY')
+            //-         img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+
+            //-     .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='02. BURMESE TEA SALAD' data-jp-caption='バーミーズ ティーサラダ')
+            //-       h3 02. BURMESE TEA SALAD
+            //-       p.p-sub-title バーミーズ ティーサラダ
+            //-       p.u-font-noto グリーンパパイア、トマト、エシャロット、にんにく、ゴマ、ナッツ、塩レモン、発行したお茶の葉
+            //-       p.p-menu-item__desc
+            //-         |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+            //-       //- .item-img-container
+            //-       .p-menu-item__img
+            //-         //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Hash.jpg` alt='PHO BO')
+            //-         img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
 
             #drink.p-menu-group
@@ -281,52 +669,64 @@ block main
 
             #takeout.p-menu-group
               .p-menu-info
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption="01. TAKE OUT TAKE OUT" data-jp-caption="TAKE OUTメニュー")
-                  h3 01. TAKE OUT TAKE OUT
-                  p.p-sub-title TAKE OUTメニュー
-                  p.u-font-noto ソーセージ、イワシ、トマトソース、バゲット
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Chicken_Porr_Egg_B.jpg` alt='PHO CHAY')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+                each i, index in takeout
+                  .p-menu-item.hasimage(data-module='MenuImageShow' data-image=`/assets/images/menu/${i.thumb}` data-caption=`${i.name}` data-jp-caption=`${i.name_jp}`)
+                    h3 !{i.name}
+                    p.p-sub-title !{i.name_jp}
+                    p.u-font-noto !{i.food_jp}
+                    p.p-menu-item__desc
+                      |!{i.food}
+                    //- .item-img-container
+                    .p-menu-item__img
+                      img(src=`/assets/images/menu/${i.thumb}` alt=`${i.alt}`)
 
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption="02. TAKE OUT TAKE OUT" data-jp-caption="TAKE OUTメニュー")
-                  h3 02. TAKE OUT TAKE OUT
-                  p.p-sub-title TAKE OUTメニュー
-                  p.u-font-noto 豚肉のパイ包み焼き、豚レバーのムース、ハラペーニョピクルス
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Quiche.jpg` alt='PHO BO')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+              //- .p-menu-info
+              //-   .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption="01. TAKE OUT TAKE OUT" data-jp-caption="TAKE OUTメニュー")
+              //-     h3 01. TAKE OUT TAKE OUT
+              //-     p.p-sub-title TAKE OUTメニュー
+              //-     p.u-font-noto ソーセージ、イワシ、トマトソース、バゲット
+              //-     p.p-menu-item__desc
+              //-       |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+              //-       |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+              //-     //- .item-img-container
+              //-     .p-menu-item__img
+              //-       //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Chicken_Porr_Egg_B.jpg` alt='PHO CHAY')
+              //-       img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='03. TAKE OUT TAKE OUT' data-jp-caption='TAKE OUTメニュー')
-                  h3 03. TAKE OUT TAKE OUT
-                  p.p-sub-title TAKE OUTメニュー
-                  p.u-font-noto 手羽先、ライム、エシャロット、ピーナッツ、赤キャベツ、マニーソース
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  //- .p-menu-item__img.is-show
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Avo_Toast.jpg` alt='PHO CHAY')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+              //-   .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption="02. TAKE OUT TAKE OUT" data-jp-caption="TAKE OUTメニュー")
+              //-     h3 02. TAKE OUT TAKE OUT
+              //-     p.p-sub-title TAKE OUTメニュー
+              //-     p.u-font-noto 豚肉のパイ包み焼き、豚レバーのムース、ハラペーニョピクルス
+              //-     p.p-menu-item__desc
+              //-       |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+              //-       |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+              //-     //- .item-img-container
+              //-     .p-menu-item__img
+              //-       //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Quiche.jpg` alt='PHO BO')
+              //-       img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
-                .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='04. TAKE OUT TAKE OUT' data-jp-caption='TAKE OUTメニュー')
-                  h3 04. TAKE OUT TAKE OUT
-                  p.p-sub-title TAKE OUTメニュー
-                  p.u-font-noto 12時間焼いた牛バラ、ホイズンソース、バジルペースト、もやし&玉ねぎ、バゲット、フォーのスープ(バインミーをディップする用)&自家製なます
-                  p.p-menu-item__desc
-                    |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
-                  //- .item-img-container
-                  .p-menu-item__img
-                    //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Rug.jpg` alt='PHO BO')
-                    img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+              //-   .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='03. TAKE OUT TAKE OUT' data-jp-caption='TAKE OUTメニュー')
+              //-     h3 03. TAKE OUT TAKE OUT
+              //-     p.p-sub-title TAKE OUTメニュー
+              //-     p.u-font-noto 手羽先、ライム、エシャロット、ピーナッツ、赤キャベツ、マニーソース
+              //-     p.p-menu-item__desc
+              //-       |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+              //-     //- .item-img-container
+              //-     //- .p-menu-item__img.is-show
+              //-     .p-menu-item__img
+              //-       //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Avo_Toast.jpg` alt='PHO CHAY')
+              //-       img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
+
+              //-   .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='04. TAKE OUT TAKE OUT' data-jp-caption='TAKE OUTメニュー')
+              //-     h3 04. TAKE OUT TAKE OUT
+              //-     p.p-sub-title TAKE OUTメニュー
+              //-     p.u-font-noto 12時間焼いた牛バラ、ホイズンソース、バジルペースト、もやし&玉ねぎ、バゲット、フォーのスープ(バインミーをディップする用)&自家製なます
+              //-     p.p-menu-item__desc
+              //-       |Vegetable and kelp-based soup, rice flour noodles, mushrooms, tomatoes, fried shallots, leeks, herbs, black pepper, shikwasa
+              //-     //- .item-img-container
+              //-     .p-menu-item__img
+              //-       //- img(src=`https://s3-us-west-2.amazonaws.com/com.sqirlla.images/DIS_Rug.jpg` alt='PHO BO')
+              //-       img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
 
             .p-menu-thumb
