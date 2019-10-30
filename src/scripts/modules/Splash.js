@@ -32,7 +32,8 @@ export default class Splash {
       // this.bg.classList.add('is-hidden')
       // this.hiddenSplash()
 
-      this.hiddenMask()
+      // this.hiddenMask()
+      // this.hiddenMaskDelay()
 
       // TweenMax.set(this.cover, { display: 'none' })
       // TweenMax.to(this.cover, 0, { backgroundColor: '#fff' })
@@ -80,6 +81,27 @@ export default class Splash {
     // target.appendChild(mask)
   }
 
+
+  hiddenMaskDelay() {
+    console.log('---- hiddenMaskDelay()')
+    // TweenMax.to(this.cover, 0.5, { display: 'none', zIndex: -1, delay: 50.0 })
+
+    return new Promise(resolve => {
+      const tl = new TimelineMax({
+        onComplete: () => {
+          setTimeout(() => {
+            resolve()
+          }, 500);
+        },
+      }).to(this.cover, 0.1, {
+        display: 'none',
+        zIndex: -1,
+        delay: 0.5,
+      })
+    })
+
+  }
+
   // heightAdjust() {
   //   let target = document.getElementsByClassName('p-splash')
   //   if (
@@ -113,7 +135,7 @@ export default class Splash {
   // }
 
 
-  bindEvents() {
+  async bindEvents() {
     // this.animate()
     // this.hiddenMask(this.splashMask, this.elem)
     if (!this.session.getItem('pig_session')) {
@@ -123,8 +145,11 @@ export default class Splash {
       // this.splashBgDelete()
     } else {
       // this.hiddenMask(this.splashMask, this.elem)
-      this.hiddenMask()
       // this.splashHide()
+
+
+      // this.hiddenMask()
+      await this.hiddenMaskDelay()
     }
   }
 
