@@ -42,14 +42,17 @@
 
     h3
       // font-family Futura-Med
-      font-size (54 / 650) * 100vw
+      // font-size (54 / 650) * 100vw
+      font-size (44 / 650) * 100vw
       word-break keep-all
       line-break strict
       word-wrap break-word
       overflow-wrap break-word
       +sp()
-        text-indent per(-100, 650)
-        padding-left per(100, 650)
+        // text-indent per(-100, 650)
+        // padding-left per(100, 650)
+        text-indent per(-80, 650)
+        padding-left per(80, 650)
         // margin-left -3%
         margin-bottom 0
       +pc()
@@ -286,6 +289,9 @@
     &-wrap
       position relative
 
+      +sp()
+        margin-top 54%
+
       .p-menu-thumb
         position fixed
         // top (360 / 2200) * 100vw
@@ -294,6 +300,8 @@
         z-index 11
 
     &-showbtn
+      display none
+
       // margin-top per(390, 650)
       margin-top 54%
       // margin-top 64%
@@ -331,7 +339,8 @@
 
       &:nth-of-type(1)
         // padding-top per(460, 650)
-        padding-top 17.769231%
+        // padding-top 17.769231%
+        padding-top 0
         // padding-top per(300, 650)
         // padding-top per(460, 650)
         +pc()
@@ -404,7 +413,8 @@
         font-family Noto
         font-size (26 / 650) * 100vw
         // margin-left per(114, 750)
-        margin 0 0 per(40, 650) per(100, 650)
+        // margin 0 0 per(40, 650) per(100, 650)
+        margin 0 0 per(40, 650) per(76, 650)
         line-height 1.4
 
         +pc()
@@ -415,7 +425,8 @@
           margin 0 0 per(30, 564) per(48, 564)
 
       .u-font-noto
-        font-size (26 / 650) * 100vw
+        // font-size (26 / 650) * 100vw
+        font-size (22 / 650) * 100vw
         line-height 1.6
         font-weight 600
         +sp()
@@ -429,14 +440,18 @@
         font-size (24 / 650) * 100vw
         line-height 1.5
         +sp()
-          margin-bottom per(100, 650)
+          // margin-bottom per(100, 650)
+          margin-bottom per(40, 650)
         +pc()
           // font-size (23 / 2560) * 100vw
           font-size (18.4 / 2560) * 100vw
           line-height 1.4
 
       &__img
-        display none
-        &.is-show
-          display block
+        +sp()
           margin-bottom per(100, 650)
+        +pc()
+          display none
+          &.is-show
+            display block
+            margin-bottom per(100, 650)

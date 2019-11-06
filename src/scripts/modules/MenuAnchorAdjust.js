@@ -10,12 +10,22 @@ export default class MenuAnchorAdjust {
   }
 
   bindEvents() {
+
+    const ua = navigator.userAgent
+
     for (let i = 0; i < this.link.length; i++) {
       this.link[i].addEventListener('click', () => {
         var path = this.link[i].getAttribute('href')
         if (path == '#lunch') {
           this.target.classList.add('is-adjust')
+
           // window.addEventListener('scroll', this.onScroll.bind(this))
+
+          // if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+          //   window.addEventListener('touchmove', this.onTouchMove.bind(this))
+          // } else {
+          //   window.addEventListener('scroll', this.onScroll.bind(this))
+          // }
         } else {
           this.target.classList.remove('is-adjust')
         }
@@ -25,12 +35,32 @@ export default class MenuAnchorAdjust {
   }
 
   onScroll() {
+    // console.log('---- onScroll()')
     const pos = this.target.getBoundingClientRect().top
     // console.log('---- position')
     // console.log(pos)
-    if ( pos < 0 ) {
+
+    if (pos < 0) {
       this.target.classList.remove('is-adjust')
+      // return false
     }
     return false
   }
+
+  onTouchMove() {
+    // console.log('---- onTouchMove()')
+
+    const pos = this.target.getBoundingClientRect().top
+    // console.log('---- position')
+    // console.log(pos)
+    // if (pos < -300 || pos > 4) {
+    if (pos < -100) {
+      this.target.classList.remove('is-adjust')
+      // return false
+    }
+    return false
+
+  }
+
+
 }
