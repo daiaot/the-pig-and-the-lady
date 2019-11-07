@@ -35,7 +35,6 @@ export default class MenuAnchorAdjust {
   }
 
   onScroll() {
-    console.log('---- onScroll()')
     const pos = this.target.getBoundingClientRect().top
     // console.log('---- position')
     // console.log(pos)
