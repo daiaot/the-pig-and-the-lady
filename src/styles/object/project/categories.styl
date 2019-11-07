@@ -669,14 +669,21 @@
       vertical-align middle
       font-family Futura-Med
       letter-spacing 0.04em
+      &:after
+        +sp()
+          width per(44, 506)
+          height (44 / 506) * 100vw
+
 
       &:hover
         font-style italic
         opacity 1
 
       +sp()
+        font-size 2rem
         bottom per(-60, 766)
-        padding per(34, 650) per(80, 650)
+        // padding per(34, 650) per(80, 650)
+        padding per(30, 650) per(80, 650) per(24, 650)
 
       +pc()
         left 0
@@ -742,7 +749,8 @@
       .p-title
         h2
           font-family Futura-Med
-          font-size 4.2rem
+          // font-size 4.2rem
+          font-size 2.5rem
           margin-bottom per(60, 650)
 
           +pc()
@@ -778,7 +786,8 @@
 
     &.thumb
       +sp()
-        margin-bottom per(175, 750)
+        // margin-bottom per(175, 750)
+        margin-bottom 0
 
       .l-col--2
         justify-content space-between
@@ -887,7 +896,8 @@
 
       h2
         font-family Futura-Med
-        font-size 4.8rem
+        // font-size 4.8rem
+        font-size 2.5rem
 
         +sp()
           margin-bottom per(110, 650)
