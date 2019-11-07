@@ -5,6 +5,8 @@ export default class Slider {
   constructor(selector) {
     this.$el = $(selector)
     this.init()
+
+    this.bindEvent()
   }
 
   init() {
@@ -14,6 +16,7 @@ export default class Slider {
       autoplay: true,
       pauseOnFocus: false,
       pauseOnHover: false,
+      pauseOnDotsHover: false,
       dots: false,
       slidesToScroll: 1,
       slidesToShow: 1,
@@ -33,5 +36,11 @@ export default class Slider {
         },
       ],
     })
+  }
+
+  bindEvent() {
+    $('.p-top-about__slide').on('touchmove', function(event, slick, currentSlide, nextSlide){
+      $('.p-top-about__slide').slick('slickPlay');
+    });
   }
 }
