@@ -50,7 +50,8 @@ export default class MenuAnchorAdjust {
     // console.log(pos)
     // if (pos < -300 || pos > 4) {
     // if (pos < -100) {
-    if (pos > 180) {
+    // if (pos > 160) {
+    if (pos > 140) {
       this.target.classList.remove('is-adjust')
       return false
     }

@@ -29,9 +29,17 @@
 
       &:nth-of-type(4)
         +sp()
-          margin-bottom per(120, 750)
+          // margin-bottom per(120, 750)
+          margin-bottom 0
         +pc()
-          margin-bottom per(250, 2560)
+          // margin-bottom per(250, 2560)
+          margin-bottom 0
+
+      &:nth-of-type(5)
+        +sp()
+          padding-top per(150, 750)
+        +pc()
+          padding-top per(250, 2560)
 
 
     h2
@@ -171,7 +179,8 @@
           img
             width 100%
     &-owners
-      padding-bottom per(120, 650)
+      // padding-bottom per(120, 650)
+      padding-bottom per(150, 650)
       border-bottom (4 / 650) * 100vw dotted #000
       +pc()
         padding-bottom per(250, 2200)
