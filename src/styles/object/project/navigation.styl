@@ -626,7 +626,7 @@ nav
         margin-top per(45, 260)
 
         a
-          margin-right per(48, 260)
+          margin-right per(58, 260)
           // font-size (32 / 2560) * 100vw
           font-size (25.6 / 2560) * 100vw
           line-height 1.8
@@ -644,6 +644,58 @@ nav
             right 0
             width per(38, 260)
             padding-top per(38, 260)
+            // right (-40 / 260) * 100vw
+
+
+      &.nav-sns--fb
+        // margin-top per(45, 260)
+        margin-top per(24, 260)
+
+        a
+          margin-right per(58, 260)
+          // font-size (32 / 2560) * 100vw
+          font-size (25.6 / 2560) * 100vw
+          line-height 1.8
+
+          // position relative
+          &:after
+            content ''
+            display block
+            background url('/assets/images/common/ico_fb_2.png') 50% 50% no-repeat
+            background-size 100% auto
+            // width 100%
+            // padding-top 100%
+            position absolute
+            top 0
+            // right 0
+            right per(9, 260)
+            width per(20, 260)
+            padding-top per(40, 260)
+            // right (-40 / 260) * 100vw
+
+      &.nav-sns--tw
+        // margin-top per(45, 260)
+        margin-top per(24, 260)
+
+        a
+          margin-right per(58, 260)
+          // font-size (32 / 2560) * 100vw
+          font-size (25.6 / 2560) * 100vw
+          line-height 1.8
+
+          // position relative
+          &:after
+            content ''
+            display block
+            background url('/assets/images/common/ico_tw_2.png') 50% 50% no-repeat
+            background-size 100% auto
+            // width 100%
+            // padding-top 100%
+            position absolute
+            top 0
+            right 0
+            width per(42, 260)
+            padding-top per(34, 260)
             // right (-40 / 260) * 100vw
 
       a

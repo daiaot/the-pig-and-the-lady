@@ -34,6 +34,7 @@
     height 100%
     +pc()
       width 22.933333%
+      width (587 / 2560) * 100vw
 
     .p-burger_menu
       text-align right
@@ -57,6 +58,7 @@
         // height (230 / 2560) * 100vw
         right per(50, 750)
         // transform translateY(-50%)
+        width per(260, 587)
 
       +sp()
         width 100%
@@ -81,11 +83,11 @@
           margin-top per(45, 260)
 
           a
-            margin-right per(56, 414)
+            margin-right per(66, 414)
             font-size 1.9rem
 
             +pc()
-              margin-right per(48, 260)
+              margin-right per(58, 260)
               // font-size (72 / 2560) * 100vw
               // font-size (36 / 2560) * 100vw
               font-size (28.8 / 2560) * 100vw
@@ -103,12 +105,81 @@
               padding-top per(46, 414)
 
               +pc()
-                // top 0
-                top 15%
+                // top 5%
+                // top 15%
                 right 0
                 width per(38, 260)
                 padding-top per(38, 260)
                 // right (-40 / 260) * 100vw
+
+        &.nav-sns--fb
+          // margin-top per(45, 260)
+          margin-top per(24, 260)
+
+          a
+            margin-right per(66, 414)
+            font-size 1.9rem
+
+            +pc()
+              margin-right per(58, 260)
+              // font-size (72 / 2560) * 100vw
+              // font-size (36 / 2560) * 100vw
+              font-size (28.8 / 2560) * 100vw
+
+            // position relative
+            &:after
+              content ''
+              display block
+              background url('/assets/images/common/ico_fb_2.png') 50% 50% no-repeat
+              background-size 100% auto
+              position absolute
+              top 0
+              right per(10, 414)
+              width per(20, 414)
+              padding-top per(40, 414)
+
+              +pc()
+                // top 0
+                // top 15%
+                right per(10, 260)
+                width per(20, 260)
+                padding-top per(40, 260)
+                // right (-40 / 260) * 100vw
+
+        &.nav-sns--tw
+          // margin-top per(45, 260)
+          margin-top per(24, 260)
+
+          a
+            margin-right per(66, 414)
+            font-size 1.9rem
+
+            +pc()
+              margin-right per(58, 260)
+              // font-size (72 / 2560) * 100vw
+              // font-size (36 / 2560) * 100vw
+              font-size (28.8 / 2560) * 100vw
+
+            // position relative
+            &:after
+              content ''
+              display block
+              background url('/assets/images/common/ico_tw_2.png') 50% 50% no-repeat
+              background-size 100% auto
+              position absolute
+              top 0
+              right 0
+              width per(46, 414)
+              padding-top per(46, 414)
+
+              +pc()
+                // top 0
+                // top 15%
+                right 0
+                width per(42, 260)
+                padding-top per(34, 260)
+                // right (-40 / 260) * 100vw
+
 
         a
           display inline-block
@@ -120,6 +191,7 @@
             // font-size (72 / 2560) * 100vw
             // font-size (36 / 2560) * 100vw
             font-size (28.8 / 2560) * 100vw
+            // font-size (36 / 2560) * 100vw
 
           &.c-link--color
             color #ed7473
