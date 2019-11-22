@@ -80,7 +80,7 @@
           pointer-events none
 
         &.nav-sns--insta
-          margin-top per(45, 260)
+          margin per(45, 260) 0 per(24, 260)
 
           a
             margin-right per(66, 414)
@@ -111,10 +111,13 @@
                 width per(38, 260)
                 padding-top per(38, 260)
                 // right (-40 / 260) * 100vw
+            &:hover
+              &:after
+                opacity .6
 
         &.nav-sns--fb
           // margin-top per(45, 260)
-          margin-top per(24, 260)
+          margin per(24, 260) 0
 
           a
             margin-right per(66, 414)
@@ -145,10 +148,13 @@
                 width per(20, 260)
                 padding-top per(40, 260)
                 // right (-40 / 260) * 100vw
+            &:hover
+              &:after
+                opacity .6
 
         &.nav-sns--tw
           // margin-top per(45, 260)
-          margin-top per(24, 260)
+          margin per(24, 260) 0
 
           a
             margin-right per(66, 414)
@@ -180,6 +186,9 @@
                 padding-top per(34, 260)
                 // right (-40 / 260) * 100vw
 
+            &:hover
+              &:after
+                opacity .6
 
         a
           display inline-block
