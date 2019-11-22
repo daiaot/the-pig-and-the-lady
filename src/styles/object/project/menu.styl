@@ -48,24 +48,11 @@
       line-break strict
       word-wrap break-word
       overflow-wrap break-word
-      +sp()
-        // text-indent per(-100, 650)
-        // padding-left per(100, 650)
-        text-indent per(-80, 650)
-        padding-left per(80, 650)
-        // margin-left -3%
-        margin-bottom 0
       +pc()
-        // font-size (38 / 2560) * 100vw
-        // font-size 1.7vw
         font-size (34.816 / 2560) * 100vw
-        // text-indent -4.5rem
-        // text-indent per(-72, 564)
-        text-indent per(-57.6, 564)
-        // padding-left 4.5rem
-        // padding-left per(72, 564)
-        padding-left per(57.6, 564)
-        margin-left -2%
+        // text-indent per(-57.6, 564)
+        // padding-left per(57.6, 564)
+        // margin-left -2%
 
     .p-section
       margin-bottom per(180, 650)
@@ -368,6 +355,13 @@
             padding-top per(440, 650)
           +pc()
             padding-top per(400, 2200)
+      &#takeout
+        .p-menu-info
+          padding-top per(150, 650)
+          border-top (4 / 650) * 100vw dotted #000
+          +pc()
+            padding-top per(120, 2200)
+            border-top (4 / 2560) * 100vw dotted #000
 
     &-info
       display flex
@@ -398,18 +392,22 @@
       &__name
         +pc()
           // font-size (40 / 2560) * 100vw
-          font-size (32 / 2560) * 100vw
+          // font-size (32 / 2560) * 100vw
+          font-size (34.816 / 2560) * 100vw
           margin-bottom per(20, 810)
           line-height 1.4
+          margin-bottom 0
 
         &--jp
           +pc()
             // font-size (22 / 2560) * 100vw
-            font-size (17.6 / 2560) * 100vw
+            // font-size (17.6 / 2560) * 100vw
+            // font-size (34.816 / 2560) * 100vw
+            font-size (26 / 2560) * 100vw
             font-family Noto
             line-height 1
             // margin-left per(60, 810)
-            margin-left per(48, 810)
+            // margin-left per(48, 810)
 
 
 
@@ -427,15 +425,18 @@
         font-size (26 / 650) * 100vw
         // margin-left per(114, 750)
         // margin 0 0 per(40, 650) per(100, 650)
-        margin 0 0 per(40, 650) per(76, 650)
+        // margin 0 0 per(40, 650) per(76, 650)
+        margin 0 0 per(40, 650) 0
         line-height 1.4
 
         +pc()
           // font-size (22 / 2560) * 100vw
-          font-size (17.6 / 2560) * 100vw
+          // font-size (17.6 / 2560) * 100vw
+          font-size (26 / 2560) * 100vw
           // margin-left per(70, 1226)
           // margin 0 0 per(30, 564) per(60, 564)
-          margin 0 0 per(30, 564) per(48, 564)
+          // margin 0 0 per(30, 564) per(48, 564)
+          margin 0 0 per(30, 564) 0
 
       .u-font-noto
         // font-size (26 / 650) * 100vw
@@ -446,18 +447,22 @@
           margin-bottom per(30, 650)
         +pc()
           // font-size (23 / 2560) * 100vw
-          font-size (18.4 / 2560) * 100vw
+          // font-size (18.4 / 2560) * 100vw
+          font-size (17.6 / 2560) * 100vw
           line-height 1.8
 
       &__desc
-        font-size (24 / 650) * 100vw
+        // font-size (24 / 650) * 100vw
+        font-size (28 / 650) * 100vw
         line-height 1.5
         +sp()
           // margin-bottom per(100, 650)
-          margin-bottom per(40, 650)
+          // margin-bottom per(40, 650)
+          margin-bottom per(20, 650)
         +pc()
           // font-size (23 / 2560) * 100vw
-          font-size (18.4 / 2560) * 100vw
+          // font-size (18.4 / 2560) * 100vw
+          font-size (26 / 2560) * 100vw
           line-height 1.4
 
       &__img
