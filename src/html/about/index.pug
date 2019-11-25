@@ -24,6 +24,7 @@ block main
           .p-burger_space
           include /_dev/_include/_inc_burger_menu.pug
 
+    //- .p-content(data-module='Movie')
     .p-content
 
       h2 ABOUT
@@ -71,6 +72,13 @@ block main
           .p-about-story
             h3.u-txtCenter BRAND STORY
             .p-about-story__movie
+              //- .p-about-story__movie__inner
+              //- #player
+
+              //- iframe
+              //- iframe.u-pcOnly(width='900', height='506', src='https://www.youtube.com/embed/vjsjkuHPtas?rel=0', frameborder='0', allowfullscreen='' fs='0' rel='0' controls='0' showinfo='0')
+              //- iframe.u-spOnly(width='560', height='315', src='https://www.youtube.com/embed/vjsjkuHPtas', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
               img.u-pcOnly(src=`/assets/images/about/img_story01.jpg` alt="")
               img.u-spOnly(src=`/assets/images/about/img_story01_sp.jpg` alt="")
 
