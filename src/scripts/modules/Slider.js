@@ -28,7 +28,7 @@ export default class Slider {
       // cssEase: 'ease',
       responsive: [
         {
-          breakpoint: 795,
+          breakpoint: 768,
           settings: {
             centerPadding: '20px',
             variableWidth: false,
