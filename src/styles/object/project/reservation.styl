@@ -339,7 +339,8 @@
       padding per(28, 750) per(20, 750)
 
       @media screen and (min-width: 768px) and (max-width: 794px)
-        width: 76.28205128205127% !important;
+        // width: 76.28205128205127% !important;
+        width per(580, 750) !important
         padding: 2.884615384615385% 4.006410256410256%;
         height: auto !important;
         margin-bottom: 0 !important;
@@ -431,6 +432,11 @@
           top 50%
           left 80%
           transform translateY(-50%)
+          @media screen and (min-width: 768px) and (max-width: 794px)
+            border-top (16 / 1280) * 100vw solid #000
+            border-left (8 / 1280) * 100vw solid transparent
+            border-right (8 / 1280) * 100vw solid transparent
+
           +pc()
             // left per(233, 314)
             // left 36%
@@ -470,6 +476,12 @@
           // left 70%
           left 80%
           transform translateY(-50%)
+
+          @media screen and (min-width: 768px) and (max-width: 794px)
+            border-top (16 / 1280) * 100vw solid #000
+            border-left (8 / 1280) * 100vw solid transparent
+            border-right (8 / 1280) * 100vw solid transparent
+
           +pc()
             // left per(138, 222)
             // left 48%
@@ -503,6 +515,12 @@
           top 50%
           left 80%
           transform translateY(-50%)
+
+          @media screen and (min-width: 768px) and (max-width: 794px)
+            border-top (16 / 1280) * 100vw solid #000
+            border-left (8 / 1280) * 100vw solid transparent
+            border-right (8 / 1280) * 100vw solid transparent
+
           +pc()
             // left per(138, 222)
             // left 48%
@@ -638,6 +656,9 @@
         // font-size (24 / 750) * 100vw
         font-size (22.4 / 2560) * 100vw
         padding per(12, 110)
+        border (4 / 1280) * 100vw solid #000
+        border-radius (8 / 1280) * 100vw
+
       +pc()
         border (4 / 2560) * 100vw solid #000
         border-radius (8 / 2560) * 100vw
