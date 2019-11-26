@@ -325,6 +325,13 @@
       // padding per(28, 750) per(32, 750)
       padding per(28, 750) per(20, 750)
       padding per(28, 750) per(20, 750)
+
+      @media screen and (min-width: 768px) and (max-width: 794px)
+        width: 76.28205128205127% !important;
+        padding: 2.884615384615385% 4.006410256410256%;
+        height: auto !important;
+        margin-bottom: 0 !important;
+
       +sp()
         text-align center
       +pc()
@@ -369,6 +376,11 @@
           // width per(406, 580)
           width per(420, 580)
           justify-content space-between
+
+        @media screen and (min-width: 768px) and (max-width: 794px)
+          width per(420, 580)
+          justify-content space-between
+
         +pc()
           width per(672, 852)
           height 100%
@@ -386,6 +398,11 @@
           // width per(200, 343)
           width per(230, 420)
           float none
+ 
+        @media screen and (min-width: 768px) and (max-width: 794px)
+          width per(230, 420)
+          float none
+ 
         +pc()
           //override
           width per(314, 672) !important
@@ -420,6 +437,11 @@
           width per(105, 420)
           // width 33%
           float none
+
+        @media screen and (min-width: 768px) and (max-width: 794px)
+          width per(105, 420)
+          float none
+
         +pc()
           //override
           // width per(222, 672)
@@ -492,6 +514,10 @@
         +sp()
           width 100%
           // font-size (20 / 750) * 100vw
+          font-size 16px
+          transform scale(0.625)
+          line-height 1
+        @media screen and (min-width: 768px) and (max-width: 794px)
           font-size 16px
           transform scale(0.625)
           line-height 1
@@ -571,6 +597,10 @@
           display flex
           align-items center
           justify-content center
+
+        @media screen and (min-width: 768px) and (max-width: 794px)
+          margin 0
+
         +pc()
           width per(180, 852)
           //override
@@ -591,6 +621,10 @@
       font-size (24 / 750) * 100vw
       line-height 1
       +sp()
+        padding per(12, 110)
+      @media screen and (min-width: 768px) and (max-width: 794px)
+        // font-size (24 / 750) * 100vw
+        font-size (22.4 / 2560) * 100vw
         padding per(12, 110)
       +pc()
         border (4 / 2560) * 100vw solid #000
