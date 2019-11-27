@@ -376,10 +376,16 @@
       transform translate(-50%, -25%)
     +pc()
       // width per(1956,2560)
-      height (1222 / 2560) * 100vw
-      max-height 80vh
+      // height (1222 / 2560) * 100vw
+      max-width 1024px
+      max-height 100%
+      height auto
+      overflow auto
 
     .p-modal-content
+      // overflow-y visible
+      overflow-y hidden
+      position relative
       .p-modal-body
         position relative
         width 100%
