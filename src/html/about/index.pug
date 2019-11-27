@@ -74,13 +74,24 @@ block main
             .p-about-story__movie
               //- .p-about-story__movie__inner
               //- #player
+                //- iframe
+              .p-about-story__movie__inner
+                //- iframe.u-pcOnly(width='900', height='506', src='https://www.youtube.com/embed/SmAIyQjvKAM', frameborder='0', allowfullscreen='' fs='0' rel='0' controls='0' showinfo='0')
+                //- iframe.u-pcOnly(width='900', height='506', src='https://www.youtube.com/embed/SmAIyQjvKAM?rel=0', frameborder='0', allowfullscreen='' fs='0' rel='0' controls='0' showinfo='0')
 
-              //- iframe
-              //- iframe.u-pcOnly(width='900', height='506', src='https://www.youtube.com/embed/vjsjkuHPtas?rel=0', frameborder='0', allowfullscreen='' fs='0' rel='0' controls='0' showinfo='0')
-              //- iframe.u-spOnly(width='560', height='315', src='https://www.youtube.com/embed/vjsjkuHPtas', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+                //- pig
+                //- iframe.u-pcOnly(width='560', height='315', src='https://www.youtube.com/embed/SmAIyQjvKAM', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
 
-              img.u-pcOnly(src=`/assets/images/about/img_story01.jpg` alt="")
-              img.u-spOnly(src=`/assets/images/about/img_story01_sp.jpg` alt="")
+                //- pig modify
+
+                //- loop再生で関連動画を非表示
+                //- iframe.u-pcOnly(width='560', height='315', src='https://www.youtube.com/embed/SmAIyQjvKAM?loop=1&playlist=SmAIyQjvKAM', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
+                iframe.u-pcOnly(width='560', height='315', src='https://www.youtube.com/embed/SmAIyQjvKAM?rel=0', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+                iframe.u-spOnly(width='560', height='315', src='https://www.youtube.com/embed/SmAIyQjvKAM?rel=0', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
+              //- img.u-pcOnly(src=`/assets/images/about/img_story01.jpg` alt="")
+              //- img.u-spOnly(src=`/assets/images/about/img_story01_sp.jpg` alt="")
 
       .p-section
         .l-inner
