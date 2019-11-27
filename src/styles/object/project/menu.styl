@@ -356,12 +356,36 @@
           +pc()
             padding-top per(400, 2200)
       &#takeout
-        .p-menu-info
-          padding-top per(150, 650)
+        .p-menu-category
+          padding-top per(40, 650)
+          // padding-top per(150, 650)
           border-top (4 / 650) * 100vw dotted #000
           +pc()
             padding-top per(120, 2200)
             border-top (4 / 2560) * 100vw dotted #000
+
+        // .p-menu-info
+        //   padding-top per(150, 650)
+        //   border-top (4 / 650) * 100vw dotted #000
+        //   +pc()
+        //     padding-top per(120, 2200)
+        //     border-top (4 / 2560) * 100vw dotted #000
+
+    &-category
+      // font-size (44 / 650) * 100vw
+      font-size (54 / 650) * 100vw
+      word-break keep-all
+      line-break strict
+      word-wrap break-word
+      overflow-wrap break-word
+      letter-spacing: .3rem
+      font-weight bold
+      margin-bottom per(40, 650)
+      +pc()
+        // font-size (34.816 / 2560) * 100vw
+        width per(1226, 2200)
+        font-size (56 / 2560) * 100vw
+        margin-bottom per(40, 1226)
 
     &-info
       display flex
@@ -458,12 +482,14 @@
         +sp()
           // margin-bottom per(100, 650)
           // margin-bottom per(40, 650)
-          margin-bottom per(20, 650)
+          // margin-bottom per(20, 650)
+          margin-bottom 0
         +pc()
           // font-size (23 / 2560) * 100vw
           // font-size (18.4 / 2560) * 100vw
           font-size (26 / 2560) * 100vw
           line-height 1.4
+          margin-bottom 0
 
       &__img
         +sp()

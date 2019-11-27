@@ -534,7 +534,8 @@ block main
             //-   |ALL PHOTOS CLICK HERE
 
             #lunch.p-menu-group
-
+              .p-menu-category
+                |LUNCH
               .p-menu-info
                 each i, index in lunch
                   .p-menu-item.hasimage(data-module='MenuImageShow' data-image=`/assets/images/menu/${i.thumb}` data-caption=`${i.name}` data-jp-caption=`${i.name_jp}`)
@@ -597,17 +598,21 @@ block main
             //-         img(src=`/assets/images/menu/img_comingsoon.jpg` alt='COMING SOON')
 
             #dinner.p-menu-group
+              .p-menu-category
+                |DINNER
               .p-menu-info
                 each i, index in dinner
                   .p-menu-item.hasimage(data-module='MenuImageShow' data-image=`/assets/images/menu/${i.thumb}` data-caption=`${i.name}` data-jp-caption=`${i.name_jp}`)
                     h3 !{i.name}
                     p.p-sub-title !{i.name_jp}
-                    p.u-font-noto !{i.food_jp}
                     p.p-menu-item__desc
                       |!{i.food}
+                    p.u-font-noto !{i.food_jp}
                     //- .item-img-container
                     .p-menu-item__img
                       img(src=`/assets/images/menu/${i.thumb}` alt=`${i.alt}`)
+
+
 
             //-   .p-menu-info
             //-     .p-menu-item.hasimage(data-module='MenuImageShow' data-image='/assets/images/menu/img_comingsoon.jpg' data-caption='01. CHINESE PORK SAUSAGE & FERMENTED SHRIMP' data-jp-caption='豚肉のソーセージ&発酵エビ')
@@ -634,14 +639,16 @@ block main
 
 
             #drink.p-menu-group
+              .p-menu-category
+                |DRINK
               .p-menu-info
                 each i, index in drink
                   .p-menu-item.hasimage(data-module='MenuImageShow' data-image=`/assets/images/menu/${i.thumb}` data-caption=`${i.name}` data-jp-caption=`${i.name_jp}`)
                     h3 !{i.name}
                     p.p-sub-title !{i.name_jp}
-                    p.u-font-noto !{i.food_jp}
                     p.p-menu-item__desc
                       |!{i.food}
+                    p.u-font-noto !{i.food_jp}
                     //- .item-img-container
                     .p-menu-item__img
                       img(src=`/assets/images/menu/${i.thumb}` alt=`${i.alt}`)
@@ -669,14 +676,16 @@ block main
 
 
             #takeout.p-menu-group
+              .p-menu-category
+                |TAKEOUT
               .p-menu-info
                 each i, index in takeout
                   .p-menu-item.hasimage(data-module='MenuImageShow' data-image=`/assets/images/menu/${i.thumb}` data-caption=`${i.name}` data-jp-caption=`${i.name_jp}`)
                     h3 !{i.name}
                     p.p-sub-title !{i.name_jp}
-                    p.u-font-noto !{i.food_jp}
                     p.p-menu-item__desc
                       |!{i.food}
+                    p.u-font-noto !{i.food_jp}
                     //- .item-img-container
                     .p-menu-item__img
                       img(src=`/assets/images/menu/${i.thumb}` alt=`${i.alt}`)
