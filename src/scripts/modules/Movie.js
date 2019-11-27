@@ -28,11 +28,11 @@ export default class Movie {
     player = new YT.Player('player', {
       width: '560',
       height: '315',
-      videoId: 'vjsjkuHPtas',
+      videoId: 'SmAIyQjvKAM',
       playerVars:  {
         'autoplay': 0,
         'modestbranding': 1,
-        'controls': 0,
+        // 'controls': 0,
         'showinfo': 0,
         'disablekb': 1,
         'html5': 1,
@@ -40,7 +40,7 @@ export default class Movie {
         'rel': 0,
         'fs': 0,
         'playsinline': 1,
-        'playlist' : 'vjsjkuHPtas'
+        'playlist' : 'SmAIyQjvKAM'
       },
       events: {
         'onReady': onPlayerReady,
@@ -51,7 +51,8 @@ export default class Movie {
     function onPlayerReady() {
       // console.log('movie - onPlayerReady()')
       player.mute();
-      // player.playVideo();
+      player.playVideo();
+
     }
 
     var done = false;
@@ -66,6 +67,13 @@ export default class Movie {
       // console.log('movie - stopVideo()')
       player.stopVideo();
     }
+
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.ENDED) {
+        event.target.stopVideo();
+      }
+    }
+    
 
     // iframeのreadyをグローバルにする
     // window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
