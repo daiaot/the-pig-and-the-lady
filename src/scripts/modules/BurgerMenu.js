@@ -78,7 +78,8 @@ export default class BurgerMenu {
   toggleSlide() {
     const ua = navigator.userAgent
     let videoSrc
-    if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+    // if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+    if (ua.match(/(iPhone|iPod|Android)/i)) {
       TweenMax.to(this.btn, 0.3, {
         css: {
           right: '43%',

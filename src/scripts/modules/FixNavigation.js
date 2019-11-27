@@ -14,7 +14,8 @@ export default class FixNavigation {
   }
   addEvents() {
     const ua_2 = navigator.userAgent
-    if (!ua_2.match(/(iPhone|iPad|iPod|Android)/i)) {
+    // if (!ua_2.match(/(iPhone|iPad|iPod|Android)/i)) {
+    if (!ua_2.match(/(iPhone|iPod|Android)/i)) {
       this.elem.classList.add('is-hidden')
       this.toggle.classList.add('is-hidden')
     }
@@ -31,7 +32,8 @@ export default class FixNavigation {
     // console.log(document.body.getBoundingClientRect().top)
     // console.log(this.elem.getBoundingClientRect().height * -1)
     // console.log(window.pageYOffset)
-    if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+    // if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+    if (ua.match(/(iPhone|iPod|Android)/i)) {
       if (top < 0) {
         this.elem.children[0].classList.add('is-fixed')
         this.toggle.classList.add('is-fixed')
