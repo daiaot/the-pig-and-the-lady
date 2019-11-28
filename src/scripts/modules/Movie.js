@@ -1,7 +1,10 @@
 
 export default class Movie {
+
   constructor(elem) {
     this.elem = elem
+    this.trigger = document.querySelector('.p-about-story__movie')
+
     // this.opts = opts
     // console.log('movie')
     // this.init()
@@ -23,57 +26,62 @@ export default class Movie {
 
     // console.log('movie - bindEvents()')
 
-    var player;
+    this.trigger.addEventListener('click', () => {
 
-    player = new YT.Player('player', {
-      width: '560',
-      height: '315',
-      videoId: 'SmAIyQjvKAM',
-      playerVars:  {
-        'autoplay': 0,
-        'modestbranding': 1,
-        // 'controls': 0,
-        'showinfo': 0,
-        'disablekb': 1,
-        'html5': 1,
-        'loop' : 0,
-        'rel': 0,
-        'fs': 0,
-        'playsinline': 1,
-        'playlist' : 'SmAIyQjvKAM'
-      },
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
+      var player;
+
+      player = new YT.Player('player', {
+        width: '560',
+        height: '315',
+        videoId: 'SmAIyQjvKAM',
+        playerVars: {
+          'autoplay': 0,
+          'modestbranding': 1,
+          // 'controls': 0,
+          'showinfo': 0,
+          'disablekb': 1,
+          'html5': 1,
+          'loop': 0,
+          'rel': 0,
+          'fs': 0,
+          'playsinline': 1,
+          'playlist': 'SmAIyQjvKAM'
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+
+      function onPlayerReady() {
+        // console.log('movie - onPlayerReady()')
+        player.mute();
+        player.playVideo();
+  
       }
+  
+      var done = false;
+      function onPlayerStateChange() {
+        // console.log('movie - onPlayerStateChange()')
+        if (player.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        // console.log('movie - stopVideo()')
+        player.stopVideo();
+      }
+  
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          event.target.stopVideo();
+        }
+      }
+
+
     });
 
-    function onPlayerReady() {
-      // console.log('movie - onPlayerReady()')
-      player.mute();
-      player.playVideo();
-
-    }
-
-    var done = false;
-    function onPlayerStateChange() {
-      // console.log('movie - onPlayerStateChange()')
-      if (player.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
-        done = true;
-      }
-    }
-    function stopVideo() {
-      // console.log('movie - stopVideo()')
-      player.stopVideo();
-    }
-
-    function onPlayerStateChange(event) {
-      if (event.data == YT.PlayerState.ENDED) {
-        event.target.stopVideo();
-      }
-    }
-    
 
     // iframeのreadyをグローバルにする
     // window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
