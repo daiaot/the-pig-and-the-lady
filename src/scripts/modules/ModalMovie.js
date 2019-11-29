@@ -13,14 +13,14 @@ export default class ModalMovie {
     // const modalClose = $('#js-galleryModalClose')
     // const modalOverlay = $('#js-galleryModalOverlay')
 
-    const modal = $('#js-contanc-modal')
-    const modalClose = $('#js-contanc-modalClose')
-    const modalOverlay = $('#js-contanc-modalOverlay')
+    const modal = $('#js-movie-modal')
+    const modalClose = $('#js-movie-modalClose')
+    const modalOverlay = $('#js-movie-modalOverlay')
     const open = 'is-open'
 
     // swiper
     // const modalSwiper = new Swiper('#js-galleryModalSwiper', {
-    const modalSwiper = new Swiper('#js-contanc-modalSwiper', {
+    const modalSwiper = new Swiper('#js-movie-modalSwiper', {
       // loop: true,
       // spaceBetween: 30,
       simulateTouch: false,
