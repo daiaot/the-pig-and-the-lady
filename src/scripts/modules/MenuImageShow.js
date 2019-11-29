@@ -24,16 +24,20 @@ export default class MenuImageShow {
 
     const ua = navigator.userAgent
 
-    if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
-      this.elem.addEventListener('click', () => {
-        if (!this.showFlg) {
-          this.thumb.classList.add('is-show')
-          this.showFlg = true
-        } else {
-          this.thumb.classList.remove('is-show')
-          this.showFlg = false
-        }
-      })
+    // if (ua.match(/(iPhone|iPad|iPod|Android)/i)) {
+    if (ua.match(/(iPhone|iPod|Android)/i)) {
+
+      //- sp時のクリックでの表示・非表示切り替えをいったんとめる
+
+      // this.elem.addEventListener('click', () => {
+      //   if (!this.showFlg) {
+      //     this.thumb.classList.add('is-show')
+      //     this.showFlg = true
+      //   } else {
+      //     this.thumb.classList.remove('is-show')
+      //     this.showFlg = false
+      //   }
+      // })
     } else {
         // this.elem.addEventListener('click', () => {
         this.elem.addEventListener('mouseover', () => {
