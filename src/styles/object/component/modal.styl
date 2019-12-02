@@ -41,6 +41,10 @@
         font-size (24 / 2560) * 100vw
         line-height 1.6
 
+      .tel
+        color #000
+        text-decoration none
+
     a
       font-size (26 / 750) * 100vw
       line-height 1.6
@@ -52,6 +56,21 @@
       +pc()
         // font-size (30 / 2560) * 100vw
         font-size (24 / 2560) * 100vw
+
+
+      &.p-modal__tel
+        font-size (24 / 750) * 100vw
+        line-height 2 !important
+        margin-bottom per(50, 1956)
+        font-family Futura-Med
+        color #000
+        text-decoration none
+        &:hover
+          font-style normal
+        +pc()
+          // font-size (30 / 2560) * 100vw
+          font-size (24 / 2560) * 100vw
+          line-height 1.6
 
   h3
     font-size (68 / 750) * 100vw !important
