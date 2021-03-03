@@ -86,7 +86,7 @@
     "npm-run-all": "4.1.2",
     "opn-cli": "3.1.0",
     "prettier": "1.15.3",
-    "pug": "2.0.0-rc.4",
+    "pug": "3.0.1",
     "pug-cli": "https://github.com/pugjs/pug-cli.git",
     "querystring": "0.2.0",
     "regenerator-runtime": "0.13.1",
